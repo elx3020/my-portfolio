@@ -9,7 +9,7 @@ const Navbar = (props) => {
         <Link to='about'>About</Link> <Link to='portfolio'>Portofolio</Link></div>);
 
     return (
-        <div style={{display: 'flex',alignItems:'center', justifyContent:'space-between'}}>
+        <div style={{display: 'flex',alignItems:'center', justifyContent:'space-between',backgroundColor:'black', color:'white'}}>
             <div><p> NavBar logo</p></div>
             {links}
 
