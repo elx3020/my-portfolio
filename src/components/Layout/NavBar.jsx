@@ -1,16 +1,16 @@
 
 import { Link } from 'react-router-dom';
 import { useLocation } from 'react-router-dom';
-
+import '../../styles/Navbar.css'
 const Navbar = (props) => {
     
     const location = useLocation();
-        const links = (<div><Link to='/'>Home</Link>
-        <Link to='about'>About</Link> <Link to='portfolio'>Portofolio</Link></div>);
+        const links = (<div className='nav_links'>
+        <Link to='work'>Work</Link> <Link to='about'>About</Link> <Link to='contact'>Contact</Link></div>);
 
     return (
-        <div style={{display: 'flex',alignItems:'center', justifyContent:'space-between',backgroundColor:'black', color:'white'}}>
-            <div><p> NavBar logo</p></div>
+        <div className='Navbar'>
+            <div className='nav_links'><Link to='/'>Home</Link></div>
             {links}
 
       </div>

@@ -4,7 +4,7 @@
 
 import HeroContainer from "../components/Layout/HeroContainer";
 
-const Home = (props) =>
+const HomePage = (props) =>
 {
     return (
         <div>
@@ -16,4 +16,4 @@ const Home = (props) =>
 }
  
 
-export default Home;
+export default HomePage;
