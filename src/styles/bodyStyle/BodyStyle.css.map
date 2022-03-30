@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,IAAI,CAAC;EACD,WAAW,ECGF,cAAc,EAAE,UAAU;EDFnC,UAAU,ECJQ,OAAO;EDKzB,KAAK,ECJkB,OAAO;CDIK",
+    "sources": [
+        "BodyStyle.sass",
+        "../helpers/variables.sass",
+        "../helpers/mixins.sass",
+        "../helpers/variables.sass"
+    ],
+    "names": [],
+    "file": "BodyStyle.css"
+}

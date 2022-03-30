@@ -1,9 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import './App.css';
-import './styles/biography.css';
-import './styles/background.css';
 
+import "./styles/bodyStyle/BodyStyle.css"
 // pages
 
 import About from './pages/AboutPage';
@@ -14,6 +13,7 @@ import ContactPage from './pages/ContactPage';
 // layout components
 
 import NavBar from './components/Layout/NavBar';
+import Footer from './components/Layout/Footer';
 
 function App() {
   return (
@@ -31,6 +31,7 @@ function App() {
           
            
         </Routes>
+        <Footer />
       </Router> 
   
     </div>

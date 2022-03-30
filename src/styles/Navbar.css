@@ -1,5 +1,9 @@
 .Navbar {
-  background-color: #f30c2d;
+  background-color: #1D0B19;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100vw;
+  padding: 2% 1% 2% 1%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -9,6 +13,14 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: white;
+  color: #D4F4DD;
+  top: 0%;
+  z-index: 2;
+}
+
+.Navbar .nav_links a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0 20px 0 10px;
 }
 /*# sourceMappingURL=Navbar.css.map */

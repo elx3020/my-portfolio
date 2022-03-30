@@ -1,0 +1,107 @@
+@import "../helpers/variables"
+@import "../helpers/mixins"
+
+.relative-container
+    position: relative
+
+// hero container styles
+
+.hero-wrapper
+    display: flex
+    position: relative
+    justify-content: center
+    align-items: center
+    width: 100vw
+    height: 100vh
+    background-color: $colorButtonSecondary
+    overflow: hidden
+    .hero-paralax-image
+        position: absolute
+        top: 50%
+        right: 0%
+        left: 50%
+        bottom: 0%
+        z-index: 0
+        transform: translate(-50%,-50%)
+        animation: backgroundImage 10s ease-in-out
+
+    .hero-content
+        color: $mainColorBackground
+        text-align: center
+        position: relative
+        h1
+            font-size: 55px
+        p
+            font-size: 16px
+
+@keyframes backgroundImage
+    0%
+        transform: translate(-50%,-30%)
+    100%
+        transform: translate(-50%,-50%)
+
+//card container
+
+.cards-wrapper
+    display: flex
+    flex-direction: row
+    width: 6000px
+    height: 100vh
+    padding: 1%
+    margin: 5% 0 5% 0
+    transform: translateX(0px)
+    transition: all 4s ease-in-out
+
+    &:hover
+        transform: translateX(-1000px)
+        .card-showcase
+            transform: translateY(0px)
+            margin: 0
+
+    .card-showcase
+
+        position: relative
+        width: 500px
+        height: 90%
+        overflow: hidden
+        margin: 0 0px 0
+        border-radius: 10px
+        background-color: white
+        // perspective: 1000px
+        transform: rotatex(20deg) rotateY(30deg)
+        transition: all 0.2s ease-in-out
+        &:hover
+            transform: translateY(-50px)
+
+        img
+            max-width: 100%
+            max-height: auto
+            margin-bottom: 20%
+
+        div
+            margin: 10px
+
+// section wrapper
+
+.section-wrapper
+
+    padding: 5%
+
+    h1
+        font-size: 60px
+        color: $colorEnphasis
+
+.section-text-column
+    display: flex
+    flex-direction: row
+    align-items: center
+    justify-content: center
+    text-align: center
+
+    .paragraph-big
+        flex: 1
+        font-size: 50px
+
+    .paragraph-small
+        flex: 1
+        font-size: 25px

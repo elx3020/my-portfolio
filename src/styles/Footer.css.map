@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,OAAO,CAAC;EACJ,KAAK,EAAE,KAAK;EACZ,MAAM,EAAE,KAAK;EACb,gBAAgB,ECJO,OAAO;EDK9B,OAAO,EAAE,EAAE;EACX,KAAK,EAAE,KAAK;CAAG",
+    "sources": [
+        "Footer.sass",
+        "helpers/variables.sass",
+        "helpers/mixins.sass",
+        "helpers/variables.sass"
+    ],
+    "names": [],
+    "file": "Footer.css"
+}
