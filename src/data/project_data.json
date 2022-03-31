@@ -1,40 +1,37 @@
-
 [
+  {
+    "project_name": "Web1",
+    "image_Url": "/images/projects/place-holder.png",
+    "project_description": "Some sample text to fill up spaces"
+  },
 
-    {
-        "project_name": "Web1",
-        "image_Url": "/images/projects/place-holder.png",
-        "project_description" : "Some sample text to fill up spaces"
-    },
+  {
+    "project_name": "Web2",
+    "image_Url": "/images/projects/place-holder.png",
+    "project_description": "Some sample text to fill up spaces"
+  },
 
-    {
-        "project_name": "Web2",
-        "image_Url": "/images/projects/place-holder.png",
-        "project_description" : "Some sample text to fill up spaces"
-    },
+  {
+    "project_name": "Web3",
+    "image_Url": "/images/projects/place-holder.png",
+    "project_description": "Some sample text to fill up spaces"
+  },
 
-    {
-        "project_name": "Web3",
-        "image_Url": "/images/projects/place-holder.png",
-        "project_description" : "Some sample text to fill up spaces"
-    },
+  {
+    "project_name": "Web4",
+    "image_Url": "/images/projects/place-holder.png",
+    "project_description": "Some sample text to fill up spaces"
+  },
 
-    {
-        "project_name": "Web4",
-        "image_Url": "/images/projects/place-holder.png",
-        "project_description" : "Some sample text to fill up spaces"
-    },
+  {
+    "project_name": "Web5",
+    "image_Url": "/images/projects/place-holder.png",
+    "project_description": "Some sample text to fill up spaces"
+  },
 
-    {
-        "project_name": "Web5",
-        "image_Url": "/images/projects/place-holder.png",
-        "project_description" : "Some sample text to fill up spaces"
-    },
-
-    {
-        "project_name": "Web6",
-        "image_Url": "/images/projects/place-holder.png",
-        "project_description" : "Some sample text to fill up spaces"
-    }
-
+  {
+    "project_name": "Web6",
+    "image_Url": "/images/projects/place-holder.png",
+    "project_description": "Some sample text to fill up spaces"
+  }
 ]

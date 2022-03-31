@@ -2,8 +2,84 @@
 @import "helpers/mixins"
 
 .footer
-    width: 100vw
-    height: 100vh
-    background-color: $secondaryColorBackground
-    padding: 1%
-    color: white
+    @include fillScreenDiv($BackgroundColor: $secondaryColorBackground, $colorText:$mainColorBackground,$width: 100vw, $height: auto )
+
+    padding-top: 5%
+
+    h2
+        font-size: 55px
+
+    .footer-content
+        display: flex
+        flex-direction: column
+        align-items: center
+        justify-content: space-between
+        height: 50vh
+        margin-bottom: 3%
+
+    .contact-button
+        @include setAnchorAsButton($BackgroundColor: $colorButtonSecondary)
+
+        font-size: 28px
+        padding: 3rem
+        border-radius: 10px
+        position: relative
+        left: 0%
+        transition: all 0.2s ease-in-out
+        &:hover
+            background-color: $colorEnphasis
+            transform: translateY(-5px)
+            box-shadow: 0px 5px 0px 0px rgba(255,255,255,0.5)
+
+    .contact-wrapper
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        width: 30%
+
+        .img-wrapper
+            overflow: hidden
+            width: 100px
+            height: 100px
+            border-radius: 50%
+            position: relative
+
+            img
+                @include imageInsideDiv($max-width: 200%)
+                position: absolute
+                top: 50%
+                right: 0%
+                left: 50%
+                bottom: 0%
+                z-index: 0
+                transform: translate(-50%,-50%)
+
+    .contact-info-wrapper
+        @include centerFlex($direction: row,$justifyContent: space-around )
+        width: 50%
+
+    .contact-info
+        border: 1px solid $mainColorBackground
+        padding: 2.5rem 1rem 2.5rem 1rem
+        border-radius: 10px
+        margin-top: 1rem
+
+    .column-layout
+        @include centerFlex($direction: row ,$justifyContent: space-around  )
+        padding: 2%
+
+    .end-footer
+        width: 100%
+        display: flex
+        flex-direction: row
+
+    .end-layout
+        display: flex
+        flex-direction: row
+        width: 30%
+        margin-left: auto
+        justify-content: space-around
+
+        .social-item
+            @include removeDefaultLinkStyle()
