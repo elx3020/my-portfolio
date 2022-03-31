@@ -15,7 +15,7 @@
           align-items: center;
   width: 100vw;
   height: 100vh;
-  background-color: #0E7C7B;
+  background-color: #231C07;
   overflow: hidden;
 }
 
@@ -33,7 +33,7 @@
 }
 
 .hero-wrapper .hero-content {
-  color: #D4F4DD;
+  color: #EDF6F0;
   text-align: center;
   position: relative;
 }
@@ -128,7 +128,7 @@
 
 .section-wrapper h1 {
   font-size: 60px;
-  color: #D62246;
+  color: #231C07;
   margin-bottom: 2%;
 }
 
@@ -138,7 +138,21 @@
 }
 
 .generic-hero-wrapper {
-  color: #1D0B19;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  color: #231C07;
   width: 80vw;
 }
 
@@ -157,8 +171,67 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
   height: 50vh;
+}
+
+.section-text-column.photo {
+  height: 100vh;
+}
+
+.cards-section {
+  margin-top: 100px;
+  width: 100%;
+  padding: 8%;
+  height: 80vh;
+}
+
+.cards-section h1 {
+  margin-bottom: 1rem;
+  font-size: 55px;
+}
+
+.column-layout {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  text-align: justify;
+}
+
+.column-layout .cards-info {
+  width: 30%;
+}
+
+.column-layout .cards-info h1 {
+  font-size: revert;
+}
+
+.wrap-text {
+  width: 40%;
+  color: #EDF6F0;
+}
+
+.wrap-text h1 {
+  font-size: 24px;
+}
+
+.wrap-text p {
+  font-size: 18px;
+}
+
+.v-img-wrap {
+  width: 50%;
 }
 
 .paragraph-big {
@@ -189,7 +262,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  text-align: center;
   margin: 5% 0 5% 0;
   min-height: 60vh;
   max-height: 100vh;
@@ -208,11 +280,10 @@
           align-items: center;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  text-align: center;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  color: #1D0B19;
+  color: #231C07;
   font-size: 24px;
   width: 80%;
   padding: 1%;

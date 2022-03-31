@@ -1,10 +1,7 @@
-import React from 'react'
-
+import React from "react";
 
 // components
-import Card from './Card';
-
-
+import Card from "../Card";
 
 // styling
 
@@ -16,22 +13,12 @@ import Card from './Card';
 //     "project_description" : "Some sample text to fill up spaces"
 // },
 
-
-
-
-
 export default function CardContainer(props) {
-    
-    const { data } = props;
+  const { data } = props;
 
-    const cards = data.map((project_Data) => {
-        return (<Card key={project_Data.project_name}projectData={project_Data} />)
-    })
+  const cards = data.map((project_Data) => {
+    return <Card key={project_Data.project_name} projectData={project_Data} />;
+  });
 
-    
-    
-
-  return (
-      <div className='cards-wrapper'>{cards}</div>
-  )
+  return <div className="cards-wrapper">{cards}</div>;
 }

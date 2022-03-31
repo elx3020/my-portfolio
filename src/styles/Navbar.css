@@ -1,5 +1,5 @@
 .Navbar {
-  background-color: #1D0B19;
+  background-color: #231C07;
   position: -webkit-sticky;
   position: sticky;
   width: 100vw;
@@ -13,7 +13,7 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  color: #D4F4DD;
+  color: #EDF6F0;
   top: 0%;
   z-index: 2;
 }

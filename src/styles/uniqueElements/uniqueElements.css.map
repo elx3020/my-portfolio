@@ -1,0 +1,12 @@
+{
+    "version": 3,
+    "mappings": "AAGA,AAAA,OAAO,CAAC;EACJ,KAAK,EAAE,MAAM;EACb,MAAM,EAAE,MAAM;EACd,aAAa,EAAE,GAAG;EAClB,gBAAgB,ECLO,OAAO;EDM9B,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,EAAE;EACX,IAAI,EAAE,GAAG;CAAG;;AAEhB,AAAA,aAAa,CAAC;EACV,MAAM,EAAE,KAAK;EACb,gBAAgB,EAAE,OAAO;EACzB,sBAAsB,EAAE,KAAK;EAC7B,uBAAuB,EAAE,KAAK;EAC9B,QAAQ,EAAE,MAAM;EAChB,OAAO,EAAE,EAAE;CAGa;;AAT5B,AAOI,aAPS,CAOT,EAAE,CAAC;EACC,KAAK,ECnBS,OAAO;EDoBrB,SAAS,EAAE,IAAI;CAAG",
+    "sources": [
+        "uniqueElements.sass",
+        "../helpers/variables.sass",
+        "../helpers/mixins.sass",
+        "../helpers/variables.sass"
+    ],
+    "names": [],
+    "file": "uniqueElements.css"
+}

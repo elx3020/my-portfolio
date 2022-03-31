@@ -1,0 +1,57 @@
+.contact-page {
+  background-color: #231C07;
+  color: #EDF6F0;
+}
+
+.contact-page h1 {
+  font-size: 55px;
+  margin-bottom: 4%;
+  padding: 5%;
+  font-weight: 500;
+}
+
+.content-wrapper {
+  background-color: #231C07;
+  height: 150vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 5%;
+}
+
+.form-style label {
+  color: #EDF6F0;
+  display: block;
+  padding: 1%;
+  font-size: 22px;
+  margin-top: 3%;
+}
+
+.form-style input {
+  background: none;
+  border: none;
+  border-bottom: 1px solid #EDF6F0;
+  width: 60vw;
+  font-size: 18px;
+  color: #EDF6F0;
+}
+
+.form-style input:focus {
+  outline: none;
+}
+
+.form-style .submit-btn {
+  display: block;
+  padding: 3rem;
+  width: auto;
+  background-color: #7F96FF;
+}
+
+.contact-info {
+  padding: 4%;
+}
+/*# sourceMappingURL=ContactPageStyle.css.map */

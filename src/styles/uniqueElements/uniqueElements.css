@@ -1,0 +1,24 @@
+.circle {
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  background-color: #231C07;
+  position: absolute;
+  z-index: -1;
+  left: 22%;
+}
+
+.dark-rounded {
+  height: 100vh;
+  background-color: #231C07;
+  border-top-left-radius: 110px;
+  border-top-right-radius: 110px;
+  overflow: hidden;
+  padding: 5%;
+}
+
+.dark-rounded h1 {
+  color: #EDF6F0;
+  font-size: 55px;
+}
+/*# sourceMappingURL=uniqueElements.css.map */

@@ -1,0 +1,42 @@
+@import "../helpers/variables"
+@import "../helpers/mixins"
+
+.contact-page
+    background-color: $secondaryColorBackground
+    color: $mainColorBackground
+    h1
+        font-size: 55px
+        margin-bottom: 4%
+        padding: 5%
+        font-weight: 500
+.content-wrapper
+    background-color: $secondaryColorBackground
+    height: 150vh
+    display: flex
+    flex-direction: row
+    padding: 5%
+
+.form-style
+    label
+        color: $mainColorBackground
+        display: block
+        padding: 1%
+        font-size: 22px
+        margin-top: 3%
+    input
+        background: none
+        border: none
+        border-bottom: 1px solid $mainColorBackground
+        width: 60vw
+        font-size: 18px
+        color: $mainColorBackground
+        &:focus
+            outline: none
+    .submit-btn
+        display: block
+        padding: 3rem
+        width: auto
+        background-color: $colorSecondary
+
+.contact-info
+    padding: 4%

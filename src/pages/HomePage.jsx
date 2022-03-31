@@ -5,7 +5,8 @@ import "../styles/layoutStyles/layoutContainers.css";
 
 import HeroContainer from "../components/Layout/HeroContainer";
 import CardContainer from "../components/Layout/CardContainer";
-import TwoColumnLayout from "../components/Layout/TwoColumnLayout";
+import ColumnLayout from "../components/Layout/ColumnLayout";
+import GoToTop from "../components/functionality/GoToTop";
 // assets
 import mePhoto from "../images/background-image.jpg";
 import ProjectsData from "../data/project_data.json";
@@ -23,12 +24,12 @@ const HomePage = (props) => {
         backgroundImageAlt="me"
         backgroundImage={mePhoto}
       />
-      <TwoColumnLayout>
+      <ColumnLayout className="section-text-column">
         <p className="paragraph-big">
           Create innovative solutions and push desing and efficcy to the limit
         </p>{" "}
         <p className="paragraph-small">Some other text</p>
-      </TwoColumnLayout>
+      </ColumnLayout>
 
       <div className="section-wrapper">
         <div className="container-wrapper">
@@ -56,6 +57,8 @@ const HomePage = (props) => {
           </div>
         </div>
       </div>
+
+      <GoToTop />
     </div>
   );
 };

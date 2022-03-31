@@ -1,6 +1,15 @@
 @import "../helpers/variables"
 @import "../helpers/mixins"
 
+// main colors light theme
+// $mainColorBackground: #EDF6F0
+// $secondaryColorBackground: #231C07
+// $colorSecondary: #7F96FF
+// $colorTerciary: #DEFF7F
+// $colorEnphasis: #FF7F7F
+// font
+// $fontFamily: 'Josefin Sans', sans-serif
+
 .relative-container
     position: relative
 
@@ -13,7 +22,7 @@
     align-items: center
     width: 100vw
     height: 100vh
-    background-color: $colorButtonSecondary
+    background-color: $secondaryColorBackground
     overflow: hidden
     .hero-paralax-image
         position: absolute
@@ -87,22 +96,66 @@
 
     h1
         font-size: 60px
-        color: $colorEnphasis
+        color: $secondaryColorBackground
         margin-bottom: 2%
+
+// container wrapper
 
 .container-wrapper
 
     margin: 0 auto 0 auto
     max-width: 80vw
 
+// generic hero wwrapper 
 .generic-hero-wrapper
+    @include centerFlex($direction: row,$justifyContent: center)
+    height: 100vh
     color: $secondaryColorBackground
     width: 80vw
 
+// text column component
 .section-text-column
     position: relative
     @include centerFlex($direction: row,$justifyContent: center)
     height: 50vh
+
+    &.photo
+        height: 100vh
+
+// column layout
+
+.cards-section
+    margin-top: 100px
+    width: 100%
+    padding: 8%
+    height: 80vh
+    h1
+        margin-bottom: 1rem
+        font-size: 55px
+.column-layout
+    position: relative
+    @include centerFlex($direction: row ,$justifyContent: space-between )
+    width: 100%
+    text-align: justify
+
+    .cards-info
+        width: 30%
+        h1
+            font-size: revert
+
+.wrap-text
+
+    width: 40%
+    color: $mainColorBackground
+
+    h1
+        font-size: 24px
+
+    p
+        font-size: 18px
+
+.v-img-wrap
+    width: 50%
 
 .paragraph-big
     flex: 1
@@ -111,8 +164,6 @@
 .paragraph-small
     flex: 1
     font-size: 25px
-
-.button-base
 
 .list-wrapper
     @include centerFlex($direction: column,$justifyContent: center)
