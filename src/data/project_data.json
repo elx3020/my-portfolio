@@ -1,37 +1,68 @@
-[
-  {
-    "project_name": "Web1",
-    "image_Url": "/images/projects/place-holder.png",
-    "project_description": "Some sample text to fill up spaces"
-  },
+{
+  "showcase_Data": [
+    {
+      "project_name": "Web1",
+      "image_Url": "/images/projects/place-holder.png",
+      "project_description": "Some sample text to fill up spaces"
+    },
 
-  {
-    "project_name": "Web2",
-    "image_Url": "/images/projects/place-holder.png",
-    "project_description": "Some sample text to fill up spaces"
-  },
+    {
+      "project_name": "Web2",
+      "image_Url": "/images/projects/place-holder.png",
+      "project_description": "Some sample text to fill up spaces"
+    },
 
-  {
-    "project_name": "Web3",
-    "image_Url": "/images/projects/place-holder.png",
-    "project_description": "Some sample text to fill up spaces"
-  },
+    {
+      "project_name": "Web3",
+      "image_Url": "/images/projects/place-holder.png",
+      "project_description": "Some sample text to fill up spaces"
+    },
 
-  {
-    "project_name": "Web4",
-    "image_Url": "/images/projects/place-holder.png",
-    "project_description": "Some sample text to fill up spaces"
-  },
+    {
+      "project_name": "Web4",
+      "image_Url": "/images/projects/place-holder.png",
+      "project_description": "Some sample text to fill up spaces"
+    },
 
-  {
-    "project_name": "Web5",
-    "image_Url": "/images/projects/place-holder.png",
-    "project_description": "Some sample text to fill up spaces"
-  },
+    {
+      "project_name": "Web5",
+      "image_Url": "/images/projects/place-holder.png",
+      "project_description": "Some sample text to fill up spaces"
+    },
 
-  {
-    "project_name": "Web6",
-    "image_Url": "/images/projects/place-holder.png",
-    "project_description": "Some sample text to fill up spaces"
-  }
-]
+    {
+      "project_name": "Web6",
+      "image_Url": "/images/projects/place-holder.png",
+      "project_description": "Some sample text to fill up spaces"
+    }
+  ],
+
+  "list_home": [
+    {
+      "arr_Id": "list_home",
+      "id": "project1",
+      "project_Name": "Awesome Project 1",
+      "imageUrl": "/images/projects/place-holder.png",
+      "imageAlt": "an image description",
+      "description": "Here goes a brief description of the project that I want to show"
+    },
+
+    {
+      "arr_Id": "list_home",
+      "id": "project2",
+      "project_Name": "Awesome Project 2",
+      "imageUrl": "/images/projects/place-holder.png",
+      "imageAlt": "an image description",
+      "description": "This is not the same description because this is another project, so here you can see that the info change depending of the click"
+    },
+
+    {
+      "arr_Id": "list_home",
+      "id": "project3",
+      "project_Name": "Awesome Project 3",
+      "imageUrl": "/images/projects/place-holder.png",
+      "imageAlt": "an image description",
+      "description": "Here goes a brief description of the project that I want to show3"
+    }
+  ]
+}

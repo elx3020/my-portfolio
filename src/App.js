@@ -11,6 +11,7 @@ import About from "./pages/AboutPage";
 import HomePage from "./pages/HomePage";
 import WorkPage from "./pages/WorkPage";
 import ContactPage from "./pages/ContactPage";
+import ProjectDescriptionPage from "./pages/ProjectDescriptionPage";
 // layout components
 
 import NavBar from "./components/Layout/NavBar";
@@ -23,10 +24,13 @@ function App() {
         <NavBar />
         <Routes>
           <Route path="/" element={<HomePage />} />
-
           <Route path="work" element={<WorkPage />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route
+            path="projects/:arr_handle/:project_handle"
+            element={<ProjectDescriptionPage />}
+          />
         </Routes>
         <Footer />
       </Router>

@@ -11,6 +11,8 @@ import DummyData from "../data/project_data.json";
 const AboutPage = (props) => {
   const dummyData = JSON.parse(JSON.stringify(DummyData));
 
+  const { showcase_Data } = dummyData;
+
   const heroText =
     "Creating innovative solutions to fulfill the most demanding problems";
 
@@ -68,7 +70,7 @@ const AboutPage = (props) => {
 
       <div className="dark-rounded">
         <h1>Technical Work</h1>
-        <CardContainer data={dummyData}></CardContainer>
+        <CardContainer data={showcase_Data}></CardContainer>
       </div>
 
       <GoToTop />

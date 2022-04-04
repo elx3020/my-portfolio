@@ -2,5 +2,13 @@ body {
   font-family: "Josefin Sans", sans-serif;
   background: #EDF6F0;
   color: #231C07;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  max-height: auto;
 }
 /*# sourceMappingURL=BodyStyle.css.map */
