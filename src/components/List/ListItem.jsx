@@ -19,6 +19,7 @@ export default function ListItem(props) {
       <div>
         <h2>{project_Name}</h2>
         <p>{description}</p>
+        <a>Click for more info</a>
       </div>
     </div>
   );

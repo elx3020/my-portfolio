@@ -172,11 +172,11 @@
     max-height: 100vh
 
 .list-item
-    @include centerFlex($direction: row,$justifyContent: space-around)
+    @include centerFlex($direction: row,$justifyContent: none)
 
     color: $mainColorBackground
     font-size: 18px
-    height: 180px
+    height: 280px
     width: 80%
     padding: 1%
     margin: 1% 0 1% 0
@@ -186,12 +186,13 @@
     transition: all 0.2s ease-in-out
 
     .img-list-container
-        width: 100%
         height: 100%
         max-width: 400px
+        flex: 1
         overflow: hidden
         position: relative
         margin-right: 5%
+        min-width: 400px
 
     .img-list
         position: absolute
@@ -202,6 +203,16 @@
         transform: translate(-50%,-50%)
 
     &:hover
-        height: 280px
+        background-color: $colorSecondary
         box-shadow: 0px 2px 0px 0px rgba(0,0,0,0.4)
         cursor: pointer
+
+    h2
+        font-size: 38px
+
+    a
+        background-color: $colorEnphasis
+        padding: 3%
+
+    p
+        margin-bottom: 20px

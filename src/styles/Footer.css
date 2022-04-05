@@ -24,8 +24,9 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  height: 50vh;
+  height: 80vh;
   margin-bottom: 3%;
+  padding: 4%;
 }
 
 .footer .contact-button {
