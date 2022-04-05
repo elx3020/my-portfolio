@@ -32,7 +32,7 @@ const ContactPage = (props) => {
               cols="30"
               rows="10"
             ></textarea>
-            <input className="submit-btn" type="submit" value="submit" />
+            <input className="submit-btn" type="submit" value="Send" />
           </form>
         </div>
         <div className="contact-info">

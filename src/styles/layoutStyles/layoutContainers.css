@@ -28,8 +28,6 @@
   z-index: 0;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  -webkit-animation: backgroundImage 10s ease-in-out;
-          animation: backgroundImage 10s ease-in-out;
 }
 
 .hero-wrapper .hero-content {
@@ -39,33 +37,11 @@
 }
 
 .hero-wrapper .hero-content h1 {
-  font-size: 85px;
+  font-size: 125px;
 }
 
 .hero-wrapper .hero-content p {
-  font-size: 24px;
-}
-
-@-webkit-keyframes backgroundImage {
-  0% {
-    -webkit-transform: translate(-50%, -30%);
-            transform: translate(-50%, -30%);
-  }
-  100% {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
-}
-
-@keyframes backgroundImage {
-  0% {
-    -webkit-transform: translate(-50%, -30%);
-            transform: translate(-50%, -30%);
-  }
-  100% {
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-  }
+  font-size: 34px;
 }
 
 .cards-wrapper {
@@ -82,13 +58,13 @@
   margin: 5% 0 5% 0;
   -webkit-transform: translateX(0px);
           transform: translateX(0px);
-  -webkit-transition: all 4s ease-in-out;
-  transition: all 4s ease-in-out;
+  -webkit-transition: all 1s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 .cards-wrapper:hover {
-  -webkit-transform: translateX(-1000px);
-          transform: translateX(-1000px);
+  -webkit-transform: translateX(-100px);
+          transform: translateX(-100px);
 }
 
 .cards-wrapper:hover .card-showcase {
@@ -171,7 +147,7 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 50vh;
+  height: 80vh;
 }
 
 .section-text-column.photo {
@@ -238,14 +214,14 @@
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  font-size: 50px;
+  font-size: 80px;
 }
 
 .paragraph-small {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
-  font-size: 25px;
+  font-size: 45px;
 }
 
 .list-wrapper {

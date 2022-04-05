@@ -32,22 +32,15 @@
         bottom: 0%
         z-index: 0
         transform: translate(-50%,-50%)
-        animation: backgroundImage 10s ease-in-out
 
     .hero-content
         color: $mainColorBackground
         text-align: center
         position: relative
         h1
-            font-size: 85px
+            font-size: 125px
         p
-            font-size: 24px
-
-@keyframes backgroundImage
-    0%
-        transform: translate(-50%,-30%)
-    100%
-        transform: translate(-50%,-50%)
+            font-size: 34px
 
 //card container
 
@@ -59,10 +52,10 @@
     padding: 1%
     margin: 5% 0 5% 0
     transform: translateX(0px)
-    transition: all 4s ease-in-out
+    transition: all 1s ease-in-out
 
     &:hover
-        transform: translateX(-1000px)
+        transform: translateX(-100px)
         .card-showcase
             transform: translateY(0px)
             margin: 0
@@ -117,7 +110,7 @@
 .section-text-column
     position: relative
     @include centerFlex($direction: row,$justifyContent: center)
-    height: 50vh
+    height: 80vh
 
     &.photo
         height: 100vh
@@ -159,11 +152,11 @@
 
 .paragraph-big
     flex: 1
-    font-size: 50px
+    font-size: 80px
 
 .paragraph-small
     flex: 1
-    font-size: 25px
+    font-size: 45px
 
 .list-wrapper
     @include centerFlex($direction: column,$justifyContent: center)

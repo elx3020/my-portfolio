@@ -1,39 +1,15 @@
 {
   "showcase_Data": [
     {
-      "project_name": "Web1",
-      "image_Url": "/images/projects/place-holder.png",
-      "project_description": "Some sample text to fill up spaces"
+      "project_name": "MishkiYaku",
+      "image_Url": "/images/projects/mishkiyaku.png",
+      "project_description": "Our name comes from indigenous ecuadorian Kichwa, meaning \"delicious water\" and refers to the sugary nectar that the hummingbirds sip from small calyxes with their long, thin beaks."
     },
 
     {
-      "project_name": "Web2",
+      "project_name": "Buenas Propiedades",
       "image_Url": "/images/projects/place-holder.png",
-      "project_description": "Some sample text to fill up spaces"
-    },
-
-    {
-      "project_name": "Web3",
-      "image_Url": "/images/projects/place-holder.png",
-      "project_description": "Some sample text to fill up spaces"
-    },
-
-    {
-      "project_name": "Web4",
-      "image_Url": "/images/projects/place-holder.png",
-      "project_description": "Some sample text to fill up spaces"
-    },
-
-    {
-      "project_name": "Web5",
-      "image_Url": "/images/projects/place-holder.png",
-      "project_description": "Some sample text to fill up spaces"
-    },
-
-    {
-      "project_name": "Web6",
-      "image_Url": "/images/projects/place-holder.png",
-      "project_description": "Some sample text to fill up spaces"
+      "project_description": "An innovative real state firm with the idea to bring a first class experiences to people who are searching for a house. People can sell and promote their properties throught the web site. I perform branch identity with colors and a overall design to represent the client expectentions."
     }
   ],
 

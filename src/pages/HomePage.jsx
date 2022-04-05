@@ -35,7 +35,7 @@ const HomePage = (props) => {
     <div>
       <HeroContainer
         title="Esteban Lasso"
-        description="Hello There"
+        description="Programmer, web designer, ui/x-designer."
         isImage={true}
         backgroundImageAlt="me"
         backgroundImage={mePhoto}

@@ -44,11 +44,24 @@
   outline: none;
 }
 
+.form-style textarea {
+  width: 60vw;
+  resize: none;
+  margin-bottom: 50px;
+}
+
 .form-style .submit-btn {
+  font-size: 32px;
   display: block;
-  padding: 3rem;
+  padding: 2rem 3rem 2rem 3rem;
+  border-radius: 5px;
   width: auto;
   background-color: #7F96FF;
+}
+
+.form-style .submit-btn:hover {
+  background-color: #DEFF7F;
+  color: #231C07;
 }
 
 .contact-info {
