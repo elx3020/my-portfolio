@@ -8,7 +8,7 @@
 
     {
       "project_name": "Buenas Propiedades",
-      "image_Url": "/images/projects/place-holder.png",
+      "image_Url": "/images/projects/buenas-propiedades.png",
       "project_description": "An innovative real state firm with the idea to bring a first class experiences to people who are searching for a house. People can sell and promote their properties throught the web site. I perform branch identity with colors and a overall design to represent the client expectentions."
     }
   ],
@@ -16,20 +16,20 @@
   "list_home": [
     {
       "arr_Id": "list_home",
-      "id": "project1",
-      "project_Name": "Awesome Project 1",
-      "imageUrl": "/images/projects/place-holder.png",
-      "imageAlt": "an image description",
-      "description": "Here goes a brief description of the project that I want to show. It has to be more text to have a better idea of the space I am going to need to describe each project"
+      "id": "social-app",
+      "project_Name": "Social App React",
+      "imageUrl": "/images/projects/social_app.png",
+      "imageAlt": "Screenshot of the social app",
+      "description": "Fullstack project created using React Redux (Front-End), Express, Node Js and Firebase (Backend)"
     },
 
     {
       "arr_Id": "list_home",
-      "id": "project2",
-      "project_Name": "Awesome Project 2",
-      "imageUrl": "/images/projects/place-holder.png",
-      "imageAlt": "an image description",
-      "description": "This is not the same description because this is another project, so here you can see that the info change depending of the click"
+      "id": "weather-app",
+      "project_Name": "Weather App",
+      "imageUrl": "/images/projects/weather_app.png",
+      "imageAlt": "Screenshot of the weather app",
+      "description": "A simple implementation of a weather app. Created using plain HTML, CSS, and JAVASCRIPT. An weather API is use to get the forecast"
     },
 
     {

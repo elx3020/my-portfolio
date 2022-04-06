@@ -4,7 +4,7 @@
 }
 
 .contact-page h1 {
-  font-size: 55px;
+  font-size: 75px;
   margin-bottom: 4%;
   padding: 5%;
   font-weight: 500;
@@ -12,7 +12,7 @@
 
 .content-wrapper {
   background-color: #231C07;
-  height: 150vh;
+  height: 120vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

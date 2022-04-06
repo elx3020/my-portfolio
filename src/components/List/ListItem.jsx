@@ -11,7 +11,7 @@ export default function ListItem(props) {
   };
 
   return (
-    <div className="list-item" onClick={handleClick}>
+    <div className="list-item">
       <div className="img-list-container">
         <img className="img-list" src={imageUrl} alt={imageAlt} />
       </div>
@@ -19,7 +19,7 @@ export default function ListItem(props) {
       <div>
         <h2>{project_Name}</h2>
         <p>{description}</p>
-        <a>Click for more info</a>
+        <button onClick={handleClick}>Click for more info</button>
       </div>
     </div>
   );

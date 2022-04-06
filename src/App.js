@@ -14,24 +14,26 @@ import ContactPage from "./pages/ContactPage";
 import ProjectDescriptionPage from "./pages/ProjectDescriptionPage";
 // layout components
 
-import NavBar from "./components/Layout/NavBar";
-import Footer from "./components/Layout/Footer";
+import NavBar from "./components/Layout/NavBar/NavBar";
+import Footer from "./components/Layout/Footer/Footer";
 
 function App() {
   return (
     <div>
       <Router>
         <NavBar />
-        <Routes>
-          <Route path="/" element={<HomePage />} />
-          <Route path="work" element={<WorkPage />} />
-          <Route path="about" element={<About />} />
-          <Route path="contact" element={<ContactPage />} />
-          <Route
-            path="projects/:arr_handle/:project_handle"
-            element={<ProjectDescriptionPage />}
-          />
-        </Routes>
+        <div className="page-content">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route path="work" element={<WorkPage />} />
+            <Route path="about" element={<About />} />
+            <Route path="contact" element={<ContactPage />} />
+            <Route
+              path="projects/:arr_handle/:project_handle"
+              element={<ProjectDescriptionPage />}
+            />
+          </Routes>
+        </div>
         <Footer />
       </Router>
     </div>

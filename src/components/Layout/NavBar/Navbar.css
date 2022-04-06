@@ -1,0 +1,74 @@
+.Navbar {
+  background-color: #231C07;
+  position: -webkit-sticky;
+  position: sticky;
+  width: 100vw;
+  padding: 2% 1% 2% 1%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #EDF6F0;
+  top: 0%;
+  z-index: 2;
+  -webkit-animation: navIn 0.1s ease-in-out forwards;
+          animation: navIn 0.1s ease-in-out forwards;
+}
+
+.Navbar .nav_links a {
+  color: inherit;
+  text-decoration: none;
+  padding: 0 20px 0 10px;
+}
+
+.Navbar.hide {
+  overflow: hidden;
+  -webkit-animation: navOut 0.1s ease-in-out forwards;
+          animation: navOut 0.1s ease-in-out forwards;
+}
+
+@-webkit-keyframes navOut {
+  0% {
+  }
+  100% {
+    padding: 0;
+    height: 0;
+  }
+}
+
+@keyframes navOut {
+  0% {
+  }
+  100% {
+    padding: 0;
+    height: 0;
+  }
+}
+
+@-webkit-keyframes navIn {
+  0% {
+    padding: 0;
+    height: 0;
+  }
+  100% {
+    padding: 2% 1% 2% 1%;
+    height: auto;
+  }
+}
+
+@keyframes navIn {
+  0% {
+    padding: 0;
+    height: 0;
+  }
+  100% {
+    padding: 2% 1% 2% 1%;
+    height: auto;
+  }
+}
+/*# sourceMappingURL=Navbar.css.map */

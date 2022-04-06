@@ -1,14 +1,33 @@
 body {
   font-family: "Josefin Sans", sans-serif;
-  background: #edf6f0;
-  color: #231c07;
+  background: #EDF6F0;
+  color: #231C07;
   padding: 0;
   -webkit-box-sizing: border-box;
-  box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 img {
   max-width: 100%;
-  height: auto;
+  max-height: auto;
+}
+
+button {
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: #231C07;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 300;
+  background-color: #FF7F7F;
+  padding: 15px 20px 15px 20px;
+}
+
+h1 {
+  font-weight: 600;
+}
+
+h2 {
+  font-weight: 600;
 }
 /*# sourceMappingURL=BodyStyle.css.map */
