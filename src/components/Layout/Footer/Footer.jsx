@@ -10,7 +10,7 @@ import placeholder from "../../../images/place-holder.png";
 
 export default function Footer() {
   return (
-    <div className="footer">
+    <div className="footer" data-scroll-section>
       <div className="footer-content">
         <h2>Contact me and I will work for you:</h2>
         <div className="contact-wrapper">

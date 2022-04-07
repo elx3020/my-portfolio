@@ -3,19 +3,18 @@ import { Link } from "react-router-dom";
 
 import "./Navbar.css";
 const Navbar = (props) => {
-  function AnimateNavBar(e) {
-    const navbar = document.getElementById("navbar");
-    if (window.scrollY < 1) {
-      navbar.classList.remove("hide");
-      console.log("hey");
-    } else {
-      navbar.classList.add("hide");
-    }
-  }
+  // function AnimateNavBar(e) {
+  //   const navbar = document.getElementById("navbar");
+  //   if (window.scrollY < 1) {
+  //     navbar.classList.remove("hide");
+  //   } else {
+  //     navbar.classList.add("hide");
+  //   }
+  // }
 
-  useEffect(() => {
-    window.addEventListener("scroll", AnimateNavBar);
-  });
+  // useEffect(() => {
+  //   window.addEventListener("scroll", AnimateNavBar);
+  // });
 
   const links = (
     <div className="nav_links">
@@ -25,7 +24,7 @@ const Navbar = (props) => {
   );
 
   return (
-    <div id="navbar" className="Navbar">
+    <div id="navbar" className="Navbar" data-scroll data-scroll-section>
       <div className="nav_links">
         <Link to="/">Home</Link>
       </div>

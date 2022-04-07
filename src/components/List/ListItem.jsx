@@ -1,6 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 export default function ListItem(props) {
   const { imageUrl, description, imageAlt, projectId, project_Name, arrId } =
     props;
@@ -9,6 +9,7 @@ export default function ListItem(props) {
   const handleClick = () => {
     navigate(`projects/${arrId}/${projectId}`);
   };
+  const projectLink = `/projects/${arrId}/${projectId}`;
 
   return (
     <div className="list-item">
@@ -19,7 +20,7 @@ export default function ListItem(props) {
       <div>
         <h2>{project_Name}</h2>
         <p>{description}</p>
-        <button onClick={handleClick}>Click for more info</button>
+        <Link to={projectLink}>See More</Link>
       </div>
     </div>
   );

@@ -1,7 +1,14 @@
 import React from "react";
 import { useParams } from "react-router-dom";
 import { ProjectDetails } from "../utils/utils";
-import ProjectsData from "../data/project_data.json";
+
+// components
+
+import GoToTop from "../components/functionality/GoToTop";
+
+// hooks
+import useLocoScroll from "../hooks/useLocoScroll";
+import useCurrentPage from "../hooks/useCurrentPage";
 
 // {
 //     "arr_Id": "list_home",
@@ -9,10 +16,11 @@ import ProjectsData from "../data/project_data.json";
 //     "imageUrl": "/images/projects/",
 //     "imageAlt": "an image description",
 //     "description": "Here goes a brief description of the project that I want to show"
-//   },
+//
 
 export default function ProjectDescriptionPage(props) {
-  const projectsData = JSON.parse(JSON.stringify(ProjectsData));
+  // set data to the component render
+  const { projectsData } = props;
 
   const { arr_handle, project_handle } = useParams();
 
@@ -22,13 +30,22 @@ export default function ProjectDescriptionPage(props) {
 
   const { arr_Id, id, imageUrl, imageAlt, description } = project;
 
+  // use scroll animation
+
+  useLocoScroll(true);
+
+  // set page as currentPage
+
+  useCurrentPage(props.handlePage);
+
   return (
-    <div>
+    <div className="project-description-page" data-scroll-section>
       <h1>{arr_Id}</h1>
       <h2>{id}</h2>
       <p>{imageUrl}</p>
       <p>{imageAlt}</p>
       <p>{description}</p>
+      <GoToTop />
     </div>
   );
 }

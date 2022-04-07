@@ -1,14 +1,24 @@
 // components
-import GoToTop from "../components/functionality/GoToTop";
+import GoToTop from "../../components/functionality/GoToTop.jsx";
 
-import "../styles/pages-style/ContactPageStyle.css";
+// hooks
+import useLocoScroll from "../../hooks/useLocoScroll.jsx";
+import useCurrentPage from "../../hooks/useCurrentPage.jsx";
+
+import "./style.sass";
 
 const ContactPage = (props) => {
   const contactInfoText =
     "Esteban David Lasso Lopez estebanl28@gmail.com +49 1 777 504 296 Location - Berlin I can write you in English, Espanol or Deutsch.";
 
+  // set scroll animation
+  useLocoScroll(true);
+
+  // set as current page
+  useCurrentPage(props.handlePage);
+
   return (
-    <div className="contact-page">
+    <div className="contact-page" data-scroll-section>
       <h1>Tell me about you and your project</h1>
       <div className="content-wrapper">
         <div className="form-side">

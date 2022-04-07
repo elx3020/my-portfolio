@@ -1,0 +1,10 @@
+.loading-screen {
+  width: 100vw;
+  height: 100vh;
+  background-color: black;
+}
+
+.loading-screen.hide {
+  display: none;
+}
+/*# sourceMappingURL=style.css.map */

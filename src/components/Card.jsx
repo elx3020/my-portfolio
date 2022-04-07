@@ -6,7 +6,12 @@ export default function Card(props) {
   return (
     <div className="card-showcase">
       <a href={url_project}>
-        <img src={image_Url} alt={image_Url}></img>
+        <img
+          src={image_Url}
+          alt={image_Url}
+          data-scroll
+          data-scroll-speed="0.5"
+        ></img>
         <div className="overlay"></div>
       </a>
       <div>

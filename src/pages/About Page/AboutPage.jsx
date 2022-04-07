@@ -1,13 +1,21 @@
 // components
-import GoToTop from "../components/functionality/GoToTop.jsx";
-import BaseSectionLayout from "../components/Layout/BaseSectionLayout.jsx";
-import ColumnLayout from "../components/Layout/ColumnLayout";
-import HeroGenericComponent from "../components/Layout/HeroGenericComponent.jsx";
-import TitleParagraphComponent from "../components/Layout/TitleParagraphComponent.jsx";
-import CardContainer from "../components/Layout/CardContainer";
+import GoToTop from "../../components/functionality/GoToTop.jsx";
+import BaseSectionLayout from "../../components/Layout/BaseSectionLayout.jsx";
+import ColumnLayout from "../../components/Layout/ColumnLayout";
+import HeroGenericComponent from "../../components/Layout/HeroGenericComponent.jsx";
+import TitleParagraphComponent from "../../components/Layout/TitleParagraphComponent.jsx";
+import CardContainer from "../../components/Layout/CardContainer";
+
+// hooks
+import useCurrentPage from "../../hooks/useCurrentPage.jsx";
+import useLocoScroll from "../../hooks/useLocoScroll.jsx";
+
+// elements styles
+import "./style.sass";
 
 // data
-import DummyData from "../data/project_data.json";
+import DummyData from "../../data/project_data.json";
+
 const AboutPage = (props) => {
   const dummyData = JSON.parse(JSON.stringify(DummyData));
 
@@ -34,6 +42,10 @@ const AboutPage = (props) => {
       Multidiciplinary:
         "My passion for creation is what drives me forward and makes me always go outsite to other areas to learn surprising new method to current problems.",
     },
+    {
+      Multidiciplinary:
+        "My passion for creation is what drives me forward and makes me always go outsite to other areas to learn surprising new method to current problems.",
+    },
   ];
 
   const cardsInfo = cardsData.map((item) => {
@@ -46,27 +58,39 @@ const AboutPage = (props) => {
     );
   });
 
-  return (
-    <div>
-      <HeroGenericComponent fontSize={80} text={heroText} />
-      <ColumnLayout className="section-text-column photo">
-        <div className="circle"></div>
-        <div className="v-img-wrap">
-          <img src="#" alt="photo me" />
-        </div>
-        <TitleParagraphComponent
-          title={title}
-          text={aboutText}
-          className="wrap-text"
-        />
-      </ColumnLayout>
+  // set as current page
 
-      <div className="cards-section">
-        <h1>What can I do for you?</h1>
-        <ColumnLayout className="column-layout">{cardsInfo}</ColumnLayout>
+  useCurrentPage(props.handlePage);
+
+  // aplly scroll animation
+  useLocoScroll(true);
+
+  return (
+    <div className="about-page" data-scroll-section>
+      <HeroGenericComponent fontSize={80} text={heroText} />
+
+      <div className="center-flex">
+        <ColumnLayout className="section-text-column photo">
+          <div className="circle"></div>
+          <div className="v-img-wrap">
+            <div data-scroll data-scroll-speed="-2">
+              <img src="/images/yo-playa.png" alt="me at the beatch" />
+            </div>
+          </div>
+          <TitleParagraphComponent
+            title={title}
+            text={aboutText}
+            className="wrap-text"
+          />
+        </ColumnLayout>
       </div>
 
-      <BaseSectionLayout></BaseSectionLayout>
+      <div className="cards-section">
+        <h1 data-scroll data-scroll-speed="1">
+          What can I do for you?
+        </h1>
+        <ColumnLayout className="column-layout">{cardsInfo}</ColumnLayout>
+      </div>
 
       <div className="dark-rounded">
         <h1>Technical Work</h1>
