@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
 
-import "./Navbar.css";
+import "./Navbar.sass";
 const Navbar = (props) => {
   // function AnimateNavBar(e) {
   //   const navbar = document.getElementById("navbar");

@@ -1,5 +1,5 @@
 // styles
-import "../../styles/layoutStyles/layoutContainers.css";
+import "../../styles/layoutStyles/layoutContainers.sass";
 
 const HeroContainer = (props) => {
   // props to pass

@@ -1,8 +1,8 @@
 import { Link, useLocation } from "react-router-dom";
 import { useEffect, useState } from "react";
 // style
-import "../../styles/layoutStyles/layoutContainers.css";
-import "./style.css";
+import "../../styles/layoutStyles/layoutContainers.sass";
+import "./style.sass";
 // page components
 
 import HeroContainer from "../../components/Layout/HeroContainer";

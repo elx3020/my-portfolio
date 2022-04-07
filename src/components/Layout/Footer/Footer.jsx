@@ -3,7 +3,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 // styles
-import "./Footer.css";
+import "./Footer.sass";
 
 // assets
 import placeholder from "../../../images/place-holder.png";

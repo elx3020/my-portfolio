@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
 
-import "./styles/bodyStyle/BodyStyle.css";
-import "./styles/uniqueElements/uniqueElements.css";
+import "./styles/bodyStyle/BodyStyle.sass";
+import "./styles/uniqueElements/uniqueElements.sass";
 // pages
 
 import About from "./pages/About Page/AboutPage";
