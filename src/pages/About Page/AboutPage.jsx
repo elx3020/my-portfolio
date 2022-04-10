@@ -13,34 +13,26 @@ import useLocoScroll from "../../hooks/useLocoScroll.jsx";
 // elements styles
 import "./style.sass";
 
-// data
-import DummyData from "../../data/project_data.json";
-
 const AboutPage = (props) => {
-  const dummyData = JSON.parse(JSON.stringify(DummyData));
-
-  const { showcase_Data } = dummyData;
-
   const heroText =
-    "Creating innovative solutions to fulfill the most demanding problems";
+    "I am an artist and technical thinker. I like to push every creation forward, bringing the best of the two worlds.";
 
   const title = "About me:";
 
   const aboutText =
-    "I am Ecuadorian programmer. I create impactful websites that attract the view of visitors. My lover for coding, animation and design, is merge in what I do and what I offer. I am very technical as well so if your project follow this path we can work together as well.";
+    "Hello there, I am Ecuadorian programmer. I create impactful websites that attract the view of visitors. My love for coding, animation and design, is merge in what I do and what I offer. My principles are to try new design and explore ideas. I provide SEO optimized websites";
 
   const cardsData = [
     {
       Designer:
-        "I can design or re-design a project to give that extra layer of personality. I have work in webdesign and UX design to offer an engaging and friendly user experecience ",
+        "I can design or re-design a project to give that extra layer of personality. I have work in webdesign and UX design to offer an engaging and friendly user experecience. My primarly experiences comes as a Webflow designer.",
     },
     {
       Programmer:
-        "A love and hate relationship with programing but I always come back. I can set up website pages from the ground and up using bare code but also frameworks like React.",
+        "Programing is what I do for a living. I can set up website pages from the ground and up. I have work with many frameworks like React, Angular, Ionic. For CMS content I have work with Joomala and Kirvy CMS",
     },
     {
-      Multidiciplinary:
-        "My passion for creation is what drives me forward and makes me always go outsite to other areas to learn surprising new method to current problems.",
+      Art: "My passion for creation is what drives me forward and makes me always go outsite to other areas to learn surprising new method to current problems.",
     },
     {
       Multidiciplinary:
@@ -48,9 +40,10 @@ const AboutPage = (props) => {
     },
   ];
 
-  const cardsInfo = cardsData.map((item) => {
+  const cardsInfo = cardsData.map((item, index) => {
     return (
       <TitleParagraphComponent
+        key={index}
         title={Object.keys(item)}
         text={item[Object.keys(item)]}
         className="cards-info"
@@ -60,6 +53,8 @@ const AboutPage = (props) => {
 
   // set as current page
 
+  const { loading } = props;
+
   useCurrentPage(props.handlePage);
 
   // aplly scroll animation
@@ -67,13 +62,17 @@ const AboutPage = (props) => {
 
   return (
     <div className="about-page" data-scroll-section>
-      <HeroGenericComponent fontSize={80} text={heroText} />
+      <HeroGenericComponent
+        className="generic-hero-wrapper"
+        fontSize={80}
+        text={heroText}
+      />
 
       <div className="center-flex">
         <ColumnLayout className="section-text-column photo">
           <div className="circle"></div>
           <div className="v-img-wrap">
-            <div data-scroll data-scroll-speed="-2">
+            <div data-scroll data-scroll-speed="-1">
               <img src="/images/yo-playa.png" alt="me at the beatch" />
             </div>
           </div>
@@ -90,11 +89,6 @@ const AboutPage = (props) => {
           What can I do for you?
         </h1>
         <ColumnLayout className="column-layout">{cardsInfo}</ColumnLayout>
-      </div>
-
-      <div className="dark-rounded">
-        <h1>Technical Work</h1>
-        <CardContainer data={showcase_Data}></CardContainer>
       </div>
 
       <GoToTop />

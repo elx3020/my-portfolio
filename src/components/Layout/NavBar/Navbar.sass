@@ -4,7 +4,6 @@
 .Navbar
     @include navBarElement($secondaryColorBackground,$mainColorBackground)
     position: fixed
-    animation: navIn 0.1s ease-in-out forwards
     .nav_links
         a
             color: inherit
@@ -20,12 +19,3 @@
     100%
         padding: 0
         height: 0
-
-@keyframes navIn
-    0%
-        padding: 0
-        height: 0
-
-    100%
-        padding: 2% 1% 2% 1%
-        height: auto

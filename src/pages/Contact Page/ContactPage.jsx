@@ -27,7 +27,9 @@ const ContactPage = (props) => {
             <input type="text" name="name" id="nameid" />
             <label htmlFor="email">Email:</label>
             <input type="email" name="email" id="emailId" />
-            <label htmlFor="services">What serivces are you looking for?</label>
+            <label htmlFor="services">
+              What kind of services are you looking?
+            </label>
             <input type="text" name="services" id="servicesId" />
             <label htmlFor="audience">What is your target audience?</label>
             <input type="text" name="audience" id="audienceId" />
@@ -45,7 +47,7 @@ const ContactPage = (props) => {
             <input className="submit-btn" type="submit" value="Send" />
           </form>
         </div>
-        <div className="contact-info">
+        <div className="contact-info-page">
           <h3>Detail Info:</h3>
           <p>{contactInfoText}</p>
         </div>

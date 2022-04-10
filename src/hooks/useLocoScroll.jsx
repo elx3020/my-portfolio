@@ -12,6 +12,7 @@ export default function useLocoScroll(start) {
       smooth: true,
       multiplier: 1,
       class: "is-reveal",
+      repeat: true,
     });
 
     return function clean() {

@@ -1,27 +1,16 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
-export default function ListItem(props) {
-  const { imageUrl, description, imageAlt, projectId, project_Name, arrId } =
-    props;
-  let navigate = useNavigate();
 
-  const handleClick = () => {
-    navigate(`projects/${arrId}/${projectId}`);
-  };
-  const projectLink = `/projects/${arrId}/${projectId}`;
+import "./style.sass";
+export default function ListItem(props) {
+  const { project_url, description, projectId, project_Name, arrId } = props;
 
   return (
     <div className="list-item">
-      <div className="img-list-container">
-        <img className="img-list" src={imageUrl} alt={imageAlt} />
-      </div>
-
-      <div>
-        <h2>{project_Name}</h2>
-        <p>{description}</p>
-        <Link to={projectLink}>See More</Link>
-      </div>
+      <h3>{project_Name}</h3>
+      <p>{description}</p>
+      <a href={project_url}>Try it</a>
     </div>
   );
 }

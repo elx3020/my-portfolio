@@ -24,12 +24,12 @@ const Navbar = (props) => {
   );
 
   return (
-    <div id="navbar" className="Navbar" data-scroll data-scroll-section>
+    <nav id="navbar" className="Navbar" data-scroll-section>
       <div className="nav_links">
         <Link to="/">Home</Link>
       </div>
       {links}
-    </div>
+    </nav>
   );
 };
 

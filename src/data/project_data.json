@@ -1,44 +1,61 @@
 {
   "showcase_Data": [
     {
+      "arrId": "showcase_Data",
+      "id": "mishkiyaku",
       "project_name": "MishkiYaku",
       "image_Url": "/images/projects/mishkiyaku.png",
-      "project_description": "Our name comes from indigenous ecuadorian Kichwa, meaning \"delicious water\" and refers to the sugary nectar that the hummingbirds sip from small calyxes with their long, thin beaks."
+      "project_description": "Our name comes from indigenous ecuadorian Kichwa, meaning \"delicious water\" and refers to the sugary nectar that the hummingbirds sip from small calyxes with their long, thin beaks.",
+      "url_project": "https://www.mishkiyaku.com/"
     },
 
     {
+      "arrId": "showcase_Data",
+      "id": "buenaspropiedades",
       "project_name": "Buenas Propiedades",
       "image_Url": "/images/projects/buenas-propiedades.png",
-      "project_description": "An innovative real state firm with the idea to bring a first class experiences to people who are searching for a house. People can sell and promote their properties throught the web site. I perform branch identity with colors and a overall design to represent the client expectentions."
+      "project_description": "An innovative real state firm with the idea to bring a first class experiences to people who are searching for a house. People can sell and promote their properties throught the web site. I perform branch identity with colors and a overall design to represent the client expectentions.",
+      "url_project": "https://buenaspropiedades.webflow.io/"
     }
   ],
 
-  "list_home": [
+  "mini_projects": [
     {
-      "arr_Id": "list_home",
-      "id": "social-app",
-      "project_Name": "Social App React",
-      "imageUrl": "/images/projects/social_app.png",
-      "imageAlt": "Screenshot of the social app",
-      "description": "Fullstack project created using React Redux (Front-End), Express, Node Js and Firebase (Backend)"
+      "arr_Id": "mini_projects",
+      "id": "markdownparse",
+      "project_Name": "Markdown parse",
+      "description": "Fullstack project created using React Redux (Front-End), Express, Node Js and Firebase (Backend)",
+      "project_url": "#"
     },
 
     {
-      "arr_Id": "list_home",
+      "arr_Id": "mini_projects",
       "id": "weather-app",
       "project_Name": "Weather App",
-      "imageUrl": "/images/projects/weather_app.png",
-      "imageAlt": "Screenshot of the weather app",
-      "description": "A simple implementation of a weather app. Created using plain HTML, CSS, and JAVASCRIPT. An weather API is use to get the forecast"
+      "description": "A simple implementation of a weather app. Created using plain HTML, CSS, and JAVASCRIPT. An weather API is use to get the forecast",
+      "project_url": "#"
     },
 
     {
-      "arr_Id": "list_home",
+      "arr_Id": "mini_projects",
       "id": "project3",
       "project_Name": "Custom video player",
-      "imageUrl": "/images/projects/custom_video_player.png",
-      "imageAlt": "video player",
-      "description": "Here goes a brief description of the project that I want to show3"
+      "description": "Here goes a brief description of the project that I want to show3",
+      "project_url": "#"
+    },
+    {
+      "arr_Id": "mini_projects",
+      "id": "project3",
+      "project_Name": "Custom video player",
+      "description": "Here goes a brief description of the project that I want to show3",
+      "project_url": "#"
+    },
+    {
+      "arr_Id": "mini_projects",
+      "id": "project3",
+      "project_Name": "Custom video player",
+      "description": "Here goes a brief description of the project that I want to show3",
+      "project_url": "#"
     }
   ],
 
