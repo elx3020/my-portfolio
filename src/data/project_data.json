@@ -5,7 +5,7 @@
       "id": "mishkiyaku",
       "project_name": "MishkiYaku",
       "image_Url": "/images/projects/mishkiyaku.png",
-      "project_description": "Our name comes from indigenous ecuadorian Kichwa, meaning \"delicious water\" and refers to the sugary nectar that the hummingbirds sip from small calyxes with their long, thin beaks.",
+      "project_description": "Mishki Yaku is a coffee e-shop that offers the best Ecuadorian coffee. Their name comes from indigenous language Kichwa, meaning \"delicious water\", and refers to the sugary nectar that the hummingbirds sip from small calyxes with their long, thin beaks.",
       "url_project": "https://www.mishkiyaku.com/"
     },
 
@@ -14,7 +14,7 @@
       "id": "buenaspropiedades",
       "project_name": "Buenas Propiedades",
       "image_Url": "/images/projects/buenas-propiedades.png",
-      "project_description": "An innovative real state firm with the idea to bring a first class experiences to people who are searching for a house. People can sell and promote their properties throught the web site. I perform branch identity with colors and a overall design to represent the client expectentions.",
+      "project_description": "An innovative real state firm with the idea to bring a first-class experience to people who are searching for a house. People can sell and promote their properties through the website. I perform branch identity with colors and an overall design to represent the client's expectations.",
       "url_project": "https://buenaspropiedades.webflow.io/"
     }
   ],
@@ -24,48 +24,80 @@
       "arr_Id": "mini_projects",
       "id": "markdownparse",
       "project_Name": "Markdown parse",
-      "description": "Fullstack project created using React Redux (Front-End), Express, Node Js and Firebase (Backend)",
-      "project_url": "#"
+      "description": "A markdown parse made with React. Perfect to re-style text faster. Could be use for blog where the main content is text. An easier way to format your publications",
+      "project_url": "https://codepen.io/elx3020/full/KKvpqmm"
     },
 
     {
       "arr_Id": "mini_projects",
-      "id": "weather-app",
-      "project_Name": "Weather App",
-      "description": "A simple implementation of a weather app. Created using plain HTML, CSS, and JAVASCRIPT. An weather API is use to get the forecast",
-      "project_url": "#"
+      "id": "drum machine",
+      "project_Name": "Drum Machine",
+      "description": "A drum machine component with two sets of music sounds. You can hit the pads with mouse or keyboard binding keys. Functionality can be expanded to play more sounds.",
+      "project_url": "https://codepen.io/elx3020/full/YzxGXay"
     },
 
     {
       "arr_Id": "mini_projects",
-      "id": "project3",
-      "project_Name": "Custom video player",
-      "description": "Here goes a brief description of the project that I want to show3",
-      "project_url": "#"
+      "id": "calculatorreact",
+      "project_Name": "Calculator ",
+      "description": "A simple implementation of a calculator made with React. Can perform arithmetical operations.",
+      "project_url": "https://codepen.io/elx3020/full/KKvzQxb"
     },
     {
       "arr_Id": "mini_projects",
-      "id": "project3",
-      "project_Name": "Custom video player",
-      "description": "Here goes a brief description of the project that I want to show3",
-      "project_url": "#"
+      "id": "timemanager",
+      "project_Name": "Time Mananger",
+      "description": "An alarm clock app that lets you program work and breaks time sessions. You can see this app being implemented in some time management apps.",
+      "project_url": "https://codepen.io/elx3020/full/LYjZWKv"
     },
     {
       "arr_Id": "mini_projects",
-      "id": "project3",
-      "project_Name": "Custom video player",
-      "description": "Here goes a brief description of the project that I want to show3",
-      "project_url": "#"
+      "id": "webapp",
+      "project_Name": "Web App",
+      "description": "A web-app written with plain vanilla javascript that can tell you the weather using the location API of the browser. It performs an asynchronous operation to fetch the data. It uses a free weather API.",
+      "project_url": "https://estebanlasso.com/WebAppWeather/index.html"
     }
   ],
 
-  "web_Proj": [
+  "web_Proj_Large": [
     {
       "arr_Id": "web_Proj",
       "id": "social-app",
       "project_Name": "Social App React",
-      "imageUrl": "/images/projects/social_app.png",
-      "imageAlt": "Screenshot of the social app",
+      "description": "Fullstack project created using React Redux (Front-End), Express, Node Js and Firebase (Backend)",
+      "project_url": "https://estebanlasso.com/WebAppWeather/index.html"
+    }
+  ],
+
+  "web_Proj_Mini": [
+    {
+      "arr_Id": "web_Proj",
+      "id": "social-app",
+      "project_Name": "Social App React",
+      "description": "Fullstack project created using React Redux (Front-End), Express, Node Js and Firebase (Backend)"
+    },
+
+    {
+      "arr_Id": "web_Proj",
+      "id": "weather-app",
+      "project_Name": "Weather App",
+      "imageUrl": "/images/projects/weather_app.png",
+      "imageAlt": "Screenshot of the weather app",
+      "description": "A simple implementation of a weather app. Created using plain HTML, CSS, and JAVASCRIPT. An weather API is use to get the forecast"
+    },
+
+    {
+      "arr_Id": "web_Proj",
+      "id": "project3",
+      "project_Name": "Awesome Project 3",
+      "imageUrl": "/images/projects/place-holder.png",
+      "imageAlt": "an image description",
+      "description": "Here goes a brief description of the project that I want to show3"
+    },
+    {
+      "arr_Id": "web_Proj",
+      "id": "social-app",
+      "project_Name": "Social App React",
       "description": "Fullstack project created using React Redux (Front-End), Express, Node Js and Firebase (Backend)"
     },
 

@@ -49,13 +49,16 @@ export default function Footer() {
       <div className="line"></div>
       <div className="end-footer">
         <div className="end-layout">
-          <a className="social-item" href="#">
+          <a className="social-item" href="https://github.com/elx3020">
             <span className="logo-social"></span> Github
           </a>
-          <a className="social-item" href="#">
+          <a
+            className="social-item"
+            href="https://www.linkedin.com/in/esteban-lasso-l%C3%B3pez-b580a8161/"
+          >
             <span className="logo-social"></span>LinkedIn
           </a>
-          <a className="social-item" href="#">
+          <a className="social-item" href="https://twitter.com/teb_dev">
             <span className="logo-social"></span>Twitter
           </a>
         </div>

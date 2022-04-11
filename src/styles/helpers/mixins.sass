@@ -53,3 +53,13 @@
 @mixin removeDefaultLinkStyle()
     text-decoration: none
     color: inherit
+
+@mixin anchorStyle()
+    color: $secondaryColorBackground
+    text-decoration: none
+    border: 1.5px solid $secondaryColorBackground
+    padding: 15px 25px
+    border-radius: 5px
+    transition: all 0.2s ease-in-out
+    &:hover
+        background-color: $colorSecondary

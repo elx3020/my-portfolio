@@ -20,13 +20,8 @@ export default function Card(props) {
 
   return (
     <div className="card-showcase">
-      <div className="image-container " onClick={handleClick}>
-        <img
-          src={image_Url}
-          alt={image_Url}
-          data-scroll
-          data-scroll-speed="-1"
-        ></img>
+      <div className="image-container ">
+        <img src={image_Url} alt={image_Url}></img>
         <div className="overlay"></div>
       </div>
       <div>

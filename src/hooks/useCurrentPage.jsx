@@ -6,7 +6,4 @@ export default function useCurrentPage(handleFunction) {
   useEffect(() => {
     handleFunction(currentPage.pathname);
   }, []);
-  return () => {
-    handleFunction("");
-  };
 }

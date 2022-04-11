@@ -18,7 +18,6 @@ import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 // import mePhoto from "../images/background-image.jpg";
 
 const HomePage = (props) => {
-  // state
   const [isActive, setIsActive] = useState(false);
 
   function handlePageStart() {
@@ -39,8 +38,10 @@ const HomePage = (props) => {
   // assign currentPage
   useCurrentPage(props.handlePage);
 
+  props.isLoading();
+
   // use locomotive effects
-  useLocoScroll(true);
+  useLocoScroll(!loading);
 
   // data
 
@@ -70,7 +71,7 @@ const HomePage = (props) => {
         backgroundImageAlt="me"
         // backgroundImage={mePhoto}
       />
-      <div className="home-sec-wrap" data-scroll data-scroll-offset="100px">
+      <div className="home-sec-wrap" data-scroll data-scroll-offset="100%">
         <ColumnLayout className="messages-section">
           <p data-scroll data-scroll-speed="1" className="paragraph-big">
             Creating innovative websites to attract the interest of clients.
@@ -117,7 +118,13 @@ const HomePage = (props) => {
     </div>
   );
 
-  return pageContent;
+  const renderPage = loading ? (
+    <LoadingScreen className="loading-screen" />
+  ) : (
+    pageContent
+  );
+
+  return renderPage;
 };
 
 export default HomePage;

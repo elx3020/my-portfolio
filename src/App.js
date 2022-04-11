@@ -30,30 +30,26 @@ function App(props) {
     setCurrentpage(currentPage);
   }
 
-  useEffect(() => {
-    setTimeout(() => {
-      setIsLoading(false);
-    }, 1000);
-    return () => {
-      setIsLoading(true);
-    };
-  }, [currentPage]);
+  function Loading() {
+    useEffect(() => {
+      const timeout = setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
+      return () => {
+        clearTimeout(timeout);
+        setIsLoading(true);
+      };
+    }, []);
+  }
 
   // data
   const projectsData = JSON.parse(JSON.stringify(ProjectsData));
 
   // Dom Render
 
-  // const loading = isLoading ? "loading-screen" : "loading-screen hide";
-
-  const loading = isLoading ? (
-    <LoadingScreen className="loading-screen" />
-  ) : null;
-
   return (
     <div>
       <Router>
-        {/* {loading} */}
         <div className="page-content" id="main-container">
           <NavBar />
           <Routes>
@@ -64,6 +60,7 @@ function App(props) {
                   projectsData={projectsData}
                   handlePage={handlePage}
                   loading={isLoading}
+                  isLoading={Loading}
                 />
               }
             />
@@ -74,12 +71,19 @@ function App(props) {
                   projectsData={projectsData}
                   handlePage={handlePage}
                   loading={isLoading}
+                  isLoading={Loading}
                 />
               }
             />
             <Route
               path="about"
-              element={<About handlePage={handlePage} loading={isLoading} />}
+              element={
+                <About
+                  handlePage={handlePage}
+                  loading={isLoading}
+                  isLoading={isLoading}
+                />
+              }
             />
             <Route
               path="contact"
