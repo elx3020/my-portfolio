@@ -10,6 +10,9 @@ const HeroContainer = (props) => {
     backgroundImage,
     title = "Title",
     description = "This is the paragraph to insert text for your hero image",
+    line,
+    location,
+    flag,
   } = props;
 
   // is necessary an image?
@@ -27,13 +30,17 @@ const HeroContainer = (props) => {
   return (
     <div className="hero-wrapper">
       {backgroundImageElement}
+      {line}
+      <p className="location-text">{location}</p>
       <div className="hero-content">
+        {props.children}
         <h1 id="title" data-scroll data-scroll-speed="1.5">
           {title}
         </h1>
         <p data-scroll data-scroll-speed="1.5">
           {description}
         </p>
+        <img className="flag-img" src={flag} alt="ecuadorian" />
       </div>
     </div>
   );

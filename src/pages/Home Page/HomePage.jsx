@@ -14,31 +14,37 @@ import useLocoScroll from "../../hooks/useLocoScroll";
 import useCurrentPage from "../../hooks/useCurrentPage";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 
+//
+import { cubeElement } from "../../animations/cubeElement";
+import flagImage from "../../images/flag.png";
+
+// hero image elements
+import { triangle, circle, line } from "../../utils/svgFigures";
 // assets
 // import mePhoto from "../images/background-image.jpg";
 
 const HomePage = (props) => {
-  const [isActive, setIsActive] = useState(false);
+  // const [isActive, setIsActive] = useState(false);
 
-  function handlePageStart() {
-    setIsActive((prev) => {
-      return (prev = !prev);
-    });
-  }
+  // function handlePageStart() {
+  //   setIsActive((prev) => {
+  //     return (prev = !prev);
+  //   });
+  // }
 
-  useEffect(() => {
-    setTimeout(handlePageStart, 1000);
-    return () => {
-      handlePageStart();
-    };
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(handlePageStart, 1000);
+  //   return () => {
+  //     handlePageStart();
+  //   };
+  // }, []);
 
   const { loading } = props;
 
   // assign currentPage
   useCurrentPage(props.handlePage);
 
-  props.isLoading();
+  props.isLoading(); //TODO this is not working correctly
 
   // use locomotive effects
   useLocoScroll(!loading);
@@ -49,7 +55,7 @@ const HomePage = (props) => {
 
   const { showcase_Data, mini_projects } = projectsData;
 
-  const list = mini_projects.map((item) => {
+  const mProjectList = mini_projects.map((item) => {
     return (
       <ListItem
         key={item.id}
@@ -65,13 +71,21 @@ const HomePage = (props) => {
   const pageContent = (
     <div className="Home-page" data-scroll-section>
       <HeroContainer
-        title=" _ Esteban Lasso ▲▼"
-        description="Programmer, web designer, ui/x-designer."
+        title="Esteban Lasso"
+        description="Programmer, web designer, UI/UX-designer."
         isImage={true}
         backgroundImageAlt="me"
+        line={line}
+        location="Living in Berlin - Germany"
+        flag={flagImage}
         // backgroundImage={mePhoto}
-      />
-      <div className="home-sec-wrap" data-scroll data-scroll-offset="100%">
+      >
+        {triangle}
+        {circle}
+      </HeroContainer>
+      {cubeElement}
+
+      <div className="home-sec-wrap" data-scroll data-scroll-offset="90%">
         <ColumnLayout className="messages-section">
           <p data-scroll data-scroll-speed="1" className="paragraph-big">
             Creating innovative websites to attract the interest of clients.
@@ -107,7 +121,7 @@ const HomePage = (props) => {
               <h2>HTML CSS JAVASCRIPT REACT</h2>
             </div>
             <div className="flex-column">
-              {list}
+              {mProjectList}
               <Link to="work">See more work</Link>
             </div>
           </div>
