@@ -135,7 +135,7 @@ const cubeElement = (
         <div className="wall left"></div>
         <div className="wall right"></div>
         <div className="wall top"></div>
-        <div className="wall bottom"></div>s
+        <div className="wall bottom"></div>
       </div>
     </div>
   </div>

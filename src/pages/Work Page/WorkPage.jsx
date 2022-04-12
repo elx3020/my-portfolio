@@ -13,7 +13,20 @@ import useCurrentPage from "../../hooks/useCurrentPage";
 import "./style.sass";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 
+import { useEffect, useState } from "react";
+
 const WorkPage = (props) => {
+  const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setIsActive(true);
+    }, 200);
+    return () => {
+      setIsActive(false);
+    };
+  }, []);
+
   const { projectsData, loading, isLoading } = props;
 
   const { showcase_Data, web_Proj_Large, web_Proj_Mini } = projectsData;
@@ -31,7 +44,7 @@ const WorkPage = (props) => {
   useCurrentPage(props.handlePage);
 
   isLoading();
-  useLocoScroll(!loading);
+  useLocoScroll(isActive);
 
   const lineFigure = (
     <svg
@@ -52,6 +65,7 @@ const WorkPage = (props) => {
 
   const pageContent = (
     <div className="work-page" data-scroll-section>
+      <LoadingScreen className="loading-screen" />
       <HeroGenericComponent
         className="generic-hero-wrapper"
         fontSize="150px"
@@ -109,12 +123,6 @@ const WorkPage = (props) => {
     </div>
   );
 
-  const pageRender = loading ? (
-    <LoadingScreen className="loading-screen" />
-  ) : (
-    pageContent
-  );
-
-  return pageRender;
+  return pageContent;
 };
 export default WorkPage;

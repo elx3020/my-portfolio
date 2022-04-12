@@ -24,22 +24,16 @@ import { triangle, circle, line } from "../../utils/svgFigures";
 // import mePhoto from "../images/background-image.jpg";
 
 const HomePage = (props) => {
-  // const [isActive, setIsActive] = useState(false);
+  const [isActive, setIsActive] = useState(false);
 
-  // function handlePageStart() {
-  //   setIsActive((prev) => {
-  //     return (prev = !prev);
-  //   });
-  // }
-
-  // useEffect(() => {
-  //   setTimeout(handlePageStart, 1000);
-  //   return () => {
-  //     handlePageStart();
-  //   };
-  // }, []);
-
-  const { loading } = props;
+  useEffect(() => {
+    setTimeout(() => {
+      setIsActive(true);
+    }, 200);
+    return () => {
+      setIsActive(false);
+    };
+  }, []);
 
   // assign currentPage
   useCurrentPage(props.handlePage);
@@ -47,7 +41,7 @@ const HomePage = (props) => {
   props.isLoading(); //TODO this is not working correctly
 
   // use locomotive effects
-  useLocoScroll(!loading);
+  useLocoScroll(isActive);
 
   // data
 
@@ -70,6 +64,7 @@ const HomePage = (props) => {
 
   const pageContent = (
     <div className="Home-page" data-scroll-section>
+      <LoadingScreen className="loading-screen" />
       <HeroContainer
         title="Esteban Lasso"
         description="Programmer, web designer, UI/UX-designer."
@@ -132,13 +127,7 @@ const HomePage = (props) => {
     </div>
   );
 
-  const renderPage = loading ? (
-    <LoadingScreen className="loading-screen" />
-  ) : (
-    pageContent
-  );
-
-  return renderPage;
+  return pageContent;
 };
 
 export default HomePage;

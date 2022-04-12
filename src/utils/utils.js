@@ -9,11 +9,11 @@ function mapToList(array) {
   const htmlElemt = array.map((item) => {
     return (
       <ListItem
-        imageUrl={item.imageUrl}
-        imageAlt={item.imageAlt}
+        key={item.id}
         description={item.description}
         projectId={item.id}
         arrId={item.arr_Id}
+        project_url={item.project_url}
         project_Name={item.project_Name}
       />
     );
