@@ -73,7 +73,10 @@ const AboutPage = (props) => {
           <div className="circle"></div>
           <div className="v-img-wrap">
             <div data-scroll data-scroll-speed="-1">
-              <img src="/images/yo-playa.png" alt="me at the beatch" />
+              <img
+                src="my-portfolio /images/yo-playa.png"
+                alt="me at the beatch"
+              />
             </div>
           </div>
           <TitleParagraphComponent

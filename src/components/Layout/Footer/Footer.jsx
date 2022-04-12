@@ -33,7 +33,7 @@ export default function Footer() {
         {/* <div className="figure-wrapper">{lineFigure}</div> */}
         <div className="contact-wrapper">
           <div className="img-wrapper">
-            <img src="/images/yo-playa.png" alt="me" />
+            <img src="my-portfolio/images/yo-playa.png" alt="me" />
           </div>
           <Link className="contact-button" to="contact">
             Contact
@@ -49,16 +49,28 @@ export default function Footer() {
       <div className="line"></div>
       <div className="end-footer">
         <div className="end-layout">
-          <a className="social-item" href="https://github.com/elx3020">
+          <a
+            className="social-item"
+            href="https://github.com/elx3020"
+            target="_blank"
+            rel="noreferrer"
+          >
             <span className="logo-social"></span> Github
           </a>
           <a
             className="social-item"
             href="https://www.linkedin.com/in/esteban-lasso-l%C3%B3pez-b580a8161/"
+            target="_blank"
+            rel="noreferrer"
           >
             <span className="logo-social"></span>LinkedIn
           </a>
-          <a className="social-item" href="https://twitter.com/teb_dev">
+          <a
+            className="social-item"
+            href="https://twitter.com/teb_dev"
+            target="_blank"
+            rel="noreferrer"
+          >
             <span className="logo-social"></span>Twitter
           </a>
         </div>

@@ -4,7 +4,7 @@
       "arrId": "showcase_Data",
       "id": "mishkiyaku",
       "project_name": "MishkiYaku",
-      "image_Url": "/images/projects/mishkiyaku.png",
+      "image_Url": "my-portfolio/images/projects/mishkiyaku.png",
       "project_description": "Mishki Yaku is a coffee e-shop that offers the best Ecuadorian coffee. Their name comes from indigenous language Kichwa, meaning \"delicious water\", and refers to the sugary nectar that the hummingbirds sip from small calyxes with their long, thin beaks.",
       "url_project": "https://www.mishkiyaku.com/"
     },
@@ -13,7 +13,7 @@
       "arrId": "showcase_Data",
       "id": "buenaspropiedades",
       "project_name": "Buenas Propiedades",
-      "image_Url": "/images/projects/buenas-propiedades.png",
+      "image_Url": "my-portfolio/images/projects/buenas-propiedades.png",
       "project_description": "An innovative real state firm with the idea to bring a first-class experience to people who are searching for a house. People can sell and promote their properties through the website. I perform branch identity with colors and an overall design to represent the client's expectations.",
       "url_project": "https://buenaspropiedades.webflow.io/"
     }
@@ -90,7 +90,7 @@
       "arr_Id": "web_Proj",
       "id": "project3",
       "project_Name": "Awesome Project 3",
-      "imageUrl": "/images/projects/place-holder.png",
+      "imageUrl": "my-portfolio/images/projects/place-holder.png",
       "imageAlt": "an image description",
       "description": "Here goes a brief description of the project that I want to show3"
     },
