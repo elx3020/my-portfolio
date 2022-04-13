@@ -10,9 +10,6 @@
 // font
 // $fontFamily: 'Josefin Sans', sans-serif
 
-.relative-container
-    position: relative
-
 // hero container styles
 
 .hero-wrapper
@@ -40,12 +37,12 @@
         bottom: 17%
         h1
             // position: absolute
-            font-size: 200px
+            font-size: clamp(1vw, 200px, 15vw)
             font-weight: 800
             line-height: 85%
 
         p
-            font-size: 34px
+            font-size: clamp(1vw, 34px,5vw)
             font-weight: 100
 
     .location-text
@@ -61,11 +58,24 @@
     img
         max-width: none
 
+    .triangle
+        position: absolute
+        left: 24%
+    .circle-line
+        position: absolute
+        right: 25.5%
+
+    .line
+        position: absolute
+        left: 5%
+        bottom: 0%
+    &.two
+        left: 8%
+
 //card container
 
 .cards-wrapper
-    display: flex
-    flex-direction: row
+    @include centerFlex($direction: row,$justifyContent: center )
     width: 65vw
     height: 100vh
     padding: 1%
@@ -82,8 +92,8 @@
     .card-showcase
 
         position: relative
-        width: 26vw
-        height: 85%
+        width: clamp(26vw, 450px, 95vw)
+        height: clamp(85%, 80vh, 90vh)
         overflow: hidden
         border-radius: 10px
         border: 1.5px solid $secondaryColorBackground
@@ -149,8 +159,7 @@
 .section-wrapper
 
     h1
-        font-size: 80px
-
+        font-size: clamp(3vw,80px,14vw)
         margin-bottom: 5%
 
 // container wrapper
@@ -162,12 +171,14 @@
     padding: 6%
     padding-bottom: 0
 
+    @media screen and (max-width: 450px)
+        padding: 1%
     .flex-column
         display: flex
         flex-direction: column
         justify-content: center
         align-items: center
-        margin-left: 5%
+        column-gap: 5%
 
         > a
             text-decoration: none
@@ -212,15 +223,18 @@
 
 .paragraph-big
 
-    font-size: 80px
+    font-size: clamp(2vw,80px,10vw)
     margin-right: 3%
 
     line-height: 110%
     transform: translateY(100px)
     transition: color 0.5s ease-in-out
 
+    @media screen and (max-width: 450px)
+        text-align: center
+
 .paragraph-small
 
-    font-size: 40px
+    font-size: clamp(2vw,40px,10vw)
     margin-left: 3%
     font-weight: 100

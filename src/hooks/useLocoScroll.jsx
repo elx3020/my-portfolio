@@ -13,11 +13,23 @@ export default function useLocoScroll(start) {
       multiplier: 1,
       class: "is-reveal",
       repeat: true,
+      mobile: {
+        breakpoint: 0,
+        smooth: true,
+        getDirection: true,
+        touchMultiplier: 2,
+      },
+      tablet: {
+        breakpoint: 0,
+        smooth: false,
+        getDirection: true,
+        touchMultiplier: 2,
+      },
     });
 
     return function clean() {
       // cleaning scroll
-      locoScroll.destroy();
+      // locoScroll.destroy();
     };
   }, [start]);
 }

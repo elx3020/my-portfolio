@@ -4,6 +4,7 @@
 .Navbar
     @include navBarElement($secondaryColorBackground,$mainColorBackground)
     position: fixed
+
     .nav_links
         a
             color: inherit
@@ -12,10 +13,3 @@
 
     &.hide
         overflow: hidden
-        animation: navOut 0.1s ease-in-out forwards
-@keyframes navOut
-    0%
-
-    100%
-        padding: 0
-        height: 0

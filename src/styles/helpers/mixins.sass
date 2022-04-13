@@ -9,19 +9,23 @@
     justify-content: space-between
     color: $colortext
     top: 0%
-    z-index: 2
+    z-index: 1
+    overflow: hidden
 
 @mixin centerFlex($direction,$justifyContent)
     display: flex
     flex-direction: $direction
     align-items: center
     justify-content: $justifyContent
+    @media screen and (max-width: 450px)
+        flex-direction: column
 
 @mixin fillScreenDiv($BackgroundColor, $colorText,$width, $height)
     width: $width
     height: $height
     background-color: $BackgroundColor
     color: $colorText
+    overflow: hidden
 
 @mixin basicButton($BackgroundColor)
     background: $BackgroundColor
