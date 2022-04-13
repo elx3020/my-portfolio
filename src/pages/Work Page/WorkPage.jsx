@@ -27,7 +27,7 @@ const WorkPage = (props) => {
     };
   }, []);
 
-  const { projectsData, loading, isLoading } = props;
+  const { projectsData } = props;
 
   const { showcase_Data, web_Proj_Large, web_Proj_Mini } = projectsData;
 
@@ -43,8 +43,7 @@ const WorkPage = (props) => {
 
   useCurrentPage(props.handlePage);
 
-  isLoading();
-  useLocoScroll(isActive);
+  // useLocoScroll(isActive);
 
   const lineFigure = (
     <svg
@@ -68,7 +67,7 @@ const WorkPage = (props) => {
       <LoadingScreen className="loading-screen" />
       <HeroGenericComponent
         className="generic-hero-wrapper"
-        fontSize="150px"
+        fontSize="clamp(2vw, 150px, 17vw)"
         text="PORTFOLIO"
       >
         <div className="figure-wrapper">{lineFigure}</div>
@@ -96,9 +95,8 @@ const WorkPage = (props) => {
         </div>
 
         <h2>Live Projects</h2>
-        <div className="c-wrapper">
-          <CardContainer data={showcase_Data} />
-        </div>
+
+        <CardContainer data={showcase_Data} />
       </div>
 
       <div

@@ -27,13 +27,13 @@ export default function Footer() {
   return (
     <footer className="footer" data-scroll-section>
       <div className="footer-content">
-        <h2 data-scroll data-scroll-speed="2">
+        <h2 data-scroll data-scroll-speed="1.5">
           Let's work together
         </h2>
         {/* <div className="figure-wrapper">{lineFigure}</div> */}
         <div className="contact-wrapper">
           <div className="img-wrapper">
-            <img src="my-portfolio/images/yo-playa.png" alt="me" />
+            <img src="images/yo-playa.png" alt="me" />
           </div>
           <Link className="contact-button" to="contact">
             Contact

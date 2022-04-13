@@ -1,6 +1,6 @@
 // styles
+import { cubeElement } from "../../animations/cubeElement";
 import "../../styles/layoutStyles/layoutContainers.sass";
-
 const HeroContainer = (props) => {
   // props to pass
 
@@ -31,6 +31,7 @@ const HeroContainer = (props) => {
     <div className="hero-wrapper">
       {backgroundImageElement}
       {line}
+      {cubeElement}
       <p className="location-text">{location}</p>
       <div className="hero-content">
         {props.children}

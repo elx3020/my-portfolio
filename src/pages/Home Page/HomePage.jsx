@@ -15,7 +15,7 @@ import useCurrentPage from "../../hooks/useCurrentPage";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 
 //
-import { cubeElement } from "../../animations/cubeElement";
+
 import flagImage from "../../images/flag.png";
 
 // hero image elements
@@ -38,10 +38,10 @@ const HomePage = (props) => {
   // assign currentPage
   useCurrentPage(props.handlePage);
 
-  props.isLoading(); //TODO this is not working correctly
+  // props.isLoading(); //TODO this is not working correctly
 
   // use locomotive effects
-  useLocoScroll(isActive);
+  // useLocoScroll(isActive);
 
   // data
 
@@ -78,7 +78,6 @@ const HomePage = (props) => {
         {triangle}
         {circle}
       </HeroContainer>
-      {cubeElement}
 
       <div className="home-sec-wrap" data-scroll data-scroll-offset="90%">
         <ColumnLayout className="messages-section">
@@ -99,7 +98,7 @@ const HomePage = (props) => {
           </h1>
           <div className="two-column">
             <CardContainer data={showcase_Data} />
-            <h2 data-scroll data-scroll-speed="2">
+            <h2 data-scroll data-scroll-speed="1">
               Take a look at some of my last projects
             </h2>
           </div>
@@ -108,11 +107,11 @@ const HomePage = (props) => {
 
       <div className="section-wrapper">
         <div className="container-wrapper">
-          <h1 data-scroll data-scroll-speed="2">
+          <h1 data-scroll data-scroll-speed="1">
             Mini Projects
           </h1>
           <div className="mini-project-content">
-            <div data-scroll data-scroll-velocity="1.5">
+            <div data-scroll data-scroll-speed="1">
               <h2>HTML CSS JAVASCRIPT REACT</h2>
             </div>
             <div className="flex-column">

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { createRef, useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 // import "./App.css";
 
@@ -18,11 +18,14 @@ import Footer from "./components/Layout/Footer/Footer";
 import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
 // data
 import ProjectsData from "./data/project_data.json";
+import useLocoScroll from "./hooks/useLocoScroll";
 
 function App(props) {
   // functionality
 
-  const [currentPage, setCurrentpage] = useState("/");
+  const scrollRef = createRef();
+
+  const [currentPage, setCurrentpage] = useState("");
 
   const [isLoading, setIsLoading] = useState(true);
 
@@ -42,6 +45,8 @@ function App(props) {
     }, []);
   }
 
+  useLocoScroll(currentPage, scrollRef);
+
   // data
   const projectsData = JSON.parse(JSON.stringify(ProjectsData));
 
@@ -50,46 +55,25 @@ function App(props) {
   return (
     <div>
       <Router>
-        <div className="page-content" id="main-container">
+        <div className="page-content" id="main-container" ref={scrollRef}>
           <NavBar />
           <Routes>
             <Route
               path="/"
               element={
-                <HomePage
-                  projectsData={projectsData}
-                  handlePage={handlePage}
-                  loading={isLoading}
-                  isLoading={Loading}
-                />
+                <HomePage projectsData={projectsData} handlePage={handlePage} />
               }
             />
             <Route
               path="work"
               element={
-                <WorkPage
-                  projectsData={projectsData}
-                  handlePage={handlePage}
-                  loading={isLoading}
-                  isLoading={Loading}
-                />
+                <WorkPage projectsData={projectsData} handlePage={handlePage} />
               }
             />
-            <Route
-              path="about"
-              element={
-                <About
-                  handlePage={handlePage}
-                  loading={isLoading}
-                  isLoading={isLoading}
-                />
-              }
-            />
+            <Route path="about" element={<About handlePage={handlePage} />} />
             <Route
               path="contact"
-              element={
-                <ContactPage handlePage={handlePage} loading={isLoading} />
-              }
+              element={<ContactPage handlePage={handlePage} />}
             />
             <Route
               path="projects/:arr_handle/:project_handle"

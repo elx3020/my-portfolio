@@ -18,10 +18,11 @@
         margin-bottom: 50px
 
     &.black
+        @include centerFlex($direction: row,$justifyContent: none )
+
         position: relative
         padding: 10%
-        display: flex
-        flex-direction: row
+
         column-gap: 2%
         margin-bottom: -5px
 
@@ -30,6 +31,9 @@
         transition: all 0.5s ease-in-out
         h2
             color: $mainColorBackground
+
+        .large-projects
+            align-self: flex-start
 
         .list-item
             color: $mainColorBackground
@@ -44,13 +48,19 @@
         &.is-reveal
             background-color: $secondaryColorBackground
 
+        @media screen and (max-width: 450px)
+            padding: 1%
+            height: auto
+    @media screen and (max-width: 450px)
+        width: 100vw
+
 .windows-wrapper
     display: flex
     flex-direction: row
     justify-content: center
     align-items: center
     width: 50vw
-    margin: 150px auto
+    margin: 10% auto
     opacity: 1
 
     img
@@ -59,17 +69,13 @@
 .header-workpage
     h1
         position: relative
-        font-size: 140px
+        font-size: clamp(2vw,140px,12vw)
 
     .projects-wrapper
         display: flex
         flex-direction: column
         align-items: center
         justify-content: center
-.c-wrapper
-
-    width: 80vw
-    margin: auto
 
 .path
     stroke-dasharray: 100

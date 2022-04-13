@@ -2,34 +2,33 @@ import { useEffect } from "react";
 import locomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/src/locomotive-scroll.scss";
 
-export default function useLocoScroll(start) {
+export default function useLocoScroll(start, domRef) {
   useEffect(() => {
     if (!start) return;
 
-    const scrollEl = document.querySelector("#main-container");
+    // const scrollEl = document.querySelector("#main-container");
     const locoScroll = new locomotiveScroll({
-      el: scrollEl,
+      el: domRef.current,
       smooth: true,
       multiplier: 1,
       class: "is-reveal",
       repeat: true,
       mobile: {
         breakpoint: 0,
-        smooth: true,
+        smooth: false,
         getDirection: true,
-        touchMultiplier: 2,
+        multiplier: 1,
       },
       tablet: {
         breakpoint: 0,
-        smooth: false,
+        smooth: true,
         getDirection: true,
-        touchMultiplier: 2,
       },
     });
 
     return function clean() {
       // cleaning scroll
-      // locoScroll.destroy();
+      locoScroll.destroy();
     };
   }, [start]);
 }

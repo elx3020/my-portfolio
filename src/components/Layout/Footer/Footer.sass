@@ -2,22 +2,22 @@
 @import "../../../styles/helpers/mixins"
 
 .footer
-    @include fillScreenDiv($BackgroundColor: $secondaryColorBackground, $colorText:$mainColorBackground,$width: 100vw, $height: auto )
+    @include fillScreenDiv($BackgroundColor: $secondaryColorBackground, $colorText:$mainColorBackground,$width: 100%, $height: auto )
 
     height: 90vh
-    overflow: hidden
+    overflow-x: hidden
 
     padding-top: 5%
 
     h2
-        font-size: 70px
+        font-size: clamp(2vw,70px,10vw)
 
     .footer-content
         display: flex
         flex-direction: column
         align-items: center
         justify-content: space-between
-        height: 70vh
+        row-gap: 60px
         padding: 4%
 
     .figure-wrapper
@@ -28,15 +28,15 @@
         bottom: 0%
 
     .contact-button
-        @include setAnchorAsButton($BackgroundColor: $colorEnphasis)
-
+        @include setAnchorAsButton($BackgroundColor: none)
+        border: 1.5px solid $mainColorBackground
         font-size: 28px
-        padding: 3rem
+        padding: 25px 30px
         border-radius: 10px
         position: relative
         left: 0%
-        transform: translateY(-5px)
-        box-shadow: 0px 5px 0px 0px rgba(255,255,255,0.5)
+        transform: translateY(-3px)
+        box-shadow: 0px 3px 0px 0px $mainColorBackground
         transition: all 0.1s ease-in-out
         &:hover
             background-color: $colorSecondary
@@ -44,11 +44,10 @@
             box-shadow: 0px 0px 0px 0px rgba(255,255,255,0.5)
 
     .contact-wrapper
-        display: flex
-        flex-direction: row
-        justify-content: space-between
-        align-items: center
+        @include centerFlex($direction: row,$justifyContent: center )
+
         width: 50%
+        column-gap: 40%
 
         .img-wrapper
             overflow: hidden
@@ -75,7 +74,7 @@
 
     .contact-info
         border: 1px solid $mainColorBackground
-        padding: 2.5rem 1rem 2.5rem 1rem
+        padding: 1.5rem 0.5rem
         border-radius: 10px
         margin-top: 1rem
 

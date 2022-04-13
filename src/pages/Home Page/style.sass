@@ -10,17 +10,16 @@
     @include centerFlex($direction: row ,$justifyContent: center )
 
     h2
-        font-size: clamp(5vw, 75px,13vw)
-        box-shadow: -3px 0px 0px 0px rgba(0,0,0,0.6)
+        margin: 10% 0
+        font-size: clamp(5vw, 75px,5vw)
         padding-left: 15px
 .mini-project-content
     @include centerFlex($direction: row,$justifyContent: none )
 
     h2
         width: 30vw
-        font-size: 65px
+        font-size: clamp(5vw, 75px,5vw)
         word-break: break-word
-        box-shadow: 4px 0px 0px 0px $secondaryColorBackground
 
         @media screen and (max-width: 450px)
             width: auto

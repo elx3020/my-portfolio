@@ -17,7 +17,7 @@
     position: relative
     justify-content: center
     align-items: center
-    width: 100vw
+    width: 100%
     height: 110vh
     background-color: $secondaryColorBackground
     overflow: hidden
@@ -76,18 +76,24 @@
 
 .cards-wrapper
     @include centerFlex($direction: row,$justifyContent: center )
-    width: 65vw
+    width: 65%
     height: 100vh
     padding: 1%
     transform: translateX(0px)
     transition: transform 1s ease-in-out, 1s ease-in-out
     flex: 1
+    row-gap: 20px
 
     &:hover
         transform: translateX(-50px)
-        .card-showcase
 
-            margin-right: 1rem
+    @media screen and (max-width: 450px)
+        transition: none
+        transform: translate(0%)
+        width: 100%
+        height: auto
+        &:hover
+            transform: none
 
     .card-showcase
 
@@ -97,19 +103,16 @@
         overflow: hidden
         border-radius: 10px
         border: 1.5px solid $secondaryColorBackground
-        // perspective: 1000px
         transform: rotatex(20deg) rotateY(35deg)
         transition: all 0.2s ease-in-out
         color: $secondaryColorBackground
         font-weight: 200
-        // background-color: antiquewhite
 
         h1
-            font-size: 55px
+            font-size: clamp(2vw,55px,4vw)
 
         &:hover
             transform: translateY(-50px)
-            margin-left: 1rem
             .overlay
                 opacity: 0
 
@@ -120,22 +123,13 @@
             height: 45%
             border-radius: 5px
 
-            .overlay
-                position: absolute
-                bottom: 0
-                right: 0
-                width: 100%
-                height: 100%
-                background-color: $secondaryColorBackground
-                opacity: 0
-                transition: all 0.2s ease-in-out
-
         img
             max-width: 650px
 
         > div
             margin: 15px
             a
+                display: inline-block
                 color: $secondaryColorBackground
                 text-decoration: none
                 border: 1.5px solid $secondaryColorBackground
@@ -149,14 +143,21 @@
                     background-color: $colorTerciary
 
         p
-            font-size: 18px
+            font-size: clamp(1vw,18px,1.5vw)
             text-align: justify
             font-weight: 300
-            margin-bottom: 40px
+            margin-bottom: 20px
+
+        @media screen and (max-width: 450px)
+            transition: none
+            transform: translate(0%)
+            width: 100%
+            height: auto
 
 // section wrapper
 
 .section-wrapper
+    // overflow-x: hidden
 
     h1
         font-size: clamp(3vw,80px,14vw)
@@ -167,7 +168,7 @@
 .container-wrapper
 
     margin: 0 auto 0 auto
-    max-width: 100vw
+    max-width: 100%
     padding: 6%
     padding-bottom: 0
 
@@ -204,12 +205,13 @@
     position: relative
     height: 110vh
     color: $secondaryColorBackground
-    width: 100vw
+    width: 100%
     margin: auto
     padding: 0 5%
     transition: all 0.5s ease-in-out 0.5s
     color: $mainColorBackground
     background-color: $secondaryColorBackground
+    overflow: hidden
 
     h1
         z-index: 2
@@ -223,7 +225,7 @@
 
 .paragraph-big
 
-    font-size: clamp(2vw,80px,10vw)
+    font-size: clamp(2vw,80px,8vw)
     margin-right: 3%
 
     line-height: 110%
@@ -235,6 +237,6 @@
 
 .paragraph-small
 
-    font-size: clamp(2vw,40px,10vw)
+    font-size: clamp(2vw,40px,5vw)
     margin-left: 3%
     font-weight: 100

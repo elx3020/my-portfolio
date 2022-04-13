@@ -7,25 +7,28 @@
     align-items: center
     justify-content: center
     height: 100vh
-    margin: 200px 0
+    margin: 20% 0
 
 .section-text-column
     position: relative
     @include centerFlex($direction: row,$justifyContent: center)
-    widt
-
-    &.photo
+    row-gap: 20px
 
 .v-img-wrap
     width: 30%
     margin-right: 30px
     overflow: hidden
 
+    @media screen and (max-width: 450px)
+        width: 90%
+        margin: 0
+
 .cards-section
-    margin-top: 300px
+    margin-top: 20%
     width: 100%
-    height: 90vh
+    height: 100%
     padding: 5%
+    overflow-x: hidden
     h1
         margin-bottom: 1rem
         font-size: 65px
@@ -36,12 +39,12 @@
     width: 100%
     text-align: justify
     margin-top: 50px
+    row-gap: 20px
+    column-gap: 20px
 
     .cards-info
-        width: 40%
         color: $mainColorBackground
         background-color: $secondaryColorBackground
-        margin-left: 30px
         padding: 1.5%
         min-width: 200px
         min-height: 230px
@@ -52,6 +55,9 @@
 
     width: 40%
     color: $secondaryColorBackground
+
+    @media screen and (max-width: 450px)
+        width: 90%
 
     h3
         font-size: 35px
@@ -70,7 +76,10 @@
     position: absolute
     z-index: -1
     left: 22%
-
+    @media screen and (max-width:450px)
+        width: 160vw
+        height: 160vw
+        top: -50px
 .dark-rounded
     height: 100vh
     background-color: #231C07

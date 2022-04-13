@@ -58,13 +58,13 @@ const AboutPage = (props) => {
   useCurrentPage(props.handlePage);
 
   // aplly scroll animation
-  useLocoScroll(true);
+  // useLocoScroll(true);
 
   return (
     <div className="about-page" data-scroll-section>
       <HeroGenericComponent
         className="generic-hero-wrapper"
-        fontSize={80}
+        fontSize="clamp(2vw, 80px, 13vw)"
         text={heroText}
       />
 
