@@ -17,7 +17,7 @@ export default function useLocoScroll(start, domRef) {
         breakpoint: 0,
         smooth: false,
         getDirection: true,
-        multiplier: 1,
+        multiplier: 3,
       },
       tablet: {
         breakpoint: 0,
