@@ -11,7 +11,7 @@ import "./style.sass";
 
 const ContactPage = (props) => {
   const contactInfoText =
-    "Esteban David Lasso Lopez estebanl28@gmail.com +49 1 777 504 296 Location - Berlin I can write you in English, Espanol or Deutsch.";
+    "Esteban David Lasso Lopez \n estebanl28@gmail.com \n +49 1 777 504 296 \n Location - Berlin \n I can write you in English, \n Español or Deutsch.";
 
   // set scroll animation
   // useLocoScroll(true);
