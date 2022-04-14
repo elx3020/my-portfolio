@@ -24,7 +24,7 @@ export default function Card(props) {
         <img src={image_Url} alt={image_Url}></img>
         <div className="overlay"></div>
       </div>
-      <div>
+      <div className="card-content">
         <h1>{project_name}</h1>
         <p>{project_description}</p>
         <a href={url_project}>Go to the site</a>

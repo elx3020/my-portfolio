@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 // styles
 import "./Footer.sass";
-
+import myPhoto from "../../../images/yo.jpg";
 // assets
 
 export default function Footer() {
@@ -33,7 +33,7 @@ export default function Footer() {
         {/* <div className="figure-wrapper">{lineFigure}</div> */}
         <div className="contact-wrapper">
           <div className="img-wrapper">
-            <img src="images/yo-playa.png" alt="me" />
+            <img src={myPhoto} alt="me" />
           </div>
           <Link className="contact-button" to="contact">
             Contact

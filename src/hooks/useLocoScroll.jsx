@@ -14,14 +14,12 @@ export default function useLocoScroll(start, domRef) {
       class: "is-reveal",
       repeat: true,
       mobile: {
-        breakpoint: 0,
         smooth: false,
         getDirection: true,
-        multiplier: 3,
+        repeat: false,
       },
       tablet: {
-        breakpoint: 0,
-        smooth: true,
+        smooth: false,
         getDirection: true,
       },
     });

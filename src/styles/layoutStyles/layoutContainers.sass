@@ -99,7 +99,6 @@
 
         position: relative
         width: clamp(26vw, 450px, 95vw)
-        height: clamp(85%, 80vh, 90vh)
         overflow: hidden
         border-radius: 10px
         border: 1.5px solid $secondaryColorBackground
@@ -109,7 +108,7 @@
         font-weight: 200
 
         h1
-            font-size: clamp(2vw,55px,7vw)
+            font-size: clamp(2vw,55px,8vw)
 
         &:hover
             transform: translateY(-50px)
@@ -126,8 +125,9 @@
         img
             max-width: 650px
 
-        > div
-            margin: 15px
+        .card-content
+            padding: 3%
+
             a
                 display: inline-block
                 color: $secondaryColorBackground
@@ -137,13 +137,14 @@
                 border-radius: 5px
                 transition: all 0.2s ease-in-out
                 background-color: aliceblue
+
                 &:hover
                     background-color: $colorSecondary
                 &:active
                     background-color: $colorTerciary
 
         p
-            font-size: clamp(1vw,18px,3vw)
+            font-size: clamp(1vw,18px,4vw)
             text-align: justify
             font-weight: 300
             margin-bottom: 20px
@@ -180,6 +181,7 @@
         justify-content: center
         align-items: center
         column-gap: 5%
+        row-gap: 5%
 
         > a
             text-decoration: none
@@ -225,11 +227,9 @@
 
 .paragraph-big
 
-    font-size: clamp(2vw,80px,8vw)
-    margin-right: 3%
+    font-size: clamp(2vw,80px,9vw)
 
     line-height: 110%
-    transform: translateY(100px)
     transition: color 0.5s ease-in-out
 
     @media screen and (max-width: 450px)
@@ -237,6 +237,8 @@
 
 .paragraph-small
 
-    font-size: clamp(2vw,40px,5vw)
-    margin-left: 3%
+    font-size: clamp(2vw,40px,6vw)
+
     font-weight: 100
+    @media screen and (max-width: 450px)
+        text-align: center

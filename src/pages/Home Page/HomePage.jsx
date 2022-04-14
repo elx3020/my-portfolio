@@ -68,7 +68,7 @@ const HomePage = (props) => {
       <HeroContainer
         title="Esteban Lasso"
         description="Programmer, web designer, UI/UX-designer."
-        isImage={true}
+        isImage={false}
         backgroundImageAlt="me"
         line={line}
         location="Living in Berlin - Germany"
@@ -81,12 +81,12 @@ const HomePage = (props) => {
 
       <div className="home-sec-wrap" data-scroll data-scroll-offset="90%">
         <ColumnLayout className="messages-section">
-          <p data-scroll data-scroll-speed="1" className="paragraph-big">
+          <p className="paragraph-big">
             Creating innovative websites to attract the interest of clients.
             Pushing the design into new frontiers.
-          </p>{" "}
-          <p className="paragraph-small" data-scroll data-scroll-speed="1.5">
-            Let's work together to put your project in the World Wide Web.{" "}
+          </p>
+          <p className="paragraph-small">
+            Let's work together to put your project in the World Wide Web.
           </p>
         </ColumnLayout>
       </div>
