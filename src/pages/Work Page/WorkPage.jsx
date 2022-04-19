@@ -41,7 +41,7 @@ const WorkPage = (props) => {
 
   // pass current Page
 
-  // useCurrentPage(props.handlePage);
+  useCurrentPage(props.handlePage);
 
   const lineFigure = (
     <svg
