@@ -5,5 +5,5 @@ import "./style.scss";
 export default function LoadingScreen(props) {
   const { className } = props;
 
-  return <div className={className}>LoadingScreen</div>;
+  return <div className={className}></div>;
 }

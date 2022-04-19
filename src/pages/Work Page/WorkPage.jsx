@@ -41,9 +41,7 @@ const WorkPage = (props) => {
 
   // pass current Page
 
-  useCurrentPage(props.handlePage);
-
-  // useLocoScroll(isActive);
+  // useCurrentPage(props.handlePage);
 
   const lineFigure = (
     <svg

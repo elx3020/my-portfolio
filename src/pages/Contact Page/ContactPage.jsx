@@ -1,6 +1,6 @@
 // components
 import GoToTop from "../../components/functionality/GoToTop.jsx";
-
+import LoadingScreen from "../../components/LoadingScreen/LoadingScreen.jsx";
 // hooks
 import useLocoScroll from "../../hooks/useLocoScroll.jsx";
 import useCurrentPage from "../../hooks/useCurrentPage.jsx";
@@ -27,6 +27,7 @@ const ContactPage = (props) => {
 
   return (
     <div className="contact-page" data-scroll-section>
+      <LoadingScreen className="loading-screen" />
       <h1>Tell me about your project</h1>
       <div className="content-wrapper">
         <form className="form-style" onSubmit={handleSubmit}>

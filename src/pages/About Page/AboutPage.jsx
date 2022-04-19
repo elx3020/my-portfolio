@@ -5,7 +5,7 @@ import ColumnLayout from "../../components/Layout/ColumnLayout";
 import HeroGenericComponent from "../../components/Layout/HeroGenericComponent.jsx";
 import TitleParagraphComponent from "../../components/Layout/TitleParagraphComponent.jsx";
 import CardContainer from "../../components/Layout/CardContainer";
-
+import LoadingScreen from "../../components/LoadingScreen/LoadingScreen.jsx";
 // hooks
 import useCurrentPage from "../../hooks/useCurrentPage.jsx";
 import useLocoScroll from "../../hooks/useLocoScroll.jsx";
@@ -20,23 +20,23 @@ const AboutPage = (props) => {
   const title = "About me:";
 
   const aboutText =
-    "Hello there, I am Ecuadorian programmer. I create impactful websites that attract the view of visitors. My love for coding, animation and design, is merge in what I do and what I offer. My principles are to try new design and explore ideas. I provide SEO optimized websites";
+    "Hello there, I am an Ecuadorian programmer. I create impactful websites that attract the view of visitors. My love for coding, animation, and design, is merged into what I do and offer. My principles are to try new designs and explore ideas. I provide SEO optimized websites";
 
   const cardsData = [
     {
       Designer:
-        "I can design or re-design a project to give that extra layer of personality. I have work in webdesign and UX design to offer an engaging and friendly user experecience. My primarly experiences comes as a Webflow designer.",
+        "I can design or re-design a project to give that extra layer of personality. I have worked in Webdesign and UX design to offer an engaging and friendly user experience. I am most versatile using Webflow designer, but I can also adapt to other software.",
     },
     {
       Programmer:
-        "Programing is what I do for a living. I can set up website pages from the ground and up. I have work with many frameworks like React, Angular, Ionic. For CMS content I have work with Joomala and Kirvy CMS",
+        "Programming is what I do for a living. I can set up website pages from the ground and up. Develop systems to keep track of products. Integrate your web page with third-party software. I have worked with many frameworks like React, Angular, and Ionic. To manage CMS content, I have worked with Joomla and Kirby CMS.",
     },
     {
-      Art: "My passion for creation is what drives me forward and makes me always go outsite to other areas to learn surprising new method to current problems.",
+      Art: "I like to create experiences. I know that more than ever your service needs care and authenticity. UI design is not only about providing a friendly user UI but making the experiences as enjoyable and memorable as possible. To bring my design to life I work mostly with Figma where I can share my progress.",
     },
     {
       Multidiciplinary:
-        "My passion for creation is what drives me forward and makes me always go outsite to other areas to learn surprising new method to current problems.",
+        "My passion for creation is what drives me forward and makes me always go outside to other areas to learn surprising new methods to current problems. My background is related to many topics. And I believe they have shaped my vision to create unique work. Let's work together on something new and incredible.",
     },
   ];
 
@@ -62,6 +62,7 @@ const AboutPage = (props) => {
 
   return (
     <div className="about-page" data-scroll-section>
+      <LoadingScreen className="loading-screen" />
       <HeroGenericComponent
         className="generic-hero-wrapper"
         fontSize="clamp(2vw, 80px, 13vw)"
