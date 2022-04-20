@@ -15,7 +15,7 @@ import ProjectDescriptionPage from "./pages/ProjectDescriptionPage";
 
 import NavBar from "./components/Layout/NavBar/NavBar";
 import Footer from "./components/Layout/Footer/Footer";
-import LoadingScreen from "./components/LoadingScreen/LoadingScreen";
+
 // data
 import ProjectsData from "./data/project_data.json";
 import useLocoScroll from "./hooks/useLocoScroll";
@@ -26,26 +26,15 @@ function App(props) {
   const scrollRef = createRef();
 
   const [currentPage, setCurrentpage] = useState("");
-
-  const [isLoading, setIsLoading] = useState(true);
+  const [LocoScroll, setLocoScroll] = useState(null);
 
   function handlePage(currentPage) {
     setCurrentpage(currentPage);
   }
 
-  function Loading() {
-    useEffect(() => {
-      const timeout = setTimeout(() => {
-        setIsLoading(false);
-      }, 500);
-      return () => {
-        clearTimeout(timeout);
-        setIsLoading(true);
-      };
-    }, []);
-  }
+  function handleLocoScroll() {}
 
-  useLocoScroll(currentPage, scrollRef);
+  useLocoScroll(currentPage, scrollRef, setLocoScroll);
 
   // data
   const projectsData = JSON.parse(JSON.stringify(ProjectsData));
@@ -81,7 +70,6 @@ function App(props) {
                 <ProjectDescriptionPage
                   projectsData={projectsData}
                   handlePage={handlePage}
-                  loading={isLoading}
                 />
               }
             />

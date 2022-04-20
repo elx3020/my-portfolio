@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import locomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/src/locomotive-scroll.scss";
 
-export default function useLocoScroll(start, domRef) {
+export default function useLocoScroll(start, domRef, state) {
   useEffect(() => {
     if (!start) return;
 
@@ -12,7 +12,9 @@ export default function useLocoScroll(start, domRef) {
       smooth: true,
       multiplier: 1,
       class: "is-reveal",
-      repeat: true,
+      repeat: false,
+      getDirection: true,
+      reloadOnContextChange: true,
       mobile: {
         smooth: false,
         getDirection: true,
@@ -23,9 +25,11 @@ export default function useLocoScroll(start, domRef) {
         getDirection: true,
       },
     });
+    state(locoScroll);
 
     return function clean() {
       // cleaning scroll
+      state(null);
       locoScroll.destroy();
     };
   }, [start]);
