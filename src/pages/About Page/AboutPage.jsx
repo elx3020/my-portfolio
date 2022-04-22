@@ -1,14 +1,14 @@
 // components
 import GoToTop from "../../components/functionality/GoToTop.jsx";
-import BaseSectionLayout from "../../components/Layout/BaseSectionLayout.jsx";
+
 import ColumnLayout from "../../components/Layout/ColumnLayout";
 import HeroGenericComponent from "../../components/Layout/HeroGenericComponent.jsx";
 import TitleParagraphComponent from "../../components/Layout/TitleParagraphComponent.jsx";
-import CardContainer from "../../components/Layout/CardContainer";
+
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen.jsx";
+import { Helmet } from "react-helmet";
 // hooks
 import useCurrentPage from "../../hooks/useCurrentPage.jsx";
-import useLocoScroll from "../../hooks/useLocoScroll.jsx";
 
 // elements styles
 import "./style.sass";
@@ -53,8 +53,6 @@ const AboutPage = (props) => {
 
   // set as current page
 
-  const { loading } = props;
-
   useCurrentPage(props.handlePage);
 
   // aplly scroll animation
@@ -63,6 +61,10 @@ const AboutPage = (props) => {
   return (
     <div className="about-page" data-scroll-section>
       <LoadingScreen className="loading-screen" />
+
+      <Helmet>
+        <title>Esteban Lasso | About</title>
+      </Helmet>
       <HeroGenericComponent
         className="generic-hero-wrapper"
         fontSize="clamp(2vw, 80px, 13vw)"

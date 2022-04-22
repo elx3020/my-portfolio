@@ -1,7 +1,8 @@
 import HeroGenericComponent from "../../components/Layout/HeroGenericComponent";
 import ColumnLayout from "../../components/Layout/ColumnLayout";
 import { mapToList } from "../../utils/utils";
-import useLocoScroll from "../../hooks/useLocoScroll";
+import { Helmet } from "react-helmet";
+
 import CardContainer from "../../components/Layout/CardContainer";
 import window1 from "../../images/WorkPage/left-window.png";
 import window2 from "../../images/WorkPage/window2.png";
@@ -13,20 +14,7 @@ import useCurrentPage from "../../hooks/useCurrentPage";
 import "./style.sass";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 
-import { useEffect, useState } from "react";
-
 const WorkPage = (props) => {
-  const [isActive, setIsActive] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsActive(true);
-    }, 200);
-    return () => {
-      setIsActive(false);
-    };
-  }, []);
-
   const { projectsData } = props;
 
   const { showcase_Data, web_Proj_Large, web_Proj_Mini } = projectsData;
@@ -63,6 +51,9 @@ const WorkPage = (props) => {
   const pageContent = (
     <div className="work-page" data-scroll-section>
       <LoadingScreen className="loading-screen" />
+      <Helmet>
+        <title>Esteban Lasso | Work</title>
+      </Helmet>
       <HeroGenericComponent
         className="generic-hero-wrapper"
         fontSize="clamp(2vw, 150px, 17vw)"

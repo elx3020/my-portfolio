@@ -1,10 +1,9 @@
 // components
 import GoToTop from "../../components/functionality/GoToTop.jsx";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen.jsx";
+import { Helmet } from "react-helmet";
 // hooks
-import useLocoScroll from "../../hooks/useLocoScroll.jsx";
 import useCurrentPage from "../../hooks/useCurrentPage.jsx";
-
 import { useForm, ValidationError } from "@formspree/react";
 
 import "./style.sass";
@@ -28,6 +27,9 @@ const ContactPage = (props) => {
   return (
     <div className="contact-page" data-scroll-section>
       <LoadingScreen className="loading-screen" />
+      <Helmet>
+        <title>Esteban Lasso | Contact</title>
+      </Helmet>
       <h1>Tell me about your project</h1>
       <div className="content-wrapper">
         <form className="form-style" onSubmit={handleSubmit}>

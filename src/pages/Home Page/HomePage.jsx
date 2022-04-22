@@ -1,5 +1,6 @@
-import { Link, useLocation } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
+
+import { Helmet } from "react-helmet";
 // style
 import "../../styles/layoutStyles/layoutContainers.sass";
 import "./style.sass";
@@ -10,7 +11,7 @@ import CardContainer from "../../components/Layout/CardContainer";
 import ColumnLayout from "../../components/Layout/ColumnLayout";
 import GoToTop from "../../components/functionality/GoToTop";
 import ListItem from "../../components/List/ListItem";
-import useLocoScroll from "../../hooks/useLocoScroll";
+
 import useCurrentPage from "../../hooks/useCurrentPage";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 
@@ -24,17 +25,6 @@ import { triangle, circle, line } from "../../utils/svgFigures";
 // import mePhoto from "../images/background-image.jpg";
 
 const HomePage = (props) => {
-  const [isActive, setIsActive] = useState(false);
-
-  useEffect(() => {
-    setTimeout(() => {
-      setIsActive(true);
-    }, 200);
-    return () => {
-      setIsActive(false);
-    };
-  }, []);
-
   // assign currentPage
   useCurrentPage(props.handlePage);
 
@@ -65,6 +55,9 @@ const HomePage = (props) => {
   const pageContent = (
     <div className="Home-page" data-scroll-section>
       <LoadingScreen className="loading-screen" />
+      <Helmet>
+        <title>Esteban Lasso</title>
+      </Helmet>
       <HeroContainer
         title="Esteban Lasso"
         description="Programmer, web designer, UI/UX-designer."
