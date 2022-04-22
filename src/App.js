@@ -11,6 +11,7 @@ import HomePage from "./pages/Home Page/HomePage";
 import WorkPage from "./pages/Work Page/WorkPage";
 import ContactPage from "./pages/Contact Page/ContactPage";
 import ProjectDescriptionPage from "./pages/ProjectDescriptionPage";
+import Page404 from "./pages/Page404/Page404";
 // layout components
 
 import NavBar from "./components/Layout/NavBar/NavBar";
@@ -73,6 +74,7 @@ function App(props) {
                 />
               }
             />
+            <Route path="*" element={<Page404 />} />
           </Routes>
           <Footer />
         </div>
