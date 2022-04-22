@@ -27,15 +27,12 @@ function App(props) {
   const scrollRef = createRef();
 
   const [currentPage, setCurrentpage] = useState("");
-  const [LocoScroll, setLocoScroll] = useState(null);
 
   function handlePage(currentPage) {
     setCurrentpage(currentPage);
   }
 
-  function handleLocoScroll() {}
-
-  useLocoScroll(currentPage, scrollRef, setLocoScroll);
+  useLocoScroll(currentPage, scrollRef);
 
   // data
   const projectsData = JSON.parse(JSON.stringify(ProjectsData));

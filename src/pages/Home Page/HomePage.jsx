@@ -106,12 +106,13 @@ const HomePage = (props) => {
             Mini Projects
           </h1>
           <div className="mini-project-content">
-            <div data-scroll data-scroll-speed="1">
-              <h2>
-                HTML CSS JAVASCRIPT REACT
-                <span className="span-arrow">{triangle}</span>
-              </h2>
-            </div>
+            <h2 data-scroll data-scroll-speed="1">
+              HTML <br /> CSS
+              <br /> JAVASCRIPT
+              <br /> REACT
+              <span className="span-arrow">{triangle}</span>
+            </h2>
+
             <div className="flex-column">
               {mProjectList}
               <Link to="work">See more work</Link>

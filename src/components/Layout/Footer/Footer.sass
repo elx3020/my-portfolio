@@ -6,11 +6,19 @@
 
     height: 90vh
     overflow-x: hidden
+    position: relative
 
     padding-top: 5%
 
     h2
         font-size: clamp(2vw,70px,10vw)
+
+    .spam-triangle
+        display: flex
+        align-items: center
+        justify-content: center
+        .triangle-down
+            width: clamp(3vw, 75px,11vw)
 
     .footer-content
         display: flex
@@ -48,12 +56,11 @@
 
         column-gap: 4vw
         row-gap: 4vh
-        margin: 10vh 0
+        margin: 5vh 0
 
         .content-in-info
-            display: flex
-            flex-direction: row
-            justify-content: space-around
+            @include centerFlex($direction: row ,$justifyContent: space-around )
+            row-gap: 3vh
             column-gap: 25vw
             width: 100%
 
@@ -83,11 +90,6 @@
         @include centerFlex($direction: row ,$justifyContent: space-around  )
         padding: 2%
 
-    .line
-        position: absolute
-        left: 3%
-        bottom: 0%
-
     .line-footer
         margin: auto
         width: 85%
@@ -95,6 +97,7 @@
         background-color: $mainColorBackground
     .end-footer
         padding: 20px 10%
+        margin-bottom: 10px
         display: flex
         flex-direction: row
 

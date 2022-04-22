@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import { line, triangleDown } from "../../../utils/svgFigures";
+import { triangleDown } from "../../../utils/svgFigures";
 // styles
 import "./Footer.sass";
 import myPhoto from "../../../images/yo.jpg";
@@ -26,10 +26,10 @@ export default function Footer() {
 
   return (
     <footer className="footer" data-scroll-section>
-      {line}
       <div className="footer-content">
         <h2 data-scroll data-scroll-speed="1.5">
-          Let's work together <span>{triangleDown} </span>
+          Let's work together
+          <span className="spam-triangle">{triangleDown} </span>
         </h2>
         {/* <div className="figure-wrapper">{lineFigure}</div> */}
 

@@ -2,11 +2,10 @@ import { useEffect } from "react";
 import locomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/src/locomotive-scroll.scss";
 
-export default function useLocoScroll(start, domRef, state) {
+export default function useLocoScroll(start, domRef) {
   useEffect(() => {
-    if (!start) return;
-
     // const scrollEl = document.querySelector("#main-container");
+
     const locoScroll = new locomotiveScroll({
       el: domRef.current,
       smooth: true,
@@ -25,11 +24,10 @@ export default function useLocoScroll(start, domRef, state) {
         getDirection: true,
       },
     });
-    state(locoScroll);
 
     return function clean() {
       // cleaning scroll
-      state(null);
+
       locoScroll.destroy();
     };
   }, [start]);
