@@ -20,6 +20,28 @@ const triangle = (
   </svg>
 );
 
+const triangleDown = (
+  <svg
+    className="triangle-down"
+    width="114"
+    height="58"
+    viewBox="0 0 114 58"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <g>
+      <mask id="path-1-inside-1_271_234" fill="white">
+        <path d="M113.137 0.568543L56.5685 57.1371L-1.99661e-06 0.568544L113.137 0.568543Z" />
+      </mask>
+      <path
+        d="M113.137 0.568543L114.198 1.6292L116.758 -0.931457L113.137 -0.931457L113.137 0.568543ZM56.5685 57.1371L55.5079 58.1977L56.5685 59.2584L57.6292 58.1977L56.5685 57.1371ZM-1.99661e-06 0.568544L-2.01219e-06 -0.931455L-3.62132 -0.931455L-1.06066 1.6292L-1.99661e-06 0.568544ZM112.076 -0.492117L55.5079 56.0764L57.6292 58.1977L114.198 1.6292L112.076 -0.492117ZM57.6292 56.0764L1.06066 -0.492116L-1.06066 1.6292L55.5079 58.1977L57.6292 56.0764ZM-1.98102e-06 2.06854L113.137 2.06854L113.137 -0.931457L-2.01219e-06 -0.931455L-1.98102e-06 2.06854Z"
+        fill="white"
+        mask="url(#path-1-inside-1_271_234)"
+      />
+    </g>
+  </svg>
+);
+
 const circle = (
   <svg
     className="circle-line"
@@ -61,4 +83,4 @@ const line = (
   </svg>
 );
 
-export { triangle, circle, line };
+export { triangle, circle, line, triangleDown };

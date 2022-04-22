@@ -28,7 +28,7 @@
 
         width: 100vw
         height: 150vh
-        transition: all 0.5s ease-in-out
+        transition: background-color 0.5s ease-in-out
         h2
             color: $mainColorBackground
 
@@ -44,6 +44,10 @@
                 color: inherit
                 border: 1.5px solid $mainColorBackground
                 background: none
+
+                &:hover
+                    color: $secondaryColorBackground
+                    background-color: $colorSecondary
 
         &.is-reveal
             background-color: $secondaryColorBackground
@@ -62,14 +66,27 @@
     width: 50vw
     margin: 10% auto
     opacity: 1
+    position: relative
 
     img
         padding: 2%
         height: auto
+
+    .circle-background
+
+        position: absolute
+        width: 35vw
+        height: 35vw
+        border-radius: 50%
+        background-color: #849AD8
+        z-index: -1
 .header-workpage
+
+    @include centerFlex($direction:  row,$justifyContent: center )
+
     h1
         position: relative
-        font-size: clamp(2vw,140px,12vw)
+        font-size: clamp(2vw,65px,11vw)
 
     .projects-wrapper
         display: flex
@@ -78,8 +95,8 @@
         justify-content: center
 
 .path
-    stroke-dasharray: 100
-    animation: dashOffset 10s linear infinite forwards
+    stroke-dasharray: 35
+    animation: dashOffset 20s linear infinite forwards
 
     @keyframes dashOffset
         to

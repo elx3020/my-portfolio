@@ -4,10 +4,10 @@ import { mapToList } from "../../utils/utils";
 import { Helmet } from "react-helmet";
 
 import CardContainer from "../../components/Layout/CardContainer";
-import window1 from "../../images/WorkPage/left-window.png";
-import window2 from "../../images/WorkPage/window2.png";
-import window3 from "../../images/WorkPage/windows3.png";
-import window4 from "../../images/WorkPage/window4.png";
+import window1 from "../../images/WorkPage/web-art-0.png";
+import window2 from "../../images/WorkPage/web-art-1.png";
+import window3 from "../../images/WorkPage/web-art-2.png";
+import window4 from "../../images/WorkPage/web-art-3.png";
 
 import useCurrentPage from "../../hooks/useCurrentPage";
 
@@ -15,7 +15,7 @@ import "./style.sass";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 
 const WorkPage = (props) => {
-  const { projectsData } = props;
+  const { projectsData, handlePage } = props;
 
   const { showcase_Data, web_Proj_Large, web_Proj_Mini } = projectsData;
 
@@ -29,12 +29,12 @@ const WorkPage = (props) => {
 
   // pass current Page
 
-  useCurrentPage(props.handlePage);
+  useCurrentPage(handlePage);
 
   const lineFigure = (
     <svg
-      width="1920"
-      height="753"
+      width="100%"
+      height="100%"
       viewBox="0 0 1920 753"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
@@ -68,6 +68,7 @@ const WorkPage = (props) => {
             WEB DEVELOPMENT
           </h1>
           <div className="windows-wrapper">
+            <div className="circle-background"></div>
             <div data-scroll data-scroll-speed="1.3">
               <img src={window1} alt="window" />
             </div>

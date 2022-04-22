@@ -80,6 +80,7 @@ const HomePage = (props) => {
           </p>
           <p className="paragraph-small">
             Let's work together to put your project in the World Wide Web.
+            <span className="span-arrow">{triangle}</span>
           </p>
         </ColumnLayout>
       </div>
@@ -93,6 +94,7 @@ const HomePage = (props) => {
             <CardContainer data={showcase_Data} />
             <h2 data-scroll data-scroll-speed="1">
               Take a look at some of my last projects
+              <span className="span-arrow">{triangle}</span>
             </h2>
           </div>
         </div>
@@ -105,7 +107,10 @@ const HomePage = (props) => {
           </h1>
           <div className="mini-project-content">
             <div data-scroll data-scroll-speed="1">
-              <h2>HTML CSS JAVASCRIPT REACT</h2>
+              <h2>
+                HTML CSS JAVASCRIPT REACT
+                <span className="span-arrow">{triangle}</span>
+              </h2>
             </div>
             <div className="flex-column">
               {mProjectList}

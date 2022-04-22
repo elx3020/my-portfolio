@@ -12,6 +12,7 @@ import useCurrentPage from "../../hooks/useCurrentPage.jsx";
 
 // elements styles
 import "./style.sass";
+import { triangleDown } from "../../utils/svgFigures.jsx";
 
 const AboutPage = (props) => {
   const heroText =
@@ -69,6 +70,7 @@ const AboutPage = (props) => {
         className="generic-hero-wrapper"
         fontSize="clamp(2vw, 80px, 13vw)"
         text={heroText}
+        figure={triangleDown}
       />
 
       <div className="center-flex">

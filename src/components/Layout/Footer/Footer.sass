@@ -43,18 +43,24 @@
             transform: translateY(0px)
             box-shadow: 0px 0px 0px 0px rgba(255,255,255,0.5)
 
-    .contact-wrapper
-        @include centerFlex($direction: row,$justifyContent: center )
+    .content-info
+        @include centerFlex($direction: column,$justifyContent: center )
 
-        width: 50%
-        column-gap: 40%
+        column-gap: 4vw
+        row-gap: 4vh
+        margin: 10vh 0
 
-        row-gap: 10%
+        .content-in-info
+            display: flex
+            flex-direction: row
+            justify-content: space-around
+            column-gap: 25vw
+            width: 100%
 
         .img-wrapper
             overflow: hidden
-            width: 150px
-            height: 150px
+            width: 100px
+            height: 100px
             border-radius: 50%
             position: relative
 
@@ -68,23 +74,21 @@
                 z-index: 0
                 transform: translate(-50%,-50%)
 
-    .contact-info-wrapper
-        @include centerFlex($direction: row,$justifyContent: space-around )
-        position: relative
-        bottom: 50px
-        width: 80%
-
-    .contact-info
-        border: 1px solid $mainColorBackground
-        padding: 1.5rem 0.5rem
-        border-radius: 10px
-        margin-top: 1rem
+        .contact-info
+            border: 1px solid $mainColorBackground
+            padding: 1.5rem 0.5rem
+            border-radius: 10px
 
     .column-layout
         @include centerFlex($direction: row ,$justifyContent: space-around  )
         padding: 2%
 
     .line
+        position: absolute
+        left: 3%
+        bottom: 0%
+
+    .line-footer
         margin: auto
         width: 85%
         height: 1px

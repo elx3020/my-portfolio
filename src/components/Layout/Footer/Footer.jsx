@@ -1,7 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-
+import { line, triangleDown } from "../../../utils/svgFigures";
 // styles
 import "./Footer.sass";
 import myPhoto from "../../../images/yo.jpg";
@@ -26,27 +26,30 @@ export default function Footer() {
 
   return (
     <footer className="footer" data-scroll-section>
+      {line}
       <div className="footer-content">
         <h2 data-scroll data-scroll-speed="1.5">
-          Let's work together
+          Let's work together <span>{triangleDown} </span>
         </h2>
         {/* <div className="figure-wrapper">{lineFigure}</div> */}
-        <div className="contact-wrapper">
-          <div className="img-wrapper">
-            <img src={myPhoto} alt="me" />
-          </div>
-          <Link className="contact-button" to="contact">
-            Contact
-          </Link>
-        </div>
 
-        <div className="contact-info-wrapper">
-          <h3 className="contact-info">+49 177504296</h3>
-          <h3 className="contact-info">estebanl28@gmail.com</h3>
+        <div className="content-info">
+          <div className="content-in-info">
+            <div className="img-wrapper">
+              <img src={myPhoto} alt="me" />
+            </div>
+            <Link className="contact-button" to="contact">
+              Contact
+            </Link>
+          </div>
+          <div className="content-in-info">
+            <h3 className="contact-info">+49 177504296</h3>
+            <h3 className="contact-info">estebanl28@gmail.com</h3>
+          </div>
         </div>
       </div>
 
-      <div className="line"></div>
+      <div className="line-footer"></div>
       <div className="end-footer">
         <div className="end-layout">
           <a
