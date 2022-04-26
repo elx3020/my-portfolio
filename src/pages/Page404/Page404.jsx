@@ -1,8 +1,14 @@
 import HeroGenericComponent from "../../components/Layout/HeroGenericComponent";
+import useCurrentPage from "../../hooks/useCurrentPage";
+
 import "./style.sass";
-export default function Page404() {
+export default function Page404(props) {
+  const { handlePage } = props;
+
+  useCurrentPage(handlePage);
+
   return (
-    <div className="not-found-page">
+    <div className="not-found-page" data-scroll-section>
       <HeroGenericComponent
         className="content-404"
         fontSize="45px"

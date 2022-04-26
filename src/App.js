@@ -1,5 +1,10 @@
 import React, { createRef, useEffect, useState } from "react";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  Navigate,
+} from "react-router-dom";
 // import "./App.css";
 
 import "./styles/bodyStyle/BodyStyle.sass";
@@ -71,7 +76,8 @@ function App(props) {
                 />
               }
             />
-            <Route path="*" element={<Page404 />} />
+            <Route path="404" element={<Page404 handlePage={handlePage} />} />
+            <Route path="*" element={<Navigate replace={true} to="404" />} />
           </Routes>
           <Footer />
         </div>
