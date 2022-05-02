@@ -1,0 +1,61 @@
+@import "../../../styles/helpers/variables"
+@import "../../../styles/helpers/mixins"
+
+.nav-panel-wrapper
+    position: absolute
+
+.nav-button
+    position: fixed
+    width: 7vh
+    height: 7vh
+    border-radius: 50%
+    z-index: 2
+    right: 1.5vh
+    top: 1.5vh
+    background-color: $secondaryColorBackground
+    display: flex
+    align-items: center
+    justify-content: center
+    color: $mainColorBackground
+    transition: all 0.2s ease-in-out
+    border: 2px solid $mainColorBackground
+
+    &.open
+        background-color: $mainColorBackground
+        color: $secondaryColorBackground
+    &:hover
+        cursor: pointer
+
+    span
+
+        font-size: 2.5vh
+.nav-panel
+    display: flex
+    flex-direction: column
+    justify-content: center
+    row-gap: 4%
+    padding-left: 3%
+    margin-left: auto
+    position: fixed
+    width: 100%
+    height: 100vh
+    background-color: $secondaryColorBackground
+    z-index: 1
+    transform: translateX(100%)
+    transition: all 0.4s ease-in-out
+
+    a
+        color: $mainColorBackground
+        font-size: clamp(1vw,138px,10vw)
+        transition: all 0.2s ease-in-out
+
+        &:hover
+            color: $colorEnphasis
+            padding-left: 100px
+
+    &.open
+
+        transform: translateX(50%)
+
+        @media screen and (max-width: 450px)
+            transform: translateX(0%)

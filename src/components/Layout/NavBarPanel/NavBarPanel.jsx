@@ -1,15 +1,38 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Link } from "react-router-dom";
-export default function NavBarPanel() {
+import { useState } from "react";
+
+import "./NavPanel.sass";
+import { addClass } from "../../../utils/utils";
+export default function NavBarPanel(props) {
+  const [navPanelOpen, setNavPanel] = useState(false);
+
+  const { currentPage } = props;
   function togglePanel() {
     //   add functionality to hide show panel
     // toggle animations
+    addClass(["nav-panel", "nav-button"], "open", navPanelOpen, setNavPanel);
+
+    // const navPanelElement = document.getElementById("navpanel");
+    // if (!navPanelOpen) {
+    //   navPanelElement.classList.add("open");
+    //   setNavPanel(true);
+    // } else {
+    //   navPanelElement.classList.remove("open");
+    //   setNavPanel(false);
+    // }
   }
 
+  useEffect(() => {
+    if (navPanelOpen !== false) {
+      togglePanel();
+    }
+  }, [currentPage]);
+
   return (
-    <div>
-      <div className="Nav-menu" onClick={togglePanel}>
-        M
+    <div className="nav-panel-wrapper">
+      <div className="nav-button" onClick={togglePanel}>
+        <span>M</span>
       </div>
       <NavPanel />
     </div>
@@ -18,7 +41,7 @@ export default function NavBarPanel() {
 
 function NavPanel() {
   return (
-    <div className="nav-panel-wrapper">
+    <div id="navpanel" className="nav-panel">
       <Link to="/">Home</Link>
       <Link to="work">Work</Link>
       <Link to="about">About</Link>

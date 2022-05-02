@@ -21,4 +21,41 @@ function mapToList(array) {
   return htmlElemt;
 }
 
-export { ProjectDetails, mapToList };
+function addClass(className, classtoAdd, state, setState) {
+  // check input
+  if (!className instanceof Array) {
+    console.error(
+      "The function required a className parameter the type Array[string]"
+    );
+    return;
+  }
+  const elements = className.map((item) => {
+    if (typeof item !== "string") {
+      console.error(
+        "The function required a className parameter the type Array[string]"
+      );
+      return null;
+    } else {
+      return document.querySelector(`.${item}`);
+    }
+  });
+
+  // elements.forEach((element) => {
+  //   if (!state) {
+  //     element.classList.add(classtoAdd);
+  //     setState((prev) => (prev = !prev));
+  //   }
+  // });
+
+  for (let i = 0; i < elements.length; i++) {
+    if (!state) {
+      elements[i].classList.add(classtoAdd);
+      setState(true);
+    } else {
+      elements[i].classList.remove(classtoAdd);
+      setState(false);
+    }
+  }
+}
+
+export { ProjectDetails, mapToList, addClass };

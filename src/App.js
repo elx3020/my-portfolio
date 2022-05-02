@@ -21,7 +21,7 @@ import Page404 from "./pages/Page404/Page404";
 
 import NavBar from "./components/Layout/NavBar/NavBar";
 import Footer from "./components/Layout/Footer/Footer";
-
+import NavBarPanel from "./components/Layout/NavBarPanel/NavBarPanel";
 // data
 import ProjectsData from "./data/project_data.json";
 import useLocoScroll from "./hooks/useLocoScroll";
@@ -48,7 +48,7 @@ function App(props) {
     <div>
       <Router>
         <div className="page-content" id="main-container" ref={scrollRef}>
-          <NavBar />
+          <NavBarPanel currentPage={currentPage} />
           <Routes>
             <Route
               path="/"
