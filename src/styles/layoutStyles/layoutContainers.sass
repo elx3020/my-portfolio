@@ -84,9 +84,6 @@
     flex: 1
     row-gap: 20px
 
-    &:hover
-        transform: translateX(-50px)
-
     @media screen and (max-width: 450px)
         transition: none
         transform: translate(0%)
@@ -101,11 +98,13 @@
         width: clamp(26vw, 450px, 95vw)
         overflow: hidden
         border-radius: 10px
-        border: 1.5px solid $secondaryColorBackground
+        border: 1.7px solid $secondaryColorBackground
         transform: rotatex(20deg) rotateY(35deg)
         transition: all 0.2s ease-in-out
         color: $secondaryColorBackground
         font-weight: 200
+        background-color: $mainColorVariation1
+        mix-blend-mode: multiply
 
         h1
             font-size: clamp(2vw,55px,8vw)

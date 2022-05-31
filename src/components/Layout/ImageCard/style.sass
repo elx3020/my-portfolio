@@ -1,0 +1,33 @@
+@import '../../../styles/helpers/mixins'
+@import '../../../styles/helpers/variables'
+
+.imageCard
+    position: relative
+
+    max-width: 600px
+
+    img
+        display: block
+        width: 100%
+        height: auto
+
+    .overlay
+        position: absolute
+        width: 100%
+        height: 100%
+        display: flex
+        align-items: center
+        justify-content: center
+        color: $mainColorBackground
+        background-color: rgba(0, 0,0 ,0.4 )
+        transition: opacity 0.3s ease-in-out
+        opacity: 0
+
+        &:hover
+            opacity: 1
+            cursor: pointer
+
+        h3
+            position: relative
+            font-weight: 200
+            font-size: 5vw

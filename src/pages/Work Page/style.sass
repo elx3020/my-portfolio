@@ -1,6 +1,11 @@
 @import "../../styles/helpers/variables"
 @import "../../styles/helpers/mixins"
 
+.work-page
+    h2
+        font-size: 65px
+        margin-bottom: 50px
+
 .figure-wrapper
     position: absolute
     top: 5%
@@ -11,12 +16,9 @@
     z-index: 1
     stroke-width: 2px
 .work-section
-    width: 80vw
+    width: $containerWidth
     margin: 100px auto
     color: $secondaryColorBackground
-    h2
-        font-size: 65px
-        margin-bottom: 50px
 
     &.black
         @include centerFlex($direction: row,$justifyContent: none )
@@ -105,3 +107,42 @@
             @media screen and (max-width: 450px)
                 width: 90vw
                 height: 90vw
+
+.ui-head
+    position: relative
+    width: 100%
+    padding: 0 4%
+
+    h1
+        font-size: 11vw
+        margin: 15% 0
+        text-align: left
+
+    .header-image
+        position: absolute
+        top: -35%
+        right: 5%
+        width: 25vw
+
+        .ui-circle
+            max-width: 100%
+            position: relative
+            mix-blend-mode: difference
+
+        .cursor
+            max-width: 70%
+            position: absolute
+            right: -10%
+            top: 40%
+
+.container-ui
+    max-width: 80vw
+    margin: auto
+
+.ui-projects-wrapper
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-template-rows: repeat(2, 1fr)
+    grid-column-gap: 10px
+    grid-row-gap: 10px
+    margin: 10% 0

@@ -1,23 +1,32 @@
-import HeroGenericComponent from "../../components/Layout/HeroGenericComponent";
-import ColumnLayout from "../../components/Layout/ColumnLayout";
 import { mapToList } from "../../utils/utils";
 import { Helmet } from "react-helmet";
 
-import CardContainer from "../../components/Layout/CardContainer";
+// art images use directly in the work page
 import window1 from "../../images/WorkPage/web-art-0.png";
 import window2 from "../../images/WorkPage/web-art-1.png";
 import window3 from "../../images/WorkPage/web-art-2.png";
 import window4 from "../../images/WorkPage/web-art-3.png";
+import uiCircle from "../../images/WorkPage/circle.png";
+import uiCursor from "../../images/WorkPage/cursor.png";
 
-import useCurrentPage from "../../hooks/useCurrentPage";
-
-import "./style.sass";
+//  components been use in this page
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
+import CardContainer from "../../components/Layout/CardContainer";
+import useCurrentPage from "../../hooks/useCurrentPage";
+import ColumnLayout from "../../components/Layout/ColumnLayout";
+import HeroGenericComponent from "../../components/Layout/HeroGenericComponent";
+import ImageCardComponent from "../../components/Layout/ImageCard/ImageCardComponent";
+
+// style document been use in this page
+import "./style.sass";
 
 const WorkPage = (props) => {
   const { projectsData, handlePage } = props;
 
-  const { showcase_Data, web_Proj_Large, web_Proj_Mini } = projectsData;
+  // obtain array of data
+
+  const { showcase_Data, web_Proj_Large, web_Proj_Mini, ui_projects } =
+    projectsData;
 
   // large projects
 
@@ -27,8 +36,13 @@ const WorkPage = (props) => {
 
   const miniProjects = [mapToList(web_Proj_Mini)];
 
-  // pass current Page
+  // ui projects
 
+  const uiProjects = ui_projects.map((project) => {
+    return <ImageCardComponent key={project.id} data={project} />;
+  });
+
+  // pass current Page
   useCurrentPage(handlePage);
 
   const pageContent = (
@@ -37,6 +51,8 @@ const WorkPage = (props) => {
       <Helmet>
         <title>Esteban Lasso | Work</title>
       </Helmet>
+
+      {/* Work - Page Hero */}
       <HeroGenericComponent
         className="generic-hero-wrapper"
         fontSize="clamp(2vw, 150px, 17vw)"
@@ -44,7 +60,7 @@ const WorkPage = (props) => {
       >
         {/* <p>Explore all the projects I have</p> */}
       </HeroGenericComponent>
-
+      {/* Web Developer Work */}
       <div className="work-section">
         <div className="header-workpage">
           <h1 data-scroll data-scroll-offset="200px">
@@ -87,6 +103,21 @@ const WorkPage = (props) => {
           </ColumnLayout>
         </div>
       </div>
+      {/* UI Work */}
+
+      <section className="ui-section">
+        <header className="ui-head">
+          <h1> UI PORTFOLIO</h1>
+          <div className="header-image">
+            <img className="ui-circle" src={uiCircle} alt="decorative" />
+            <img className="cursor" src={uiCursor} alt="decorative" />
+          </div>
+        </header>
+        <div className="container-ui">
+          <h2>UI Interfaces</h2>
+          <div className="ui-projects-wrapper">{uiProjects}</div>
+        </div>
+      </section>
     </div>
   );
 

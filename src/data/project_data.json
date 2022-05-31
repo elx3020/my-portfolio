@@ -109,6 +109,35 @@
     }
   ],
 
+  "ui_projects": [
+    {
+      "arr_Id": "ui_projects",
+      "id": "jumpProject",
+      "project_Name": "Jump",
+      "tumbnailUrl": "images/projects/Jump-cover.png",
+      "imageAlt": "tumbnail of project",
+      "imageCollection": ["/images/projects/", "/images/projects/"],
+      "description": "Some description to the project"
+    },
+
+    {
+      "arr_Id": "ui_projects",
+      "id": "arplatesproject",
+      "project_Name": "AR Plates",
+      "tumbnailUrl": "images/projects/web-cover-ar-plate.png",
+      "imageAlt": "tumbnail of project",
+      "imageCollection": ["/images/projects/", "/images/projects/"],
+      "description": "Some description to the project"
+    },
+    {
+      "project_Name": "Yupana",
+      "tumbnailUrl": "images/projects/yupana-cover.png",
+      "imageAlt": "tumbnail of project",
+      "imageCollection": ["/images/projects/", "/images/projects/"],
+      "description": "Some description to the project"
+    }
+  ],
+
   "videogame-projects": [
     {
       "arr_Id": "videogame-projects",

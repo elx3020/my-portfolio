@@ -6,8 +6,6 @@ import { ProjectDetails } from "../utils/utils";
 
 import GoToTop from "../components/functionality/GoToTop";
 
-// hooks
-import useLocoScroll from "../hooks/useLocoScroll";
 import useCurrentPage from "../hooks/useCurrentPage";
 
 // {
@@ -29,10 +27,6 @@ export default function ProjectDescriptionPage(props) {
   const project = ProjectDetails(projectArr, project_handle);
 
   const { arr_Id, id, imageUrl, imageAlt, description } = project;
-
-  // use scroll animation
-
-  useLocoScroll(true);
 
   // set page as currentPage
 

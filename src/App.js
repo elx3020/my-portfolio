@@ -10,8 +10,8 @@ import {
 import "./styles/bodyStyle/BodyStyle.sass";
 // pages
 
-import About from "./pages/About Page/AboutPage";
 // import Blog from './pages/Blog';
+import About from "./pages/About Page/AboutPage";
 import HomePage from "./pages/Home Page/HomePage";
 import WorkPage from "./pages/Work Page/WorkPage";
 import ContactPage from "./pages/Contact Page/ContactPage";
@@ -19,7 +19,6 @@ import ProjectDescriptionPage from "./pages/ProjectDescriptionPage";
 import Page404 from "./pages/Page404/Page404";
 // layout components
 
-import NavBar from "./components/Layout/NavBar/NavBar";
 import Footer from "./components/Layout/Footer/Footer";
 import NavBarPanel from "./components/Layout/NavBarPanel/NavBarPanel";
 // data
