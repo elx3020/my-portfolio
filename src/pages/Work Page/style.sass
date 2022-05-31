@@ -111,18 +111,24 @@
 .ui-head
     position: relative
     width: 100%
-    padding: 0 4%
+    padding: 0 9%
+    @media screen and (max-width: 450px)
+        padding: 0 5%
 
     h1
-        font-size: 11vw
+        font-size: 9vw
         margin: 15% 0
         text-align: left
+        @media screen and (max-width: 450px)
+            font-size: 11vw
 
     .header-image
         position: absolute
         top: -35%
-        right: 5%
-        width: 25vw
+        right: 15%
+        width: 22vw
+        @media screen and (max-width: 450px)
+            right: 7%
 
         .ui-circle
             max-width: 100%
@@ -130,14 +136,18 @@
             mix-blend-mode: difference
 
         .cursor
-            max-width: 70%
+            max-width: 60%
             position: absolute
             right: -10%
             top: 40%
 
 .container-ui
-    max-width: 80vw
+    max-width: 60vw
     margin: auto
+    @media screen and (max-width: 450px)
+        max-width: 95vw
+        h2
+            font-size: 30px
 
 .ui-projects-wrapper
     display: grid
@@ -146,3 +156,6 @@
     grid-column-gap: 10px
     grid-row-gap: 10px
     margin: 10% 0
+    @media screen and (max-width: 450px)
+        display: flex
+        flex-direction: column

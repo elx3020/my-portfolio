@@ -4,10 +4,8 @@ import "locomotive-scroll/src/locomotive-scroll.scss";
 
 export default function useLocoScroll(start, domRef) {
   useEffect(() => {
-    // const scrollEl = document.querySelector("#main-container");
-
     const locoScroll = new locomotiveScroll({
-      el: domRef.current,
+      el: document.querySelector("#main-container"),
       smooth: true,
       multiplier: 1,
       class: "is-reveal",
@@ -25,9 +23,14 @@ export default function useLocoScroll(start, domRef) {
       },
     });
 
+    const timeout = setTimeout(() => {
+      locoScroll.start();
+    }, 3000);
+
     return function clean() {
       // cleaning scroll
-
+      if (locoScroll === undefined) return;
+      clearTimeout(timeout);
       locoScroll.destroy();
     };
   }, [start]);

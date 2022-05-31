@@ -116,8 +116,11 @@
       "project_Name": "Jump",
       "tumbnailUrl": "images/projects/Jump-cover.png",
       "imageAlt": "tumbnail of project",
-      "imageCollection": ["/images/projects/", "/images/projects/"],
-      "description": "Some description to the project"
+      "imageCollection": [
+        "/images/projects/jump-showcase.png",
+        "/images/projects/"
+      ],
+      "description": "A start-up app idea. Participated for funding in the event TuApp Lima-Perú, 2018. The app will help people find jobs online as a freelance with the concept of time banks that can be use to trade for other type of work."
     },
 
     {
@@ -126,7 +129,10 @@
       "project_Name": "AR Plates",
       "tumbnailUrl": "images/projects/web-cover-ar-plate.png",
       "imageAlt": "tumbnail of project",
-      "imageCollection": ["/images/projects/", "/images/projects/"],
+      "imageCollection": [
+        "/images/projects/portfolio-plates.png",
+        "/images/projects/"
+      ],
       "description": "Some description to the project"
     },
     {
