@@ -34,11 +34,26 @@ export default function ProjectDescriptionPage(props) {
       pageContent = (
         <div>
           <div className="project-content">
-            <h1>{project_Name}</h1>
+            <h1 data-scroll data-scroll-speed="1">
+              {project_Name}
+            </h1>
             <p>{description}</p>
           </div>
-          <div>
-            <img src={imageCollection[0]} alt="somealt" />
+          <div
+            style={{
+              width: "99%",
+              margin: "auto",
+              marginBottom: "5%",
+              overflow: "hidden",
+              height: "95vh",
+            }}
+          >
+            <img
+              data-scroll
+              data-scroll-speed="-1"
+              src={imageCollection[0]}
+              alt="somealt"
+            />
           </div>
         </div>
       );

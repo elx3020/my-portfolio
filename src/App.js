@@ -37,7 +37,7 @@ function App(props) {
   }
 
   useLocoScroll(currentPage, scrollRef);
-
+  // console.log(locoInstance);
   // data
   const projectsData = JSON.parse(JSON.stringify(ProjectsData));
 

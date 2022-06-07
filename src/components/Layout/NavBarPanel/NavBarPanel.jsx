@@ -43,8 +43,8 @@ function NavPanel() {
   return (
     <div id="navpanel" className="nav-panel">
       <Link to="/">Home</Link>
-      <Link to="work">Work</Link>
-      <Link to="about">About</Link>
+      <Link to="work">My Work</Link>
+      <Link to="about">About me</Link>
       <Link to="contact">Contact</Link>
     </div>
   );
