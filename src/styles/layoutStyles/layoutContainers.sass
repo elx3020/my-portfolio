@@ -128,6 +128,10 @@
 
         h1
             font-size: clamp(2vw,55px,8vw)
+            margin: 2% 0
+
+            @media screen and(max-width: 450px)
+                text-align: left
 
         &:hover
             transform: translateY(-50px)
@@ -165,9 +169,12 @@
                     background-color: $colorSecondary
                 &:active
                     background-color: $colorTerciary
+                @media screen and (max-width: 450px)
+                    border: 1px solid $secondaryColorBackground
+                    font-size: 16px
 
         p
-            font-size: clamp(1vw,18px,4vw)
+            font-size: clamp(1vw,18px,4.5vw)
             text-align: justify
             margin-bottom: 20px
 
@@ -204,15 +211,15 @@
         flex-direction: column
         justify-content: center
         align-items: center
-        column-gap: 5%
-        row-gap: 5%
+        column-gap: 8%
+        row-gap: 8%
 
         > a
             text-decoration: none
             color: inherit
             background-color: aliceblue
-            padding: 2% 3%
-            font-size: clamp(1vw,22px,5vw)
+            padding: 3% 4%
+            font-size: clamp(1vw,22px,5.5vw)
             border-radius: 4px
             margin-top: 10px
             align-self: flex-end

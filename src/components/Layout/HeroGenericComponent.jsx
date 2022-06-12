@@ -5,7 +5,7 @@ export default function HeroGenericComponent(props) {
 
   return (
     <div className={className} style={{ fontSize: fontSize }} data-scroll>
-      <h1 style={{ fontSize: "inherit" }} data-scroll data-scroll-speed="1.5">
+      <h1 data-scroll data-scroll-speed="1.5">
         {text}
         <span style={{ display: "block" }}>{figure}</span>
       </h1>
