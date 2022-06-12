@@ -7,7 +7,7 @@ export default function ListItem(props) {
   const { project_url, description, projectId, project_Name, arrId } = props;
 
   return (
-    <div className="list-item">
+    <div data-scroll data-scroll-offset="25%" className="list-item">
       <h3>{project_Name}</h3>
       <p>{description}</p>
       <a href={project_url}>Try it</a>

@@ -1,7 +1,7 @@
 import "./cubeAnim.scss";
 
 const cubeElement = (
-  <div className="container">
+  <div className="container-cube">
     <div className="flex">
       <div className="cube">
         <div className="wall front"></div>

@@ -29,7 +29,7 @@ function ImageCardComponent(props) {
 
   return (
     <div className="imageCard" onClick={handleClick}>
-      <div className="overlay">
+      <div data-scroll data-scroll-offset="50%" className="overlay">
         <h3>{project_Name}</h3>
       </div>
 

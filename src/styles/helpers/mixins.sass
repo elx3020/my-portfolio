@@ -62,9 +62,18 @@
     color: $secondaryColorBackground
     text-decoration: none
     border: 1.5px solid $secondaryColorBackground
-    padding: 10px 20px
-    border-radius: 5px
-    font-size: clamp(1vw,14px,3vw)
+    padding: 2.5% 5%
+    border-radius: 3px
+    line-height: 90%
+    font-size: clamp(1vw,14px,4vw)
     transition: all 0.2s ease-in-out
     &:hover
         background-color: $colorSecondary
+
+@mixin mobileCardAnimation()
+    opacity: 0
+    transform: translateY(80px)
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out
+    &.is-reveal
+        opacity: 1
+        transform: translateY(0)

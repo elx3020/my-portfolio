@@ -16,7 +16,7 @@ import { triangleDown } from "../../utils/svgFigures.jsx";
 
 const AboutPage = (props) => {
   const heroText =
-    "I am an artist and technical thinker. I like to push every creation forward, bringing the best of the two worlds.";
+    "I am a technical thinker and artist. I like to push every creation forward, bringing the best of the two worlds.";
 
   const title = "About me:";
 

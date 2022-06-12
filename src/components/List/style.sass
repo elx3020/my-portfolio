@@ -22,11 +22,11 @@
         transform: translateY(-5px)
         box-shadow: 0px 5px 0px 0px $colorSecondary
     h3
-        font-size: clamp(12px,30px,7vw)
+        font-size: clamp(12px,30px,6vw)
         margin-bottom: 5px
 
     p
-        font-size: clamp(12px,18px,5vw)
+        font-size: clamp(12px,18px,4vw)
         font-weight: 200
         margin-bottom: 10px
 
@@ -38,3 +38,4 @@
 
     @media screen and (max-width: 450px)
         width: 100%
+        @include mobileCardAnimation()

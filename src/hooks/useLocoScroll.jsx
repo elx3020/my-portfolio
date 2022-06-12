@@ -25,7 +25,6 @@ export default function useLocoScroll(start, domRef) {
     });
     imagesLoaded(document.querySelector("#main-container"), function () {
       locoScroll.update();
-      console.log("hello");
     });
 
     return function clean() {

@@ -1,8 +1,13 @@
-.container {
+.container-cube {
   transform: rotate(45deg);
   position: absolute;
   top: 5%;
   right: 20%;
+  @media screen and (max-width: 450px) {
+    transform: rotate(45deg) scale(0.6);
+    left: 35%;
+    top: 20%;
+  }
 }
 
 .flex {

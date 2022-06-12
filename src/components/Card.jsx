@@ -19,7 +19,7 @@ export default function Card(props) {
   const projectLink = `/projects/${arrId}/${id}`;
 
   return (
-    <div className="card-showcase">
+    <div data-scroll data-scroll-offset="50%" className="card-showcase">
       <div className="image-container ">
         <img src={image_Url} alt={image_Url}></img>
         <div className="overlay"></div>
