@@ -88,7 +88,7 @@ const WorkPage = (props) => {
         <CardContainer data={showcase_Data} />
       </div>
 
-      <div className="work-section black" data-scroll data-scroll-offset="100%">
+      <div className="work-section black" data-scroll data-scroll-offset="120%">
         <div className="large-projects">
           <h2>Large Projects</h2>
           <ColumnLayout className="projects-wrapper">

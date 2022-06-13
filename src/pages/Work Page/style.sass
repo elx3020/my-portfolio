@@ -4,7 +4,7 @@
 .work-page
     h2
         font-size: clamp(1vw,65px,11vw)
-        margin: 6% 0
+        margin: 2vw 0
 
 .figure-wrapper
     position: absolute
@@ -24,21 +24,27 @@
         @include centerFlex($direction: row,$justifyContent: none )
 
         position: relative
-        padding: 10%
+        padding: 8vw
 
         column-gap: 2%
         margin-bottom: -5px
 
-        width: 100vw
-        height: 150vh
+        width: 100%
         transition: background-color 0.5s ease-in-out
 
         .large-projects
             align-self: flex-start
+            row-gap: 3vw
+
+        .projects-wrapper
+            display: flex
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            row-gap: 2vw
 
         .list-item
             color: inherit
-
             border: 1.5px solid $secondaryColorBackground
 
             a
@@ -57,6 +63,7 @@
                 border: 1px solid $mainColorBackground
                 a
                     border: 1px solid $mainColorBackground
+                    padding: 1vw
 
         @media screen and (max-width: 450px)
             padding: 10% 2%
@@ -73,12 +80,6 @@
     h1
         position: relative
         font-size: clamp(1vw,85px,12vw)
-
-    .projects-wrapper
-        display: flex
-        flex-direction: column
-        align-items: center
-        justify-content: center
 
     .windows-wrapper
         display: flex
