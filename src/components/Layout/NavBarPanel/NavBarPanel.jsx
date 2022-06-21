@@ -17,6 +17,10 @@ export default function NavBarPanel(props) {
     }
   }
 
+  useEffect(() => {
+    setNavPanel("close");
+  }, [currentPage]);
+
   return (
     <div className="nav-panel-wrapper">
       <div

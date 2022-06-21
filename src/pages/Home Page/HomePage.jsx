@@ -76,7 +76,7 @@ const HomePage = (props) => {
         <ColumnLayout className="messages-section">
           <p className="paragraph-big">
             Creating innovative websites to attract the interest of clients.
-            Building robust solutions that scalable and functional.
+            Building robust solutions that are scalable and functional.
           </p>
           <p className="paragraph-small">
             Let's work together to put your project in the World Wide Web.
