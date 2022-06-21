@@ -17,8 +17,9 @@
     align-items: center
     justify-content: center
     color: $mainColorBackground
+    font-weight: 200
     transition: all 0.2s ease-in-out
-    border: 2px solid $mainColorBackground
+    border: 1px solid $mainColorBackground
 
     &.open
         background-color: $mainColorBackground
@@ -27,9 +28,16 @@
         cursor: pointer
         background-color: $colorSecondary
 
+    &.close
+        &.up
+            transform: translateX(125%)
+            @media screen and(max-width: 450px)
+                transform: translateX(0)
+
     span
 
         font-size: 2.5vh
+
 .nav-panel
     display: flex
     flex-direction: column
@@ -46,7 +54,7 @@
     transform: translateX(100%)
     border-top-left-radius: 150px
     border-bottom-left-radius: 150px
-    border-left: 2px solid $mainColorBackground
+    border-left: 1.5px solid $mainColorBackground
     transition: all 0.4s ease-in-out
 
     a

@@ -1,9 +1,10 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import locomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/src/locomotive-scroll.scss";
 import imagesLoaded from "imagesloaded";
 
-export default function useLocoScroll(start, domRef) {
+export default function useLocoScroll(start) {
+  const [scroll, setScroll] = useState(null);
   useEffect(() => {
     const locoScroll = new locomotiveScroll({
       el: document.querySelector("#main-container"),
@@ -23,6 +24,8 @@ export default function useLocoScroll(start, domRef) {
         getDirection: true,
       },
     });
+
+    setScroll(locoScroll);
     imagesLoaded(document.querySelector("#main-container"), function () {
       locoScroll.update();
     });
@@ -32,4 +35,5 @@ export default function useLocoScroll(start, domRef) {
       locoScroll.destroy();
     };
   }, [start]);
+  return scroll;
 }

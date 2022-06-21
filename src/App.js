@@ -21,6 +21,7 @@ import Page404 from "./pages/Page404/Page404";
 
 import Footer from "./components/Layout/Footer/Footer";
 import NavBarPanel from "./components/Layout/NavBarPanel/NavBarPanel";
+import NavBar from "./components/Layout/NavBar/NavBar";
 // data
 import ProjectsData from "./data/project_data.json";
 import useLocoScroll from "./hooks/useLocoScroll";
@@ -31,15 +32,27 @@ function App(props) {
   const scrollRef = createRef();
 
   const [currentPage, setCurrentpage] = useState("");
+  const [scrollDirection, setScrollDirection] = useState("up");
 
   function handlePage(currentPage) {
     setCurrentpage(currentPage);
   }
 
-  useLocoScroll(currentPage, scrollRef);
+  const scroll = useLocoScroll(currentPage, scrollRef);
   // console.log(locoInstance);
   // data
   const projectsData = JSON.parse(JSON.stringify(ProjectsData));
+
+  useEffect(() => {
+    if (scroll !== null) {
+      scroll.on("scroll", (args) => {
+        const scrollHorizontal = args.direction;
+        // ignore when the event return null
+        if (scrollHorizontal === null) return;
+        setScrollDirection(scrollHorizontal);
+      });
+    }
+  }, [scroll]);
 
   // Dom Render
 
@@ -47,7 +60,12 @@ function App(props) {
     <div>
       <Router>
         <div className="page-content" id="main-container" ref={scrollRef}>
-          <NavBarPanel currentPage={currentPage} />
+          <NavBar scrollDirection={scrollDirection} />
+          <NavBarPanel
+            currentPage={currentPage}
+            scrollDirection={scrollDirection}
+          />
+
           <Routes>
             <Route
               path="/"

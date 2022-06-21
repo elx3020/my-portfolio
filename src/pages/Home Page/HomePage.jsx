@@ -72,20 +72,20 @@ const HomePage = (props) => {
         {circle}
       </HeroContainer>
 
-      <div className="home-sec-wrap" data-scroll data-scroll-offset="90%">
+      <section className="home-sec-wrap" data-scroll data-scroll-offset="90%">
         <ColumnLayout className="messages-section">
           <p className="paragraph-big">
             Creating innovative websites to attract the interest of clients.
-            Pushing the design into new frontiers.
+            Building robust solutions that scalable and functional.
           </p>
           <p className="paragraph-small">
             Let's work together to put your project in the World Wide Web.
             <span className="span-arrow">{triangle}</span>
           </p>
         </ColumnLayout>
-      </div>
+      </section>
 
-      <div className="section-wrapper">
+      <section className="section-wrapper">
         <div className="container-wrapper">
           <h1 data-scroll data-scroll-speed="1">
             Showcase
@@ -98,9 +98,9 @@ const HomePage = (props) => {
             </h2>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className="section-wrapper">
+      <section className="section-wrapper">
         <div className="container-wrapper">
           <h1 data-scroll data-scroll-speed="1">
             Mini Projects
@@ -119,7 +119,7 @@ const HomePage = (props) => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
       <GoToTop />
     </div>

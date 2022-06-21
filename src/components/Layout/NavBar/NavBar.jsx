@@ -1,19 +1,8 @@
 import { Link } from "react-router-dom";
-
+import { useEffect } from "react/cjs/react.production.min";
 import "./Navbar.sass";
 const Navbar = (props) => {
-  // function AnimateNavBar(e) {
-  //   const navbar = document.getElementById("navbar");
-  //   if (window.scrollY < 1) {
-  //     navbar.classList.remove("hide");
-  //   } else {
-  //     navbar.classList.add("hide");
-  //   }
-  // }
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", AnimateNavBar);
-  // });
+  const { scrollDirection } = props;
 
   const links = (
     <div className="nav_links">
@@ -23,7 +12,7 @@ const Navbar = (props) => {
   );
 
   return (
-    <nav id="navbar" className="Navbar" data-scroll-section>
+    <nav id="navbar" className={`Navbar ${scrollDirection}`}>
       <div className="nav_links">
         <Link to="/">Home</Link>
       </div>
