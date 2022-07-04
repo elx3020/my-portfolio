@@ -31,7 +31,7 @@ const ContactPage = (props) => {
         <title>Esteban Lasso | Contact</title>
       </Helmet>
       <h1>Tell me about your project</h1>
-      <div className="content-wrapper">
+      <section className="content-wrapper">
         <form className="form-style" onSubmit={handleSubmit}>
           <label htmlFor="name">Name:</label>
           <input type="text" name="name" id="nameid" required />
@@ -50,32 +50,29 @@ const ContactPage = (props) => {
           />
           <label htmlFor="audience">What is your target audience?</label>
           <input type="text" name="audience" id="audienceId" />
-          <ValidationError
-            prefix="Audience"
-            field="audience"
-            errors={state.errors}
-          />
+
           <label htmlFor="company">
             What is the name of your organization?
           </label>
           <input type="text" name="company" id="companyId" />
-          <ValidationError
-            prefix="Company"
-            field="company"
-            errors={state.errors}
-          />
+
           <label htmlFor="moreinfo">Tell me more about the project:</label>
           <textarea
             name="moreinfo"
             id="moreinfoId"
             cols="30"
             rows="10"
+            required
           ></textarea>
           <ValidationError
             prefix="Info Box"
             field="moreinfo"
             errors={state.errors}
           />
+          <div
+            className="g-recaptcha"
+            data-sitekey="6LcOxIsgAAAAACRMcaMSOH7xON7OQoF3r0RjMLpa"
+          ></div>
           <button
             className="submit-btn"
             type="submit"
@@ -90,7 +87,7 @@ const ContactPage = (props) => {
           <h3>Detail Info:</h3>
           <p>{contactInfoText}</p>
         </div>
-      </div>
+      </section>
       <GoToTop />
     </div>
   );

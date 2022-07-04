@@ -8,7 +8,7 @@ import window3 from "../../images/WorkPage/web-art-2.png";
 import window4 from "../../images/WorkPage/web-art-3.png";
 import uiCircle from "../../images/WorkPage/circle.png";
 import uiCursor from "../../images/WorkPage/cursor.png";
-
+import computerIllustration from "../../images/WorkPage/1computer-work.svg";
 //  components been use in this page
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import CardContainer from "../../components/Layout/CardContainer";
@@ -54,9 +54,10 @@ const WorkPage = (props) => {
 
       {/* Work - Page Hero */}
       <HeroGenericComponent
-        className="generic-hero-wrapper"
+        className="generic-hero-wrapper work-page"
         fontSize="clamp(2vw, 150px, 17vw)"
         text="My Work."
+        figure={computerIllustration}
       >
         {/* <p>Explore all the projects I have</p> */}
       </HeroGenericComponent>

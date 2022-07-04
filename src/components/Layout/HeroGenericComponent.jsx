@@ -5,9 +5,9 @@ export default function HeroGenericComponent(props) {
 
   return (
     <div className={className} style={{ fontSize: fontSize }} data-scroll>
-      <h1 data-scroll data-scroll-speed="1.5">
+      <img src={figure} alt="" />
+      <h1 data-scroll data-scroll-speed="-1">
         {text}
-        <span style={{ display: "block" }}>{figure}</span>
       </h1>
       {props.children}
     </div>
