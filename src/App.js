@@ -16,6 +16,7 @@ import HomePage from "./pages/Home Page/HomePage";
 import WorkPage from "./pages/Work Page/WorkPage";
 import ContactPage from "./pages/Contact Page/ContactPage";
 import ProjectDescriptionPage from "./pages/ProjectDescription Page/ProjectDescriptionPage";
+import ExperimentPage from "./pages/ExperimentsPage/ExperimentPage";
 import Page404 from "./pages/Page404/Page404";
 // layout components
 
@@ -93,6 +94,7 @@ function App(props) {
                 />
               }
             />
+            <Route path="projects/experiments" element={<ExperimentPage />} />
             <Route path="404" element={<Page404 handlePage={handlePage} />} />
             <Route path="*" element={<Navigate replace={true} to="404" />} />
           </Routes>
