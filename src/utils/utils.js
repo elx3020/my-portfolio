@@ -58,4 +58,54 @@ function addClass(className, classtoAdd, state, setState) {
   }
 }
 
-export { ProjectDetails, mapToList, addClass };
+// Vector Class
+function Vector2(x, y) {
+  this.x = x;
+  this.y = y;
+
+  this.add = function (vector) {
+    const x = this.x + vector.x;
+    const y = this.y + vector.y;
+    return new Vector2(x, y);
+  };
+  this.rest = function (vector) {
+    const x = this.x - vector.x;
+    const y = this.y - vector.y;
+    return new Vector2(x, y);
+  };
+  this.dot = function (vector) {
+    const x = this.x * vector.x;
+    const y = this.y * vector.y;
+    return x + y;
+  };
+
+  this.scale = function (number) {
+    this.x = this.x * number;
+    this.y = this.y * number;
+  };
+  this.length = function () {
+    return Math.sqrt(this.x * this.x + this.y * this.y);
+  };
+
+  this.normalized = function () {
+    return new Vector2(this.x / this.length(), this.y / this.length());
+  };
+
+  this.isEqual = function (vector) {
+    if (this.x === vector.x && this.y === vector.y) {
+      return true;
+    }
+    return false;
+  };
+}
+
+function DrawLine(ctx, x, y, lenx, leny, color) {
+  ctx.beginPath();
+  ctx.moveTo(x, y);
+  ctx.lineTo(lenx, leny);
+  ctx.strokeStyle = color;
+  ctx.stroke();
+  ctx.closePath();
+}
+
+export { ProjectDetails, mapToList, addClass, Vector2, DrawLine };

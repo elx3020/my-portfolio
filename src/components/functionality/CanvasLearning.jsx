@@ -1,10 +1,10 @@
 import React from "react";
 
 import CanvasComponent from "./CanvasComponent";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 function CanvasLearning() {
-  const canvasWidth = window.innerWidth;
+  let canvasWidth = useRef(window.innerWidth);
 
   function Vector2(x, y) {
     this.x = x;
@@ -66,8 +66,9 @@ function CanvasLearning() {
       ctx.strokeStyle = "red";
       // nothing is show if stroke method is not called
       ctx.stroke();
+      ctx.fillStyle = "black";
       ctx.fill();
-      this.update(ctx);
+      ctx.closePath();
     };
 
     this.growCircle = function () {
@@ -98,24 +99,7 @@ function CanvasLearning() {
     };
 
     this.update = function (ctx) {
-      if (this.desiredVelocity.length() + 0.01 < this.velocity.length()) {
-        this.desiredVelocity.x +=
-          (this.desiredVelocity.x / this.desiredVelocity.length()) *
-          acceleration;
-        this.desiredVelocity.y +=
-          (this.desiredVelocity.y / this.desiredVelocity.length()) *
-          acceleration;
-      } else if (
-        this.desiredVelocity.length() - 0.01 >
-        this.velocity.length()
-      ) {
-        this.desiredVelocity.x -=
-          (this.desiredVelocity.x / this.desiredVelocity.length()) *
-          acceleration;
-        this.desiredVelocity.y -=
-          (this.desiredVelocity.y / this.desiredVelocity.length()) *
-          acceleration;
-      }
+      this.draw(ctx);
 
       if (
         this.position.x + this.radius > ctx.canvas.width ||
@@ -140,20 +124,102 @@ function CanvasLearning() {
     };
   }
 
-  function InstanciateCircles() {
+  function CircleMouse(x, y, radius) {
+    this.position = new Vector2(x, y);
+    this.radius = radius;
+
+    this.draw = function (ctx) {
+      ctx.beginPath();
+      ctx.arc(this.position.x, this.position.y, this.radius, 0, Math.PI * 2);
+      ctx.strokeStyle = "blue";
+      ctx.stroke();
+      ctx.fillStyle = "green";
+      ctx.fill();
+      this.position.x = mouseInput.position.x;
+      this.position.y = mouseInput.position.y;
+    };
+  }
+
+  const gravityValue = 1;
+
+  function CircleGravity(x, y, dx, dy, radius) {
+    this.position = new Vector2(x, y);
+    this.velocity = new Vector2(dx, dy);
+    this.radius = radius;
+
+    this.update = function (ctx) {
+      this.boudaryConstrain(ctx);
+
+      this.position.y += this.velocity.y;
+      this.position.x += this.velocity.x;
+      this.draw(ctx);
+    };
+
+    this.draw = function (ctx) {
+      ctx.beginPath();
+      ctx.arc(this.position.x, this.position.y, this.radius, 0, Math.PI * 2);
+      ctx.stroke();
+      ctx.fillStyle = "white";
+      ctx.fill();
+      ctx.closePath();
+    };
+
+    this.boudaryConstrain = function (ctx) {
+      if (this.position.y + this.radius > ctx.canvas.height) {
+        if (this.velocity.y === 0) {
+          return;
+        }
+
+        if (this.velocity.length() < 1) {
+          this.velocity.y = 0;
+        }
+        this.velocity.y = -this.velocity.y;
+      } else {
+        // friction
+        this.velocity.y *= 0.985;
+        // gravity
+        this.velocity.y += 0.3;
+      }
+
+      if (
+        this.position.x + this.radius > ctx.canvas.width ||
+        this.position.x - this.radius < 0
+      ) {
+        if (this.velocity.x === 0) {
+          return;
+        }
+
+        if (this.velocity.length() < 2) {
+          this.velocity.x = 0;
+        }
+        this.velocity.x = -this.velocity.x;
+      } else {
+        // friction
+        this.velocity.x *= 0.985;
+      }
+    };
+  }
+
+  function InstanciateObject(object, number) {
     let circleArray = [];
-    for (let i = 0; i < 100; i++) {
-      const radius = 25;
-      let x = radius + Math.random() * (canvasWidth - radius * 2);
+    for (let i = 0; i <= number; i++) {
+      const radius = Math.random() * 25 + 1;
+      let x = radius + Math.random() * (canvasWidth.current - radius * 2);
       let y = radius + Math.random() * (750 - radius * 2);
       let dx = (Math.random() - 0.5) * 10;
       let dy = (Math.random() - 0.5) * 10;
-      circleArray.push(new Circle(x, y, dx, dy, radius));
+      circleArray.push(new object(x, y, dx, dy, radius));
     }
     return circleArray;
   }
 
-  const circleArray = InstanciateCircles();
+  const circleArray = InstanciateObject(Circle, 100);
+
+  const circleMouse = new CircleMouse(100, 100, 75);
+
+  const circlePhysics = new CircleGravity(400, 400, 0, 0, 25);
+
+  const circlePhysiscArray = InstanciateObject(CircleGravity, 100);
 
   function drawLesson1(context) {
     context.fillStyle = "rgba(0,255,0,0.5)";
@@ -191,20 +257,31 @@ function CanvasLearning() {
     for (let i = 1; i < circleArray.length; i++) {
       circleArray[i].draw(ctx);
     }
+    circleMouse.draw(ctx);
+  }
+
+  function drawGravityLesson3(ctx) {
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+
+    for (let i = 0; i < circlePhysiscArray.length; i++) {
+      circlePhysiscArray[i].update(ctx);
+    }
+  }
+
+  function RenderCollisionBall(ctx) {
+    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
   }
 
   // useEffect(() => {
-  //   const mouseMove = window.addEventListener("mousemove", function (event) {
-  //     mouseInput.mouseCoordinates.x = event.x;
-  //     mouseInput.mouseCoordinates.y = event.y;
-  //     console.log(mouseInput.mouseCoordinates);
+  //   window.addEventListener("resize", function () {
+  //     canvasWidth.current = window.innerWidth;
   //   });
   // }, []);
 
   return (
     <CanvasComponent
-      draw={drawMoveLesson2}
-      width={canvasWidth}
+      draw={drawGravityLesson3}
+      width={canvasWidth.current}
       height={750}
       eventListener={mouseEvent}
     />

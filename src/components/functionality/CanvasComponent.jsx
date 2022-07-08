@@ -30,11 +30,16 @@ function CanvasComponent({
   }, []);
 
   const renderCanvas = setToContainerSize ? (
-    <canvas ref={canvas} style={{ width: "100%", height: "100%" }}>
+    <canvas ref={canvas} style={{ cursor: "none" }}>
       {" "}
     </canvas>
   ) : (
-    <canvas ref={canvas} width={width} height={height}></canvas>
+    <canvas
+      style={{ cursor: "none" }}
+      ref={canvas}
+      width={width}
+      height={height}
+    ></canvas>
   );
 
   return renderCanvas;
