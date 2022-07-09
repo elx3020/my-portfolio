@@ -8,6 +8,7 @@ class PhysicsObject {
     this.position = new Vector2(x, y);
     this.velocity = new Vector2(0, 0);
     this.useGravity = gravity;
+    this.restitution = -1;
   }
 
   start() {}
@@ -22,7 +23,9 @@ class PhysicsObject {
     }
 
     this.show(ctx);
+
     this.collision(ctx, this, other);
+    // console.log(this.velocity.length());
 
     this.position.x += this.velocity.x;
     this.position.y += this.velocity.y;
@@ -33,55 +36,61 @@ class PhysicsObject {
   collision(ctx, thisObject, other) {
     for (let i = 0; i < other.length; i++) {
       if (thisObject === other[i]) continue;
-      const distanceVector = other[i].position.rest(this.position);
 
-      if (distanceVector.length() < this.radius * 2) {
-        if (this.velocity.length() === 0) return;
-        const dotProduct = this.velocity
-          .normalized()
-          .dot(distanceVector.normalized());
+      const normalVector = other[i].position.rest(this.position);
 
-        const collisionVelocity = new Vector2(
-          this.velocity.x * dotProduct,
-          this.velocity.y * dotProduct
-        );
+      //   DrawLine(
+      //     ctx,
+      //     this.position.x,
+      //     this.position.y,
+      //     this.position.x + normalVector.normalized().x * this.radius,
+      //     this.position.y + normalVector.normalized().y * this.radius,
+      //     "lightblue"
+      //   );
 
-        const dotProductOther = other[i].velocity
-          .normalized()
-          .dot(distanceVector.normalized());
+      if (normalVector.length() <= this.radius * 2) {
+        if (true) {
+          //   console.log("hit start");
 
-        const collisionVelocityOther = other[i].velocity
-          .add(distanceVector)
-          .normalized();
+          //   other[i].color = "red";
+          const relativeVelocity = this.velocity.rest(other[i].velocity);
+          const collisionVelocity =
+            this.restitution * relativeVelocity.dot(normalVector.normalized());
 
-        console.log(
-          collisionVelocity
-            .normalized()
-            .dot(collisionVelocityOther.normalized())
-        );
-        const instanceVelocity = new Vector2(this.velocity.x, this.velocity.y);
-        // console.log({ x: collisionVelocity.x, y: collisionVelocity.y });
-        // instanceVelocity.x = this.velocity.x + other[i].velocity.x + collisionVelocity.x;
-        // other[i].velocity.x = this.velocity.x + collisionVelocity.x;
-        // this.velocity.x = collisionVelocity.x;
-        // this.velocity.y +=
-        //   -collisionVelocity.y * this.velocity.length() * dotProduct;
+          this.velocity.x += collisionVelocity * normalVector.normalized().x;
+          other[i].velocity.x -=
+            collisionVelocity * normalVector.normalized().x;
+          this.velocity.y += collisionVelocity * normalVector.normalized().y;
+          other[i].velocity.y -=
+            collisionVelocity * normalVector.normalized().y;
 
-        DrawLine(
-          ctx,
-          this.position.x,
-          this.position.y,
-          this.position.x + collisionVelocity.x * 5,
-          this.position.y + collisionVelocity.y * 5,
-          "white"
-        );
+          this.position.x -=
+            normalVector.normalized().x *
+            (this.radius - normalVector.length() / 2);
+          this.position.y -=
+            normalVector.normalized().y *
+            (this.radius - normalVector.length() / 2);
+
+          //   this.position.x += this.radius - normalVector.length() / 2;
+          //   this.position.y -= this.radius - normalVector.length() / 2;
+        }
+
+        // console.log("hit enters");
+      } else {
+        // if (other[i].color === "black") continue;
+        // other[i].color = "black";
+        // // console.log("hit finish");
       }
     }
   }
 
   drag() {
-    this.velocity.x *= 0.995;
-    this.velocity.y *= 0.98;
+    this.velocity.x *= 0.985;
+    this.velocity.y *= 0.985;
+    if (this.velocity.length() < 1) {
+      this.velocity.x *= this.velocity.x * this.velocity.x;
+      this.velocity.y *= this.velocity.y * this.velocity.y;
+    }
   }
 
   BoundaryConstrain(ctx) {
@@ -89,13 +98,23 @@ class PhysicsObject {
       this.position.x + this.radius > ctx.canvas.width ||
       this.position.x - this.radius < 0
     ) {
-      this.velocity.x = -this.velocity.x;
+      this.velocity.x = -this.velocity.x * 0.9;
+      if (this.position.x + this.radius > ctx.canvas.width) {
+        this.position.x = ctx.canvas.width - this.radius;
+      } else if (this.position.x - this.radius < 0) {
+        this.position.x = this.radius;
+      }
     }
     if (
       this.position.y + this.radius > ctx.canvas.height ||
       this.position.y - this.radius < 0
     ) {
-      this.velocity.y = -this.velocity.y;
+      this.velocity.y = -this.velocity.y * 0.9;
+      if (this.position.y + this.radius > ctx.canvas.height) {
+        this.position.y = ctx.canvas.height - this.radius + 0.7;
+      } else if (this.position.y - this.radius < 0) {
+        this.position.y = this.radius;
+      }
       return true;
     }
     return false;

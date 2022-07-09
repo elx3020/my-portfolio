@@ -80,14 +80,16 @@ function Vector2(x, y) {
   };
 
   this.scale = function (number) {
-    this.x = this.x * number;
-    this.y = this.y * number;
+    return new Vector2(this.x * number, this.y * number);
   };
   this.length = function () {
     return Math.sqrt(this.x * this.x + this.y * this.y);
   };
 
   this.normalized = function () {
+    if (this.length() === 0) {
+      return new Vector2(0, 0);
+    }
     return new Vector2(this.x / this.length(), this.y / this.length());
   };
 

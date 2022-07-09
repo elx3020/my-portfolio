@@ -6,11 +6,14 @@ import CircleParticle from "../../Classes/CircleParticle";
 import { useState, useEffect } from "react";
 
 function CollisionSystem() {
-  const canvasSettings = useRef({ width: window.innerWidth, height: 800 });
+  const canvasSettings = useRef({
+    width: window.innerWidth - 100,
+    height: 800,
+  });
 
   function InstanciateObjects(object, numberOfObjects) {
     let canvasObjects = [];
-    const radius = 55;
+    const radius = 20;
 
     for (let i = 0; i < numberOfObjects; i++) {
       let x =
@@ -37,8 +40,14 @@ function CollisionSystem() {
         }
       }
 
-      const particle = new object(spawnPosition.x, 100, false, radius);
-      particle.velocity.x = (Math.random() - 0.2) * 10;
+      const particle = new object(
+        spawnPosition.x,
+        spawnPosition.y,
+        false,
+        radius
+      );
+      particle.velocity.x = (Math.random() - 0.5) * 10;
+      particle.velocity.y = (Math.random() - 0.5) * 10;
 
       canvasObjects.push(particle);
     }
@@ -46,21 +55,23 @@ function CollisionSystem() {
     return canvasObjects;
   }
 
-  const drawObjects = InstanciateObjects(CircleParticle, 2);
+  const drawObjects = InstanciateObjects(CircleParticle, 250);
 
   function drawCollision(ctx) {
-    ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    // ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+    ctx.fillStyle = "rgba(255, 255, 255, 0.3)";
+    ctx.fillRect(0, 0, ctx.canvas.width, ctx.canvas.height);
 
     drawObjects.forEach((particle) => {
       particle.update(ctx, drawObjects);
 
-      DrawLine(ctx, 0, 0, particle.position.x, particle.position.y, "red");
+      //   DrawLine(ctx, 0, 0, particle.position.x, particle.position.y, "red");
       //   DrawLine(
       //     ctx,
       //     particle.position.x,
       //     particle.position.y,
-      //     particle.position.x + particle.velocity.x * 50,
-      //     particle.position.y + particle.velocity.y * 50,
+      //     particle.position.x + particle.velocity.x * 30,
+      //     particle.position.y + particle.velocity.y * 30,
       //     "yellow"
       //   );
     });

@@ -8,7 +8,15 @@ function ExperimentPage() {
   return (
     <div style={fullPage} data-scroll data-scroll-section>
       <h1 style={{ margin: "50px 0" }}>Canvas Experiments</h1>
-      <CollisionSystem />
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+        }}
+      >
+        <CollisionSystem />
+      </div>
     </div>
   );
 }
