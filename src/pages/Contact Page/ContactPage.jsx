@@ -1,6 +1,7 @@
 // components
 import GoToTop from "../../components/functionality/GoToTop.jsx";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen.jsx";
+import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 // hooks
 import useCurrentPage from "../../hooks/useCurrentPage.jsx";
@@ -9,6 +10,7 @@ import { useForm, ValidationError } from "@formspree/react";
 import "./style.sass";
 
 const ContactPage = (props) => {
+  const { scrollObject } = props;
   const contactInfoText =
     "Esteban David Lasso Lopez \n estebannl28@gmail.com \n +49 1 777 504 296 \n Location - Berlin \n English - Español - Deutsch.";
 
@@ -20,8 +22,21 @@ const ContactPage = (props) => {
 
   // submit the for,
   const [state, handleSubmit] = useForm("xvolwkpz");
+  // console.log(scrollObject);
+  useEffect(() => {
+    console.log("Update");
+    if (scrollObject !== null) {
+      scrollObject.update();
+      scrollObject.scrollTo("top");
+    }
+  }, [state.succeeded]);
+
   if (state.succeeded) {
-    return <p>Thanks for joining!</p>;
+    return (
+      <section className="submission-message" data-scroll-section>
+        <h1>Thanks, you are awesome! I will respond you as soon as posible!</h1>
+      </section>
+    );
   }
 
   return (
@@ -69,10 +84,11 @@ const ContactPage = (props) => {
             field="moreinfo"
             errors={state.errors}
           />
-          <div
+          {/* re catchap */}
+          {/* <div
             className="g-recaptcha"
             data-sitekey="6LcOxIsgAAAAACRMcaMSOH7xON7OQoF3r0RjMLpa"
-          ></div>
+          ></div> */}
           <button
             className="submit-btn"
             type="submit"

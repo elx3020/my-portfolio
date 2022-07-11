@@ -82,7 +82,9 @@ function App(props) {
             <Route path="about" element={<About handlePage={handlePage} />} />
             <Route
               path="contact"
-              element={<ContactPage handlePage={handlePage} />}
+              element={
+                <ContactPage scrollObject={scroll} handlePage={handlePage} />
+              }
             />
             <Route
               path="projects/:arr_handle/:project_handle"
