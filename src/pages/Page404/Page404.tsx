@@ -1,8 +1,9 @@
+import React from "react";
 import HeroGenericComponent from "../../components/Layout/HeroGenericComponent";
 import useCurrentPage from "../../hooks/useCurrentPage";
 
 import "./style.sass";
-export default function Page404(props) {
+export default function Page404(props: { handlePage: any; }) {
   const { handlePage } = props;
 
   useCurrentPage(handlePage);

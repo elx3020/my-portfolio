@@ -1,22 +1,23 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { ProjectDataT } from "../types/globalTypes";
 
-export default function Card(props) {
+export default function Card(props: {projectData: ProjectDataT}) {
   const {
-    project_name,
+    project_Name,
     image_Url,
-    project_description,
-    url_project,
+    description,
+    project_url,
     id,
-    arrId,
+    arr_Id,
   } = props.projectData;
 
   let navigate = useNavigate();
 
   const handleClick = () => {
-    navigate(`projects/${arrId}/${id}`);
+    navigate(`projects/${arr_Id}/${id}`);
   };
-  const projectLink = `/projects/${arrId}/${id}`;
+  const projectLink = `/projects/${arr_Id}/${id}`;
 
   return (
     <div data-scroll data-scroll-offset="50%" className="card-showcase">
@@ -25,9 +26,9 @@ export default function Card(props) {
         <div className="overlay"></div>
       </div>
       <div className="card-content">
-        <h1>{project_name}</h1>
-        <p>{project_description}</p>
-        <a href={url_project}>Go to the site</a>
+        <h1>{project_Name}</h1>
+        <p>{description}</p>
+        <a href={project_url}>Go to the site</a>
       </div>
     </div>
   );

@@ -3,30 +3,30 @@ import locomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/src/locomotive-scroll.scss";
 import imagesLoaded from "imagesloaded";
 
-export default function useLocoScroll(start) {
-  const [scroll, setScroll] = useState(null);
+export default function useLocoScroll(currentPage: string) {
+  const [scroll, setScroll] = useState<null | locomotiveScroll>(null);
   useEffect(() => {
     const locoScroll = new locomotiveScroll({
-      el: document.querySelector("#main-container"),
+      el: document.querySelector("#main-container") as HTMLElement,
       smooth: true,
       multiplier: 1,
       class: "is-reveal",
       repeat: false,
       getDirection: true,
       reloadOnContextChange: true,
-      mobile: {
+      smartphone: {
         smooth: false,
-        getDirection: true,
-        repeat: false,
       },
       tablet: {
+        breakpoint: 10,
         smooth: false,
-        getDirection: true,
+        direction: "vertical"
+
       },
     });
 
     setScroll(locoScroll);
-    imagesLoaded(document.querySelector("#main-container"), function () {
+    imagesLoaded(document.querySelector("#main-container") as ImagesLoaded.ElementSelector, function () {
       locoScroll.update();
     });
 
@@ -34,6 +34,6 @@ export default function useLocoScroll(start) {
       // cleaning scroll
       locoScroll.destroy();
     };
-  }, [start]);
+  }, [currentPage]);
   return scroll;
 }

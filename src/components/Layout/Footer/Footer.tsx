@@ -4,6 +4,8 @@ import { Link } from "react-router-dom";
 import { triangleDown } from "../../../utils/svgFigures";
 // styles
 import "./Footer.sass";
+// TODO
+// @ts-ignore
 import myPhoto from "../../../images/yo.jpg";
 // assets
 

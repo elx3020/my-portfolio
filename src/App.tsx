@@ -25,27 +25,30 @@ import NavBar from "./components/Layout/NavBar/NavBar";
 // data
 import ProjectsData from "./data/project_data.json";
 import useLocoScroll from "./hooks/useLocoScroll";
+import { GlobalDataT } from "./types/globalTypes";
 
-function App(props) {
+
+function App() {
   // functionality
 
-  const scrollRef = createRef();
+  const scrollRef = createRef<HTMLDivElement>();
 
   const [currentPage, setCurrentpage] = useState("");
   const [scrollDirection, setScrollDirection] = useState("up");
 
-  function handlePage(currentPage) {
+  function handlePage(currentPage: string) {
     setCurrentpage(currentPage);
   }
 
-  const scroll = useLocoScroll(currentPage, scrollRef);
+  const scroll = useLocoScroll(currentPage);
   // console.log(locoInstance);
   // data
-  const projectsData = JSON.parse(JSON.stringify(ProjectsData));
+  const projectsData: GlobalDataT = JSON.parse(JSON.stringify(ProjectsData));
 
   useEffect(() => {
     if (scroll !== null) {
       scroll.on("scroll", (args) => {
+        // @ts-ignore
         const scrollHorizontal = args.direction;
         // ignore when the event return null
         if (scrollHorizontal === null) return;
@@ -73,12 +76,12 @@ function App(props) {
                 <HomePage projectsData={projectsData} handlePage={handlePage} />
               }
             />
-            <Route
+            {/* <Route
               path="work"
               element={
                 <WorkPage projectsData={projectsData} handlePage={handlePage} />
               }
-            />
+            /> */}
             <Route path="about" element={<About handlePage={handlePage} />} />
             <Route
               path="contact"

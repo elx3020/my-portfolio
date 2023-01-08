@@ -1,3 +1,5 @@
+import React from "react";
+
 const triangle = (
   <svg
     className="triangle"

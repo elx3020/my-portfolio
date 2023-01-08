@@ -1,14 +1,15 @@
+import React from "react";
 import { mapToList } from "../../utils/utils";
 import { Helmet } from "react-helmet";
 
 // art images use directly in the work page
-import window1 from "../../images/WorkPage/web-art-0.png";
-import window2 from "../../images/WorkPage/web-art-1.png";
-import window3 from "../../images/WorkPage/web-art-2.png";
-import window4 from "../../images/WorkPage/web-art-3.png";
-import uiCircle from "../../images/WorkPage/circle.png";
-import uiCursor from "../../images/WorkPage/cursor.png";
-import computerIllustration from "../../images/WorkPage/1computer-work.svg";
+import window1 from "images/WorkPage/web-art-0.png";
+import window2 from "images/WorkPage/web-art-1.png";
+import window3 from "images/WorkPage/web-art-2.png";
+import window4 from "images/WorkPage/web-art-3.png";
+import uiCircle from "images/WorkPage/circle.png";
+import uiCursor from "images/WorkPage/cursor.png";
+import computerIllustration from "images/WorkPage/1computer-work.svg";
 //  components been use in this page
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import CardContainer from "../../components/Layout/CardContainer";

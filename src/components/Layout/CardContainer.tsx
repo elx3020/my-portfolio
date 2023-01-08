@@ -2,6 +2,7 @@ import React from "react";
 
 // components
 import Card from "../Card";
+import { ProjectDataT } from "../../types/globalTypes";
 
 // styling
 
@@ -13,11 +14,11 @@ import Card from "../Card";
 //     "project_description" : "Some sample text to fill up spaces"
 // },
 
-export default function CardContainer(props) {
+export default function CardContainer(props: {data: ProjectDataT[]}) {
   const { data } = props;
 
   const cards = data.map((project_Data) => {
-    return <Card key={project_Data.project_name} projectData={project_Data} />;
+    return <Card key={project_Data.project_Name} projectData={project_Data} />;
   });
 
   return <div className="cards-wrapper">{cards}</div>;

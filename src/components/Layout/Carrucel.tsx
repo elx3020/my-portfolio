@@ -1,5 +1,6 @@
+import React from "react";
 
-const Carrucel = (props) => {
+const Carrucel = () => {
     return (<div>
         <h1>Carrucel component</h1>
     </div>)

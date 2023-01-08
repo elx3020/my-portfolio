@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react/cjs/react.production.min";
 import "./Navbar.sass";
-const Navbar = (props) => {
+import React from "react";
+const Navbar = (props: { scrollDirection: any; }) => {
   const { scrollDirection } = props;
 
   const links = (

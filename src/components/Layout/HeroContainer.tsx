@@ -1,7 +1,8 @@
 // styles
+import React from "react";
 import { cubeElement } from "../../animations/cubeElement";
 import "../../styles/layoutStyles/layoutContainers.sass";
-const HeroContainer = (props) => {
+const HeroContainer = (props: any) => {
   // props to pass
 
   const {

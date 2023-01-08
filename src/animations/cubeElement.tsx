@@ -1,5 +1,6 @@
+import React from "react";
 import "./cubeAnim.scss";
-
+// @ts-ignore
 const cubeElement = (
   <div className="container-cube">
     <div className="flex">

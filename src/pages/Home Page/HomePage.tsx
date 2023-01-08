@@ -15,26 +15,22 @@ import ListItem from "../../components/List/ListItem";
 import useCurrentPage from "../../hooks/useCurrentPage";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 
-//
-
+// TODO
+//@ts-ignore
 import flagImage from "../../images/flag.png";
 
 // hero image elements
 import { triangle, circle, line } from "../../utils/svgFigures";
+import React from "react";
+import { GlobalDataT } from "../../types/globalTypes";
 // assets
 // import mePhoto from "../images/background-image.jpg";
 
-const HomePage = (props) => {
+const HomePage = (props: {children?: any, projectsData: GlobalDataT, handlePage: (value: string) => void }) => {
   // assign currentPage
   useCurrentPage(props.handlePage);
 
-  // props.isLoading(); //TODO this is not working correctly
-
-  // use locomotive effects
-  // useLocoScroll(isActive);
-
-  // data
-
+ 
   const { projectsData } = props;
 
   const { showcase_Data, mini_projects } = projectsData;

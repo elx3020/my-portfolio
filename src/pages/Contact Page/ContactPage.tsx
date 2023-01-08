@@ -1,10 +1,11 @@
+import React from "react";
 // components
-import GoToTop from "../../components/functionality/GoToTop.jsx";
-import LoadingScreen from "../../components/LoadingScreen/LoadingScreen.jsx";
+import GoToTop from "../../components/functionality/GoToTop";
+import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 // hooks
-import useCurrentPage from "../../hooks/useCurrentPage.jsx";
+import useCurrentPage from "../../hooks/useCurrentPage";
 import { useForm, ValidationError } from "@formspree/react";
 
 import "./style.sass";
@@ -75,8 +76,8 @@ const ContactPage = (props) => {
           <textarea
             name="moreinfo"
             id="moreinfoId"
-            cols="30"
-            rows="10"
+            cols={30}
+            rows={10}
             required
           ></textarea>
           <ValidationError
