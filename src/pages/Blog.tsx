@@ -1,5 +1,6 @@
+import React from "react";
 
-const Blog = (props) =>
+const Blog = () =>
 {
     return (
         <div>

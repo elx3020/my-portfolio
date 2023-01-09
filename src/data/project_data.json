@@ -114,7 +114,7 @@
       "arr_Id": "ui_projects",
       "id": "jumpProject",
       "project_Name": "Jump",
-      "tumbnailUrl": "images/projects/Jump-cover.png",
+      "image_Url": "images/projects/Jump-cover.png",
       "imageAlt": "tumbnail of project",
       "imageCollection": [
         "/images/projects/jump-showcase.png",
@@ -127,7 +127,7 @@
       "arr_Id": "ui_projects",
       "id": "arplatesproject",
       "project_Name": "AR Plates",
-      "tumbnailUrl": "images/projects/web-cover-ar-plate.png",
+      "image_Url": "images/projects/web-cover-ar-plate.png",
       "imageAlt": "tumbnail of project",
       "imageCollection": [
         "/images/projects/portfolio-plates.png",
@@ -137,7 +137,7 @@
     },
     {
       "project_Name": "Yupana",
-      "tumbnailUrl": "images/projects/yupana-cover.png",
+      "image_Url": "images/projects/yupana-cover.png",
       "imageAlt": "tumbnail of project",
       "imageCollection": ["/images/projects/", "/images/projects/"],
       "description": "Some description to the project"
@@ -149,7 +149,7 @@
       "arr_Id": "videogame-projects",
       "id": "social-app",
       "project_Name": "Social App React",
-      "imageUrl": "/images/projects/social_app.png",
+      "image_Url": "/images/projects/social_app.png",
       "imageAlt": "Screenshot of the social app",
       "description": "Fullstack project created using React Redux (Front-End), Express, Node Js and Firebase (Backend)"
     },
@@ -158,7 +158,7 @@
       "arr_Id": "videogame-projects",
       "id": "weather-app",
       "project_Name": "Weather App",
-      "imageUrl": "/images/projects/weather_app.png",
+      "image_Url": "/images/projects/weather_app.png",
       "imageAlt": "Screenshot of the weather app",
       "description": "A simple implementation of a weather app. Created using plain HTML, CSS, and JAVASCRIPT. An weather API is use to get the forecast"
     },
@@ -167,7 +167,7 @@
       "arr_Id": "videogame-projects",
       "id": "project3",
       "project_Name": "Awesome Project 3",
-      "imageUrl": "/images/projects/place-holder.png",
+      "image_Url": "/images/projects/place-holder.png",
       "imageAlt": "an image description",
       "description": "Here goes a brief description of the project that I want to show3"
     }

@@ -38,12 +38,13 @@ const HomePage = (props: {children?: any, projectsData: GlobalDataT, handlePage:
   const mProjectList = mini_projects.map((item) => {
     return (
       <ListItem
+      data={{description: item.description, 
+        id: item.id, 
+        project_url: item.project_url,
+        arr_Id: item.arr_Id,
+        project_Name: item.project_Name,
+        image_Url: item.image_Url}}
         key={item.id}
-        description={item.description}
-        projectId={item.id}
-        arrId={item.arr_Id}
-        project_url={item.project_url}
-        project_Name={item.project_Name}
       />
     );
   });

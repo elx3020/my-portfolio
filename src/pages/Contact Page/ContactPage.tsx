@@ -9,8 +9,9 @@ import useCurrentPage from "../../hooks/useCurrentPage";
 import { useForm, ValidationError } from "@formspree/react";
 
 import "./style.sass";
+import LocomotiveScroll from "locomotive-scroll";
 
-const ContactPage = (props) => {
+const ContactPage = (props: {scrollObject: LocomotiveScroll | null, handlePage: (value:string) => void} ) => {
   const { scrollObject } = props;
   const contactInfoText =
     "Esteban David Lasso Lopez \n estebannl28@gmail.com \n +49 1 777 504 296 \n Location - Berlin \n English - Español - Deutsch.";

@@ -4,12 +4,12 @@ import { useState } from "react";
 
 import "./NavPanel.sass";
 
-export default function NavBarPanel(props) {
+export default function NavBarPanel(props: {currentPage: string, scrollDirection: string}) {
   const [navPanelOpen, setNavPanel] = useState("close");
 
   const { currentPage, scrollDirection } = props;
 
-  function togglePanel(e) {
+  function togglePanel(e: React.MouseEvent ) {
     if (navPanelOpen === "close") {
       setNavPanel("open");
     } else if (navPanelOpen === "open") {
@@ -29,14 +29,14 @@ export default function NavBarPanel(props) {
       >
         <span>M</span>
       </div>
-      <NavPanel state={navPanelOpen} />
+      <NavPanel toggleClass={navPanelOpen} />
     </div>
   );
 }
 
-function NavPanel(props) {
+function NavPanel(props: {toggleClass: string}) {
   return (
-    <div id="navpanel" className={`nav-panel ${props.state}`}>
+    <div id="navpanel" className={`nav-panel ${props.toggleClass}`}>
       <Link to="/">Home</Link>
       <Link to="work">My Work</Link>
       <Link to="about">About me</Link>

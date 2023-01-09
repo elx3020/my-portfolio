@@ -7,14 +7,24 @@ export type DataIndentity = {
 export type ProjectDataT = DataIndentity & {
     description: string, 
     project_url: string, 
-    image_Url?: string
+    image_Url?: string,
+    imageAlt?: string
 }
+
+export type UIProjectDataT = ProjectDataT & {
+    imageCollection: string[],
+
+}
+
+
 
 export type GlobalDataT = {
     showcase_Data: ProjectDataT[], 
     mini_projects: ProjectDataT[],  
     web_Proj_Large: ProjectDataT[], 
-    web_Proj_Mini: ProjectDataT[]
+    web_Proj_Mini: ProjectDataT[],
+    ui_projects: UIProjectDataT[],
+    
 }
 
 type ClassMode = 'single' | 'multiple'

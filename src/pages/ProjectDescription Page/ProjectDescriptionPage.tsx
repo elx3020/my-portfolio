@@ -10,8 +10,9 @@ import useCurrentPage from "../../hooks/useCurrentPage";
 
 // style
 import "./style.sass";
+import { GlobalDataT, UIProjectDataT } from "../../types/globalTypes";
 
-export default function ProjectDescriptionPage(props) {
+export default function ProjectDescriptionPage(props: {projectsData: GlobalDataT, handlePage: (value: string) => void}) {
   // set data to the component render
   //  data is an object which is value is an array
   const { projectsData } = props;
@@ -20,10 +21,11 @@ export default function ProjectDescriptionPage(props) {
   const { arr_handle, project_handle } = useParams();
 
   // param match key name and select array of projects
+// @ts-ignore
   const projectArr = projectsData[arr_handle];
   // use project_handle to mach projectID so filter to proper data.
 
-  const project = ProjectDetails(projectArr, project_handle);
+  const project = ProjectDetails<UIProjectDataT>(projectArr, project_handle as string);
 
   let pageContent;
 

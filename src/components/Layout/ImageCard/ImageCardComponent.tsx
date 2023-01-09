@@ -3,12 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import "./style.sass";
+import { ProjectDataT } from "../../../types/globalTypes";
 
-function ImageCardComponent(props) {
+function ImageCardComponent(props : {data: ProjectDataT}) {
   // status state
   const [status, setStatus] = useState("disable");
 
-  const { arr_Id, id, project_Name, tumbnailUrl, imageAlt } = props.data;
+  const { arr_Id, id, project_Name, image_Url, imageAlt } = props.data;
 
   //active component
 
@@ -33,7 +34,7 @@ function ImageCardComponent(props) {
         <h3>{project_Name}</h3>
       </div>
 
-      <img src={tumbnailUrl} alt={imageAlt} />
+      <img src={image_Url} alt={imageAlt} />
     </div>
   );
 }

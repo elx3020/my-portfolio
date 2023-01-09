@@ -1,10 +1,9 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
-import { Link } from "react-router-dom";
 
 import "./style.sass";
-export default function ListItem(props) {
-  const { project_url, description, projectId, project_Name, arrId } = props;
+import { ProjectDataT } from "../../types/globalTypes";
+export default function ListItem(props: {data: ProjectDataT}) {
+  const { project_url, description, project_Name } = props.data;
 
   return (
     <div data-scroll data-scroll-offset="25%" className="list-item">

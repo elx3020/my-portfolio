@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-export default function useLoading(handleFunction) {
+export default function useLoading(handleFunction: Function) {
   useEffect(() => {
     setTimeout(() => {
       handleFunction();
