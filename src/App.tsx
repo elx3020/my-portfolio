@@ -76,12 +76,12 @@ function App() {
                 <HomePage projectsData={projectsData} handlePage={handlePage} />
               }
             />
-            {/* <Route
+            <Route
               path="work"
               element={
                 <WorkPage projectsData={projectsData} handlePage={handlePage} />
               }
-            /> */}
+            />
             <Route path="about" element={<About handlePage={handlePage} />} />
             <Route
               path="contact"

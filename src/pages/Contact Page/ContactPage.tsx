@@ -26,7 +26,6 @@ const ContactPage = (props: {scrollObject: LocomotiveScroll | null, handlePage: 
   const [state, handleSubmit] = useForm("xvolwkpz");
   // console.log(scrollObject);
   useEffect(() => {
-    console.log("Update");
     if (scrollObject !== null) {
       scrollObject.update();
       scrollObject.scrollTo("top");
