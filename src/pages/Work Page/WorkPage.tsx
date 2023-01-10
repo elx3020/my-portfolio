@@ -2,15 +2,7 @@ import React from "react";
 import { mapToList } from "../../utils/utils";
 import { Helmet } from "react-helmet";
 
-// art images use directly in the work page
-import window1 from "images/WorkPage/web-art-0.png";
-import window2 from "images/WorkPage/web-art-1.png";
-import window3 from "images/WorkPage/web-art-2.png";
-import window4 from "images/WorkPage/web-art-3.png";
-import uiCircle from "images/WorkPage/circle.png";
-import uiCursor from "images/WorkPage/cursor.png";
-import computerIllustration from "images/WorkPage/1computer-work.svg";
-//  components been use in this page
+
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import CardContainer from "../../components/Layout/CardContainer";
 import useCurrentPage from "../../hooks/useCurrentPage";
@@ -21,6 +13,10 @@ import ImageCardComponent from "../../components/Layout/ImageCard/ImageCardCompo
 // style document been use in this page
 import "./style.sass";
 
+
+const imagesUrl = ['/images/WorkPage/web-art-0.png', '/images/WorkPage/web-art-1.png', '/images/WorkPage/web-art-2.png','/images/WorkPage/web-art-3.png','/images/WorkPage/circle.png','/images/WorkPage/cursor.png']
+
+const computerIllustration = '/images/WorkPage/1computer-work.svg';
 const WorkPage = (props) => {
   const { projectsData, handlePage } = props;
 
@@ -39,8 +35,8 @@ const WorkPage = (props) => {
 
   // ui projects
 
-  const uiProjects = ui_projects.map((project) => {
-    return <ImageCardComponent key={project.id} data={project} />;
+  const uiProjects = ui_projects.map((project, index) => {
+    return <ImageCardComponent key={index} data={project} />;
   });
 
   // pass current Page
@@ -56,9 +52,9 @@ const WorkPage = (props) => {
       {/* Work - Page Hero */}
       <HeroGenericComponent
         className="generic-hero-wrapper work-page"
-        fontSize="clamp(2vw, 150px, 17vw)"
-        text="My Work."
-        figure={computerIllustration}
+        styleOptions={{fontSize: "clamp(2vw, 150px, 17vw)"}}
+        textContent="My Work."
+        image_Url={computerIllustration}
       >
         {/* <p>Explore all the projects I have</p> */}
       </HeroGenericComponent>
@@ -71,16 +67,16 @@ const WorkPage = (props) => {
           <div className="windows-wrapper">
             <div className="circle-background"></div>
             <div data-scroll data-scroll-speed="1.3">
-              <img src={window1} alt="window" />
+              <img src={imagesUrl[0]} alt="window" />
             </div>
             <div data-scroll data-scroll-speed="-1.2">
-              <img src={window2} alt="window" />
+              <img src={imagesUrl[1]} alt="window" />
             </div>
             <div data-scroll data-scroll-speed="1.1">
-              <img src={window3} alt="window" />
+              <img src={imagesUrl[2]} alt="window" />
             </div>
             <div data-scroll data-scroll-speed="-1.2">
-              <img src={window4} alt="window" />
+              <img src={imagesUrl[3]} alt="window" />
             </div>
           </div>
         </div>
@@ -111,8 +107,8 @@ const WorkPage = (props) => {
         <header className="ui-head">
           <h1> UI PORTFOLIO</h1>
           <div className="header-image">
-            <img className="ui-circle" src={uiCircle} alt="decorative" />
-            <img className="cursor" src={uiCursor} alt="decorative" />
+            <img className="ui-circle" src={imagesUrl[4]} alt="decorative" />
+            <img className="cursor" src={imagesUrl[5]} alt="decorative" />
           </div>
         </header>
         <div className="container-ui">
