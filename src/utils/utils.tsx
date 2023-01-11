@@ -1,6 +1,5 @@
 import React from "react";
 import ListItem from "../components/List/ListItem";
-import { GlobalDataT, ProjectDataT } from "../types/globalTypes";
 
 function ProjectDetails<T extends ProjectDataT>(arrayId: T[], id: string): T  {
   let arr = arrayId.filter((item) => item.id === id);

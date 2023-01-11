@@ -21,20 +21,14 @@ import flagImage from "../../images/flag.png";
 
 // hero image elements
 import { triangle, circle, line } from "../../utils/svgFigures";
-import React from "react";
-import { GlobalDataT } from "../../types/globalTypes";
 // assets
 // import mePhoto from "../images/background-image.jpg";
 
 const HomePage = (props: {children?: any, projectsData: GlobalDataT, handlePage: (value: string) => void }) => {
   // assign currentPage
   useCurrentPage(props.handlePage);
-
- 
   const { projectsData } = props;
-
   const { showcase_Data, mini_projects } = projectsData;
-
   const mProjectList = mini_projects.map((item) => {
     return (
       <ListItem

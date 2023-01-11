@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { ProjectDataT } from "../types/globalTypes";
 
 export default function Card(props: {projectData: ProjectDataT}) {
   const {

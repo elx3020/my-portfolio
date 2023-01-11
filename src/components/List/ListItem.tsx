@@ -1,7 +1,6 @@
 import React from "react";
 
 import "./style.sass";
-import { ProjectDataT } from "../../types/globalTypes";
 export default function ListItem(props: {data: ProjectDataT}) {
   const { project_url, description, project_Name } = props.data;
 

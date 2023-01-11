@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useState, useEffect } from "react";
 
 import "./style.sass";
-import { ProjectDataT } from "../../../types/globalTypes";
 
 function ImageCardComponent(props : {data: ProjectDataT}) {
   // status state

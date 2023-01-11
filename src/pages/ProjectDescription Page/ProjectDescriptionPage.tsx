@@ -10,7 +10,6 @@ import useCurrentPage from "../../hooks/useCurrentPage";
 
 // style
 import "./style.sass";
-import { GlobalDataT, UIProjectDataT } from "../../types/globalTypes";
 
 export default function ProjectDescriptionPage(props: {projectsData: GlobalDataT, handlePage: (value: string) => void}) {
   // set data to the component render

@@ -2,7 +2,6 @@ import React from "react";
 
 // components
 import Card from "../Card";
-import { ProjectDataT } from "../../types/globalTypes";
 
 // styling
 

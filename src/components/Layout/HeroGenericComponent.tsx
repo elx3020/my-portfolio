@@ -1,5 +1,4 @@
 import React from "react";
-import { ComponentBT } from "../../types/globalTypes";
 
 export type HeroComponentProps = {
   className: string, fontSize: number, text: string, figure: string

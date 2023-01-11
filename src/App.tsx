@@ -25,7 +25,6 @@ import NavBar from "./components/Layout/NavBar/NavBar";
 // data
 import ProjectsData from "./data/project_data.json";
 import useLocoScroll from "./hooks/useLocoScroll";
-import { GlobalDataT } from "./types/globalTypes";
 
 
 function App() {
@@ -35,7 +34,6 @@ function App() {
 
   const [currentPage, setCurrentpage] = useState("");
   const [scrollDirection, setScrollDirection] = useState("up");
-
   function handlePage(currentPage: string) {
     setCurrentpage(currentPage);
   }
