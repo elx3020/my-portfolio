@@ -16,13 +16,12 @@ import useCurrentPage from "../../hooks/useCurrentPage";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 
 // TODO
-//@ts-ignore
-import flagImage from "../../images/flag.png";
 
 // hero image elements
 import { triangle, circle, line } from "../../utils/svgFigures";
 // assets
 // import mePhoto from "../images/background-image.jpg";
+const flagImage = "/images/flag.png";
 
 const HomePage = (props: {children?: any, projectsData: GlobalDataT, handlePage: (value: string) => void }) => {
   // assign currentPage

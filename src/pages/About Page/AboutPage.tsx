@@ -81,7 +81,7 @@ const AboutPage = (props: {handlePage: (value: string) => void}) => {
           <div className="circle"></div>
           <div className="v-img-wrap">
             <div data-scroll data-scroll-speed="-1">
-              <img src="images/yo.jpg" alt="me at the beatch" />
+              <img src="/images/yo.jpg" alt="me at the beatch" />
             </div>
           </div>
           <TitleParagraphComponent

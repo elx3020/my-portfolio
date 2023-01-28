@@ -25,7 +25,11 @@ import NavBar from "./components/Layout/NavBar/NavBar";
 // data
 import ProjectsData from "./data/project_data.json";
 import useLocoScroll from "./hooks/useLocoScroll";
+import LocomotiveScroll from "locomotive-scroll";
 
+type LMScrollEvent = LocomotiveScroll.OnScrollEvent & {
+  direction: 'up' | 'down' | null;
+}
 
 function App() {
   // functionality
@@ -46,8 +50,8 @@ function App() {
   useEffect(() => {
     if (scroll !== null) {
       scroll.on("scroll", (args) => {
-        // @ts-ignore
-        const scrollHorizontal = args.direction;
+        const event = args as LMScrollEvent
+        const scrollHorizontal = event.direction;
         // ignore when the event return null
         if (scrollHorizontal === null) return;
         setScrollDirection(scrollHorizontal);
