@@ -31,26 +31,17 @@ function addClass(className: string[], classtoAdd: string, state: boolean, setSt
     );
     return;
   }
-  const elements = className.map((item) => {
+  const elements = className.map<any>((item) => {
 
       return document.querySelector(`.${item}`);
   
   });
 
-  // elements.forEach((element) => {
-  //   if (!state) {
-  //     element.classList.add(classtoAdd);
-  //     setState((prev) => (prev = !prev));
-  //   }
-  // });
-
   for (let i = 0; i < elements.length; i++) {
     if (!state) {
-      // @ts-ignore
       elements[i].classList.add(classtoAdd);
       setState(true);
     } else {
-      // @ts-ignore
       elements[i].classList.remove(classtoAdd);
       setState(false);
     }
