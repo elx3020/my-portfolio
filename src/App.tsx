@@ -26,7 +26,8 @@ import NavBar from "./components/Layout/NavBar/NavBar";
 import ProjectsData from "./data/project_data.json";
 import useLocoScroll from "./hooks/useLocoScroll";
 import LocomotiveScroll from "locomotive-scroll";
-
+import StudiesPage from "./pages/Studies Page/StudiesPage";
+import { log } from "console";
 type LMScrollEvent = LocomotiveScroll.OnScrollEvent & {
   direction: 'up' | 'down' | null;
 }
@@ -38,6 +39,7 @@ function App() {
 
   const [currentPage, setCurrentpage] = useState("");
   const [scrollDirection, setScrollDirection] = useState("up");
+
   function handlePage(currentPage: string) {
     setCurrentpage(currentPage);
   }
@@ -60,15 +62,14 @@ function App() {
   }, [scroll]);
 
   // Dom Render
-
   return (
     <div>
       <Router>
         <div className="page-content" id="main-container" ref={scrollRef}>
-          <NavBar scrollDirection={scrollDirection} />
+        <NavBar scrollDirection={scrollDirection} />
           <NavBarPanel
             currentPage={currentPage}
-            scrollDirection={scrollDirection}
+            scrollDirection={scrollDirection} 
           />
 
           <Routes>
@@ -82,6 +83,12 @@ function App() {
               path="work"
               element={
                 <WorkPage projectsData={projectsData} handlePage={handlePage} />
+              }
+            />
+             <Route
+              path="studies"
+              element={
+                <StudiesPage />
               }
             />
             <Route path="about" element={<About handlePage={handlePage} />} />
