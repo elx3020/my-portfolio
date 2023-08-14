@@ -13,6 +13,7 @@ import useCurrentPage from "../../hooks/useCurrentPage";
 // elements styles
 import "./style.sass";
 import { triangleDown } from "../../utils/svgFigures";
+import { downloadIcon } from "../../utils/icons";
 import React from "react";
 
 const AboutPage = (props: {handlePage: (value: string) => void}) => {
@@ -97,6 +98,13 @@ const AboutPage = (props: {handlePage: (value: string) => void}) => {
           What can I do for you?
         </h1>
         <ColumnLayout className="column-layout">{cardsInfo}</ColumnLayout>
+      </div>
+
+      <div style={{display: 'flex', justifyContent: 'center', padding: '3vw'}}>
+
+      <div className="cv_button">
+        <a href="files/CV_Esteban_2023.pdf" target="_blank">Download CV <span> {downloadIcon} </span></a>   
+      </div>
       </div>
 
       <GoToTop />

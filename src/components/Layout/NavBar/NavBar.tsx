@@ -6,7 +6,9 @@ const Navbar = (props: { scrollDirection: any}) => {
 
   const links = (
     <div className="nav_links">
-      <Link to="work">Work</Link> <Link to="studies">Studies</Link> <Link to="about">About</Link>
+      <Link to="work">Work</Link> 
+      {/* <Link to="studies">Studies</Link>  */}
+      <Link to="about">About</Link>
       <Link to="contact">Contact</Link>
     </div>
   );
