@@ -1,5 +1,4 @@
 // components
-import GoToTop from "../../components/functionality/GoToTop";
 
 import ColumnLayout from "../../components/Layout/ColumnLayout";
 import HeroGenericComponent from "../../components/Layout/HeroGenericComponent";
