@@ -9,7 +9,6 @@ import "./style.sass";
 import HeroContainer from "../../components/Layout/HeroContainer";
 import CardContainer from "../../components/Layout/CardContainer";
 import ColumnLayout from "../../components/Layout/ColumnLayout";
-import GoToTop from "../../components/functionality/GoToTop";
 import ListItem from "../../components/List/ListItem";
 
 import useCurrentPage from "../../hooks/useCurrentPage";
@@ -111,7 +110,6 @@ const HomePage = (props: {children?: any, projectsData: GlobalDataT, handlePage:
         </div>
       </section>
 
-      <GoToTop />
     </div>
   );
 

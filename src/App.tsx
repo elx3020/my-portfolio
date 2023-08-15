@@ -25,12 +25,8 @@ import NavBar from "./components/Layout/NavBar/NavBar";
 // data
 import ProjectsData from "./data/project_data.json";
 import useLocoScroll from "./hooks/useLocoScroll";
-import LocomotiveScroll from "locomotive-scroll";
 import StudiesPage from "./pages/Studies Page/StudiesPage";
-import { log } from "console";
-type LMScrollEvent = LocomotiveScroll.OnScrollEvent & {
-  direction: 'up' | 'down' | null;
-}
+
 
 function App() {
   // functionality
@@ -38,34 +34,22 @@ function App() {
   const scrollRef = createRef<HTMLDivElement>();
 
   const [currentPage, setCurrentpage] = useState("");
-  const [scrollDirection, setScrollDirection] = useState("up");
 
   function handlePage(currentPage: string) {
     setCurrentpage(currentPage);
   }
 
-  const scroll = useLocoScroll(currentPage);
+  const {scroll,scrollDirection} = useLocoScroll(currentPage,scrollRef);
   // console.log(locoInstance);
   // data
   const projectsData: GlobalDataT = JSON.parse(JSON.stringify(ProjectsData));
 
-  useEffect(() => {
-    if (scroll !== null) {
-      scroll.on("scroll", (args) => {
-        const event = args as LMScrollEvent
-        const scrollHorizontal = event.direction;
-        // ignore when the event return null
-        if (scrollHorizontal === null) return;
-        setScrollDirection(scrollHorizontal);
-      });
-    }
-  }, [scroll]);
-
+ 
   // Dom Render
   return (
     <div>
       <Router>
-        <div className="page-content" id="main-container" ref={scrollRef}>
+        <div className="page-content" id="main-container" data-scroll-container ref={scrollRef}>
         <NavBar scrollDirection={scrollDirection} />
           <NavBarPanel
             currentPage={currentPage}

@@ -107,7 +107,6 @@ const AboutPage = (props: {handlePage: (value: string) => void}) => {
       </div>
       </div>
 
-      <GoToTop />
     </div>
   );
 };

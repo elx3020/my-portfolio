@@ -1,6 +1,5 @@
 import React from "react";
 // components
-import GoToTop from "../../components/functionality/GoToTop";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
@@ -105,7 +104,6 @@ const ContactPage = (props: {scrollObject: LocomotiveScroll | null, handlePage: 
           <p>{contactInfoText}</p>
         </div>
       </section>
-      <GoToTop />
     </div>
   );
 };

@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import { ProjectDetails } from "../../utils/utils";
 
 // components
-import GoToTop from "../../components/functionality/GoToTop";
 
 // hook
 import useCurrentPage from "../../hooks/useCurrentPage";
@@ -64,7 +63,6 @@ export default function ProjectDescriptionPage(props: {projectsData: GlobalDataT
   return (
     <section className="project-description-page" data-scroll-section>
       {pageContent}
-      <GoToTop />
     </section>
   );
 }

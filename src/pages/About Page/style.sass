@@ -6,11 +6,11 @@
     flex-direction: column
     align-items: center
     justify-content: center
-    height: 70vw
+    min-height: 70vw
     margin: 7% 0
     overflow: hidden
     @media screen and(max-width: 450px)
-        height: 100vh
+        min-height: 100vh
 
 .section-text-column
     position: relative
@@ -21,6 +21,9 @@
     width: 30%
     margin-right: 30px
     overflow: hidden
+
+    @media screen and (max-width: 950px)
+        width: 50%
 
     @media screen and (max-width: 450px)
         width: 90%
@@ -44,18 +47,22 @@
     row-gap: 20px
     column-gap: 20px
 
+            
+        
+
     .cards-info
         color: $secondaryColorBackground
         flex: 1
 
         mix-blend-mode: multiply
         padding: 2vw
-        height: 350px
+        min-height: 350px
         border-radius: 5px
         border: 2px solid $secondaryColorBackground
         opacity: 0
         transform: translateY(100px)
         transition: all 0.5s ease-in-out
+       
 
         h3
             font-size: 32px
@@ -67,6 +74,8 @@
         &.is-reveal
             transform: translate(0px)
             opacity: 1
+
+
 
 .wrap-text
 
