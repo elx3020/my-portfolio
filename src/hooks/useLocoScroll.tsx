@@ -19,6 +19,7 @@ export default function useLocoScroll(currentPage: string,scrollRef: React.RefOb
       el: scrollRef.current!,
       smooth: true,
       multiplier: 1,
+      touchMultiplier: 2,
       class: "is-reveal",
       repeat: true,
       getDirection: true,
@@ -29,13 +30,12 @@ export default function useLocoScroll(currentPage: string,scrollRef: React.RefOb
       },
       tablet: {
         breakpoint: 10,
-        smooth: true,
+        smooth: false,
         direction: "vertical"
     
       },
     })
     setScroll(locoScroll);
-
     locoScroll.on("scroll", (args) => {
       const event = args as LMScrollEvent
       const scrollHorizontal = event.direction;
