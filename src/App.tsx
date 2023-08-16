@@ -47,7 +47,7 @@ function App() {
  
   // Dom Render
   return (
-    <div>
+    <div className="content-page">
       <Router>
         <div className="page-content" id="main-container" data-scroll-container ref={scrollRef}>
         <NavBar scrollDirection={scrollDirection} />

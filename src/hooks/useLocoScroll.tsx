@@ -23,12 +23,13 @@ export default function useLocoScroll(currentPage: string,scrollRef: React.RefOb
       repeat: true,
       getDirection: true,
       reloadOnContextChange: true,
-      smartphone: {
+      smartphone: { 
+        direction: "vertical",
         smooth: false,
       },
       tablet: {
         breakpoint: 10,
-        smooth: false,
+        smooth: true,
         direction: "vertical"
     
       },
