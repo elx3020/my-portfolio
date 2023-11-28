@@ -26,6 +26,7 @@ import NavBar from "./components/Layout/NavBar/NavBar";
 import ProjectsData from "./data/project_data.json";
 import useLocoScroll from "./hooks/useLocoScroll";
 import StudiesPage from "./pages/Studies Page/StudiesPage";
+import GlobalStateProvider from "./hooks/useGlobalContext";
 
 
 function App() {
@@ -35,12 +36,12 @@ function App() {
 
   const [currentPage, setCurrentpage] = useState("");
 
+
   function handlePage(currentPage: string) {
     setCurrentpage(currentPage);
   }
 
   const {scroll,scrollDirection} = useLocoScroll(currentPage,scrollRef);
-  // console.log(locoInstance);
   // data
   const projectsData: GlobalDataT = JSON.parse(JSON.stringify(ProjectsData));
 
@@ -48,6 +49,7 @@ function App() {
   // Dom Render
   return (
     <div className="content-page">
+      <GlobalStateProvider>
       <Router>
         <div className="page-content" id="main-container" data-scroll-container ref={scrollRef}>
         <NavBar scrollDirection={scrollDirection} />
@@ -75,7 +77,7 @@ function App() {
                 <StudiesPage />
               }
             />
-            <Route path="about" element={<About handlePage={handlePage} />} />
+            <Route path="about/" element={<About handlePage={handlePage} />} />
             <Route
               path="contact"
               element={
@@ -96,7 +98,9 @@ function App() {
           </Routes>
           <Footer />
         </div>
-      </Router>
+        </Router>
+      </GlobalStateProvider>
+        
     </div>
   );
 }
