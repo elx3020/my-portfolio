@@ -18,6 +18,9 @@ import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 
 // hero image elements
 import { triangle, circle, line } from "../../utils/svgFigures";
+
+import { useGlobalContext } from "../../hooks/useGlobalContext";
+
 // assets
 // import mePhoto from "../images/background-image.jpg";
 const flagImage = "/images/flag.png";
@@ -25,6 +28,11 @@ const flagImage = "/images/flag.png";
 const HomePage = (props: {children?: any, projectsData: GlobalDataT, handlePage: (value: string) => void }) => {
   // assign currentPage
   useCurrentPage(props.handlePage);
+
+  const globalContext = useGlobalContext();
+
+  const homePageContent = globalContext.content.homePage;
+
   const { projectsData } = props;
   const { showcase_Data, mini_projects } = projectsData;
   const mProjectList = mini_projects.map((item) => {
@@ -49,11 +57,11 @@ const HomePage = (props: {children?: any, projectsData: GlobalDataT, handlePage:
       </Helmet>
       <HeroContainer
         title="Esteban Lasso"
-        description="Programmer, web designer, UI/UX-designer."
+        description={homePageContent.heroContainer.description}
         isImage={false}
         backgroundImageAlt="me"
         line={line}
-        location="Living in Berlin - Germany"
+        location={homePageContent.heroContainer.location}
         flag={flagImage}
         // backgroundImage={mePhoto}
       >
@@ -64,11 +72,10 @@ const HomePage = (props: {children?: any, projectsData: GlobalDataT, handlePage:
       <section className="home-sec-wrap" data-scroll data-scroll-offset="90%">
         <ColumnLayout className="messages-section">
           <p className="paragraph-big">
-            Creating innovative websites to attract the interest of clients.
-            Building robust solutions that are scalable and functional.
+            {homePageContent.firstSection.paragraph_big}
           </p>
           <p className="paragraph-small">
-            Let's work together to put your project in the World Wide Web.
+          {homePageContent.firstSection.paragraph_small}
             <span className="span-arrow">{triangle}</span>
           </p>
         </ColumnLayout>
@@ -77,12 +84,12 @@ const HomePage = (props: {children?: any, projectsData: GlobalDataT, handlePage:
       <section className="section-wrapper">
         <div className="container-wrapper">
           <h1 data-scroll data-scroll-speed="1">
-            Showcase
+            {homePageContent.sec_projects.title}
           </h1>
           <div className="two-column">
             <CardContainer data={showcase_Data} />
             <h2 data-scroll data-scroll-speed="1">
-              Take a look at some of my last projects
+            {homePageContent.sec_projects.subtitle}
               <span className="span-arrow">{triangle}</span>
             </h2>
           </div>
@@ -92,7 +99,7 @@ const HomePage = (props: {children?: any, projectsData: GlobalDataT, handlePage:
       <section className="section-wrapper">
         <div className="container-wrapper">
           <h1 data-scroll data-scroll-speed="1">
-            Mini Projects
+            {homePageContent.sec_projects.content_1}
           </h1>
           <div className="mini-project-content">
             <h2 data-scroll data-scroll-speed="1">
@@ -104,7 +111,7 @@ const HomePage = (props: {children?: any, projectsData: GlobalDataT, handlePage:
 
             <div className="flex-column">
               {mProjectList}
-              <Link to="work">See more work</Link>
+              <Link to="work">{homePageContent.sec_projects.end_Part}</Link>
             </div>
           </div>
         </div>

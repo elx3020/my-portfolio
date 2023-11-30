@@ -1,0 +1,58 @@
+{
+
+
+    "homePage": {
+
+        "heroContainer": {
+            "description": "Desarrollador, Diseñador Web y Artista",
+            "location": "Viviendo en Berlin - Alemania"
+        },
+
+        "firstSection": {
+            "paragraph_big": "Creando experiencias digitales únicas que fusionan funcionalidad y arte. Construyo soluciones digitales que se adaptan a sus necesidades.",
+            "paragraph_small": "Trabajemos juntos para poner tu proyecto en la WWW web."
+        },
+
+        "sec_projects": {
+            "title": "Proyectos",
+            "subtitle": "Mira algunos de mis trabajos",
+            "content_1": "Mini Proyectos",
+            "end_Part": "Mirar más"
+        }
+
+
+    },
+
+
+
+
+
+    "aboutPage":
+    {
+        "helmet_Title": "Esteban Lasso | Acerca de", 
+        "heroText": "Soy un pensador técnico y artista. Me gusta llevar cada creación hacia adelante, trayendo lo mejor de los dos mundos.",
+        "title": "Acerca de mi:",
+        "aboutText": "Hola soy un programador Ecuatoriano. Creo sitios web impactantes que atraen la vista de los visitantes. Mi amor por la codificación, la animación y el diseño, se fusiona en lo que hago y ofrezco. Mis principios son probar nuevos diseños y explorar ideas. Proporciono sitios web optimizados para SEO.",
+        "title_cards": "Que puedo hacer por ti?",
+        "button_text": "Descargar CV", 
+        "cardsData": [
+            {
+                "title": "Diseñador",
+                "description": "Puedo diseñar o rediseñar un proyecto para darle esa capa extra de personalidad. He trabajado en diseño web y diseño UX para ofrecer una experiencia de usuario atractiva y amigable. Soy más versátil usando el diseñador de Webflow, pero también puedo adaptarme a otro software."
+            },
+            {
+                "title": "Desarrollador",
+                "description": "Programar es lo que hago para vivir. Puedo configurar páginas web desde cero. Desarrollar sistemas para realizar un seguimiento de los productos. Integrar su página web con software de terceros. He trabajado con muchos frameworks como React, Angular e Ionic. Para administrar el contenido del CMS, he trabajado con Joomla y Kirby CMS."
+            },
+            {
+                "title": "Arte",
+                "description": "Me gusta crear experiencias. Sé que más que nunca su servicio necesita cuidado y autenticidad. El diseño de UI no se trata solo de proporcionar una interfaz de usuario amigable, sino de hacer que las experiencias sean lo más agradables y memorables posible. Para dar vida a mi diseño, trabajo principalmente con Figma donde puedo compartir mi progreso."
+            },
+            {
+                "title": "Multidiciplanirio",
+                "description": "Mi pasion por crear es lo que me impulsa hacia adelante y me hace siempre salir a otras áreas para aprender nuevos métodos sorprendentes para los problemas actuales. Mi experiencia está relacionada con muchos temas. Y creo que han dado forma a mi visión para crear un trabajo único. Trabajemos juntos en algo nuevo e increíble."
+            }
+
+        ]
+    }
+}

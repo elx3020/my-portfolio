@@ -15,7 +15,6 @@ import { triangleDown } from "../../utils/svgFigures";
 import { downloadIcon } from "../../utils/icons";
 import React from "react";
 
-import aboutPageData from '../data/site_en.json'
 import { useLocation } from "react-router-dom";
 import { useGlobalContext } from "../../hooks/useGlobalContext";
 
@@ -24,15 +23,9 @@ const AboutPage = (props: { handlePage: (value: string) => void }) => {
   const location = useLocation();
   const globalContext = useGlobalContext();
 
-  let pageData = { heroText: '', title: '', aboutText: '', title_cards: '', button_text: '', cardsData: [] as any[]}
+  const pageData = globalContext.content.aboutPage;
 
-  if (globalContext.language === 'es') { 
-    pageData = {...aboutPageData.aboutPage_es}
-  } else if (globalContext.language === 'en') { 
-    pageData = {...aboutPageData.aboutPage_en}
-  }
-
-  const cardsInfo = pageData.cardsData.map((item, index) => {
+  const cardsInfo = globalContext.content.aboutPage.cardsData.map((item, index) => {
     return (<TitleParagraphComponent 
       className="cards-info"
       title={item.title}
