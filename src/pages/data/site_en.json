@@ -37,9 +37,56 @@
               "description": "An innovative real state firm with the idea to bring a first-class experience to people who are searching for a house. People can sell and promote their properties through the website. I perform branch identity with colors and an overall design to represent the client's expectations.",
               "project_url": "https://buenaspropiedades.online"
             }
-          ]
+          ],
 
 
+          "mini_projects": [
+            {
+              "arr_Id": "mini_projects",
+              "id": "markdownparse",
+              "project_Name": "Markdown parse",
+              "description": "A markdown parse made with React. Perfect to re-style text faster. Could be use for blog where the main content is text. An easier way to format your publications",
+              "project_url": "https://codepen.io/elx3020/full/KKvpqmm"
+            },
+        
+            {
+              "arr_Id": "mini_projects",
+              "id": "drum machine",
+              "project_Name": "Drum Machine",
+              "description": "A drum machine component with two sets of music sounds. You can hit the pads with mouse or keyboard binding keys. Functionality can be expanded to play more sounds.",
+              "project_url": "https://codepen.io/elx3020/full/YzxGXay"
+            },
+        
+            {
+              "arr_Id": "mini_projects",
+              "id": "calculatorreact",
+              "project_Name": "Calculator ",
+              "description": "A simple implementation of a calculator made with React. Can perform arithmetical operations.",
+              "project_url": "https://codepen.io/elx3020/full/KKvzQxb"
+            },
+            {
+              "arr_Id": "mini_projects",
+              "id": "timemanager",
+              "project_Name": "Time Mananger",
+              "description": "An alarm clock app that lets you program work and breaks time sessions. You can see this app being implemented in some time management apps.",
+              "project_url": "https://codepen.io/elx3020/full/LYjZWKv"
+            },
+            {
+              "arr_Id": "mini_projects",
+              "id": "webapp",
+              "project_Name": "Web App",
+              "description": "A web-app written with plain vanilla javascript that can tell you the weather using the location API of the browser. It performs an asynchronous operation to fetch the data. It uses a free weather API.",
+              "project_url": "https://estebanlasso.com/WebAppWeather/index.html"
+            }
+          ],
+
+        
+        "buttons": {
+            "button_text": "See more work",
+            "button_text_2": "Contact me",
+            "button_text_3": "Try it"
+        }
+      
     },
 
     "aboutPage":
@@ -69,6 +116,43 @@
             }
 
         ]
+    },
+
+    "contactPage": {
+        "helmet_Title": "Esteban Lasso | Contact",
+        
+        "title": {
+            "title_1": "Tell me about your project"
+        },
+        
+        "form": {
+            "name": "Name:",
+            "email": "Email:",
+            "option_1": "What kind of services are you looking?",
+            "option_2": "What is your target audience?",
+            "option_3": "What is the name of your organization?",
+            "option_4": "Tell me more about the project:",
+            "form_send_text": "Thanks, you are awesome! I will respond you as soon as posible!"
+        },
+        "detail_info": {
+            "title": "Detail Info:",
+            "description": "Esteban David Lasso Lopez \n estebannl28@gmail.com \n +49 1 777 504 296 \n Location - Berlin \n English - Español - Deutsch."
+        },
+
+        "buttons": {
+            "button_text": "Send"
+          }
+
+    },
+
+
+    "footer": {
+      "titles": {
+        "title_1": "Let's work together",
+        "title_2": "Contact"
+      },
+
+        "footer_text": "© 2021 Esteban Lasso. All rights reserved."
     }
 
    

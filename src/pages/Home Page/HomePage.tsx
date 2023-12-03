@@ -34,16 +34,14 @@ const HomePage = (props: {children?: any, projectsData: GlobalDataT, handlePage:
   const homePageContent = globalContext.content.homePage;
 
   const { projectsData } = props;
-  const { showcase_Data, mini_projects } = projectsData;
-  const mProjectList = mini_projects.map((item) => {
+  const mProjectList = homePageContent.mini_projects.map((item) => {
     return (
       <ListItem
       data={{description: item.description, 
         id: item.id, 
         project_url: item.project_url,
         arr_Id: item.arr_Id,
-        project_Name: item.project_Name,
-        image_Url: item.image_Url}}
+        project_Name: item.project_Name}}
         key={item.id}
       />
     );
@@ -87,7 +85,7 @@ const HomePage = (props: {children?: any, projectsData: GlobalDataT, handlePage:
             {homePageContent.sec_projects.title}
           </h1>
           <div className="two-column">
-            <CardContainer data={showcase_Data} />
+            <CardContainer data={homePageContent.showcase_Data} />
             <h2 data-scroll data-scroll-speed="1">
             {homePageContent.sec_projects.subtitle}
               <span className="span-arrow">{triangle}</span>
