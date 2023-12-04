@@ -21,6 +21,8 @@ type UIProjectData = {
     project_Name: string,
     image_Url: string,
     imageAlt: string
+    description?: string,
+    imageCollection?: string[],
 }
 
 type UIProjectDataT = ProjectDataT & {

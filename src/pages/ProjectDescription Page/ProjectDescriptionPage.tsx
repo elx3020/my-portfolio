@@ -9,21 +9,21 @@ import useCurrentPage from "../../hooks/useCurrentPage";
 
 // style
 import "./style.sass";
+import { useGlobalContext } from "../../hooks/useGlobalContext";
 
-export default function ProjectDescriptionPage(props: {projectsData: GlobalDataT, handlePage: (value: string) => void}) {
+export default function ProjectDescriptionPage(props: { handlePage: (value: string) => void}) {
   // set data to the component render
   //  data is an object which is value is an array
-  const { projectsData } = props;
 
   // obtain params
   const { arr_handle, project_handle } = useParams();
 
+  const projectContent = useGlobalContext().content.workPage;
   // param match key name and select array of projects
-// @ts-ignore
-  const projectArr = projectsData[arr_handle];
+  const projectArr = projectContent[arr_handle! as 'ui_projects'];
   // use project_handle to mach projectID so filter to proper data.
 
-  const project = ProjectDetails<UIProjectDataT>(projectArr, project_handle as string);
+  const project = ProjectDetails<UIProjectData>(projectArr, project_handle as string);
 
   let pageContent;
 
@@ -43,7 +43,7 @@ export default function ProjectDescriptionPage(props: {projectsData: GlobalDataT
             <img
               data-scroll
               data-scroll-speed="-1"
-              src={imageCollection[0]}
+              src={imageCollection![0]}
               alt="somealt"
             />
           </div>

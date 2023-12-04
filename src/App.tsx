@@ -88,7 +88,6 @@ function App() {
               path="projects/:arr_handle/:project_handle"
               element={
                 <ProjectDescriptionPage
-                  projectsData={projectsData}
                   handlePage={handlePage}
                 />
               }

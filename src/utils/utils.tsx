@@ -1,7 +1,7 @@
 import React from "react";
 import ListItem from "../components/List/ListItem";
 
-function ProjectDetails<T extends ProjectDataT>(arrayId: T[], id: string): T  {
+function ProjectDetails<T extends UIProjectData>(arrayId: T[], id: string): T  {
   let arr = arrayId.filter((item) => item.id === id);
   return arr[0];
 }

@@ -211,7 +211,7 @@
             "/images/projects/jump-showcase.png",
             "/images/projects/"
           ],
-          "description": "A start-up app idea. Participated for funding in the event TuApp Lima-Perú, 2018. The app will help people find jobs online as a freelance with the concept of time banks that can be use to trade for other type of work."
+          "description": "Una idea de app para startups. Participó por financiamiento en el evento TuApp Lima-Perú, 2018. La app ayudará a las personas a encontrar trabajo online como freelance con el concepto de bancos de tiempo que pueden ser usados para intercambiar por otro tipo de trabajo."
         },
     
         {
@@ -224,7 +224,7 @@
             "/images/projects/portfolio-plates.png",
             "/images/projects/"
           ],
-          "description": "AR plates is an mobile app with the purpose of easing the way public and private parking lots are manage. Reducing time for users and companies so they have more time for other activities. Car plates's numbers are use to distinguish between users. A user can select the amount of time or type of parking lot is going to be use."
+          "description": "AR plates es una aplicación móvil cuyo objetivo es facilitar la gestión de los aparcamientos públicos y privados. Reducir el tiempo de los usuarios y las empresas para que tengan más tiempo para otras actividades. Los números de las matrículas se utilizan para distinguir a los usuarios. Un usuario puede seleccionar la cantidad de tiempo o el tipo de aparcamiento que va a utilizar."
         },
         {
           "arr_Id": "ui_projects",
@@ -233,7 +233,7 @@
           "image_Url": "images/projects/yupana-cover.png",
           "imageAlt": "tumbnail of project",
           "imageCollection": ["/images/projects/", "/images/projects/"],
-          "description": "Some description to the project"
+          "description": "Yupana es una aplicacion que resuelve polinomios, ademas de tener operaciones basicas como suma, resta, multiplicacion y division. La aplicacion esta pensada para estudiantes de secundaria y universitarios."
         }
       ],
     
@@ -245,25 +245,10 @@
           "image_Url": "/images/projects/social_app.png",
           "imageAlt": "Screenshot of the social app",
           "description": "Fullstack project created using React Redux (Front-End), Express, Node Js and Firebase (Backend)"
-        },
-    
-        {
-          "arr_Id": "videogame-projects",
-          "id": "weather-app",
-          "project_Name": "Weather App",
-          "image_Url": "/images/projects/weather_app.png",
-          "imageAlt": "Screenshot of the weather app",
-          "description": "A simple implementation of a weather app. Created using plain HTML, CSS, and JAVASCRIPT. An weather API is use to get the forecast"
-        },
-    
-        {
-          "arr_Id": "videogame-projects",
-          "id": "project3",
-          "project_Name": "Awesome Project 3",
-          "image_Url": "/images/projects/place-holder.png",
-          "imageAlt": "an image description",
-          "description": "Here goes a brief description of the project that I want to show3"
         }
+    
+      
+      
       ],
 
       "buttons": {
