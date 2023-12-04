@@ -62,13 +62,13 @@ function App() {
             <Route
               path="/"
               element={
-                <HomePage projectsData={projectsData} handlePage={handlePage} />
+                <HomePage  handlePage={handlePage} />
               }
             />
             <Route
               path="work"
               element={
-                <WorkPage projectsData={projectsData} handlePage={handlePage} />
+                <WorkPage handlePage={handlePage} />
               }
             />
              <Route

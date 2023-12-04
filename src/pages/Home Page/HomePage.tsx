@@ -25,7 +25,7 @@ import { useGlobalContext } from "../../hooks/useGlobalContext";
 // import mePhoto from "../images/background-image.jpg";
 const flagImage = "/images/flag.png";
 
-const HomePage = (props: {children?: any, projectsData: GlobalDataT, handlePage: (value: string) => void }) => {
+const HomePage = (props: {children?: any,  handlePage: (value: string) => void }) => {
   // assign currentPage
   useCurrentPage(props.handlePage);
 
@@ -33,7 +33,6 @@ const HomePage = (props: {children?: any, projectsData: GlobalDataT, handlePage:
 
   const homePageContent = globalContext.content.homePage;
 
-  const { projectsData } = props;
   const mProjectList = homePageContent.mini_projects.map((item) => {
     return (
       <ListItem

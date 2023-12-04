@@ -13,9 +13,6 @@ const GlobalStateProvider = ({children}) => {
 
 
 
-
-
-
     const handleLanguage = (language: 'en' | 'es') => { 
         setLenguage(language);
         if (language === "en") { 

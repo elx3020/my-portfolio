@@ -13,6 +13,16 @@ type ProjectDataT = DataIndentity & {
     imageAlt?: string
 }
 
+// arr_Id, id, project_Name, image_Url, imageAlt
+
+type UIProjectData = {
+    id: string,
+    arr_Id: string,
+    project_Name: string,
+    image_Url: string,
+    imageAlt: string
+}
+
 type UIProjectDataT = ProjectDataT & {
     imageCollection: string[],
 

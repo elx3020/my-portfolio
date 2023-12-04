@@ -118,6 +118,156 @@
         ]
     },
 
+    "workPage":{
+      "helmet_Title": "Esteban Lasso | Portafolio",
+      "titles": {
+        "title_1": "Portafolio.",
+        "title_2": "Desarrollo Web",
+        "title_3": "Proyectos actuales",
+        "title_4": "Proyectos Full Stack",
+        "title_5": "Mini Proyectos",
+        "title_6": "Proyectos de UI",
+        "title_7": "Interfaces de Usuario"
+      },
+
+      "showcase_Data": [
+        {
+          "arr_Id": "showcase_Data",
+          "id": "mishkiyaku",
+          "project_Name": "MishkiYaku",
+          "image_Url": "images/projects/mishkiyaku.jpg",
+          "description": "Mishki Yaku es una empresa de cafe que se enfoca en la producción de café de alta calidad. El sitio web es una plataforma para mostrar sus productos y servicios. El sitio web está construido con Webflow y se integra con un CMS para administrar el contenido. El sitio web está optimizado para SEO y se puede encontrar en Google con palabras clave como 'café ecuatoriano'.",
+          "project_url": "https://www.mishkiyaku.com/"
+        },
+    
+        {
+          "arr_Id": "showcase_Data",
+          "id": "buenaspropiedades",
+          "project_Name": "Buenas Propiedades",
+          "image_Url": "images/projects/buenas-propiedades.jpg",
+          "description": "Una empresa de bienes raíces que se enfoca en la venta de propiedades en Ecuador. El sitio web es una plataforma para mostrar sus productos y servicios. El sitio web está construido con Webflow y se integra con un CMS para administrar el contenido. El sitio web está optimizado para SEO y se puede encontrar en Google con palabras clave como 'propiedades en Ecuador'.",
+          "project_url": "https://buenaspropiedades.online"
+        }
+      ],
+
+      "web_Proj_Large": [
+        {
+          "arr_Id": "web_Proj",
+          "id": "social-app",
+          "project_Name": "Aplicacion social web",
+          "description": "Aplicacion Full-Stack creada con React, Redux, Node.js, Express y MongoDB. La aplicacion permite a los usuarios registrarse, iniciar sesión, crear publicaciones, comentar publicaciones, dar me gusta a publicaciones y seguir a otros usuarios.",
+          "project_url": "https://elx3020.github.io/SocialApp-Front-End-React-Redux/#/"
+        }
+      ],
+    
+      "mini_projects": [
+        {
+          "arr_Id": "mini_projects",
+          "id": "markdownparse",
+          "project_Name": "Markdown parse",
+          "description": "A markdown parse hecho con React. Puede ingresar texto en el área de texto y ver el resultado en el área de vista previa. Puede usar el texto de muestra para ver cómo funciona.",
+          "project_url": "https://codepen.io/elx3020/full/KKvpqmm"
+        },
+    
+        {
+          "arr_Id": "mini_projects",
+          "id": "drum machine",
+          "project_Name": "Bateria Musical",
+          "description": "Una bateria musical hecha con React. Puede hacer clic en los botones o presionar las teclas para reproducir el sonido. Puede cambiar el volumen y el sonido de la batería.",
+          "project_url": "https://codepen.io/elx3020/full/YzxGXay"
+        },
+    
+        {
+          "arr_Id": "mini_projects",
+          "id": "calculatorreact",
+          "project_Name": "Calculadora",
+          "description": "Una calculadora simple hecha con React. Puede realizar operaciones matemáticas básicas. Puede usar el teclado para ingresar números y operaciones.",
+          "project_url": "https://codepen.io/elx3020/full/KKvzQxb"
+        },
+        {
+          "arr_Id": "mini_projects",
+          "id": "timemanager",
+          "project_Name": "Temporizador",
+          "description": "Una alarma de reloj hecha con React. Puede configurar el temporizador y ver el tiempo restante. Puede usar el teclado para ingresar números y operaciones.",
+          "project_url": "https://codepen.io/elx3020/full/LYjZWKv"
+        },
+        {
+          "arr_Id": "mini_projects",
+          "id": "webapp",
+          "project_Name": "Aplicación del clima",
+          "description": "Una aplicacion web del clima. Puede ver el clima actual y más información relevante de cualquier ciudad.",
+          "project_url": "https://estebanlasso.com/WebAppWeather/index.html"
+        }
+      ],
+
+      "ui_projects": [
+        {
+          "arr_Id": "ui_projects",
+          "id": "jumpProject",
+          "project_Name": "Jump",
+          "image_Url": "images/projects/Jump-cover.png",
+          "imageAlt": "tumbnail of project",
+          "imageCollection": [
+            "/images/projects/jump-showcase.png",
+            "/images/projects/"
+          ],
+          "description": "A start-up app idea. Participated for funding in the event TuApp Lima-Perú, 2018. The app will help people find jobs online as a freelance with the concept of time banks that can be use to trade for other type of work."
+        },
+    
+        {
+          "arr_Id": "ui_projects",
+          "id": "arplatesproject",
+          "project_Name": "AR Plates",
+          "image_Url": "images/projects/web-cover-ar-plate.png",
+          "imageAlt": "tumbnail of project",
+          "imageCollection": [
+            "/images/projects/portfolio-plates.png",
+            "/images/projects/"
+          ],
+          "description": "AR plates is an mobile app with the purpose of easing the way public and private parking lots are manage. Reducing time for users and companies so they have more time for other activities. Car plates's numbers are use to distinguish between users. A user can select the amount of time or type of parking lot is going to be use."
+        },
+        {
+          "arr_Id": "ui_projects",
+          "id": "yupana",
+          "project_Name": "Yupana",
+          "image_Url": "images/projects/yupana-cover.png",
+          "imageAlt": "tumbnail of project",
+          "imageCollection": ["/images/projects/", "/images/projects/"],
+          "description": "Some description to the project"
+        }
+      ],
+    
+      "videogame-projects": [
+        {
+          "arr_Id": "videogame-projects",
+          "id": "social-app",
+          "project_Name": "Social App React",
+          "image_Url": "/images/projects/social_app.png",
+          "imageAlt": "Screenshot of the social app",
+          "description": "Fullstack project created using React Redux (Front-End), Express, Node Js and Firebase (Backend)"
+        },
+    
+        {
+          "arr_Id": "videogame-projects",
+          "id": "weather-app",
+          "project_Name": "Weather App",
+          "image_Url": "/images/projects/weather_app.png",
+          "imageAlt": "Screenshot of the weather app",
+          "description": "A simple implementation of a weather app. Created using plain HTML, CSS, and JAVASCRIPT. An weather API is use to get the forecast"
+        },
+    
+        {
+          "arr_Id": "videogame-projects",
+          "id": "project3",
+          "project_Name": "Awesome Project 3",
+          "image_Url": "/images/projects/place-holder.png",
+          "imageAlt": "an image description",
+          "description": "Here goes a brief description of the project that I want to show3"
+        }
+      ]
+      
+    },
+
     "contactPage": {
       "helmet_Title": "Esteban Lasso | Contacto",
 

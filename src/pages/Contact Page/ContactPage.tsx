@@ -99,7 +99,7 @@ const ContactPage = (props: {scrollObject: LocomotiveScroll | null, handlePage: 
             value="Send"
             disabled={state.submitting}
           >
-            Send
+            {contactPageContent.buttons.button_text}
           </button>
         </form>
 

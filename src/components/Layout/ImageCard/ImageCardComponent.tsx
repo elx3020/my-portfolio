@@ -4,11 +4,11 @@ import { useState, useEffect } from "react";
 
 import "./style.sass";
 
-function ImageCardComponent(props : {data: ProjectDataT}) {
+function ImageCardComponent(props : {content: UIProjectData}) {
   // status state
   const [status, setStatus] = useState("disable");
 
-  const { arr_Id, id, project_Name, image_Url, imageAlt } = props.data;
+  const { arr_Id, id, project_Name, image_Url, imageAlt } = props.content;
 
   //active component
 
