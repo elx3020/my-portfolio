@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import { useGlobalContext } from "../hooks/useGlobalContext";
 
 export default function Card(props: {projectData: ProjectDataT}) {
   const {
@@ -12,6 +13,9 @@ export default function Card(props: {projectData: ProjectDataT}) {
   } = props.projectData;
 
   let navigate = useNavigate();
+
+  const globalContext = useGlobalContext();
+  const buttonText = globalContext.content.workPage.buttons.button_card
 
   const handleClick = () => {
     navigate(`projects/${arr_Id}/${id}`);
@@ -27,7 +31,7 @@ export default function Card(props: {projectData: ProjectDataT}) {
       <div className="card-content">
         <h1>{project_Name}</h1>
         <p>{description}</p>
-        <a href={project_url}>Go to the site</a>
+        <a href={project_url}>{buttonText}</a>
       </div>
     </div>
   );

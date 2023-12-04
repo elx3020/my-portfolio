@@ -237,7 +237,12 @@
           "imageAlt": "an image description",
           "description": "Here goes a brief description of the project that I want to show3"
         }
-      ]
+      ],
+
+      "buttons": {
+        "button_card": "Go to site",
+        "button_list": "Try it"
+      }
       
     },
 
