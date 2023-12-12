@@ -43,7 +43,7 @@
     flex-direction: column
     justify-content: center
     top: 0
-    row-gap: 4%
+    row-gap: 3%
     padding-left: 3%
     margin-left: auto
     position: fixed
@@ -57,20 +57,48 @@
     border-left: 1.5px solid $mainColorBackground
     transition: all 0.4s ease-in-out
 
+    div
+        cursor: pointer
+        font-size: clamp(1vw,110px,8vw)
+        color: $mainColorBackground
+        span
+            font-size: clamp(1vw,110px,7vw)
+            &:hover
+                color: $colorEnphasis
+        
+
+
+
+
     a
         color: $mainColorBackground
-        font-size: clamp(1vw,110px,10vw)
-        transition: all 0.2s ease-in-out
+        font-size: clamp(1vw,110px,8vw)
+        transition: all 0.5s ease
+        display: inline-block
+        &::before
+            content: ''
+            display: inline-block
+            width: 0px
+            height: 50%
+            overflow: hidden
+            transition: all 1s ease
+            border-top-right-radius: 100px
+            border-bottom-right-radius: 100px
 
+           
         &:hover
             color: $colorEnphasis
             // padding-left: 50px
-
+            
             &::before
-                content: '// '
-                width: 0px
-                height: 0
+                content: ''
+                width: 120px
+                margin-right: 10px
+                background-color: $colorEnphasis
+                color: $mainColorBackground
+                
 
+    
     &.open
 
         transform: translateX(25%)
