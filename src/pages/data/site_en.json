@@ -27,16 +27,9 @@
               "image_Url": "images/projects/mishkiyaku.jpg",
               "description": "Mishki Yaku is a coffee e-shop that offers the best Ecuadorian coffee. Their name comes from indigenous language Kichwa, meaning \"delicious water\", and refers to the sugary nectar that the hummingbirds sip from small calyxes with their long, thin beaks.",
               "project_url": "https://www.mishkiyaku.com/"
-            },
-        
-            {
-              "arr_Id": "showcase_Data",
-              "id": "buenaspropiedades",
-              "project_Name": "Buenas Propiedades",
-              "image_Url": "images/projects/buenas-propiedades.jpg",
-              "description": "An innovative real state firm with the idea to bring a first-class experience to people who are searching for a house. People can sell and promote their properties through the website. I perform branch identity with colors and an overall design to represent the client's expectations.",
-              "project_url": "https://buenaspropiedades.online"
             }
+        
+           
           ],
 
 
@@ -111,16 +104,8 @@
           "image_Url": "images/projects/mishkiyaku.jpg",
           "description": "Mishki Yaku is a coffee e-shop that offers the best Ecuadorian coffee. Their name comes from indigenous language Kichwa, meaning \"delicious water\", and refers to the sugary nectar that the hummingbirds sip from small calyxes with their long, thin beaks.",
           "project_url": "https://www.mishkiyaku.com/"
-        },
-    
-        {
-          "arr_Id": "showcase_Data",
-          "id": "buenaspropiedades",
-          "project_Name": "Buenas Propiedades",
-          "image_Url": "images/projects/buenas-propiedades.jpg",
-          "description": "An innovative real state firm with the idea to bring a first-class experience to people who are searching for a house. People can sell and promote their properties through the website. I perform branch identity with colors and an overall design to represent the client's expectations.",
-          "project_url": "https://buenaspropiedades.online"
         }
+     
       ],
 
       "web_Proj_Large": [

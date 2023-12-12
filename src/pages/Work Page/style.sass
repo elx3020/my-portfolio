@@ -16,15 +16,21 @@
     z-index: 1
     stroke-width: 2px
 .work-section
+    
     width: $containerWidth
     margin: 100px auto
     color: $secondaryColorBackground
+
+    .cards-wrapper
+        width: 100%
+
+       
 
     &.black
         @include centerFlex($direction: row,$justifyContent: none )
 
         position: relative
-        padding: 8vw
+        padding: 2vw 8vw
 
         column-gap: 2%
         margin-bottom: -5px
@@ -45,7 +51,6 @@
 
         .list-item
             color: inherit
-            border: 1.5px solid $secondaryColorBackground
 
             a
                 color: inherit
@@ -60,10 +65,10 @@
             background-color: $secondaryColorBackground
             color: $mainColorBackground
             .list-item
-                border: 1px solid $mainColorBackground
+                border: 2px solid $mainColorBackground
+                border-bottom: 5px solid $mainColorBackground
                 a
-                    border: 1px solid $mainColorBackground
-                    padding: 1vw
+                    border: 1.8px solid $mainColorBackground
 
         @media screen and (max-width: 450px)
             padding: 10% 2%

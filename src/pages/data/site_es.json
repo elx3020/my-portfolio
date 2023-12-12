@@ -4,12 +4,12 @@
     "homePage": {
 
         "heroContainer": {
-            "description": "Desarrollador, Diseñador Web y Artista.",
-            "location": "Viviendo en Berlin - Alemania"
+            "description": "Desarrollador FullStack, 3D, y Diseñador.",
+            "location": "Berlin - Alemania"
         },
 
         "firstSection": {
-            "paragraph_big": "Creando experiencias digitales únicas que fusionan funcionalidad y arte. Construyo soluciones digitales que se adaptan a sus necesidades.",
+            "paragraph_big": "Creó experiencias digitales únicas que fusionan funcionalidad y estilo. Construyó soluciones digitales para tí o tu negocio.",
             "paragraph_small": "Trabajemos juntos para poner tu proyecto en la WWW web."
         },
 
@@ -28,16 +28,10 @@
               "image_Url": "images/projects/mishkiyaku.jpg",
               "description": "Mishki Yaku es una empresa de cafe que se enfoca en la producción de café de alta calidad. El sitio web es una plataforma para mostrar sus productos y servicios. El sitio web está construido con Webflow y se integra con un CMS para administrar el contenido. El sitio web está optimizado para SEO y se puede encontrar en Google con palabras clave como 'café ecuatoriano'.",
               "project_url": "https://www.mishkiyaku.com/"
-            },
-        
-            {
-              "arr_Id": "showcase_Data",
-              "id": "buenaspropiedades",
-              "project_Name": "Buenas Propiedades",
-              "image_Url": "images/projects/buenas-propiedades.jpg",
-              "description": "Una empresa de bienes raíces que se enfoca en la venta de propiedades en Ecuador. El sitio web es una plataforma para mostrar sus productos y servicios. El sitio web está construido con Webflow y se integra con un CMS para administrar el contenido. El sitio web está optimizado para SEO y se puede encontrar en Google con palabras clave como 'propiedades en Ecuador'.",
-              "project_url": "https://buenaspropiedades.online"
             }
+
+
+        
           ],
           "mini_projects": [
             {
@@ -138,16 +132,8 @@
           "image_Url": "images/projects/mishkiyaku.jpg",
           "description": "Mishki Yaku es una empresa de cafe que se enfoca en la producción de café de alta calidad. El sitio web es una plataforma para mostrar sus productos y servicios. El sitio web está construido con Webflow y se integra con un CMS para administrar el contenido. El sitio web está optimizado para SEO y se puede encontrar en Google con palabras clave como 'café ecuatoriano'.",
           "project_url": "https://www.mishkiyaku.com/"
-        },
-    
-        {
-          "arr_Id": "showcase_Data",
-          "id": "buenaspropiedades",
-          "project_Name": "Buenas Propiedades",
-          "image_Url": "images/projects/buenas-propiedades.jpg",
-          "description": "Una empresa de bienes raíces que se enfoca en la venta de propiedades en Ecuador. El sitio web es una plataforma para mostrar sus productos y servicios. El sitio web está construido con Webflow y se integra con un CMS para administrar el contenido. El sitio web está optimizado para SEO y se puede encontrar en Google con palabras clave como 'propiedades en Ecuador'.",
-          "project_url": "https://buenaspropiedades.online"
         }
+        
       ],
 
       "web_Proj_Large": [

@@ -9,7 +9,8 @@
     max-width: 100%
     padding: 1vw
     border-radius: 5px
-    border: 1.5px solid $secondaryColorBackground
+    border: 2.5px solid $secondaryColorBackground
+    border-bottom: 5px solid $secondaryColorBackground
     transition: all 0.1s ease-in-out
     display: flex
     flex-direction: column
@@ -17,22 +18,22 @@
     align-items: flex-start
 
     &:hover
-        transform: translateY(-5px)
-        box-shadow: 0px 5px 0px 0px $colorSecondary
+        transform: translateY(-8px)
+        box-shadow: 0px 8px 0px 0px $colorSecondary
     h3
         font-size: clamp(12px,30px,6vw)
         margin-bottom: 10px
 
     p
         font-size: clamp(12px,18px,4.5vw)
-        font-weight: 200
+        font-weight: 300
         margin-bottom: 20px
 
     a
         @include anchorStyle()
         background-color: aliceblue
         &:active
-            background-color: $colorTerciary
+            background-color: $colorSecondary
 
     @media screen and (max-width: 450px)
         width: 100%
