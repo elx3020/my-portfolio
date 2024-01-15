@@ -43,7 +43,6 @@
     flex-direction: column
     justify-content: center
     top: 0
-    row-gap: 3%
     padding-left: 3%
     margin-left: auto
     position: fixed
@@ -56,13 +55,14 @@
     border-bottom-left-radius: 150px
     border-left: 1.5px solid $mainColorBackground
     transition: all 0.4s ease-in-out
+    overflow: auto
 
     div
         cursor: pointer
-        font-size: clamp(1vw,110px,8vw)
+        font-size: clamp(1vw,110px,7vw)
         color: $mainColorBackground
         span
-            font-size: clamp(1vw,110px,7vw)
+            font-size: clamp(1vw,110px,6vw)
             &:hover
                 color: $colorEnphasis
         
@@ -72,7 +72,7 @@
 
     a
         color: $mainColorBackground
-        font-size: clamp(1vw,110px,8vw)
+        font-size: clamp(1vw,110px,7vw)
         transition: all 0.5s ease
         display: inline-block
         &::before
@@ -89,7 +89,7 @@
         &:hover
             color: $colorEnphasis
             // padding-left: 50px
-            
+            text-decoration: underline
             &::before
                 content: ''
                 width: 120px

@@ -41,12 +41,12 @@ function NavPanel(props: { toggleClass: string }) {
   
 
   const globalContext = useGlobalContext();
-  let navBarContent = { home: '', work: '', about: '', contact: '', language: ''}	
+  let navBarContent = { home: '', work: '', about: '',blog: '' ,contact: '', language: ''}	
 
   if (globalContext.language === "en") {
-    navBarContent = { home: 'Home', work: 'My Work', about: 'About me', contact: 'Contact', language: 'Language' }
+    navBarContent = { home: 'Home', work: 'My Work', about: 'About me', blog: "Blog" ,contact: 'Contact', language: 'Language' }
   } else if (globalContext.language === "es") { 
-    navBarContent = { home: 'Inicio', work: 'Mi Trabajo', about: 'Sobre mi', contact: 'Contacto', language: 'Idioma' }
+    navBarContent = { home: 'Inicio', work: 'Mi Trabajo', about: 'Sobre mi', blog: "Blog" , contact: 'Contacto', language: 'Idioma' }
   }
 
   return (
@@ -54,6 +54,7 @@ function NavPanel(props: { toggleClass: string }) {
       <Link to="/">{navBarContent.home}</Link>
       <Link to="work">{navBarContent.work}</Link>
       <Link to="about">{navBarContent.about}</Link>
+      <Link to="blog">{navBarContent.blog}</Link>
       <Link to="contact">{navBarContent.contact}</Link>
       <div>{navBarContent.language} <span onClick={(e) => {globalContext.setLenguage('en')}}>EN</span> <span>/</span> <span onClick={(e) => {globalContext.setLenguage('es')}}>ES</span></div>
 

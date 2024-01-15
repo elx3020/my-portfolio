@@ -27,6 +27,7 @@ import ProjectsData from "./data/project_data.json";
 import useLocoScroll from "./hooks/useLocoScroll";
 import StudiesPage from "./pages/Studies Page/StudiesPage";
 import GlobalStateProvider from "./hooks/useGlobalContext";
+import BlogPage from "./pages/Blog Page/BlogPage";
 
 
 function App() {
@@ -77,7 +78,9 @@ function App() {
                 <StudiesPage />
               }
             />
-            <Route path="about/" element={<About handlePage={handlePage} />} />
+              <Route path="about/" element={<About handlePage={handlePage} />} />
+            <Route path="blog" element={<BlogPage handlePage={handlePage}  />} />
+              
             <Route
               path="contact"
               element={

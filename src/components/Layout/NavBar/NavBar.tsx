@@ -15,6 +15,7 @@ const Navbar = (props: { scrollDirection: any }) => {
     studies: "",
     about: "",
     contact: "",
+    blog: "",
   };
   if (globalContext.language === "en") {
     navTextContent = {
@@ -23,6 +24,7 @@ const Navbar = (props: { scrollDirection: any }) => {
       studies: "Studies",
       about: "About",
       contact: "Contact",
+      blog: "Blog",
     };
   } else if (globalContext.language === "es") {
     navTextContent = {
@@ -31,6 +33,7 @@ const Navbar = (props: { scrollDirection: any }) => {
       studies: "Estudios",
       about: "Acerca de",
       contact: "Contacto",
+      blog: "Blog",
     };
   }
 
@@ -53,6 +56,7 @@ const Navbar = (props: { scrollDirection: any }) => {
       <Link to="work">{navTextContent.work}</Link>
       {/* <Link to="studies">Studies</Link>  */}
       <Link to="about">{navTextContent.about}</Link>
+      <Link to="blog">{navTextContent.blog}</Link>
       <Link to="contact">{navTextContent.contact}</Link>
     </div>
   );
