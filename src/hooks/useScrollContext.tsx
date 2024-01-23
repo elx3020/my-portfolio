@@ -1,22 +1,34 @@
-import { useEffect, useState, useMemo } from "react";
 import locomotiveScroll from "locomotive-scroll";
 import "locomotive-scroll/src/locomotive-scroll.scss";
+import  { createContext, useContext, useEffect, useMemo, useState } from "react";
+
 import imagesLoaded from "imagesloaded";
 
-
-type LMScrollEvent = LocomotiveScroll.OnScrollEvent & {
-  direction: 'up' | 'down' | null;
+export type ScrollContextType = {
+  scroll: LocomotiveScroll;
+  scrollDirection: string;
 }
 
-export default function useLocoScroll(currentPage: string,scrollRef: React.RefObject<HTMLDivElement>) {
-  const [scroll, setScroll] = useState<null | locomotiveScroll>(null);
-  const [scrollDirection, setScrollDirection] = useState("");
+type LMScrollEvent = LocomotiveScroll.OnScrollEvent & {
+    direction: 'up' | 'down' | null;
+  }
+
+
+const ScrollProvider = createContext({} as ScrollContextType);
+
+
+
+const ScrollStateProvider = (props: { children: any, scrollElementRef: React.RefObject<HTMLDivElement>, currentPage: string }) => {
+    const [scroll, setScroll] = useState<locomotiveScroll>({} as locomotiveScroll);
+    const [scrollDirection, setScrollDirection] = useState("");
+
+ 
+  const { children, scrollElementRef,currentPage } = props;
   
   useEffect(() => {
-
-    if (scroll) return;
+    
     const locoScroll = new locomotiveScroll({
-      el: scrollRef.current!,
+      el: scrollElementRef.current!,
       smooth: true,
       multiplier: 1,
       touchMultiplier: 2,
@@ -44,16 +56,15 @@ export default function useLocoScroll(currentPage: string,scrollRef: React.RefOb
       if (scrollHorizontal === null) return;
 
       setScrollDirection(scrollHorizontal);
-      
     });
- 
+  
+  
+  
   }, []);
 
- 
- 
   useEffect(() => {
     
-    if (!scroll) return;
+    if (Object.keys(scroll).length === 0) return;
 
     scroll.scrollTo('top',{duration: 0,disableLerp: true})
 
@@ -63,5 +74,19 @@ export default function useLocoScroll(currentPage: string,scrollRef: React.RefOb
 
    
   }, [currentPage]);
-  return {scroll,scrollDirection};
+
+  
+
+    
+    const memo = useMemo(() => ({ scroll, scrollDirection }), [scroll, scrollDirection]);
+
+    return <ScrollProvider.Provider value={memo}>{children}</ScrollProvider.Provider>;
+    
+    
+};
+
+export default ScrollStateProvider;
+
+export const useScrollContext = () => { 
+    return useContext(ScrollProvider);
 }

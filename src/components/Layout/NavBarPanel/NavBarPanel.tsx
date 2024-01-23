@@ -5,10 +5,12 @@ import { useState } from "react";
 import "./NavPanel.sass";
 import { useGlobalContext } from "../../../hooks/useGlobalContext";
 
-export default function NavBarPanel(props: {currentPage: string, scrollDirection: string}) {
+export default function NavBarPanel(props: { currentPage: string }) {
   const [navPanelOpen, setNavPanel] = useState("close");
 
-  const { currentPage, scrollDirection } = props;
+  const { currentPage } = props;
+
+  const scrollDirection = useGlobalContext().scrollDirection;
 
   
 

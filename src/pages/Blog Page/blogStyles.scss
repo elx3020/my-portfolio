@@ -42,6 +42,7 @@
         padding: 10px 20px;
         border-radius: 5px;
         width: fit-content;
+        cursor: pointer;
     }
     .__link {
         text-decoration: none;
@@ -49,4 +50,9 @@
 
     }
     
+}
+
+
+.content-container {
+    padding: 6vw 15vw;
 }

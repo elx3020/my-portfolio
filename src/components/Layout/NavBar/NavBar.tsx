@@ -2,9 +2,10 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.sass";
 import React, { useState } from "react";
 import { useGlobalContext } from "../../../hooks/useGlobalContext";
-const Navbar = (props: { scrollDirection: any }) => {
-  const { scrollDirection } = props;
+import { useScrollContext } from "../../../hooks/useScrollContext";
+const Navbar = () => {
 
+  const scrollDirection = useScrollContext().scrollDirection;
   const location = useLocation();
   const navigate = useNavigate();
   const globalContext = useGlobalContext();

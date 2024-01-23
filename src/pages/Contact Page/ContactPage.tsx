@@ -8,19 +8,16 @@ import useCurrentPage from "../../hooks/useCurrentPage";
 import { useForm, ValidationError } from "@formspree/react";
 
 import "./style.sass";
-import LocomotiveScroll from "locomotive-scroll";
 import {useGlobalContext} from "../../hooks/useGlobalContext";
+import { useScrollContext } from "../../hooks/useScrollContext";
 
 
 
-const ContactPage = (props: {scrollObject: LocomotiveScroll | null, handlePage: (value:string) => void} ) => {
-  const { scrollObject } = props;
+const ContactPage = (props: {handlePage: (value:string) => void} ) => {
 
   const globalContext = useGlobalContext();
-  
+  const scrollObject = useScrollContext().scroll;
   const contactPageContent = globalContext.content.contactPage;
-  // set scroll animation
-  // useLocoScroll(true);
 
   // set as current page
   useCurrentPage(props.handlePage);

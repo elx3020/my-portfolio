@@ -24,10 +24,12 @@ import NavBarPanel from "./components/Layout/NavBarPanel/NavBarPanel";
 import NavBar from "./components/Layout/NavBar/NavBar";
 // data
 import ProjectsData from "./data/project_data.json";
-import useLocoScroll from "./hooks/useLocoScroll";
 import StudiesPage from "./pages/Studies Page/StudiesPage";
 import GlobalStateProvider from "./hooks/useGlobalContext";
 import BlogPage from "./pages/Blog Page/BlogPage";
+import BlogPostPage from "./pages/Blog Page/BlogPostPage";
+import { marked, use } from "marked";
+import ScrollStateProvider from "./hooks/useScrollContext";
 
 
 function App() {
@@ -42,22 +44,28 @@ function App() {
     setCurrentpage(currentPage);
   }
 
-  const {scroll,scrollDirection} = useLocoScroll(currentPage,scrollRef);
-  // data
-  const projectsData: GlobalDataT = JSON.parse(JSON.stringify(ProjectsData));
+ 
+
+  // set marked options
+  marked.setOptions({
+    breaks: true,
+    async: true,
+  });
 
  
   // Dom Render
   return (
     <div className="content-page">
       <GlobalStateProvider>
-      <Router>
+        <Router>
+          
+            <ScrollStateProvider scrollElementRef={scrollRef} currentPage={currentPage}>
         <div className="page-content" id="main-container" data-scroll-container ref={scrollRef}>
-        <NavBar scrollDirection={scrollDirection} />
+              
+        <NavBar />
           <NavBarPanel
             currentPage={currentPage}
-            scrollDirection={scrollDirection} 
-          />
+            />
 
           <Routes>
             <Route
@@ -65,41 +73,44 @@ function App() {
               element={
                 <HomePage  handlePage={handlePage} />
               }
-            />
+              />
             <Route
               path="work"
               element={
                 <WorkPage handlePage={handlePage} />
               }
-            />
+              />
              <Route
               path="studies"
               element={
                 <StudiesPage />
               }
-            />
+              />
               <Route path="about/" element={<About handlePage={handlePage} />} />
-            <Route path="blog" element={<BlogPage handlePage={handlePage}  />} />
+              <Route path="blog" element={<BlogPage handlePage={handlePage} />} />
+            <Route path="blog/post/:postId" element={<BlogPostPage handlePage={handlePage}  />} />
+              
               
             <Route
               path="contact"
               element={
-                <ContactPage scrollObject={scroll} handlePage={handlePage} />
+                <ContactPage handlePage={handlePage} />
               }
-            />
+              />
             <Route
               path="projects/:arr_handle/:project_handle"
               element={
                 <ProjectDescriptionPage
-                  handlePage={handlePage}
+                handlePage={handlePage}
                 />
               }
-            />
+              />
             <Route path="404" element={<Page404 handlePage={handlePage} />} />
             <Route path="*" element={<Navigate replace={true} to="404" />} />
           </Routes>
           <Footer />
         </div>
+              </ScrollStateProvider>
         </Router>
       </GlobalStateProvider>
         
