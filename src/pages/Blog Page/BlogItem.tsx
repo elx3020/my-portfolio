@@ -28,11 +28,11 @@ const BlogItem = (props: {blogData: IBlogItemProps}) => {
         <h3 className="__title">{title}</h3>
         <p className="__date">{date}</p>
         <p className="__description">{description}</p>
-        <div className="__link_w">
-          <div onClick={() => {
+        <div onClick={() => {
             navigate('/blog/post/' + postId);
           }
-        } className="__link">
+        } className="__link_w">
+          <div  className="__link">
           Read More
         </div>
         </div>

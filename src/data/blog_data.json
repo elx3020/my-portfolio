@@ -26,22 +26,6 @@
         "keywords": ["quantum computing", "future tech", "computational science"],
         "thumbnail": "images/blog/placeholder_blogs.jpg",
         "date": "2024-01-17"
-      },
-      {
-        "postId": "post4",
-        "title": "Smart Homes: The Tech-Driven Living Experience",
-        "description": "Exploring the latest smart home technologies, gadgets, and how they are transforming modern living, including in-depth reviews of smart devices, home automation guides, and the integration of Internet of Things (IoT).",
-        "keywords": ["smart homes", "IoT", "home automation"],
-        "thumbnail": "smart_homes_thumbnail.jpg",
-        "date": "2024-01-18"
-      },
-      {
-        "postId": "post5",
-        "title": "Blockchain Revolution: Beyond Cryptocurrencies",
-        "description": "Diving deep into blockchain technology, its applications beyond cryptocurrencies, and its potential impact on industries, covering smart contracts, decentralized finance (DeFi), and the role of blockchain in supply chain management.",
-        "keywords": ["blockchain", "decentralized technology", "cryptocurrency"],
-        "thumbnail": "blockchain_thumbnail.jpg",
-        "date": "2024-01-19"
       }
     ]
-  }
+  } 
