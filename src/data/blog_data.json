@@ -1,31 +1,16 @@
 {
   "pageContent": {
-    "description": "Greetings, fellow blog aficionados and web wanderers! Step into a laid-back blog space where [Influencer Name] takes you on a stroll through the world of tech without the hype. No fancy blog jargon, just a straightforward exploration of the gadgets, gizmos, and digital quirks that shape our lives."
+    "description": "Greetings, web wanderers! Let's takes you on a stroll through the world of tech without the hype. No fancy blog jargon, just a straightforward exploration of the gadgets, gizmos, and digital quirks that shape our lives. This blog is dedicated to motivate my self into the ways of technology, but it's also for you curious fellow who have the same goal but needs a bit of help in the process."
   },
     "blogs": [
       {
-        "postId": "post1",
-        "title": "The Future of Artificial Intelligence",
-        "description": "Exploring the latest advancements and future trends in artificial intelligence, including breakthroughs in machine learning algorithms, neural networks, and their potential societal impacts.",
-        "keywords": ["AI", "machine learning", "future tech"],
-        "thumbnail": "images/blog/placeholder_blogs.jpg",
-        "date": "2024-01-15"
-      },
-      {
-        "postId": "post2",
-        "title": "Cybersecurity: Protecting Your Digital World",
-        "description": "Insights into the world of cybersecurity, offering tips to secure your online presence, the latest threats such as ransomware and phishing attacks, and discussions on emerging technologies in the field.",
-        "keywords": ["cybersecurity", "online safety", "data protection"],
-        "thumbnail": "images/blog/placeholder_blogs.jpg",
-        "date": "2024-01-16"
-      },
-      {
-        "postId": "post3",
-        "title": "The Rise of Quantum Computing",
-        "description": "Unraveling the mysteries of quantum computing and its potential impact on technology and science, discussing quantum algorithms, quantum supremacy, and applications in fields like cryptography and optimization.",
-        "keywords": ["quantum computing", "future tech", "computational science"],
-        "thumbnail": "images/blog/placeholder_blogs.jpg",
-        "date": "2024-01-17"
+        "postId": "read-execute-file-nodejs",
+        "title": "How to read and execute file using Node.js",
+        "description": "A brief tutorial on how to read and execute file using Node.js",
+        "keywords": ["nodejs", "javascript", "backend"],
+        "thumbnail": "images/blog/cover_readfile_nodejs.jpg",
+        "date": "2024-02-01"
       }
+     
     ]
   } 
