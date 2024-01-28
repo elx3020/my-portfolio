@@ -2,7 +2,7 @@
     "blogPosts": {
         "read-execute-file-nodejs": {
             "title": "How to Read and Execute a File in Node.js",
-            "content": "# How to Read and Execute a File in Node.js\n\nWelcome to the first installment of our deep dive into Node Js. In this post, we'll explore the latest advancements and emerging trends that are shaping the landscape of AI.\n\n##    1. **Machine Learning Breakthroughs**\n\nArtificial intelligence is increasingly reliant on machine learning algorithms. Recent breakthroughs in machine learning have propelled AI capabilities to new heights. Algorithms are becoming more sophisticated, enabling machines to learn and adapt in real-time. Here's a glimpse of a cutting-edge machine learning model:\n\n <img class='blog-c' src='/images/blog/placeholder_blogs.jpg' alt='Test'> ",
+            "content": "# How to Read and Execute a File in Node.js\n\nWelcome to the first installment of our deep dive into Node Js. In this post, we'll explore the latest advancements and emerging trends that are shaping the landscape of AI.\n\n##    1. **Machine Learning Breakthroughs**\n\nArtificial intelligence is increasingly reliant on machine learning algorithms. Recent breakthroughs in machine learning have propelled AI capabilities to new heights. Algorithms are becoming more sophisticated, enabling machines to learn and adapt in real-time. Here's a glimpse of a cutting-edge machine learning model:\n\n <img class='blog-c' src='/images/blog/placeholder_blogs.jpg' alt='Test'> \n\n ``code inside``",
             "date": "2024-02-01"
         },
         "example-ai": {

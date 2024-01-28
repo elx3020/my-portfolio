@@ -6,7 +6,6 @@ import BlogPostData from '../../data/blog_Post_data.json';
 import { useScrollContext } from '../../hooks/useScrollContext';
 import "./blogStyles.scss";
 import useCurrentPage from '../../hooks/useCurrentPage';
-
 const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
     const { postId } = useParams();
 
@@ -28,6 +27,18 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
         
         const post = BlogPostData.blogPosts[postId]?.content as string;
         renderPostContent(post);
+
+
+        async function getFile() {
+            return await fetch('../../data/ReadFileNodeJs.md').then((response) => { 
+                if (response.ok) {
+                    return response.text()
+                }
+            }).catch((err) => { console.log(err) }).then((data) => { console.log(data); return data })
+        }
+
+        const test = getFile();
+        console.log(test)
     }, [postId]);
 
 
