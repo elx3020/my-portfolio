@@ -1,5 +1,5 @@
 import { useParams } from 'react-router-dom';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { marked, } from 'marked';
 
 import BlogPostData from '../../data/blog_Post_data.json';
@@ -8,7 +8,7 @@ import "./blogStyles.scss";
 import useCurrentPage from '../../hooks/useCurrentPage';
 const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
     const { postId } = useParams();
-
+    const [markdownContent, setMarkdownContent] = useState('');
     const postContainerRef = useRef<HTMLDivElement>(null);
     const scroll = useScrollContext().scroll;
     useCurrentPage(props.handlePage);
@@ -29,23 +29,27 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
         renderPostContent(post);
 
 
+        
+    }, [postId]);
+
+    useEffect(() => { 
         async function getFile() {
-            return await fetch('../../data/ReadFileNodeJs.md').then((response) => { 
-                if (response.ok) {
-                    return response.text()
-                }
-            }).catch((err) => { console.log(err) }).then((data) => { console.log(data); return data })
+            return await fetch('public/files/ReadFileNodeJs.md').then((response) => { 
+               return response.text()
+            }).catch((err) => { console.log(err) }).then(async (data) => { if(data) setMarkdownContent(await marked.parse(data)); return data })
         }
 
-        const test = getFile();
-        console.log(test)
-    }, [postId]);
+        getFile();
+
+
+    }, [markdownContent]);
 
 
     return (
         <div data-scroll-section className='content-container'>
           
-            <div  ref={postContainerRef}></div>
+            <div ref={postContainerRef}></div>
+            
         </div>
     );
 };
