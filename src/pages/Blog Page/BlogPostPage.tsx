@@ -6,6 +6,10 @@ import BlogPostData from '../../data/blog_Post_data.json';
 import { useScrollContext } from '../../hooks/useScrollContext';
 import "./blogStyles.scss";
 import useCurrentPage from '../../hooks/useCurrentPage';
+import Prism from 'prismjs';
+
+// if you are intending to use Prism functions manually, you will need to set:
+
 const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
     const { postId } = useParams();
     const [markdownContent, setMarkdownContent] = useState('');
@@ -16,34 +20,20 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
 
 
     useEffect(() => { 
-        async function renderPostContent(postContent: string) {
-            postContainerRef.current!.innerHTML = await marked.parse(postContent)
-            setTimeout(() => {
-            scroll.update();
-
-             }, 1000);
-
-        }
-        if (postId === undefined) return;
-        
-        const post = BlogPostData.blogPosts[postId]?.content as string;
-        renderPostContent(post);
-
-
-        
-    }, [postId]);
-
-    useEffect(() => { 
         async function getFile() {
-            return await fetch('/files/ReadFileNodeJs.md').then((response) => { 
-                console.log(response)
+            return await fetch(`/files/${postId}.md`).then((response) => { 
                return response.text()
-            }).catch((err) => { console.log(err) }).then(async (data) => { if(data) setMarkdownContent(await marked.parse(data)); return data })
+            }).catch((err) => { console.log(err) }).then(async (data) => {
+                if (data) setMarkdownContent(await marked.parse(data)); scroll?.update();
+                Prism.highlightAll();
+                 return data
+            })
         }
 
         getFile();
         containertwo.current!.innerHTML = markdownContent;
 
+      
     }, [markdownContent]);
 
 

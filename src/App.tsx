@@ -23,14 +23,13 @@ import Footer from "./components/Layout/Footer/Footer";
 import NavBarPanel from "./components/Layout/NavBarPanel/NavBarPanel";
 import NavBar from "./components/Layout/NavBar/NavBar";
 // data
-import ProjectsData from "./data/project_data.json";
 import StudiesPage from "./pages/Studies Page/StudiesPage";
 import GlobalStateProvider from "./hooks/useGlobalContext";
 import BlogPage from "./pages/Blog Page/BlogPage";
 import BlogPostPage from "./pages/Blog Page/BlogPostPage";
-import { marked, use } from "marked";
+import { marked } from "marked";
 import ScrollStateProvider from "./hooks/useScrollContext";
-
+import "./code_theme.css";
 
 function App() {
   // functionality
@@ -39,18 +38,19 @@ function App() {
 
   const [currentPage, setCurrentpage] = useState("");
 
-
   function handlePage(currentPage: string) {
     setCurrentpage(currentPage);
   }
 
- 
 
+ 
   // set marked options
   marked.setOptions({
     breaks: true,
     async: true,
   });
+
+ 
 
  
   // Dom Render
