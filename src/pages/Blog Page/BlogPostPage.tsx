@@ -10,6 +10,7 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
     const { postId } = useParams();
     const [markdownContent, setMarkdownContent] = useState('');
     const postContainerRef = useRef<HTMLDivElement>(null);
+    const containertwo = useRef<HTMLDivElement>(null);
     const scroll = useScrollContext().scroll;
     useCurrentPage(props.handlePage);
 
@@ -34,13 +35,14 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
 
     useEffect(() => { 
         async function getFile() {
-            return await fetch('public/files/ReadFileNodeJs.md').then((response) => { 
+            return await fetch('/files/ReadFileNodeJs.md').then((response) => { 
+                console.log(response)
                return response.text()
             }).catch((err) => { console.log(err) }).then(async (data) => { if(data) setMarkdownContent(await marked.parse(data)); return data })
         }
 
         getFile();
-
+        containertwo.current!.innerHTML = markdownContent;
 
     }, [markdownContent]);
 
@@ -49,7 +51,7 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
         <div data-scroll-section className='content-container'>
           
             <div ref={postContainerRef}></div>
-            
+            <div ref={containertwo} ></div>
         </div>
     );
 };
