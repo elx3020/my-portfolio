@@ -8,6 +8,10 @@
     h1{
         margin-bottom: 50px;    
     }
+
+    @media screen and (max-width: 450px) {
+        padding: 10% 2%;
+    }
 }
 
 .blog-item {
@@ -55,6 +59,10 @@
 
 .content-container {
     padding: 7vw 25vw;
+
+    @media screen and (max-width: 450px) {
+        padding: 10% 2%;
+    }
 }
 
 .blog-c {
