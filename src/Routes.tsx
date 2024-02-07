@@ -8,7 +8,7 @@ import StudiesPage from "./pages/Studies Page/StudiesPage";
 import About from "./pages/About Page/AboutPage";
 import BlogPage from "./pages/Blog Page/BlogPage";
 import BlogPostPage from "./pages/Blog Page/BlogPostPage";
-export function AppRoutes(props: { handlePage: (currentPage: string) => void }) {
+export default function AppRoutes(props: { handlePage: (currentPage: string) => void }) {
 
     const { handlePage } = props;
 
@@ -26,13 +26,13 @@ export function AppRoutes(props: { handlePage: (currentPage: string) => void }) 
                     <WorkPage handlePage={handlePage} />
                 }
             />
-            <Route
+            {/* <Route
                 path="studies"
                 element={
                     <StudiesPage />
                 }
-            />
-            <Route path="about/" element={<About handlePage={handlePage} />} />
+            /> */}
+            <Route path="about" element={<About handlePage={handlePage} />} />
             <Route path="blog" element={<BlogPage handlePage={handlePage} />} />
             <Route path="blog/post/:postId" element={<BlogPostPage handlePage={handlePage} />} />
             <Route

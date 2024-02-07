@@ -15,7 +15,7 @@ import NavBar from "./components/Layout/NavBar/NavBar";
 import NavBarPanel from "./components/Layout/NavBarPanel/NavBarPanel";
 // data
 import { marked } from "marked";
-import { AppRoutes } from "./Routes";
+import AppRoutes from "./Routes";
 import "./code_theme.css";
 import GlobalStateProvider from "./hooks/useGlobalContext";
 import ScrollStateProvider from "./hooks/useScrollContext";

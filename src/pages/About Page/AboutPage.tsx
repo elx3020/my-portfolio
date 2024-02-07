@@ -4,36 +4,33 @@ import ColumnLayout from "../../components/Layout/ColumnLayout";
 import HeroGenericComponent from "../../components/Layout/HeroGenericComponent";
 import TitleParagraphComponent from "../../components/Layout/TitleParagraphComponent";
 
-import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import { Helmet } from "react-helmet";
+import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 // hooks
 import useCurrentPage from "../../hooks/useCurrentPage";
 
 // elements styles
-import "./style.sass";
-import { triangleDown } from "../../utils/svgFigures";
 import { downloadIcon } from "../../utils/icons";
-import React from "react";
+import { triangleDown } from "../../utils/svgFigures";
+import "./style.sass";
 
-import { useLocation } from "react-router-dom";
 import { useGlobalContext } from "../../hooks/useGlobalContext";
 
 const AboutPage = (props: { handlePage: (value: string) => void }) => {
-  
-  const location = useLocation();
+
   const globalContext = useGlobalContext();
 
   const pageData = globalContext.content.aboutPage;
 
   const cardsInfo = globalContext.content.aboutPage.cardsData.map((item, index) => {
-    return (<TitleParagraphComponent 
+    return (<TitleParagraphComponent
       className="cards-info"
       title={item.title}
       key={index}
       textContent={item.description}
     />)
 
-    
+
   });
 
   // set as current page
@@ -50,11 +47,11 @@ const AboutPage = (props: { handlePage: (value: string) => void }) => {
       </Helmet>
       <HeroGenericComponent
         className="generic-hero-wrapper"
-        styleOptions = {{fontSize: "clamp(2vw, 80px, 13vw)"}}
+        styleOptions={{ fontSize: "clamp(2vw, 80px, 13vw)" }}
         textContent={pageData.heroText}
       >
         {triangleDown}
-        </HeroGenericComponent>
+      </HeroGenericComponent>
 
       <div className="center-flex">
         <ColumnLayout className="section-text-column photo">
@@ -79,11 +76,11 @@ const AboutPage = (props: { handlePage: (value: string) => void }) => {
         <ColumnLayout className="column-layout">{cardsInfo}</ColumnLayout>
       </div>
 
-      <div style={{display: 'flex', justifyContent: 'center', padding: '3vw'}}>
+      <div style={{ display: 'flex', justifyContent: 'center', padding: '3vw' }}>
 
-      <div className="cv_button">
-        <a href="files/CV_Esteban_2023.pdf" target="_blank">{pageData.button_text} <span> {downloadIcon} </span></a>   
-      </div>
+        <div className="cv_button">
+          <a href="files/CV_Esteban_2023.pdf" target="_blank">{pageData.button_text} <span> {downloadIcon} </span></a>
+        </div>
       </div>
 
     </div>

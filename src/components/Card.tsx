@@ -11,10 +11,10 @@ export default function Card(props: { projectData: ProjectDataT }) {
   const globalContext = useGlobalContext();
   const buttonText = globalContext.content.workPage.buttons.button_card;
 
-  const handleClick = () => {
-    navigate(`projects/${arr_Id}/${id}`);
-  };
-  const projectLink = `/projects/${arr_Id}/${id}`;
+  // const handleClick = () => {
+  //   navigate(`projects/${arr_Id}/${id}`);
+  // };
+  // const projectLink = `/projects/${arr_Id}/${id}`;
 
   return (
     <div data-scroll data-scroll-offset="50%" className="card-showcase" >

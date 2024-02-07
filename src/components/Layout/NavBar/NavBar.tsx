@@ -1,4 +1,4 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./Navbar.sass";
 import React, { useState } from "react";
 import { useGlobalContext } from "../../../hooks/useGlobalContext";
@@ -6,8 +6,6 @@ import { useScrollContext } from "../../../hooks/useScrollContext";
 const Navbar = () => {
 
   const scrollDirection = useScrollContext().scrollDirection;
-  const location = useLocation();
-  const navigate = useNavigate();
   const globalContext = useGlobalContext();
 
   let navTextContent = {
@@ -68,7 +66,7 @@ const Navbar = () => {
         <Link to="/">{navTextContent.home}</Link>
       </div>
       {links}
-      <div className={`custom-dropdown `}  onMouseLeave={toggleDropdown}>
+      <div className={`custom-dropdown `} onMouseLeave={toggleDropdown}>
         <div className="selected-option" onMouseEnter={toggleDropdown} >
           {globalContext.language === "en" ? "Language" : "Lenguaje"}
         </div>

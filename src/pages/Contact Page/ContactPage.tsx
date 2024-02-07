@@ -8,12 +8,12 @@ import useCurrentPage from "../../hooks/useCurrentPage";
 import { useForm, ValidationError } from "@formspree/react";
 
 import "./style.sass";
-import {useGlobalContext} from "../../hooks/useGlobalContext";
+import { useGlobalContext } from "../../hooks/useGlobalContext";
 import { useScrollContext } from "../../hooks/useScrollContext";
 
 
 
-const ContactPage = (props: {handlePage: (value:string) => void} ) => {
+const ContactPage = (props: { handlePage: (value: string) => void }) => {
 
   const globalContext = useGlobalContext();
   const scrollObject = useScrollContext().scroll;
@@ -30,7 +30,7 @@ const ContactPage = (props: {handlePage: (value:string) => void} ) => {
       scrollObject.update();
       scrollObject.scrollTo("top");
     }
-  }, [state.succeeded]);
+  }, [scrollObject, state.succeeded]);
 
   if (state.succeeded) {
     return (
@@ -68,7 +68,7 @@ const ContactPage = (props: {handlePage: (value:string) => void} ) => {
           <input type="text" name="audience" id="audienceId" />
 
           <label htmlFor="company">
-          {contactPageContent.form.option_3}
+            {contactPageContent.form.option_3}
           </label>
           <input type="text" name="company" id="companyId" />
 

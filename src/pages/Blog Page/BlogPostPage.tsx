@@ -2,7 +2,6 @@ import { useParams } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { marked, } from 'marked';
 
-import BlogPostData from '../../data/blog_Post_data.json';
 import { useScrollContext } from '../../hooks/useScrollContext';
 import "./blogStyles.scss";
 import useCurrentPage from '../../hooks/useCurrentPage';
@@ -19,27 +18,27 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
     useCurrentPage(props.handlePage);
 
 
-    useEffect(() => { 
+    useEffect(() => {
         async function getFile() {
-            return await fetch(`/files/${postId}.md`).then((response) => { 
-               return response.text()
+            return await fetch(`/files/${postId}.md`).then((response) => {
+                return response.text()
             }).catch((err) => { console.log(err) }).then(async (data) => {
                 if (data) setMarkdownContent(await marked.parse(data)); scroll?.update();
                 Prism.highlightAll();
-                 return data
+                return data
             })
         }
 
         getFile();
         containertwo.current!.innerHTML = markdownContent;
 
-      
+
     }, [markdownContent]);
 
 
     return (
         <div data-scroll-section className='content-container'>
-          
+
             <div ref={postContainerRef}></div>
             <div ref={containertwo} ></div>
         </div>
