@@ -60,12 +60,17 @@ const Navbar = () => {
     </div>
   );
 
+  const linksNoBlog = links.props.children.filter((link) => link.props.to !== "blog")
+
   return (
     <nav id="navbar" className={`Navbar ${scrollDirection}`}>
       <div className="nav_links">
         <Link to="/">{navTextContent.home}</Link>
       </div>
-      {links}
+      <div className="nav_links">
+        {linksNoBlog}
+      </div>
+
       <div className={`custom-dropdown `} onMouseLeave={toggleDropdown}>
         <div className="selected-option" onMouseEnter={toggleDropdown} >
           {globalContext.language === "en" ? "Language" : "Lenguaje"}
