@@ -23,7 +23,8 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
             return await fetch(`/files/${postId}.md`).then((response) => {
                 return response.text()
             }).catch((err) => { console.log(err) }).then(async (data) => {
-                if (data) setMarkdownContent(await marked.parse(data)); scroll?.update();
+                if (data) setMarkdownContent(await marked.parse(data));
+                scroll?.update();
                 Prism.highlightAll();
                 return data
             })
@@ -33,7 +34,7 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
         containertwo.current!.innerHTML = markdownContent;
 
 
-    }, [markdownContent]);
+    }, [markdownContent, postId]);
 
 
     return (
