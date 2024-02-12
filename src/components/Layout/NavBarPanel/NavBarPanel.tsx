@@ -13,9 +13,9 @@ export default function NavBarPanel(props: { currentPage: string }) {
 
   const scrollDirection = useScrollContext().scrollDirection;
 
-  
 
-  function togglePanel(e: React.MouseEvent ) {
+
+  function togglePanel(e: React.MouseEvent) {
     if (navPanelOpen === "close") {
       setNavPanel("open");
     } else if (navPanelOpen === "open") {
@@ -41,25 +41,26 @@ export default function NavBarPanel(props: { currentPage: string }) {
 }
 
 function NavPanel(props: { toggleClass: string }) {
-  
+
 
   const globalContext = useGlobalContext();
-  let navBarContent = { home: '', work: '', about: '',blog: '' ,contact: '', language: ''}	
+  let navBarContent = { work: '', about: '', blog: '', contact: '', language: '' }
+  const homeTranslation = globalContext.language === "en" ? "Home" : "Inicio";
 
   if (globalContext.language === "en") {
-    navBarContent = { home: 'Home', work: 'My Work', about: 'About me', blog: "Blog" ,contact: 'Contact', language: 'Language' }
-  } else if (globalContext.language === "es") { 
-    navBarContent = { home: 'Inicio', work: 'Mi Trabajo', about: 'Sobre mi', blog: "Blog" , contact: 'Contacto', language: 'Idioma' }
+    navBarContent = { work: 'My Work', about: 'About me', blog: "Blog", contact: 'Contact', language: 'Language' }
+  } else if (globalContext.language === "es") {
+    navBarContent = { work: 'Mi Trabajo', about: 'Sobre mi', blog: "Blog", contact: 'Contacto', language: 'Idioma' }
   }
 
+  const links = Object.entries(navBarContent).map(([key, value]) => { return (<Link key={key} to={key}>{value}</Link>) }).filter((link) => link.props.to !== "studies");
+  const linksNoBlog = links.filter((link) => link.props.to !== "blog")
   return (
     <div id="navpanel" className={`nav-panel ${props.toggleClass}`}>
-      <Link to="/">{navBarContent.home}</Link>
-      <Link to="work">{navBarContent.work}</Link>
-      <Link to="about">{navBarContent.about}</Link>
-      <Link to="blog">{navBarContent.blog}</Link>
-      <Link to="contact">{navBarContent.contact}</Link>
-      <div>{navBarContent.language} <span onClick={(e) => {globalContext.setLenguage('en')}}>EN</span> <span>/</span> <span onClick={(e) => {globalContext.setLenguage('es')}}>ES</span></div>
+      <Link to="/">{homeTranslation}</Link>
+
+      {globalContext.blogActive ? links : linksNoBlog}
+      <div>{navBarContent.language} <span onClick={(e) => { globalContext.setLenguage('en') }}>EN</span> <span>/</span> <span onClick={(e) => { globalContext.setLenguage('es') }}>ES</span></div>
 
     </div>
   );

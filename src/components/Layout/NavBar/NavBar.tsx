@@ -8,17 +8,19 @@ const Navbar = () => {
   const scrollDirection = useScrollContext().scrollDirection;
   const globalContext = useGlobalContext();
 
+
   let navTextContent = {
-    home: "",
     work: "",
     studies: "",
     about: "",
     contact: "",
     blog: "",
   };
+
+  const homeTranslation = globalContext.language === "en" ? "Home" : "Inicio";
+
   if (globalContext.language === "en") {
     navTextContent = {
-      home: "Home",
       work: "Work",
       studies: "Studies",
       about: "About",
@@ -27,7 +29,6 @@ const Navbar = () => {
     };
   } else if (globalContext.language === "es") {
     navTextContent = {
-      home: "Inicio",
       work: "Trabajo",
       studies: "Estudios",
       about: "Acerca de",
@@ -50,25 +51,17 @@ const Navbar = () => {
     setIsOpen(false);
   };
 
-  const links = (
-    <div className="nav_links">
-      <Link to="work">{navTextContent.work}</Link>
-      {/* <Link to="studies">Studies</Link>  */}
-      <Link to="about">{navTextContent.about}</Link>
-      <Link to="blog">{navTextContent.blog}</Link>
-      <Link to="contact">{navTextContent.contact}</Link>
-    </div>
-  );
+  const links = Object.entries(navTextContent).map(([key, value]) => { return (<Link key={key} to={key}>{value}</Link>) }).filter((link) => link.props.to !== "studies");
 
-  const linksNoBlog = links.props.children.filter((link) => link.props.to !== "blog")
+  const linksNoBlog = links.filter((link) => link.props.to !== "blog")
 
   return (
     <nav id="navbar" className={`Navbar ${scrollDirection}`}>
       <div className="nav_links">
-        <Link to="/">{navTextContent.home}</Link>
+        <Link to="/">{homeTranslation}</Link>
       </div>
       <div className="nav_links">
-        {linksNoBlog}
+        {globalContext.blogActive ? links : linksNoBlog}
       </div>
 
       <div className={`custom-dropdown `} onMouseLeave={toggleDropdown}>

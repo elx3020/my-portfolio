@@ -9,7 +9,8 @@
         "description": "A brief tutorial on how to read and execute file using Node.js",
         "keywords": ["nodejs", "javascript", "backend"],
         "thumbnail": "images/blog/cover_readfile_nodejs.jpg",
-        "date": "2024-02-05"
+        "date": "2024-02-05",
+        "draft": false
       },
       {
         "postId": "markdown-react",
@@ -17,7 +18,9 @@
         "description": "React and Markdown are a powerful combination. Learn how to use Markdown in React to create dynamic content.",
         "keywords": ["Reactjs", "javascript", "Markdown", "frontend"],	
         "thumbnail": "https://cdn-ak.f.st-hatena.com/images/fotolife/r/rifublog/20231102/20231102232849.png",
-        "date": "2024-02-12"
+        "date": "2024-02-12",
+        "draft": true
+
       }
      
     ]
