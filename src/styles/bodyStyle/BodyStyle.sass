@@ -67,13 +67,15 @@ li
     transform-style: preserve-3d
     will-change: transform
 
-// code
-//     display: block
-//     font-family: $fontFamily
-//     font-size: 1.2rem
-//     background-color: $colorEnphasis
-//     padding: 0.5rem
-//     border-radius: 0.5rem
-//     color: $secondaryColorBackground
-//     font-weight: 300
-//     width: 100%
+pre 
+    &::-webkit-scrollbar
+        height: 5px
+
+    &::-webkit-scrollbar-track 
+        box-shadow: inset 0 0 3px transparent  
+        -webkit-box-shadow: inset 0 0 3px transparent 
+
+    &::-webkit-scrollbar-thumb
+        background-color: $colorEnphasis
+        border-radius: 10px 
+	

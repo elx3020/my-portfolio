@@ -15,7 +15,7 @@ Leer y ejecutar archivos dinámicamente proporciona flexibilidad y te permite ca
 
 Comienza importando el módulo `fs` en tu archivo JavaScript:
 
-```javascript
+```js
 const fs = require('fs');
 ```
 
@@ -28,7 +28,7 @@ El método `fs.readFile` es nuestro protagonista. Toma dos argumentos:
 
 Aquí hay un ejemplo usando una función de callback:
 
-```javascript
+```js
 fs.readFile('miArchivo.js', 'utf8', (err, data) => {
   if (err) {
     console.error('Error leyendo el archivo:', err);
@@ -42,7 +42,7 @@ fs.readFile('miArchivo.js', 'utf8', (err, data) => {
 
 Alternativamente, puedes usar async/await para un enfoque más limpio:
 
-```javascript
+```js
 async function readFile() {
   try {
     const data = await fs.promises.readFile('miArchivo.js', 'utf8');
@@ -61,7 +61,7 @@ Antes de ejecutar, necesitamos entender el tipo de contenido del archivo. ¿Es J
 
 * **JSON:** Si son datos JSON, usa `JSON.parse` para convertirlos en un objeto JavaScript:
 
-```javascript
+```js
 const jsonObject = JSON.parse(data);
 // Ahora puedes acceder a las propiedades del objeto como jsonObject.propiedad
 ```
