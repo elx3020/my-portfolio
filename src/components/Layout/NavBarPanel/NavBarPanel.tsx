@@ -60,7 +60,7 @@ function NavPanel(props: { toggleClass: string }) {
       <Link to="/">{homeTranslation}</Link>
 
       {globalContext.blogActive ? links : linksNoBlog}
-      <div>{navBarContent.language} <span onClick={(e) => { globalContext.setLenguage('en') }}>EN</span> <span>/</span> <span onClick={(e) => { globalContext.setLenguage('es') }}>ES</span></div>
+      <div>{navBarContent.language} <span onClick={(e) => { globalContext.setLanguage('en') }}>EN</span> <span>/</span> <span onClick={(e) => { globalContext.setLanguage('es') }}>ES</span></div>
 
     </div>
   );

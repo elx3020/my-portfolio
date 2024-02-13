@@ -1,4 +1,4 @@
-## Lee y ejecuta archivos en Node.js para tu blog
+# Lee y ejecuta archivos en Node.js
 
 <img class='blog-c' src='/images/blog/cover_readfile_nodejs.jpg' alt='reading_a_file_nodejs'>
 

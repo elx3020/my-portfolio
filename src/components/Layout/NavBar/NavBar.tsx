@@ -38,7 +38,7 @@ const Navbar = () => {
   }
 
   const changeLanguage = (value) => {
-    globalContext.setLenguage(value);
+    globalContext.setLanguage(value);
     closeDropdown();
   };
 
