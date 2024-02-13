@@ -58,7 +58,9 @@
 
 
 .content-container {
-    padding: 7vw 25vw;
+    padding: 5vw 25vw;
+    min-height: 80vh;
+
 
     @media screen and (max-width: 450px) {
         padding: 10% 2%;

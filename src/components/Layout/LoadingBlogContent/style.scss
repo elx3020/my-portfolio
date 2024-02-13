@@ -1,0 +1,90 @@
+
+.bodyWrap {
+    .loadingAnim:first-child {
+    }
+
+    .loadingAnim:nth-child(2){
+        height: 150px;
+        width: 70%;
+    }
+
+
+    .loadingAnim:nth-child(3){
+        width: 80%;
+    }
+
+    .loadingAnim:nth-child(4){
+        width: 50%;
+    }
+
+    .loadingAnim:nth-child(5){
+        width: 90%;
+    }
+
+    .loadingAnim:nth-child(7){
+        width: 60%;
+    }
+    .loadingAnim:nth-child(8){
+        width: 95%;
+        height: 250px;
+    }
+
+    .loadingAnim:nth-child(9){
+        width: 80%;
+    }
+
+
+
+    .loadingAnim:last-child {
+        height: 100px;
+    }
+    
+    .loadingAnim {
+        padding: 6px;
+        min-height: 30px;
+        width: 100%;
+        margin: 1.5vw 0;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0.5),rgba(54, 54, 54, 0.35)), rgba(165, 165, 165, 0);
+        -webkit-animation: loadanimation 1s ease infinite;
+        -moz-animation: loadanimation 1s ease infinite;
+        animation: loadanimation 1s ease infinite;
+        background-size: 800% 800%
+    }
+    @-webkit-keyframes loadanimation {
+        0% {
+            background-position: 0 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0 50%
+        }
+    }
+    @-moz-keyframes loadanimation {
+        0% {
+            background-position: 0 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0 50%
+        }
+    }
+    @keyframes loadanimation {
+        0% {
+            background-position: 0 50%
+        }
+        50% {
+            background-position: 100% 50%
+        }
+        100% {
+            background-position: 0 50%
+        }
+    }
+}
+
