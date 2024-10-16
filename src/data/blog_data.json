@@ -20,8 +20,18 @@
         "thumbnail": "https://cdn-ak.f.st-hatena.com/images/fotolife/r/rifublog/20231102/20231102232849.png",
         "date": "2024-02-12",
         "draft": true
-
+      },
+      {
+        "postId": "vue-directives-intro",
+        "title": "Vue.js Directives", 
+        "description": "One of the powerful features in Vue.js is directives, which provide a declarative way to extend HTML with custom behavior. .",
+        "keywords": ["vue", "javascript", "directives", "frontend"],	
+        "thumbnail": "https://www.svgrepo.com/show/349557/vue.svg",
+        "date": "2024-10-17",
+        "draft": false
       }
+
+
      
     ]
   } 

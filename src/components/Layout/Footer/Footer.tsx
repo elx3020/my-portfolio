@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { triangleDown } from "../../../utils/svgFigures";
 // styles
 import "./Footer.sass";
-import {useGlobalContext} from "../../../hooks/useGlobalContext";
+import { useGlobalContext } from "../../../hooks/useGlobalContext";
 // assets
 const myPhoto = "/images/yo.jpg";
 
@@ -12,7 +12,7 @@ export default function Footer() {
 
   const globalContext = useGlobalContext();
   const footerContent = globalContext.content.footer;
- 
+
 
   return (
     <footer className="footer" data-scroll-section>
@@ -29,13 +29,11 @@ export default function Footer() {
               <img src={myPhoto} alt="me" />
             </div>
             <Link className="contact-button" to="contact">
-            {footerContent.titles.title_2}
+              {footerContent.titles.title_2}
             </Link>
-          </div>
-          <div className="content-in-info">
-            <h3 className="contact-info">+49 177504296</h3>
             <h3 className="contact-info">estebanl28@gmail.com</h3>
           </div>
+
         </div>
       </div>
 

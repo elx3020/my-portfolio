@@ -53,7 +53,7 @@ function NavPanel(props: { toggleClass: string }) {
     navBarContent = { work: 'Mi Trabajo', about: 'Sobre mi', blog: "Blog", contact: 'Contacto', language: 'Idioma' }
   }
 
-  const links = Object.entries(navBarContent).map(([key, value]) => { return (<Link key={key} to={key}>{value}</Link>) }).filter((link) => link.props.to !== "studies");
+  const links = Object.entries(navBarContent).filter(([k, v]) => k !== 'language').map(([key, value]) => { return (<Link key={key} to={key}>{value}</Link>) }).filter((link) => link.props.to !== "studies");
   const linksNoBlog = links.filter((link) => link.props.to !== "blog")
   return (
     <div id="navpanel" className={`nav-panel ${props.toggleClass}`}>

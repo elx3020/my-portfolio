@@ -43,8 +43,8 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
                 if (data) setMarkdownContent(await marked.parse(data));
                 setIsLoaded(true);
                 divRef.current!.innerHTML = markdownContent;
-                scroll?.update();
                 Prism.highlightAll();
+                scroll?.update();
             })
         }
 
