@@ -29,6 +29,15 @@
         "thumbnail": "https://www.svgrepo.com/show/349557/vue.svg",
         "date": "2024-10-17",
         "draft": false
+      },
+      {
+        "postId": "npm-intro-tutorial",
+        "title": "Npm Introduction and Tutorial", 
+        "description": "Npm is the package manager for JavaScript. Find, share, and reuse packages of code from hundreds of thousands of developers — and assemble them in powerful new ways.",
+        "keywords": ["npm", "javascript", "tutorial", "beginner"],	
+        "thumbnail": "https://res.cloudinary.com/benjamincrozat-com/image/fetch/c_scale,f_webp,q_auto,w_1200/https://github.com/benjamincrozat/content/assets/3613731/527efaf4-30dd-4066-8f8b-1012c05f904d",
+        "date": "2024-10-28",
+        "draft": false
       }
 
 
