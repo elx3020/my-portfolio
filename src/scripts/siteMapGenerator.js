@@ -22,7 +22,7 @@ app.get('/sitemap.xml', (req, res) => {
     const sitemap = new SitemapStream({ hostname: 'https://estebanlasso.com' });
 
     routes.forEach((route) => {
-      sitemap.write({ url: route.path, changefreq: 'monthly', priority: 0.7 });
+      sitemap.write({ url: route.path, changefreq: route.changefreq, priority: route.priority });
     });
 
     // matchRoutes(routes, req.path).map(({ route }) => {
