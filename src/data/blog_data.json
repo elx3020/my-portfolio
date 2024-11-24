@@ -38,9 +38,15 @@
         "thumbnail": "https://res.cloudinary.com/benjamincrozat-com/image/fetch/c_scale,f_webp,q_auto,w_1200/https://github.com/benjamincrozat/content/assets/3613731/527efaf4-30dd-4066-8f8b-1012c05f904d",
         "date": "2024-10-28",
         "draft": false
+      },
+      {
+        "postId": "nodejs-read-write-file",
+        "title": "Read and write files using node js", 
+        "description": Get started with node js. The runtime environment for javascript. Learn how to read and write text file using the fs module. ",
+        "keywords": ["node js", "javascript", "tutorial", "beginner"],	
+        "thumbnail": "images/blog/cover_readfile_nodejs.jpg",
+        "date": "2024-11-24",
+        "draft": false
       }
-
-
-     
     ]
   } 
