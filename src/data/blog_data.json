@@ -47,6 +47,15 @@
         "thumbnail": "images/blog/cover_readfile_nodejs.jpg",
         "date": "2024-11-24",
         "draft": false
+      },
+      {
+        "postId": "os-nodejs-tutorial",
+        "title": "Using the OS module of Node js", 
+        "description": "Learn how to use the os module for your next web app.",
+        "keywords": ["node js", "javascript", "tutorial", "os module"],	
+        "thumbnail": "images/blog/cover-nodejs-os.jpg",
+        "date": "2024-11-30",
+        "draft": false
       }
     ]
   } 
