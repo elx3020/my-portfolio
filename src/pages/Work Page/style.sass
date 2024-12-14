@@ -19,7 +19,6 @@
     
     width: $containerWidth
     margin: 100px auto
-    color: $BackgroundColor
 
     .cards-wrapper
         width: 100%
@@ -51,24 +50,20 @@
 
         .list-item
             color: inherit
-
+            border: 2px solid $mainFontColor
+            border-bottom: 5px solid $mainFontColor
             a
+                border: 1.8px solid $mainFontColor
                 color: inherit
-                border: 1.5px solid $BackgroundColor
+                border: 1.5px solid $mainFontColor
                 background: none
 
                 &:hover
-                    color: $BackgroundColor
+                    color: $mainFontColor
                     background-color: $colorSecondary
 
-        &.is-reveal
-            background-color: $BackgroundColor
-            color: $mainFontColor
-            .list-item
-                border: 2px solid $mainFontColor
-                border-bottom: 5px solid $mainFontColor
-                a
-                    border: 1.8px solid $mainFontColor
+
+                    
 
         @media screen and (max-width: 450px)
             padding: 10% 2%

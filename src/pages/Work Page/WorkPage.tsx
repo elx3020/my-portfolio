@@ -39,40 +39,10 @@ const WorkPage = (props) => {
         <title>{workPageContent.helmet_Title}</title>
       </Helmet>
 
-      {/* Work - Page Hero */}
-      <HeroGenericComponent
-        className="generic-hero-wrapper work-page"
-        styleOptions={{ fontSize: "clamp(2vw, 150px, 17vw)" }}
-        textContent={workPageContent.titles.title_1}
-        image_Url={computerIllustration}
-      >
-        {/* <p>Explore all the projects I have</p> */}
-      </HeroGenericComponent>
+
       {/* Web Developer Work */}
       <div className="work-section">
-        <div className="header-workpage">
-          <h1 data-scroll data-scroll-offset="200px">
-            {workPageContent.titles.title_2}
-          </h1>
-          <div className="windows-wrapper">
-            <div className="circle-background"></div>
-            <div data-scroll data-scroll-speed="1.3">
-              <img src={imagesUrl[0]} alt="window" />
-            </div>
-            <div data-scroll data-scroll-speed="-1.2">
-              <img src={imagesUrl[1]} alt="window" />
-            </div>
-            <div data-scroll data-scroll-speed="1.1">
-              <img src={imagesUrl[2]} alt="window" />
-            </div>
-            <div data-scroll data-scroll-speed="-1.2">
-              <img src={imagesUrl[3]} alt="window" />
-            </div>
-          </div>
-        </div>
-
-        <h2>{workPageContent.titles.title_3}</h2>
-
+        {/* TODO all work should be a card */}
         <CardContainer data={workPageContent.showcase_Data} />
       </div>
 
@@ -106,6 +76,13 @@ const WorkPage = (props) => {
           <div className="ui-projects-wrapper">{uiProjects}</div>
         </div>
       </section>
+
+      <div style={{ display: 'flex', justifyContent: 'center' }}>
+        <div style={{ width: '80vw', height: '100vh', overflow: 'hidden' }}>
+          <img src={computerIllustration} alt="decorative" />
+        </div>
+      </div>
+
     </div>
   );
 
