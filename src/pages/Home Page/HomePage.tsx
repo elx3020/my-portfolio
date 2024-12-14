@@ -20,6 +20,7 @@ import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import { triangle, circle, line } from "../../utils/svgFigures";
 
 import { useGlobalContext } from "../../hooks/useGlobalContext";
+import FullScreenSection from "../../components/Layout/FullScreenSection";
 
 // assets
 // import mePhoto from "../images/background-image.jpg";
@@ -78,9 +79,8 @@ const HomePage = (props: {children?: any,  handlePage: (value: string) => void }
         </ColumnLayout>
       </section>
 
-      <section className="section-wrapper">
-        <div className="container-wrapper">
-          <h1 data-scroll data-scroll-speed="1">
+      <FullScreenSection >
+      <h1 data-scroll data-scroll-speed="1">
             {homePageContent.sec_projects.title}
           </h1>
           <div className="two-column">
@@ -90,8 +90,8 @@ const HomePage = (props: {children?: any,  handlePage: (value: string) => void }
               <span className="span-arrow">{triangle}</span>
             </h2>
           </div>
-        </div>
-      </section>
+      </FullScreenSection>
+
 
       <section className="section-wrapper">
         <div className="container-wrapper">
