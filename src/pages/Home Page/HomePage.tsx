@@ -51,33 +51,36 @@ const HomePage = (props: { children?: any, handlePage: (value: string) => void }
       <Helmet>
         <title>Esteban Lasso</title>
       </Helmet>
-      <HeroContainer
-        title="Esteban Lasso"
-        description={homePageContent.heroContainer.description}
-        isImage={false}
-        backgroundImageAlt="me"
-        location={homePageContent.heroContainer.location}
-        flag={flagImage}
-      // backgroundImage={mePhoto}
-      >
-        {triangle}
-        {circle}
-      </HeroContainer>
+      <div style={{ border: '1px solid white' }}>
 
 
-      <section className="home-sec-wrap" data-scroll data-scroll-offset="90%">
-        <ColumnLayout className="messages-section">
-          <p className="paragraph-big">
-            {homePageContent.firstSection.paragraph_big}
-          </p>
-          <p className="paragraph-small">
-            {homePageContent.firstSection.paragraph_small}
-            <span className="span-arrow">{triangle}</span>
-          </p>
-        </ColumnLayout>
-      </section>
+        <HeroContainer
+          title="Esteban Lasso"
+          description={homePageContent.heroContainer.description}
+          isImage={false}
+          backgroundImageAlt="me"
+          location={homePageContent.heroContainer.location}
+          flag={flagImage}
+        // backgroundImage={mePhoto}
+        >
+          {triangle}
+          {circle}
+        </HeroContainer>
 
 
+        <section className="home-sec-wrap" data-scroll data-scroll-offset="90%">
+          <ColumnLayout className="messages-section">
+            <p className="paragraph-big">
+              {homePageContent.firstSection.paragraph_big}
+            </p>
+            <p className="paragraph-small">
+              {homePageContent.firstSection.paragraph_small}
+              <span className="span-arrow">{triangle}</span>
+            </p>
+          </ColumnLayout>
+        </section>
+
+      </div>
     </div>
   );
 
