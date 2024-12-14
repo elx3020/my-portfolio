@@ -11,7 +11,7 @@ import useCurrentPage from "../../hooks/useCurrentPage";
 import "./style.sass";
 import { useGlobalContext } from "../../hooks/useGlobalContext";
 
-export default function ProjectDescriptionPage(props: { handlePage: (value: string) => void}) {
+export default function ProjectDescriptionPage(props: { handlePage: (value: string) => void }) {
   // set data to the component render
   //  data is an object which is value is an array
 
@@ -61,7 +61,7 @@ export default function ProjectDescriptionPage(props: { handlePage: (value: stri
   useCurrentPage(props.handlePage);
 
   return (
-    <section className="project-description-page" data-scroll-section>
+    <section className="project-description-page"  >
       {pageContent}
     </section>
   );

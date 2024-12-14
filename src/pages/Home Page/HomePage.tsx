@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { Helmet } from "react-helmet";
 
 // style
@@ -7,7 +6,6 @@ import "./style.sass";
 // page components
 
 import HeroContainer from "../../components/Layout/HeroContainer";
-import CardContainer from "../../components/Layout/CardContainer";
 import ColumnLayout from "../../components/Layout/ColumnLayout";
 import ListItem from "../../components/List/ListItem";
 import useCurrentPage from "../../hooks/useCurrentPage";
@@ -19,7 +17,6 @@ import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import { triangle, circle, line } from "../../utils/svgFigures";
 
 import { useGlobalContext } from "../../hooks/useGlobalContext";
-import FullScreenSection from "../../components/Layout/FullScreenSection";
 
 // assets
 // import mePhoto from "../images/background-image.jpg";
@@ -49,7 +46,7 @@ const HomePage = (props: { children?: any, handlePage: (value: string) => void }
   });
 
   const pageContent = (
-    <div className="Home-page" data-scroll-section>
+    <div className="Home-page"  >
       <LoadingScreen className="loading-screen" />
       <Helmet>
         <title>Esteban Lasso</title>
@@ -59,7 +56,6 @@ const HomePage = (props: { children?: any, handlePage: (value: string) => void }
         description={homePageContent.heroContainer.description}
         isImage={false}
         backgroundImageAlt="me"
-        line={line}
         location={homePageContent.heroContainer.location}
         flag={flagImage}
       // backgroundImage={mePhoto}
@@ -67,6 +63,7 @@ const HomePage = (props: { children?: any, handlePage: (value: string) => void }
         {triangle}
         {circle}
       </HeroContainer>
+
 
       <section className="home-sec-wrap" data-scroll data-scroll-offset="90%">
         <ColumnLayout className="messages-section">

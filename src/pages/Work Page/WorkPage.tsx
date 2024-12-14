@@ -15,11 +15,11 @@ import "./style.sass";
 import { useGlobalContext } from "../../hooks/useGlobalContext";
 
 
-const imagesUrl = ['/images/WorkPage/web-art-0.png', '/images/WorkPage/web-art-1.png', '/images/WorkPage/web-art-2.png','/images/WorkPage/web-art-3.png','/images/WorkPage/circle.png','/images/WorkPage/cursor.png']
+const imagesUrl = ['/images/WorkPage/web-art-0.png', '/images/WorkPage/web-art-1.png', '/images/WorkPage/web-art-2.png', '/images/WorkPage/web-art-3.png', '/images/WorkPage/circle.png', '/images/WorkPage/cursor.png']
 
 const computerIllustration = '/images/WorkPage/1computer-work.svg';
 const WorkPage = (props) => {
-  const {  handlePage } = props;
+  const { handlePage } = props;
 
   const globalContext = useGlobalContext();
   const workPageContent = globalContext.content.workPage;
@@ -33,7 +33,7 @@ const WorkPage = (props) => {
   useCurrentPage(handlePage);
 
   const pageContent = (
-    <div className="work-page" data-scroll-section>
+    <div className="work-page"  >
       <LoadingScreen className="loading-screen" />
       <Helmet>
         <title>{workPageContent.helmet_Title}</title>
@@ -42,7 +42,7 @@ const WorkPage = (props) => {
       {/* Work - Page Hero */}
       <HeroGenericComponent
         className="generic-hero-wrapper work-page"
-        styleOptions={{fontSize: "clamp(2vw, 150px, 17vw)"}}
+        styleOptions={{ fontSize: "clamp(2vw, 150px, 17vw)" }}
         textContent={workPageContent.titles.title_1}
         image_Url={computerIllustration}
       >

@@ -52,7 +52,7 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
 
 
     return (
-        <div data-scroll-section className='content-container'>
+        <div className='content-container'>
             {isLoaded ? (<div ref={divRef} className='blog-post' />) : (<LoadingBlogContent />)}
         </div>
     );

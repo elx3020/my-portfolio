@@ -2,7 +2,7 @@
 @import "../../../styles/helpers/mixins"
 
 .footer
-    @include fillScreenDiv($BackgroundColor: $BackgroundColor, $colorText:$mainColorBackground,$width: 100%, $height: auto )
+    @include fillScreenDiv($BackgroundColor: $BackgroundColor, $colorText:$mainFontColor,$width: 100%, $height: auto )
 
     overflow-x: hidden
     position: relative
@@ -36,14 +36,14 @@
 
     .contact-button
         @include setAnchorAsButton($BackgroundColor: none)
-        border: 1.5px solid $mainColorBackground
+        border: 1.5px solid $mainFontColor
         font-size: 28px
         padding: 25px 30px
         border-radius: 10px
         position: relative
         left: 0%
         transform: translateY(-3px)
-        box-shadow: 0px 3px 0px 0px $mainColorBackground
+        box-shadow: 0px 3px 0px 0px $mainFontColor
         transition: all 0.1s ease-in-out
         &:hover
             background-color: $colorSecondary
@@ -81,7 +81,7 @@
                 transform: translate(-50%,-50%)
 
         .contact-info
-            border: 1px solid $mainColorBackground
+            border: 1px solid $mainFontColor
             padding: 1.5rem 0.5rem
             border-radius: 10px
 
@@ -93,7 +93,7 @@
         margin: auto
         width: 85%
         height: 1px
-        background-color: $mainColorBackground
+        background-color: $mainFontColor
     .end-footer
         padding: 20px 10%
         display: flex

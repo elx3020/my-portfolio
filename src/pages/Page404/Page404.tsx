@@ -9,10 +9,10 @@ export default function Page404(props: { handlePage: any; }) {
   useCurrentPage(handlePage);
 
   return (
-    <div className="not-found-page" data-scroll-section>
+    <div className="not-found-page"  >
       <HeroGenericComponent
         className="content-404"
-        styleOptions={{fontSize: "45px"}}
+        styleOptions={{ fontSize: "45px" }}
         textContent="Error 404"
       >
         <p> Oops! The resource you are looking can not be found.</p>

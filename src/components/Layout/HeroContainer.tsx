@@ -11,7 +11,6 @@ const HeroContainer = (props: any) => {
     backgroundImage,
     title = "Title",
     description = "This is the paragraph to insert text for your hero image",
-    line,
     location,
     flag,
   } = props;
@@ -31,7 +30,6 @@ const HeroContainer = (props: any) => {
   return (
     <div className="hero-wrapper">
       {backgroundImageElement}
-      {line}
       {cubeElement}
       <p className="location-text">{location}</p>
       <div className="hero-content">

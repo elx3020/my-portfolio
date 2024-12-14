@@ -2,7 +2,7 @@
 @import "../helpers/mixins"
 
 // main colors light theme
-// $mainColorBackground: #EDF6F0
+// $mainFontColor: #EDF6F0
 // $BackgroundColor: #231C07
 // $colorSecondary: #7F96FF
 // $colorTerciary: #DEFF7F
@@ -31,7 +31,7 @@
         transform: translate(-50%,-50%)
 
     .hero-content
-        color: $mainColorBackground
+        color: $mainFontColor
         position: absolute
         right: 2%
         bottom: 17%
@@ -65,7 +65,7 @@
                 max-width: 7%
 
     .location-text
-        color: $mainColorBackground
+        color: $mainFontColor
         position: absolute
         left: -3%
         transform: rotate(-90deg)
@@ -193,7 +193,7 @@
     
                 &:hover
                     background-color: $colorSecondary
-                    color: $mainColorBackground
+                    color: $mainFontColor
 
                 &:active
                     background-color: $colorTerciary
@@ -218,7 +218,7 @@
 // section wrapper
 
 .section-wrapper
-    background-color: $mainColorBackground
+    background-color: $mainFontColor
 
     h1
         font-size: clamp(3vw,80px,11vw)
@@ -271,7 +271,7 @@
     margin: auto
     padding: 0 5%
     transition: all 0.5s ease-in-out 0.5s
-    color: $mainColorBackground
+    color: $mainFontColor
     background-color: $BackgroundColor
     overflow: hidden
 
@@ -282,8 +282,7 @@
 
 .home-sec-wrap
     transition: all 0.5s ease-in-out
-    &.is-reveal
-        color: $mainColorBackground
+    color: $mainFontColor
 
 .paragraph-big
 

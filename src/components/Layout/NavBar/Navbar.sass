@@ -2,16 +2,19 @@
 @import "../../../styles/helpers/mixins"
 
 .navbar
-    @include navBarElement($BackgroundColor,$mainColorBackground)
+    @include navBarElement($BackgroundColor,$mainFontColor)
     position: fixed
     right: 0
     transition: transform 0.2s ease-in-out
-    font-size: 1.2rem
     .nav_links
         a
             color: inherit
             text-decoration: none
             padding: 0 20px 0 10px
+            transition: all 0.2s ease-in-out
+            &:hover
+              background-color: $mainFontColor
+              color: $BackgroundColor
 
     @media screen and(max-width: 450px)
         transform: translateY(-100%)
@@ -26,7 +29,6 @@
 .selected-option 
   cursor: pointer
   padding: 12px
-  border: 1px solid $mainColorBackground
   border-radius: 4px
 
 
@@ -47,7 +49,6 @@
 
 .options.open 
   height: 70px
-  border: 1px solid $mainColorBackground
 
 
 .options div 

@@ -15,7 +15,7 @@ export default function Footer() {
 
 
   return (
-    <footer className="footer" data-scroll-section>
+    <footer className="footer"  >
       <div className="footer-content">
         <h2 data-scroll data-scroll-speed="1.5">
           {footerContent.titles.title_1}

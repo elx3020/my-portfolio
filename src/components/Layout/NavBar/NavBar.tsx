@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "./Navbar.sass";
-import React, { useState } from "react";
+import { useState } from "react";
 import { useGlobalContext } from "../../../hooks/useGlobalContext";
 const Navbar = () => {
 
@@ -62,7 +62,7 @@ const Navbar = () => {
         {globalContext.blogActive ? links : linksNoBlog}
       </div>
 
-      <div className={`custom-dropdown `} onMouseLeave={toggleDropdown}>
+      <div className={`custom-dropdown`} onMouseLeave={toggleDropdown}>
         <div className="selected-option" onMouseEnter={toggleDropdown} >
           {globalContext.language === "en" ? "Language" : "Lenguaje"}
         </div>

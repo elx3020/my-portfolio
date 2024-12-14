@@ -26,14 +26,14 @@ const ContactPage = (props: { handlePage: (value: string) => void }) => {
 
   if (state.succeeded) {
     return (
-      <section className="submission-message" data-scroll-section>
+      <section className="submission-message"  >
         <h1>{contactPageContent.form.form_send_text}</h1>
       </section>
     );
   }
 
   return (
-    <div className="contact-page" data-scroll-section>
+    <div className="contact-page"  >
       <LoadingScreen className="loading-screen" />
       <Helmet>
         <title>{contactPageContent.helmet_Title}</title>

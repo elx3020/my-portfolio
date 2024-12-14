@@ -27,12 +27,12 @@ export default function NavBarPanel(props: { currentPage: string }) {
 
   return (
     <div className="nav-panel-wrapper">
-      <div
+      {/* <div
         className={`nav-button ${navPanelOpen}`}
         onClick={togglePanel}
       >
         <span>M</span>
-      </div>
+      </div> */}
       <NavPanel toggleClass={navPanelOpen} />
     </div>
   );

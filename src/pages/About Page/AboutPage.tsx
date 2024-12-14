@@ -39,7 +39,7 @@ const AboutPage = (props: { handlePage: (value: string) => void }) => {
 
 
   return (
-    <div className="about-page" data-scroll-section>
+    <div className="about-page"  >
       <LoadingScreen className="loading-screen" />
 
       <Helmet>
