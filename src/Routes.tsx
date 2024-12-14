@@ -4,13 +4,13 @@ import WorkPage from "./pages/Work Page/WorkPage";
 import ContactPage from "./pages/Contact Page/ContactPage";
 import ProjectDescriptionPage from "./pages/ProjectDescription Page/ProjectDescriptionPage";
 import Page404 from "./pages/Page404/Page404";
-import StudiesPage from "./pages/Studies Page/StudiesPage";
 import About from "./pages/About Page/AboutPage";
 import BlogPage from "./pages/Blog Page/BlogPage";
 import BlogPostPage from "./pages/Blog Page/BlogPostPage";
 export default function AppRoutes(props: { handlePage: (currentPage: string) => void }) {
 
     const { handlePage } = props;
+
 
     return (
         <Routes>

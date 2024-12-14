@@ -34,9 +34,7 @@ const AboutPage = (props: { handlePage: (value: string) => void }) => {
   });
 
   // set as current page
-
   useCurrentPage(props.handlePage);
-
 
   return (
     <div className="about-page"  >
@@ -52,22 +50,12 @@ const AboutPage = (props: { handlePage: (value: string) => void }) => {
       >
         {triangleDown}
       </HeroGenericComponent>
-
-      <div className="center-flex">
-        <ColumnLayout className="section-text-column photo">
-          <div className="circle"></div>
-          <div className="v-img-wrap">
-            <div data-scroll data-scroll-speed="-1">
-              <img src="/images/yo.jpg" alt="me at the beatch" />
-            </div>
-          </div>
-          <TitleParagraphComponent
-            title={pageData.title}
-            textContent={pageData.aboutText}
-            className="wrap-text"
-          />
-        </ColumnLayout>
+      <div className="v-img-wrap">
+        <div data-scroll data-scroll-speed="-1">
+          <img src="/images/yo.jpg" alt="me at the beatch" />
+        </div>
       </div>
+
 
       <div className="cards-section">
         <h1 data-scroll data-scroll-speed="1">

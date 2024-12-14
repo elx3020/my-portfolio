@@ -5,18 +5,16 @@
   width: 100vw;
   height: 100vh;
   background-color: $BackgroundColor;
-  position: absolute;
+  position: fixed;
   z-index: 4;
   overflow: hidden;
-  animation: circle 1s cubic-bezier(0.77, 0, 0.18, 1) 0.2s 1 forwards;
-
-  &.hide {
-    display: none;
-  }
-
+  animation: circle 0.8s ease-in-out 0.2s 1 forwards;
+  transform: rotateY(-180deg);
+  
   @keyframes circle {
+    
     100% {
-      width: 0;
+      height: 0;
     }
   }
 }

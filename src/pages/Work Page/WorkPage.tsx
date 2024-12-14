@@ -7,7 +7,6 @@ import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import CardContainer from "../../components/Layout/CardContainer";
 import useCurrentPage from "../../hooks/useCurrentPage";
 import ColumnLayout from "../../components/Layout/ColumnLayout";
-import HeroGenericComponent from "../../components/Layout/HeroGenericComponent";
 import ImageCardComponent from "../../components/Layout/ImageCard/ImageCardComponent";
 
 // style document been use in this page
@@ -39,48 +38,10 @@ const WorkPage = (props) => {
         <title>{workPageContent.helmet_Title}</title>
       </Helmet>
 
-
       {/* Web Developer Work */}
       <div className="work-section">
         {/* TODO all work should be a card */}
         <CardContainer data={workPageContent.showcase_Data} />
-      </div>
-
-      <div className="work-section black" data-scroll data-scroll-offset="120%">
-        <div className="large-projects">
-          <h2>{workPageContent.titles.title_4}</h2>
-          <ColumnLayout className="projects-wrapper">
-            {mapToList(workPageContent.web_Proj_Large)}
-          </ColumnLayout>
-        </div>
-
-        <div className="mini-projects">
-          <h2>{workPageContent.titles.title_5}</h2>
-          <ColumnLayout className="projects-wrapper">
-            {mapToList(workPageContent.mini_projects)}
-          </ColumnLayout>
-        </div>
-      </div>
-      {/* UI Work */}
-
-      <section className="ui-section">
-        <header className="ui-head">
-          <h1>{workPageContent.titles.title_6}</h1>
-          <div className="header-image">
-            <img className="ui-circle" src={imagesUrl[4]} alt="decorative" />
-            <img className="cursor" src={imagesUrl[5]} alt="decorative" />
-          </div>
-        </header>
-        <div className="container-ui">
-          <h2>{workPageContent.titles.title_7}</h2>
-          <div className="ui-projects-wrapper">{uiProjects}</div>
-        </div>
-      </section>
-
-      <div style={{ display: 'flex', justifyContent: 'center' }}>
-        <div style={{ width: '80vw', height: '100vh', overflow: 'hidden' }}>
-          <img src={computerIllustration} alt="decorative" />
-        </div>
       </div>
 
     </div>

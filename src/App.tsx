@@ -1,4 +1,4 @@
-import { createRef, useState } from "react";
+import { createRef, useRef, useState } from "react";
 import {
   BrowserRouter as Router
 } from "react-router-dom";
@@ -21,6 +21,7 @@ function App() {
 
   const scrollRef = createRef<HTMLDivElement>();
   const [currentPage, setCurrentpage] = useState("");
+
   function handlePage(currentPage: string) {
     setCurrentpage(currentPage);
   }
@@ -30,6 +31,8 @@ function App() {
     breaks: true,
     async: true,
   });
+
+  // TODO use ref to make the fade in effect
 
 
   // Dom Render

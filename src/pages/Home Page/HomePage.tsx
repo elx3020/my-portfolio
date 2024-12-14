@@ -27,23 +27,7 @@ const HomePage = (props: { children?: any, handlePage: (value: string) => void }
   useCurrentPage(props.handlePage);
 
   const globalContext = useGlobalContext();
-
   const homePageContent = globalContext.content.homePage;
-
-  const mProjectList = homePageContent.mini_projects.map((item) => {
-    return (
-      <ListItem
-        data={{
-          description: item.description,
-          id: item.id,
-          project_url: item.project_url,
-          arr_Id: item.arr_Id,
-          project_Name: item.project_Name
-        }}
-        key={item.id}
-      />
-    );
-  });
 
   const pageContent = (
     <div className="Home-page"  >
@@ -67,8 +51,7 @@ const HomePage = (props: { children?: any, handlePage: (value: string) => void }
           {circle}
         </HeroContainer>
 
-
-        <section className="home-sec-wrap" data-scroll data-scroll-offset="90%">
+        <section>
           <ColumnLayout className="messages-section">
             <p className="paragraph-big">
               {homePageContent.firstSection.paragraph_big}
