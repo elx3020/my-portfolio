@@ -2,10 +2,8 @@ import { Link } from "react-router-dom";
 import "./Navbar.sass";
 import React, { useState } from "react";
 import { useGlobalContext } from "../../../hooks/useGlobalContext";
-import { useScrollContext } from "../../../hooks/useScrollContext";
 const Navbar = () => {
 
-  const scrollDirection = useScrollContext().scrollDirection;
   const globalContext = useGlobalContext();
 
 
@@ -56,7 +54,7 @@ const Navbar = () => {
   const linksNoBlog = links.filter((link) => link.props.to !== "blog")
 
   return (
-    <nav id="navbar" className={`Navbar ${scrollDirection}`}>
+    <nav id="navbar" className={`navbar`} data-scroll-sticky>
       <div className="nav_links">
         <Link to="/">{homeTranslation}</Link>
       </div>

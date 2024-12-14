@@ -4,14 +4,12 @@ import { useState } from "react";
 
 import "./NavPanel.sass";
 import { useGlobalContext } from "../../../hooks/useGlobalContext";
-import { useScrollContext } from "../../../hooks/useScrollContext";
 
 export default function NavBarPanel(props: { currentPage: string }) {
   const [navPanelOpen, setNavPanel] = useState("close");
 
   const { currentPage } = props;
 
-  const scrollDirection = useScrollContext().scrollDirection;
 
 
 
@@ -30,7 +28,7 @@ export default function NavBarPanel(props: { currentPage: string }) {
   return (
     <div className="nav-panel-wrapper">
       <div
-        className={`nav-button ${navPanelOpen} ${scrollDirection}`}
+        className={`nav-button ${navPanelOpen}`}
         onClick={togglePanel}
       >
         <span>M</span>

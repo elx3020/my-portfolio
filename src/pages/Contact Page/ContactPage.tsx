@@ -9,14 +9,12 @@ import { useForm, ValidationError } from "@formspree/react";
 
 import "./style.sass";
 import { useGlobalContext } from "../../hooks/useGlobalContext";
-import { useScrollContext } from "../../hooks/useScrollContext";
 
 
 
 const ContactPage = (props: { handlePage: (value: string) => void }) => {
 
   const globalContext = useGlobalContext();
-  const scrollObject = useScrollContext().scroll;
   const contactPageContent = globalContext.content.contactPage;
 
   // set as current page
@@ -24,13 +22,7 @@ const ContactPage = (props: { handlePage: (value: string) => void }) => {
 
   // submit the for,
   const [state, handleSubmit] = useForm("xvolwkpz");
-  // console.log(scrollObject);
-  useEffect(() => {
-    if (scrollObject !== null) {
-      scrollObject.update();
-      scrollObject.scrollTo("top");
-    }
-  }, [scrollObject, state.succeeded]);
+
 
   if (state.succeeded) {
     return (

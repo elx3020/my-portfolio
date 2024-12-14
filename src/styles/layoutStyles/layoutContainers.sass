@@ -3,7 +3,7 @@
 
 // main colors light theme
 // $mainColorBackground: #EDF6F0
-// $secondaryColorBackground: #231C07
+// $BackgroundColor: #231C07
 // $colorSecondary: #7F96FF
 // $colorTerciary: #DEFF7F
 // $colorEnphasis: #FF7F7F
@@ -19,7 +19,7 @@
     align-items: center
     width: 100%
     height: 110vh
-    background-color: $secondaryColorBackground
+    background-color: $BackgroundColor
     overflow: hidden
     .hero-paralax-image
         position: absolute
@@ -123,10 +123,10 @@
         width: clamp(26vw, 500px, 95vw)
         overflow: hidden
         border-radius: 10px
-        border: 5px solid $secondaryColorBackground
+        border: 5px solid $BackgroundColor
         transform: rotatex(20deg) rotateY(35deg)
         transition: all 0.2s ease-in-out
-        color: $secondaryColorBackground
+        color: $BackgroundColor
         font-weight: 200
         mix-blend-mode: multiply
 
@@ -139,7 +139,7 @@
             left: 0
             right: 0
             bottom: 0
-            background-color: $secondaryColorBackground
+            background-color: $BackgroundColor
             z-index: 4
             transform: translateX(-15%)
             transition: all 0.5s ease-in-out
@@ -181,11 +181,11 @@
             
             a
                 display: inline-block
-                color: $secondaryColorBackground
+                color: $BackgroundColor
                 text-decoration: none
                 font-weight: 300
 
-                border: 1.7px solid $secondaryColorBackground
+                border: 1.7px solid $BackgroundColor
                 padding: 3% 3%
                 border-radius: 5px
                 transition: all 0.2s ease-in-out
@@ -198,7 +198,7 @@
                 &:active
                     background-color: $colorTerciary
                 @media screen and (max-width: 450px)
-                    border: 1px solid $secondaryColorBackground
+                    border: 1px solid $BackgroundColor
                     font-size: 16px
 
         p
@@ -218,7 +218,7 @@
 // section wrapper
 
 .section-wrapper
-    // overflow-x: hidden
+    background-color: $mainColorBackground
 
     h1
         font-size: clamp(3vw,80px,11vw)
@@ -253,7 +253,7 @@
             margin-top: 10px
             align-self: flex-end
             transition: all 0.2s ease-in-out
-            border: 1.5px solid $secondaryColorBackground
+            border: 1.5px solid $BackgroundColor
             margin-bottom: 50px
             &:hover
                 background-color: $colorEnphasis
@@ -266,13 +266,13 @@
     @include centerFlex($direction: row,$justifyContent: center)
     position: relative
     height: 110vh
-    color: $secondaryColorBackground
+    color: $BackgroundColor
     width: 100%
     margin: auto
     padding: 0 5%
     transition: all 0.5s ease-in-out 0.5s
     color: $mainColorBackground
-    background-color: $secondaryColorBackground
+    background-color: $BackgroundColor
     overflow: hidden
 
     &.work-page
@@ -281,10 +281,8 @@
             max-height: 800px
 
 .home-sec-wrap
-    color: $secondaryColorBackground
     transition: all 0.5s ease-in-out
     &.is-reveal
-        background-color: $secondaryColorBackground
         color: $mainColorBackground
 
 .paragraph-big

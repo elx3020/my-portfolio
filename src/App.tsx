@@ -7,8 +7,6 @@ import {
 import "./styles/bodyStyle/BodyStyle.sass";
 // pages
 
-// import Blog from './pages/Blog';
-// layout components
 
 import Footer from "./components/Layout/Footer/Footer";
 import NavBar from "./components/Layout/NavBar/NavBar";
@@ -18,7 +16,6 @@ import { marked } from "marked";
 import AppRoutes from "./Routes";
 import "./code_theme.css";
 import GlobalStateProvider from "./hooks/useGlobalContext";
-import ScrollStateProvider from "./hooks/useScrollContext";
 function App() {
   // functionality
 
@@ -40,14 +37,12 @@ function App() {
     <div className="content-page">
       <GlobalStateProvider>
         <Router>
-          <ScrollStateProvider scrollElementRef={scrollRef} currentPage={currentPage}>
-            <div className="page-content" id="main-container" data-scroll-container ref={scrollRef}>
-              <NavBar />
-              <NavBarPanel currentPage={currentPage} />
-              <AppRoutes handlePage={handlePage} />
-              <Footer />
-            </div>
-          </ScrollStateProvider>
+          <div className="page-content" id="main-container" ref={scrollRef}>
+            <NavBar />
+            <NavBarPanel currentPage={currentPage} />
+            <AppRoutes handlePage={handlePage} />
+            <Footer />
+          </div>
         </Router>
       </GlobalStateProvider>
 

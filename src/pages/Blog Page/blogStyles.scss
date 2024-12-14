@@ -19,7 +19,7 @@
     min-height: 350px;
     padding: 3% 4%;
     border-radius: 10px;
-    background-color: $secondaryColorBackground;
+    background-color: $BackgroundColor;
     .__image {
         margin-bottom: 20px;
         img {
@@ -50,7 +50,7 @@
     }
     .__link {
         text-decoration: none;
-        color: $secondaryColorBackground;
+        color: $BackgroundColor;
 
     }
     

@@ -2,7 +2,6 @@ import { useParams, useSearchParams } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
 import { marked, } from 'marked';
 
-import { useScrollContext } from '../../hooks/useScrollContext';
 import "./blogStyles.scss";
 import useCurrentPage from '../../hooks/useCurrentPage';
 import Prism from 'prismjs';
@@ -19,7 +18,6 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
     const [markdownContent, setMarkdownContent] = useState('');
     const [isLoaded, setIsLoaded] = useState(false);
     const divRef = useRef<HTMLDivElement>(null);
-    const scroll = useScrollContext().scroll;
     useCurrentPage(props.handlePage);
 
     const globalContext = useGlobalContext();
@@ -44,7 +42,6 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
                 setIsLoaded(true);
                 divRef.current!.innerHTML = markdownContent;
                 Prism.highlightAll();
-                scroll?.update();
             })
         }
 
