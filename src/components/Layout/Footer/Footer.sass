@@ -4,107 +4,51 @@
 .footer
     @include fillScreenDiv($BackgroundColor: $BackgroundColor, $colorText:$mainFontColor,$width: 100%, $height: auto )
 
-    overflow-x: hidden
     position: relative
-
-    padding: 10vh 0
-
-    h2
-        font-size: clamp(2vw,70px,10vw)
-
-    .spam-triangle
-        display: flex
-        align-items: center
-        justify-content: center
-        .triangle-down
-            width: clamp(3vw, 75px,11vw)
-
-    .footer-content
-        display: flex
-        flex-direction: column
-        align-items: center
-        justify-content: space-between
-        row-gap: 60px
-        padding: 4%
-        row-gap: 50px
-    .figure-wrapper
-        position: absolute
-        top: 0%
-        left: 0%
-        right: 0%
-        bottom: 0%
+    padding-top: 7vh
 
     .contact-button
         @include setAnchorAsButton($BackgroundColor: none)
-        border: 1.5px solid $mainFontColor
-        font-size: 28px
-        padding: 25px 30px
-        border-radius: 10px
-        position: relative
-        left: 0%
-        transform: translateY(-3px)
-        box-shadow: 0px 3px 0px 0px $mainFontColor
-        transition: all 0.1s ease-in-out
+        border-left: 1px solid $mainFontColor
+        border-right: 1px solid $mainFontColor
+        display: flex
+        align-items: center
+        padding: 0 5px
+
         &:hover
-            background-color: $colorSecondary
-            transform: translateY(0px)
-            box-shadow: 0px 0px 0px 0px rgba(255,255,255,0.5)
+            background-color: $mainFontColor
+            color: $BackgroundColor
+    
+    .img-wrapper
+        overflow: hidden
+        height: 100%
+        width: 60px
+        position: relative
 
-    .content-info
-        @include centerFlex($direction: column,$justifyContent: center )
+        img
+            @include imageInsideDiv($max-width: 100%)
+            
 
-        column-gap: 4vw
-        row-gap: 4vh
-        margin: 5vh 0
-
-        .content-in-info
-            @include centerFlex($direction: row ,$justifyContent: space-around )
-            row-gap: 3vh
-            column-gap: 25vw
-            width: 100%
-
-        .img-wrapper
-            overflow: hidden
-            width: 100px
-            height: 100px
-            border-radius: 50%
-            position: relative
-
-            img
-                @include imageInsideDiv($max-width: 100%)
-                position: absolute
-                top: 50%
-                right: 0%
-                left: 50%
-                bottom: 0%
-                z-index: 0
-                transform: translate(-50%,-50%)
-
-        .contact-info
-            border: 1px solid $mainFontColor
-            padding: 1.5rem 0.5rem
-            border-radius: 10px
-
-    .column-layout
-        @include centerFlex($direction: row ,$justifyContent: space-around  )
-        padding: 2%
-
-    .line-footer
-        margin: auto
-        width: 85%
-        height: 1px
-        background-color: $mainFontColor
     .end-footer
-        padding: 20px 10%
+        height: 60px
+        border: 1px solid $mainFontColor
+        
         display: flex
         flex-direction: row
 
     .end-layout
         display: flex
         flex-direction: row
-        column-gap: 8%
         margin-left: auto
         justify-content: space-around
 
         .social-item
             @include removeDefaultLinkStyle()
+            display: flex
+            align-items: center
+            justify-content: center
+            width: 80px
+            border-left: 1px solid $mainFontColor
+            &:hover
+                background-color: $mainFontColor
+                color: $BackgroundColor

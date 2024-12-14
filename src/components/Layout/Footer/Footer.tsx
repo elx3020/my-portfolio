@@ -1,7 +1,4 @@
-import React from "react";
-
 import { Link } from "react-router-dom";
-import { triangleDown } from "../../../utils/svgFigures";
 // styles
 import "./Footer.sass";
 import { useGlobalContext } from "../../../hooks/useGlobalContext";
@@ -14,31 +11,20 @@ export default function Footer() {
   const footerContent = globalContext.content.footer;
 
 
+  function getYear() {
+    const date = new Date();
+    return date.getFullYear();
+  }
+
   return (
-    <footer className="footer"  >
-      <div className="footer-content">
-        <h2 data-scroll data-scroll-speed="1.5">
-          {footerContent.titles.title_1}
-          <span className="spam-triangle">{triangleDown} </span>
-        </h2>
-        {/* <div className="figure-wrapper">{lineFigure}</div> */}
-
-        <div className="content-info">
-          <div className="content-in-info">
-            <div className="img-wrapper">
-              <img src={myPhoto} alt="me" />
-            </div>
-            <Link className="contact-button" to="contact">
-              {footerContent.titles.title_2}
-            </Link>
-            <h3 className="contact-info">estebanl28@gmail.com</h3>
-          </div>
-
-        </div>
-      </div>
-
-      <div className="line-footer"></div>
+    <footer className="footer" >
       <div className="end-footer">
+        <div className="img-wrapper">
+          <img src={myPhoto} alt="me" />
+        </div>
+        <Link className="contact-button" to="contact">
+          {footerContent.titles.title_2}
+        </Link>
         <div className="end-layout">
           <a
             className="social-item"
@@ -65,6 +51,9 @@ export default function Footer() {
             <span className="logo-social"></span>Twitter
           </a>
         </div>
+      </div>
+      <div style={{ display: 'flex', padding: '10px 0 ', justifyContent: 'center' }}>
+        <p style={{ fontWeight: 200, fontSize: '14px' }}>{`© ${getYear()} Esteban Lasso. All rights reserved.`}</p>
       </div>
     </footer>
   );

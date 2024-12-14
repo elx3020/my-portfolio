@@ -290,11 +290,8 @@
 
     "footer": {
       "titles": {
-        "title_1": "Let's work together",
         "title_2": "Contact"
-      },
-
-        "footer_text": "© 2021 Esteban Lasso. All rights reserved."
+      }
     }
 
    
