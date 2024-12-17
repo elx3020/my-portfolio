@@ -6,7 +6,6 @@ import { Helmet } from "react-helmet";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import CardContainer from "../../components/Layout/CardContainer";
 import useCurrentPage from "../../hooks/useCurrentPage";
-import ColumnLayout from "../../components/Layout/ColumnLayout";
 import ImageCardComponent from "../../components/Layout/ImageCard/ImageCardComponent";
 
 // style document been use in this page
@@ -32,8 +31,7 @@ const WorkPage = (props) => {
   useCurrentPage(handlePage);
 
   const pageContent = (
-    <div className="work-page"  >
-      <LoadingScreen className="loading-screen" />
+    <div>
       <Helmet>
         <title>{workPageContent.helmet_Title}</title>
       </Helmet>

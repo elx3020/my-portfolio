@@ -1,11 +1,9 @@
 // components
 
-import ColumnLayout from "../../components/Layout/ColumnLayout";
 import HeroGenericComponent from "../../components/Layout/HeroGenericComponent";
 import TitleParagraphComponent from "../../components/Layout/TitleParagraphComponent";
 
 import { Helmet } from "react-helmet";
-import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 // hooks
 import useCurrentPage from "../../hooks/useCurrentPage";
 
@@ -37,9 +35,7 @@ const AboutPage = (props: { handlePage: (value: string) => void }) => {
   useCurrentPage(props.handlePage);
 
   return (
-    <div className="about-page"  >
-      <LoadingScreen className="loading-screen" />
-
+    <div>
       <Helmet>
         <title>Esteban Lasso | About</title>
       </Helmet>
@@ -61,7 +57,9 @@ const AboutPage = (props: { handlePage: (value: string) => void }) => {
         <h1 data-scroll data-scroll-speed="1">
           {pageData.title_cards}
         </h1>
-        <ColumnLayout className="column-layout">{cardsInfo}</ColumnLayout>
+        <div className="column-layout">
+          {cardsInfo}
+        </div>
       </div>
 
       <div style={{ display: 'flex', justifyContent: 'center', padding: '3vw' }}>

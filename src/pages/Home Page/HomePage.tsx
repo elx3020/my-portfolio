@@ -6,15 +6,13 @@ import "./style.sass";
 // page components
 
 import HeroContainer from "../../components/Layout/HeroContainer";
-import ColumnLayout from "../../components/Layout/ColumnLayout";
-import ListItem from "../../components/List/ListItem";
-import useCurrentPage from "../../hooks/useCurrentPage";
 import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
+import useCurrentPage from "../../hooks/useCurrentPage";
 
 // TODO
 
 // hero image elements
-import { triangle, circle, line } from "../../utils/svgFigures";
+import { circle, triangle } from "../../utils/svgFigures";
 
 import { useGlobalContext } from "../../hooks/useGlobalContext";
 
@@ -30,40 +28,32 @@ const HomePage = (props: { children?: any, handlePage: (value: string) => void }
   const homePageContent = globalContext.content.homePage;
 
   const pageContent = (
-    <div className="Home-page"  >
-      <LoadingScreen className="loading-screen" />
+    <div className="page-content">
       <Helmet>
         <title>Esteban Lasso</title>
       </Helmet>
-      <div style={{ border: '1px solid white' }}>
+      <HeroContainer
+        title="Esteban Lasso"
+        description={homePageContent.heroContainer.description}
+        isImage={false}
+        backgroundImageAlt="me"
+        location={homePageContent.heroContainer.location}
+        flag={flagImage}
+      // backgroundImage={mePhoto}
+      >
+        {triangle}
+        {circle}
+      </HeroContainer>
+      <section className="messages-section">
+        <p className="paragraph-big">
+          {homePageContent.firstSection.paragraph_big}
+        </p>
+        <p className="paragraph-small">
+          {homePageContent.firstSection.paragraph_small}
+          <span className="span-arrow">{triangle}</span>
+        </p>
+      </section>
 
-
-        <HeroContainer
-          title="Esteban Lasso"
-          description={homePageContent.heroContainer.description}
-          isImage={false}
-          backgroundImageAlt="me"
-          location={homePageContent.heroContainer.location}
-          flag={flagImage}
-        // backgroundImage={mePhoto}
-        >
-          {triangle}
-          {circle}
-        </HeroContainer>
-
-        <section>
-          <ColumnLayout className="messages-section">
-            <p className="paragraph-big">
-              {homePageContent.firstSection.paragraph_big}
-            </p>
-            <p className="paragraph-small">
-              {homePageContent.firstSection.paragraph_small}
-              <span className="span-arrow">{triangle}</span>
-            </p>
-          </ColumnLayout>
-        </section>
-
-      </div>
     </div>
   );
 

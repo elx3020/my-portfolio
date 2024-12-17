@@ -18,7 +18,7 @@
     justify-content: center
     align-items: center
     width: 100%
-    height: 110vh
+    height: 102vh
     background-color: $BackgroundColor
     overflow: hidden
     .hero-paralax-image
@@ -37,13 +37,13 @@
         bottom: 17%
         h1
             // position: absolute
-            font-size: clamp(1vw, 190px, 14vw)
+            font-size: clamp(1vw, 190px, 13vw)
             font-weight: 800
             line-height: 85%
 
         p
-            font-size: clamp(1vw, 34px,4.5vw)
-            font-weight: 100
+            font-size: 16px
+            font-weight: 200
 
         @media screen and(max-width: 450px)
             right: 0
@@ -52,22 +52,24 @@
             row-gap: 10px
             align-items: center
             justify-content: center
+            p
+                font-size: 14px
             .flag-img
                 bottom: -38%
                 max-width: 15%
             .triangle
-                max-width: 8%
+                max-width: 6%
                 top: -35%
-                left: 30%
+                left: 24%
             .circle-line
-                top: -25%
-                right: 31%
-                max-width: 7%
+                max-width: 6%
+                top: -20%
+                right: 23.5%
 
     .location-text
         color: $mainFontColor
         position: absolute
-        left: -3%
+        left: -8%
         transform: rotate(-90deg)
         @media screen and(max-width: 450px)
             font-size: 11px
@@ -82,14 +84,11 @@
     .triangle
         position: absolute
         left: 24%
+        top: -4%
     .circle-line
         position: absolute
         right: 25.5%
 
-    .line
-        position: absolute
-        left: 5%
-        bottom: 0%
     &.two
         left: 8%
 
@@ -268,7 +267,6 @@
     color: $BackgroundColor
     width: 100%
     margin: auto
-    padding: 0 5%
     transition: all 0.5s ease-in-out 0.5s
     color: $mainFontColor
     background-color: $BackgroundColor

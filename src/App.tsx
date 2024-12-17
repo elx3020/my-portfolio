@@ -1,10 +1,12 @@
-import { createRef, useRef, useState } from "react";
+import { useState } from "react";
 import {
   BrowserRouter as Router
 } from "react-router-dom";
 // import "./App.css";
 
 import "./styles/bodyStyle/BodyStyle.sass";
+import "./styles/global.sass"
+
 // pages
 
 
@@ -16,11 +18,13 @@ import { marked } from "marked";
 import AppRoutes from "./Routes";
 import "./code_theme.css";
 import GlobalStateProvider from "./hooks/useGlobalContext";
+import GoToTop from "./components/functionality/GoToTop";
 function App() {
   // functionality
 
-  const scrollRef = createRef<HTMLDivElement>();
   const [currentPage, setCurrentpage] = useState("");
+
+
 
   function handlePage(currentPage: string) {
     setCurrentpage(currentPage);
@@ -37,19 +41,15 @@ function App() {
 
   // Dom Render
   return (
-    <div className="content-page">
-      <GlobalStateProvider>
-        <Router>
-          <div className="page-content" id="main-container" ref={scrollRef}>
-            <NavBar />
-            <NavBarPanel currentPage={currentPage} />
-            <AppRoutes handlePage={handlePage} />
-            <Footer />
-          </div>
-        </Router>
-      </GlobalStateProvider>
-
-    </div>
+    <GlobalStateProvider>
+      <Router>
+        <NavBar />
+        <NavBarPanel currentPage={currentPage} />
+        <AppRoutes handlePage={handlePage} />
+        <Footer />
+        <GoToTop />
+      </Router>
+    </GlobalStateProvider>
   );
 }
 

@@ -1,5 +1,4 @@
 // styles
-import React from "react";
 import { cubeElement } from "../../animations/cubeElement";
 import "../../styles/layoutStyles/layoutContainers.sass";
 const HeroContainer = (props: any) => {
@@ -34,10 +33,10 @@ const HeroContainer = (props: any) => {
       <p className="location-text">{location}</p>
       <div className="hero-content">
         {props.children}
-        <h1 id="title" data-scroll data-scroll-speed="1.5">
+        <h1 id="title">
           {title}
         </h1>
-        <p data-scroll data-scroll-speed="1.5">
+        <p>
           {description}
         </p>
         <img className="flag-img" src={flag} alt="ecuadorian" />
