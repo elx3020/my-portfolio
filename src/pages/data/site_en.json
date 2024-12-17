@@ -117,7 +117,7 @@
           "arr_Id": "showcase_Data",
           "id": "markdown_parse",
           "project_Name": "Markdown parse",
-          "image_Url": "images/projects/placeholder.png",
+          "image_Url": "images/projects/markdown_parser.jpg",
           "description": "A markdown parse made with React. Perfect to re-style text faster. Could be use for blog where the main content is text. An easier way to format your publications",
           "project_url": "https://codepen.io/elx3020/full/KKvpqmm"
         },
@@ -125,7 +125,7 @@
           "arr_Id": "showcase_Data",
           "id": "drum_machine",
           "project_Name": "Drum Machine",
-          "image_Url": "images/projects/placeholder.png",
+          "image_Url": "images/projects/drum_machine.jpg",
           "description": "A drum machine component with two sets of music sounds. You can hit the pads with mouse or keyboard binding keys. Functionality can be expanded to play more sounds.",
           "project_url": "https://codepen.io/elx3020/full/YzxGXay"
         },
@@ -133,15 +133,15 @@
           "arr_Id": "showcase_Data",
           "id": "calculator_react",
           "project_Name": "Calculator using React",
-          "image_Url": "images/projects/placeholder.png",
+          "image_Url": "images/projects/calculator.jpg",
           "description": "A simple implementation of a calculator made with React. Can perform arithmetical operations.",
           "project_url": "https://codepen.io/elx3020/full/KKvzQxb"
         },
         {
           "arr_Id": "showcase_Data",
-          "id": "time_manager",
-          "project_Name": "Time Mananger",
-          "image_Url": "images/projects/placeholder.png",
+          "id": "pomodoro_app",
+          "project_Name": "Pomodoro App",
+          "image_Url": "images/projects/pomodoro_app.jpg",
           "description": "An alarm clock app that lets you program work and breaks time sessions. You can see this app being implemented in some time management apps.",
           "project_url": "https://codepen.io/elx3020/full/LYjZWKv"
         },

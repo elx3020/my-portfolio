@@ -2,24 +2,14 @@
 @import "../../styles/helpers/mixins";
 
 
-.blog-page {
-    padding: 10% 30%;
 
-    h1{
-        margin-bottom: 50px;    
-    }
-
-    @media screen and (max-width: 450px) {
-        padding: 10% 2%;
-    }
-}
 
 .blog-item {
     margin-bottom: 30px;
     min-height: 350px;
-    padding: 3% 4%;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: $BackgroundColor;
+    margin: 40px 0;
     .__image {
         margin-bottom: 20px;
         img {
@@ -27,13 +17,12 @@
         }
     }
     .__title {
-        margin-bottom: 10px;
+        margin-bottom: 5px;
         font-size: 40px;
         font-weight: 600;
         color: $mainFontColor;
     }
     .__date {
-        margin-bottom: 10px;
         font-size: 14px;
         color: #999;
     }
@@ -42,15 +31,20 @@
         margin-bottom: 30px
     }
     .__link_w {
-        background-color: $mainFontColor;
-        padding: 10px 20px;
-        border-radius: 5px;
+        padding: 20px 30px;
+        border-radius: 2px;
+        border: 1px solid $mainFontColor;
         width: fit-content;
         cursor: pointer;
+        transition: background-color 0.1s ease-in-out;
+        &:hover {
+            background-color: $mainFontColor;
+            color: $BackgroundColor;
+        }
     }
     .__link {
+        font-size: 16px;
         text-decoration: none;
-        color: $BackgroundColor;
 
     }
     

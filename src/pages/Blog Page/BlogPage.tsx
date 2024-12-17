@@ -20,8 +20,8 @@ const BlogPage = (props: { handlePage: (value: string) => void }) => {
 
 
   return (
-    <div className="blog-page">
-      <h1>Blog</h1>
+    <div className="page-content stretch">
+      <h1 style={{ marginTop: '10vh' }}>Blog</h1>
       <p>Stuff that I like :). Feel free to check out my posts. Hopefuly you will learn a thing or two </p>
       <p>
         {blogData.pageContent.description}
