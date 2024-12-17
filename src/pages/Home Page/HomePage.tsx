@@ -41,7 +41,6 @@ const HomePage = (props: { children?: any, handlePage: (value: string) => void }
         flag={flagImage}
       // backgroundImage={mePhoto}
       >
-        {triangle}
         {circle}
       </HeroContainer>
       <section className="messages-section">

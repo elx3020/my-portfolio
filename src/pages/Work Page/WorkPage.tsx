@@ -15,7 +15,6 @@ import { useGlobalContext } from "../../hooks/useGlobalContext";
 
 const imagesUrl = ['/images/WorkPage/web-art-0.png', '/images/WorkPage/web-art-1.png', '/images/WorkPage/web-art-2.png', '/images/WorkPage/web-art-3.png', '/images/WorkPage/circle.png', '/images/WorkPage/cursor.png']
 
-const computerIllustration = '/images/WorkPage/1computer-work.svg';
 const WorkPage = (props) => {
   const { handlePage } = props;
 
