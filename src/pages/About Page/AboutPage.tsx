@@ -1,7 +1,6 @@
 // components
 
 import HeroGenericComponent from "../../components/Layout/HeroGenericComponent";
-import TitleParagraphComponent from "../../components/Layout/TitleParagraphComponent";
 
 import { Helmet } from "react-helmet";
 // hooks
@@ -21,13 +20,10 @@ const AboutPage = (props: { handlePage: (value: string) => void }) => {
   const pageData = globalContext.content.aboutPage;
 
   const cardsInfo = globalContext.content.aboutPage.cardsData.map((item, index) => {
-    return (<TitleParagraphComponent
-      className="cards-info"
-      title={item.title}
-      key={index}
-      textContent={item.description}
-    />)
-
+    return (<div className="cards-info" key={index}>
+      <h3>{item.title}</h3>
+      <p>{item.description}</p>
+    </div>)
 
   });
 
@@ -35,7 +31,7 @@ const AboutPage = (props: { handlePage: (value: string) => void }) => {
   useCurrentPage(props.handlePage);
 
   return (
-    <div>
+    <div className="page-content">
       <Helmet>
         <title>Esteban Lasso | About</title>
       </Helmet>
@@ -44,17 +40,16 @@ const AboutPage = (props: { handlePage: (value: string) => void }) => {
         styleOptions={{ fontSize: "clamp(2vw, 80px, 13vw)" }}
         textContent={pageData.heroText}
       >
-        {triangleDown}
       </HeroGenericComponent>
       <div className="v-img-wrap">
-        <div data-scroll data-scroll-speed="-1">
-          <img src="/images/yo.jpg" alt="me at the beatch" />
+        <div style={{ backgroundColor: 'black', opacity: 0.5 }}>
+          <img src="/images/yo.jpg" alt="me" />
         </div>
       </div>
 
 
       <div className="cards-section">
-        <h1 data-scroll data-scroll-speed="1">
+        <h1>
           {pageData.title_cards}
         </h1>
         <div className="column-layout">

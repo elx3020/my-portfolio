@@ -1,3 +1,6 @@
+@import '../styles/helpers/variables.sass';
+
+
 .container-cube {
   transform: rotate(45deg);
   position: absolute;
@@ -124,5 +127,19 @@
     transform: rotateX(270deg) rotateY(90deg);
   }
 }
+
+// @keyframes border_anim {
+
+//   0%{
+//     border-color: $colorEnphasis
+//   }
+//   50% {
+//     border-color: $mainFontColor
+//   }
+//   100%{
+//     border-color: $colorSecondary
+//   }
+// }
+
 
 /* cube */

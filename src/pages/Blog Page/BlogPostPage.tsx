@@ -52,7 +52,7 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
 
 
     return (
-        <div className='content-container'>
+        <div className='page-content stretch'>
             {isLoaded ? (<div ref={divRef} className='blog-post' />) : (<LoadingBlogContent />)}
         </div>
     );

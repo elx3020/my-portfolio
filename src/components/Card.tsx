@@ -33,8 +33,8 @@ export default function Card(props: { projectData: ProjectDataT, index: number, 
   // const projectLink = `/projects/${arr_Id}/${id}`;
 
   return (
-    <div className={cardClassName} style={{ left: `${props.index * 4.5 + 5}rem`, top: `${(Math.sin((props.index / props.maxSize) * Math.PI * 4)) + 12}rem`, zIndex: `${props.maxSize - props.index}`, }} onClick={show} ref={cardRef} >
-      <div className="image-container ">
+    <div className={cardClassName} style={{ left: `${props.index * 5 + 5}rem`, top: `${(Math.sin((props.index / props.maxSize) * Math.PI * 3)) + 12}rem`, zIndex: `${props.maxSize - props.index}`, }} onClick={show} ref={cardRef} >
+      <div className="image-container">
         <img src={image_Url} alt={image_Url}></img>
         <div className="overlay"></div>
       </div>
