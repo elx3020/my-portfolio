@@ -5,6 +5,14 @@
     margin: 0
     box-sizing: border-box
     text-decoration: none
+    &::-webkit-scrollbar
+        width: 7px
+
+    &::-webkit-scrollbar-track 
+        background: $mainFontColor
+
+    &::-webkit-scrollbar-thumb
+        background-color: $BackgroundColor
 
 // html
 //     overflow-x: hidden
@@ -17,14 +25,7 @@ body
     background: $BackgroundColor
     color: $mainFontColor
     // scroll-bar
-    &::-webkit-scrollbar
-        width: 7px
-
-    &::-webkit-scrollbar-track 
-        background: $mainFontColor
-
-    &::-webkit-scrollbar-thumb
-        background-color: $BackgroundColor
+   
         
 
 img

@@ -104,125 +104,87 @@
           "image_Url": "images/projects/mishkiyaku.jpg",
           "description": "Mishki Yaku is a coffee e-shop that offers the best Ecuadorian coffee. Their name comes from indigenous language Kichwa, meaning \"delicious water\", and refers to the sugary nectar that the hummingbirds sip from small calyxes with their long, thin beaks.",
           "project_url": "https://www.mishkiyaku.com/"
-        }
-     
-      ],
-
-      "web_Proj_Large": [
+        },
         {
-          "arr_Id": "web_Proj",
-          "id": "social-app",
+          "arr_Id": "showcase_Data",
+          "id": "react_social_app",
           "project_Name": "Social App React",
+          "image_Url": "images/projects/placeholder.png",
           "description": "Fullstack project created using React Redux (Front-End), Express, Node Js and Firebase as (Backend)",
           "project_url": "https://elx3020.github.io/SocialApp-Front-End-React-Redux/#/"
-        }
-      ],
-    
-      "mini_projects": [
+        },
         {
-          "arr_Id": "mini_projects",
-          "id": "markdownparse",
+          "arr_Id": "showcase_Data",
+          "id": "markdown_parse",
           "project_Name": "Markdown parse",
+          "image_Url": "images/projects/placeholder.png",
           "description": "A markdown parse made with React. Perfect to re-style text faster. Could be use for blog where the main content is text. An easier way to format your publications",
           "project_url": "https://codepen.io/elx3020/full/KKvpqmm"
         },
-    
         {
-          "arr_Id": "mini_projects",
-          "id": "drum machine",
+          "arr_Id": "showcase_Data",
+          "id": "drum_machine",
           "project_Name": "Drum Machine",
+          "image_Url": "images/projects/placeholder.png",
           "description": "A drum machine component with two sets of music sounds. You can hit the pads with mouse or keyboard binding keys. Functionality can be expanded to play more sounds.",
           "project_url": "https://codepen.io/elx3020/full/YzxGXay"
         },
-    
         {
-          "arr_Id": "mini_projects",
-          "id": "calculatorreact",
-          "project_Name": "Calculator ",
+          "arr_Id": "showcase_Data",
+          "id": "calculator_react",
+          "project_Name": "Calculator using React",
+          "image_Url": "images/projects/placeholder.png",
           "description": "A simple implementation of a calculator made with React. Can perform arithmetical operations.",
           "project_url": "https://codepen.io/elx3020/full/KKvzQxb"
         },
         {
-          "arr_Id": "mini_projects",
-          "id": "timemanager",
+          "arr_Id": "showcase_Data",
+          "id": "time_manager",
           "project_Name": "Time Mananger",
+          "image_Url": "images/projects/placeholder.png",
           "description": "An alarm clock app that lets you program work and breaks time sessions. You can see this app being implemented in some time management apps.",
           "project_url": "https://codepen.io/elx3020/full/LYjZWKv"
         },
         {
-          "arr_Id": "mini_projects",
-          "id": "webapp",
-          "project_Name": "Web App",
-          "description": "A web-app written with plain vanilla javascript that can tell you the weather using the location API of the browser. It performs an asynchronous operation to fetch the data. It uses a free weather API.",
+          "arr_Id": "showcase_Data",
+          "id": "weather_app",
+          "project_Name": "Weather App",
+          "image_Url": "images/projects/placeholder.png",
+          "description": "A weather app written with plain vanilla javascript that can tell you the weather using the location API of the browser. It performs an asynchronous operation to fetch the data. It uses a free weather API.",
           "project_url": "https://estebanlasso.com/WebAppWeather/index.html"
-        }
-      ],
-
-      "ui_projects": [
-        {
-          "arr_Id": "ui_projects",
-          "id": "jumpProject",
-          "project_Name": "Jump",
-          "image_Url": "images/projects/Jump-cover.png",
-          "imageAlt": "tumbnail of project",
-          "imageCollection": [
-            "/images/projects/jump-showcase.png",
-            "/images/projects/"
-          ],
-          "description": "A start-up app idea. Participated for funding in the event TuApp Lima-Perú, 2018. The app will help people find jobs online as a freelance with the concept of time banks that can be use to trade for other type of work."
         },
-    
         {
-          "arr_Id": "ui_projects",
-          "id": "arplatesproject",
+          "arr_Id": "showcase_Data",
+          "id": "jump_Project",
+          "project_Name": "Jump App",
+          "image_Url": "images/projects/jump-showcase.png",
+          "description": "A start-up app idea. Participated for funding in the event TuApp Lima-Perú, 2018. The app will help people find jobs online as a freelance with the concept of time banks that can be use to trade for other type of work.",
+          "project_url": ""
+        },
+      
+        {
+          "arr_Id": "showcase_Data",
+          "id": "arplates_project",
           "project_Name": "AR Plates",
           "image_Url": "images/projects/web-cover-ar-plate.png",
-          "imageAlt": "tumbnail of project",
-          "imageCollection": [
-            "/images/projects/portfolio-plates.png",
-            "/images/projects/"
-          ],
-          "description": "AR plates is an mobile app with the purpose of easing the way public and private parking lots are manage. Reducing time for users and companies so they have more time for other activities. Car plates's numbers are use to distinguish between users. A user can select the amount of time or type of parking lot is going to be use."
-        },
+          "description": "AR plates is an mobile app with the purpose of easing the way public and private parking lots are manage. Reducing time for users and companies so they have more time for other activities. Car plates's numbers are use to distinguish between users. A user can select the amount of time or type of parking lot is going to be use.",
+          "project_url": ""
+        }
+        ,
         {
-          "arr_Id": "ui_projects",
+          "arr_Id": "showcase_Data",
           "id": "yupana",
-          "project_Name": "Yupana",
+          "project_Name": "Yupana App",
           "image_Url": "images/projects/yupana-cover.png",
-          "imageAlt": "tumbnail of project",
-          "imageCollection": ["/images/projects/", "/images/projects/"],
-          "description": "Some description to the project"
+          "description": "A scientific calculator aim to help students to learn math. The calculator counts with a polynomial solver, and trigonometric functions. The app is design to be use in a tablet or a computer. The app is written in React.",
+          "project_url": ""
         }
+        
+        
+     
       ],
+
     
-      "videogame-projects": [
-        {
-          "arr_Id": "videogame-projects",
-          "id": "social-app",
-          "project_Name": "Social App React",
-          "image_Url": "/images/projects/social_app.png",
-          "imageAlt": "Screenshot of the social app",
-          "description": "Fullstack project created using React Redux (Front-End), Express, Node Js and Firebase (Backend)"
-        },
-    
-        {
-          "arr_Id": "videogame-projects",
-          "id": "weather-app",
-          "project_Name": "Weather App",
-          "image_Url": "/images/projects/weather_app.png",
-          "imageAlt": "Screenshot of the weather app",
-          "description": "A simple implementation of a weather app. Created using plain HTML, CSS, and JAVASCRIPT. An weather API is use to get the forecast"
-        },
-    
-        {
-          "arr_Id": "videogame-projects",
-          "id": "project3",
-          "project_Name": "Awesome Project 3",
-          "image_Url": "/images/projects/place-holder.png",
-          "imageAlt": "an image description",
-          "description": "Here goes a brief description of the project that I want to show3"
-        }
-      ],
 
       "buttons": {
         "button_card": "Go to site",

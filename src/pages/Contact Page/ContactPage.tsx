@@ -1,6 +1,4 @@
-import React from "react";
 // components
-import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import { useEffect } from "react";
 import { Helmet } from "react-helmet";
 // hooks
@@ -34,7 +32,6 @@ const ContactPage = (props: { handlePage: (value: string) => void }) => {
 
   return (
     <div className="contact-page"  >
-      <LoadingScreen className="loading-screen" />
       <Helmet>
         <title>{contactPageContent.helmet_Title}</title>
       </Helmet>

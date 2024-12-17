@@ -6,7 +6,6 @@ import "./style.sass";
 // page components
 
 import HeroContainer from "../../components/Layout/HeroContainer";
-import LoadingScreen from "../../components/LoadingScreen/LoadingScreen";
 import useCurrentPage from "../../hooks/useCurrentPage";
 
 // TODO
