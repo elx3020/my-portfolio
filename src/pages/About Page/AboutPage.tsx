@@ -1,7 +1,5 @@
 // components
 
-import HeroGenericComponent from "../../components/Layout/HeroGenericComponent";
-
 import { Helmet } from "react-helmet";
 // hooks
 import useCurrentPage from "../../hooks/useCurrentPage";
@@ -35,12 +33,13 @@ const AboutPage = (props: { handlePage: (value: string) => void }) => {
       <Helmet>
         <title>Esteban Lasso | About</title>
       </Helmet>
-      <HeroGenericComponent
-        className="generic-hero-wrapper"
-        styleOptions={{ fontSize: "clamp(2vw, 80px, 13vw)" }}
-        textContent={pageData.heroText}
-      >
-      </HeroGenericComponent>
+
+      <div className="generic-hero-wrapper" >
+        <h1>
+          {pageData.heroText}
+        </h1>
+      </div>
+
       <div className="v-img-wrap">
         <div style={{ backgroundColor: 'black', opacity: 0.5 }}>
           <img src="/images/yo.jpg" alt="me" />
