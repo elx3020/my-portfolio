@@ -17,7 +17,6 @@ export default function CardContainer(props: { data: ProjectDataT[], maxSize: nu
   const { data } = props;
 
   const [offset, setOffset] = React.useState(0);
-  const [lastClientX, setLastClientX] = React.useState(0);
 
   const containerRef = React.useRef<HTMLDivElement>(null);
 
@@ -27,28 +26,26 @@ export default function CardContainer(props: { data: ProjectDataT[], maxSize: nu
 
   const filteredArray = cards.filter((card, index) => { return index < props.maxSize });
 
-  function touchStart(e: any) { }
 
-  function touchEnd(e: any) {
-    if (e.changedTouches.length > 0) {
-      setLastClientX(0);
-    }
+
+  function onWheel(e: any) {
+    const container = containerRef.current!;
+    container.scrollBy({ left: e.deltaY });
+
+
   }
 
-  function touchMove(e: any) {
-    if (e.changedTouches.length > 0) {
-      const clientX = e.changedTouches[0].clientX;
+  useEffect(() => {
+    containerRef.current!.scrollLeft = offset;
 
-      if (lastClientX === 0) {
-        setLastClientX(clientX);
-        return;
-      }
-      const deltaX = clientX - lastClientX;
-      setLastClientX(clientX);
-      setOffset((offset + deltaX));
-    }
-  }
+  }, [offset]);
 
 
-  return <div className="cards-wrapper" ref={containerRef} onTouchStart={touchStart} onTouchEnd={touchEnd} onTouchMove={touchMove}>{filteredArray}</div>;
+  return <div className="cards-wrapper" ref={containerRef} onWheel={onWheel} >
+    <div className="cards-content">
+      <div style={{ minWidth: '45vw' }}></div>
+      {filteredArray}
+      <div style={{ minWidth: '50vw' }}></div>
+    </div>
+  </div>;
 }

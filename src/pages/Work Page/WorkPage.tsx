@@ -16,13 +16,20 @@ const WorkPage = (props) => {
   const globalContext = useGlobalContext();
   const workPageContent = globalContext.content.workPage;
 
-
+  const testData = {
+    "arr_Id": "showcase_Data",
+    "id": "mishkiyaku",
+    "project_Name": "MishkiYaku",
+    "image_Url": "images/projects/mishkiyaku.jpg",
+    "description": "Mishki Yaku is a coffee e-shop that offers the best Ecuadorian coffee. Their name comes from indigenous language Kichwa, meaning \"delicious water\", and refers to the sugary nectar that the hummingbirds sip from small calyxes with their long, thin beaks.",
+    "project_url": "https://www.mishkiyaku.com/"
+  }
 
   // pass current Page
   useCurrentPage(handlePage);
 
   const pageContent = (
-    <div className="page-content">
+    <div className="page-content no-padding">
       <Helmet>
         <title>{workPageContent.helmet_Title}</title>
       </Helmet>
