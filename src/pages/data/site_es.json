@@ -10,75 +10,105 @@
 
         "firstSection": {
             "paragraph_big": "Creó experiencias digitales únicas que fusionan funcionalidad y estilo. Construyó soluciones digitales para tí o tu negocio.",
-            "paragraph_small": "Trabajemos juntos para poner tu proyecto en la WWW web."
-        },
-
-        "sec_projects": {
-            "title": "Proyectos",
-            "subtitle": "Mira algunos de mis trabajos",
-            "content_1": "Mini Proyectos",
-            "end_Part": "Mirar más"
-        },
-
-        "showcase_Data": [
-            {
-              "arr_Id": "showcase_Data",
-              "id": "mishkiyaku",
-              "project_Name": "MishkiYaku",
-              "image_Url": "images/projects/mishkiyaku.jpg",
-              "description": "Mishki Yaku es una empresa de cafe que se enfoca en la producción de café de alta calidad. El sitio web es una plataforma para mostrar sus productos y servicios. El sitio web está construido con Webflow y se integra con un CMS para administrar el contenido. El sitio web está optimizado para SEO y se puede encontrar en Google con palabras clave como 'café ecuatoriano'.",
-              "project_url": "https://www.mishkiyaku.com/"
-            }
-
-
-        
-          ],
-          "mini_projects": [
-            {
-              "arr_Id": "mini_projects",
-              "id": "markdownparse",
-              "project_Name": "Markdown parse",
-              "description": "A markdown parse hecho con React. Puede ingresar texto en el área de texto y ver el resultado en el área de vista previa. Puede usar el texto de muestra para ver cómo funciona.",
-              "project_url": "https://codepen.io/elx3020/full/KKvpqmm"
-            },
-        
-            {
-              "arr_Id": "mini_projects",
-              "id": "drum machine",
-              "project_Name": "Bateria Musical",
-              "description": "Una bateria musical hecha con React. Puede hacer clic en los botones o presionar las teclas para reproducir el sonido. Puede cambiar el volumen y el sonido de la batería.",
-              "project_url": "https://codepen.io/elx3020/full/YzxGXay"
-            },
-        
-            {
-              "arr_Id": "mini_projects",
-              "id": "calculatorreact",
-              "project_Name": "Calculadora",
-              "description": "Una calculadora simple hecha con React. Puede realizar operaciones matemáticas básicas. Puede usar el teclado para ingresar números y operaciones.",
-              "project_url": "https://codepen.io/elx3020/full/KKvzQxb"
-            },
-            {
-              "arr_Id": "mini_projects",
-              "id": "timemanager",
-              "project_Name": "Temporizador",
-              "description": "Una alarma de reloj hecha con React. Puede configurar el temporizador y ver el tiempo restante. Puede usar el teclado para ingresar números y operaciones.",
-              "project_url": "https://codepen.io/elx3020/full/LYjZWKv"
-            },
-            {
-              "arr_Id": "mini_projects",
-              "id": "webapp",
-              "project_Name": "Aplicación del clima",
-              "description": "Una aplicacion web del clima. Puede ver el clima actual y más información relevante de cualquier ciudad.",
-              "project_url": "https://estebanlasso.com/WebAppWeather/index.html"
-            }
-          ],
-
-          "buttons": {
-            "button_text": "Ver más",
-            "button_text_2": "Contacto",
-            "button_text_3": "Pruebaló"
+            "paragraph_small": "Trabajemos juntos para poner tu proyecto en la WWW."
         }
 
+    },
+
+    "workPage":{
+      "helmet_Title": "Esteban Lasso | Portfolio",
+      
+      "showcase_Data": [
+        {
+          "arr_Id": "showcase_Data",
+          "id": "mishkiyaku",
+          "project_Name": "MishkiYaku",
+          "image_Url": "images/projects/mishkiyaku.jpg",
+          "description": "Mishki Yaku es una empresa de cafe que se enfoca en la producción de café de alta calidad. El sitio web es una plataforma para mostrar sus productos y servicios. El sitio web está construido con Webflow y se integra con un CMS para administrar el contenido. El sitio web está optimizado para SEO y se puede encontrar en Google con palabras clave como 'café ecuatoriano'.",
+          "project_url": "https://www.mishkiyaku.com/"
+        },
+        {
+          "arr_Id": "showcase_Data",
+          "id": "react_social_app",
+          "project_Name": "Aplicacion de red social",
+          "image_Url": "images/projects/placeholder.png",
+          "description": "Aplicacion Full-Stack creada con React, Redux, Node.js, Express y MongoDB. La aplicacion permite a los usuarios registrarse, iniciar sesión, crear publicaciones, comentar publicaciones, dar me gusta a publicaciones y seguir a otros usuarios.",
+          "project_url": "https://elx3020.github.io/SocialApp-Front-End-React-Redux/#/"
+        },
+        {
+          "arr_Id": "showcase_Data",
+          "id": "markdown_parse",
+          "project_Name": "Markdown parse",
+          "image_Url": "images/projects/markdown_parser.jpg",
+          "description": "A markdown parse hecho con React. Puede ingresar texto en el área de texto y ver el resultado en el área de vista previa. Puede usar el texto de muestra para ver cómo funciona.",
+          "project_url": "https://codepen.io/elx3020/full/KKvpqmm"
+        },
+        {
+          "arr_Id": "showcase_Data",
+          "id": "drum_machine",
+          "project_Name": "Drum Machine",
+          "image_Url": "images/projects/drum_machine.jpg",
+          "description": "Una bateria musical hecha con React. Puede hacer clic en los botones o presionar las teclas para reproducir el sonido. Puede cambiar el volumen y el banco de sonidos de la batería.",
+          "project_url": "https://codepen.io/elx3020/full/YzxGXay"
+        },
+        {
+          "arr_Id": "showcase_Data",
+          "id": "calculator_react",
+          "project_Name": "Calculadora",
+          "image_Url": "images/projects/calculator.jpg",
+          "description": "Una calculadora simple hecha con React. Puede realizar operaciones matemáticas básicas. Puede usar el teclado para ingresar números y operaciones.",
+          "project_url": "https://codepen.io/elx3020/full/KKvzQxb"
+        },
+        {
+          "arr_Id": "showcase_Data",
+          "id": "pomodoro_app",
+          "project_Name": "Pomodoro App",
+          "image_Url": "images/projects/pomodoro_app.jpg",
+          "description": "Una alarma de reloj hecha con React. Puede configurar el temporizador y ver el tiempo restante. Puede usar el teclado para ingresar números y operaciones.",
+          "project_url": "https://codepen.io/elx3020/full/LYjZWKv"
+        },
+        {
+          "arr_Id": "showcase_Data",
+          "id": "weather_app",
+          "project_Name": "Weather App",
+          "image_Url": "images/projects/placeholder.png",
+          "description": "Una aplicacion web del clima. Puede ver el clima actual y más información relevante de cualquier ciudad.",
+          "project_url": "https://estebanlasso.com/WebAppWeather/index.html"
+        },
+        {
+          "arr_Id": "showcase_Data",
+          "id": "jump_Project",
+          "project_Name": "Jump App",
+          "image_Url": "images/projects/jump-showcase.png",
+          "description": "Una idea de app para startups. Participó por financiamiento en el evento TuApp Lima-Perú, 2018. La app ayudará a las personas a encontrar trabajo online como freelance con el concepto de bancos de tiempo que pueden ser usados para intercambiar por otro tipo de trabajo.",
+          "project_url": ""
+        },
+      
+        {
+          "arr_Id": "showcase_Data",
+          "id": "arplates_project",
+          "project_Name": "AR Plates",
+          "image_Url": "images/projects/web-cover-ar-plate.png",
+          "description": "AR plates es una aplicación móvil cuyo objetivo es facilitar la gestión de los aparcamientos públicos y privados. Reducir el tiempo de los usuarios y las empresas para que tengan más tiempo para otras actividades. Los números de las matrículas se utilizan para distinguir a los usuarios. Un usuario puede seleccionar la cantidad de tiempo o el tipo de aparcamiento que va a utilizar.",
+          "project_url": ""
+        }
+        ,
+        {
+          "arr_Id": "showcase_Data",
+          "id": "yupana",
+          "project_Name": "Yupana App",
+          "image_Url": "images/projects/yupana-cover.png",
+          "description": "Yupana es una aplicacion que resuelve polinomios, ademas de tener operaciones basicas como suma, resta, multiplicacion y division. La aplicacion esta pensada para estudiantes de secundaria y universitarios.",
+          "project_url": ""
+        }
+
+      ],
+    
+      "buttons": {
+        "button_card": "Ir al sitio",
+        "button_list": "Pruebaló"
+      }
+      
     },
 
 
@@ -112,137 +142,7 @@
         ]
     },
 
-    "workPage":{
-      "helmet_Title": "Esteban Lasso | Portafolio",
-      "titles": {
-        "title_1": "Portafolio.",
-        "title_2": "Desarrollo Web",
-        "title_3": "Proyectos actuales",
-        "title_4": "Proyectos Full Stack",
-        "title_5": "Mini Proyectos",
-        "title_6": "Proyectos de UI",
-        "title_7": "Interfaces de Usuario"
-      },
-
-      "showcase_Data": [
-        {
-          "arr_Id": "showcase_Data",
-          "id": "mishkiyaku",
-          "project_Name": "MishkiYaku",
-          "image_Url": "images/projects/mishkiyaku.jpg",
-          "description": "Mishki Yaku es una empresa de cafe que se enfoca en la producción de café de alta calidad. El sitio web es una plataforma para mostrar sus productos y servicios. El sitio web está construido con Webflow y se integra con un CMS para administrar el contenido. El sitio web está optimizado para SEO y se puede encontrar en Google con palabras clave como 'café ecuatoriano'.",
-          "project_url": "https://www.mishkiyaku.com/"
-        }
-        
-      ],
-
-      "web_Proj_Large": [
-        {
-          "arr_Id": "web_Proj",
-          "id": "social-app",
-          "project_Name": "Aplicacion social web",
-          "description": "Aplicacion Full-Stack creada con React, Redux, Node.js, Express y MongoDB. La aplicacion permite a los usuarios registrarse, iniciar sesión, crear publicaciones, comentar publicaciones, dar me gusta a publicaciones y seguir a otros usuarios.",
-          "project_url": "https://elx3020.github.io/SocialApp-Front-End-React-Redux/#/"
-        }
-      ],
-    
-      "mini_projects": [
-        {
-          "arr_Id": "mini_projects",
-          "id": "markdownparse",
-          "project_Name": "Markdown parse",
-          "description": "A markdown parse hecho con React. Puede ingresar texto en el área de texto y ver el resultado en el área de vista previa. Puede usar el texto de muestra para ver cómo funciona.",
-          "project_url": "https://codepen.io/elx3020/full/KKvpqmm"
-        },
-    
-        {
-          "arr_Id": "mini_projects",
-          "id": "drum machine",
-          "project_Name": "Bateria Musical",
-          "description": "Una bateria musical hecha con React. Puede hacer clic en los botones o presionar las teclas para reproducir el sonido. Puede cambiar el volumen y el sonido de la batería.",
-          "project_url": "https://codepen.io/elx3020/full/YzxGXay"
-        },
-    
-        {
-          "arr_Id": "mini_projects",
-          "id": "calculatorreact",
-          "project_Name": "Calculadora",
-          "description": "Una calculadora simple hecha con React. Puede realizar operaciones matemáticas básicas. Puede usar el teclado para ingresar números y operaciones.",
-          "project_url": "https://codepen.io/elx3020/full/KKvzQxb"
-        },
-        {
-          "arr_Id": "mini_projects",
-          "id": "timemanager",
-          "project_Name": "Temporizador",
-          "description": "Una alarma de reloj hecha con React. Puede configurar el temporizador y ver el tiempo restante. Puede usar el teclado para ingresar números y operaciones.",
-          "project_url": "https://codepen.io/elx3020/full/LYjZWKv"
-        },
-        {
-          "arr_Id": "mini_projects",
-          "id": "webapp",
-          "project_Name": "Aplicación del clima",
-          "description": "Una aplicacion web del clima. Puede ver el clima actual y más información relevante de cualquier ciudad.",
-          "project_url": "https://estebanlasso.com/WebAppWeather/index.html"
-        }
-      ],
-
-      "ui_projects": [
-        {
-          "arr_Id": "ui_projects",
-          "id": "jumpProject",
-          "project_Name": "Jump",
-          "image_Url": "images/projects/Jump-cover.png",
-          "imageAlt": "tumbnail of project",
-          "imageCollection": [
-            "/images/projects/jump-showcase.png",
-            "/images/projects/"
-          ],
-          "description": "Una idea de app para startups. Participó por financiamiento en el evento TuApp Lima-Perú, 2018. La app ayudará a las personas a encontrar trabajo online como freelance con el concepto de bancos de tiempo que pueden ser usados para intercambiar por otro tipo de trabajo."
-        },
-    
-        {
-          "arr_Id": "ui_projects",
-          "id": "arplatesproject",
-          "project_Name": "AR Plates",
-          "image_Url": "images/projects/web-cover-ar-plate.png",
-          "imageAlt": "tumbnail of project",
-          "imageCollection": [
-            "/images/projects/portfolio-plates.png",
-            "/images/projects/"
-          ],
-          "description": "AR plates es una aplicación móvil cuyo objetivo es facilitar la gestión de los aparcamientos públicos y privados. Reducir el tiempo de los usuarios y las empresas para que tengan más tiempo para otras actividades. Los números de las matrículas se utilizan para distinguir a los usuarios. Un usuario puede seleccionar la cantidad de tiempo o el tipo de aparcamiento que va a utilizar."
-        },
-        {
-          "arr_Id": "ui_projects",
-          "id": "yupana",
-          "project_Name": "Yupana",
-          "image_Url": "images/projects/yupana-cover.png",
-          "imageAlt": "tumbnail of project",
-          "imageCollection": ["/images/projects/", "/images/projects/"],
-          "description": "Yupana es una aplicacion que resuelve polinomios, ademas de tener operaciones basicas como suma, resta, multiplicacion y division. La aplicacion esta pensada para estudiantes de secundaria y universitarios."
-        }
-      ],
-    
-      "videogame-projects": [
-        {
-          "arr_Id": "videogame-projects",
-          "id": "social-app",
-          "project_Name": "Social App React",
-          "image_Url": "/images/projects/social_app.png",
-          "imageAlt": "Screenshot of the social app",
-          "description": "Fullstack project created using React Redux (Front-End), Express, Node Js and Firebase (Backend)"
-        }
-    
-      
-      
-      ],
-
-      "buttons": {
-        "button_card": "Ir al sitio",
-        "button_list": "Pruebaló"
-      }
-      
-    },
+   
 
     "contactPage": {
       "helmet_Title": "Esteban Lasso | Contacto",

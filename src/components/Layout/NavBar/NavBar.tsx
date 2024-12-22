@@ -54,7 +54,7 @@ const Navbar = () => {
   const linksNoBlog = links.filter((link) => link.props.to !== "blog")
 
   return (
-    <nav id="navbar" className={`navbar`} data-scroll-sticky>
+    <header id="navbar" className={`navbar`} data-scroll-sticky>
       <div className="nav_links">
         <Link to="/">{homeTranslation}</Link>
       </div>
@@ -71,7 +71,7 @@ const Navbar = () => {
           <div onClick={() => changeLanguage("es")}>Español</div>
         </div>
       </div>
-    </nav>
+    </header>
   );
 };
 

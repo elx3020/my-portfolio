@@ -65,7 +65,7 @@
             margin-bottom: 5%
         p
             font-weight: 200
-            font-size: clamp(1vw,15px,1rem)
+            font-size: clamp(0.9vw,15px,1rem)
 
         @media screen and (max-width: 1024px)
             border: none
@@ -122,15 +122,18 @@
     display: inline-block
     background-color: $BackgroundColor
     color: $mainFontColor
-    font-size: 2.5vw
-    border: 1.5px solid $mainFontColor
-    padding: 25px 30px
-    border-radius: 10px
+    font-size: 2vw
+    font-weight: 500
+    border: 1px solid $mainFontColor
+    padding: 15px 35px
+    border-radius: 4px
     position: relative
     left: 0%
     transform: translateY(-3px)
-    box-shadow: 0px 3px 0px 0px  $colorSecondary
     transition: all 0.1s ease-in-out
+    svg
+        *
+            fill: $mainFontColor
 
     @media screen and (max-width: 600px)
         font-size: 5vw
@@ -138,9 +141,13 @@
     
         
     &:hover
-        background-color: $colorSecondary
+        background-color: $mainFontColor
+        color: $BackgroundColor
         transform: translateY(0px)
         box-shadow: 0px 0px 0px 0px rgba(255,255,255,0.5)
+        svg
+            *
+                fill: $BackgroundColor
 
     a
         display: flex
