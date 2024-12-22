@@ -1,7 +1,7 @@
 import { useMemo, createContext, useContext, useState } from "react";
 
-import pageContent_en from "../pages/data/site_en.json";
-import pageContent_es from "../pages/data/site_es.json";
+import pageContent_en from "../data/site_en.json";
+import pageContent_es from "../data/site_es.json";
 
 const GlobalProvider = createContext({} as { language: 'en' | 'es', blogActive: boolean, setLanguage: (language: 'en' | 'es') => void, content: typeof pageContent_en, [key: string]: any });
 
