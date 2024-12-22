@@ -1,7 +1,6 @@
 {
 
     "homePage": {
-
         "heroContainer": {
             "description": "Programmer, web designer, UI/UX-designer.",
             "location": "Living in Berlin - Germany"
@@ -12,8 +11,6 @@
             "paragraph_small": "Let's work together to put your project in the World Wide Web."
         }
     },
-
-
 
     "workPage":{
       "helmet_Title": "Esteban Lasso | Portfolio",
@@ -159,7 +156,7 @@
         },
         "detail_info": {
             "title": "Detail Info:",
-            "description": "Esteban David Lasso Lopez \n estebannl28@gmail.com \n Location - Berlin \n English - Español - Deutsch."
+            "description": "Esteban David Lasso Lopez \n Location - Berlin \n English - Español - Deutsch."
         },
 
         "buttons": {

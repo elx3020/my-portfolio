@@ -31,11 +31,11 @@ const ContactPage = (props: { handlePage: (value: string) => void }) => {
   }
 
   return (
-    <div className="contact-page"  >
+    <div className="page-content"  >
       <Helmet>
         <title>{contactPageContent.helmet_Title}</title>
       </Helmet>
-      <h1>{contactPageContent.title.title_1}</h1>
+      <h1 style={{ marginTop: '80px' }}>{contactPageContent.title.title_1}</h1>
       <section className="content-wrapper">
         <form className="form-style" onSubmit={handleSubmit}>
           <label htmlFor="name">{contactPageContent.form.name}</label>
