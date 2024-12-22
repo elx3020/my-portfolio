@@ -1,8 +1,9 @@
 {
   "pageContent": {
-    "description": "Greetings, web wanderers! Let's takes you on a stroll through the world of tech without the hype. No fancy blog jargon, just a straightforward exploration of the gadgets, gizmos, and digital quirks that shape our lives. This blog is dedicated to motivate my self into the ways of technology, but it's also for you curious fellow who have the same goal but needs a bit of help in the process."
+    "description_en": "Greetings, web wanderers! Let's takes you on a stroll through the world of tech without the hype. No fancy blog jargon, just a straightforward exploration of the gadgets, gizmos, and digital quirks that shape our lives. This blog is dedicated to motivate my self into the ways of technology, but it's also for you curious fellow who have the same goal but needs a bit of help in the process.",
+    "description_es": "¡Saludos, vagabundos de la web! Te llevaremos a dar un paseo por el mundo de la tecnología sin la exageración. Sin jerga de blog elegante, solo una exploración directa de los dispositivos, artilugios y peculiaridades digitales que dan forma a nuestras vidas. Este blog está dedicado a motivarlos a ustedes y a mi mismo en el camino de la tecnología, pero también es para ustedes, compañeros curiosos que tienen el mismo objetivo pero necesitan un poco de ayuda en el proceso."
   },
-    "blogs": [
+    "blogs_en": [
       {
         "postId": "read-execute-file-nodejs",
         "title": "How to read and execute file using Node.js",
@@ -57,5 +58,19 @@
         "date": "2024-11-30",
         "draft": false
       }
+    ],
+
+    "blogs_es": [
+      {
+        "postId": "read-execute-file-nodejs",
+        "title": "Como leer y ejecutar un archivo usando Node.js",
+        "description": "Un breve tutorial sobre cómo leer y ejecutar un archivo usando Node.js",
+        "keywords": ["nodejs", "javascript", "backend"],
+        "thumbnail": "images/blog/cover_readfile_nodejs.jpg",
+        "date": "2024-02-05",
+        "draft": false
+      }
     ]
+
+    
   } 
