@@ -18,7 +18,7 @@ import { marked } from "marked";
 import AppRoutes from "./Routes";
 import "./code_theme.css";
 import GlobalStateProvider from "./hooks/useGlobalContext";
-import GoToTop from "./components/functionality/GoToTop";
+import GoToTop from "./components/functional/GoToTop";
 function App() {
   // functionality
 

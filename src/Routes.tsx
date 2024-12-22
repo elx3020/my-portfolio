@@ -12,6 +12,7 @@ export default function AppRoutes(props: { handlePage: (currentPage: string) => 
     const { handlePage } = props;
 
 
+
     return (
         <Routes>
             <Route
