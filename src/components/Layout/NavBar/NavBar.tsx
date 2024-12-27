@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./Navbar.sass";
 import { useState } from "react";
 import { useGlobalContext } from "../../../hooks/useGlobalContext";
+import DropDown from "../../DropDown";
 const Navbar = () => {
 
   const globalContext = useGlobalContext();
@@ -62,7 +63,7 @@ const Navbar = () => {
         {globalContext.blogActive ? links : linksNoBlog}
       </div>
 
-      <div className={`custom-dropdown`} onMouseLeave={toggleDropdown}>
+      {/* <div className={`custom-dropdown`} onMouseLeave={toggleDropdown}>
         <div className="selected-option" onMouseEnter={toggleDropdown} >
           {globalContext.language === "en" ? "Language" : "Lenguaje"}
         </div>
@@ -70,7 +71,12 @@ const Navbar = () => {
           <div onClick={() => changeLanguage("en")}>English</div>
           <div onClick={() => changeLanguage("es")}>Español</div>
         </div>
-      </div>
+      </div> */}
+
+      <DropDown title="Language">
+        <button onClick={() => changeLanguage("en")}>English</button>
+        <button onClick={() => changeLanguage("es")}>Español</button>
+      </DropDown>
     </header>
   );
 };

@@ -1,6 +1,9 @@
 // styles
+import { useEffect, useRef, useState } from "react";
 import { cubeElement } from "../../animations/cubeElement";
 import "../../styles/layoutStyles/layoutContainers.sass";
+import { string_with_span_at } from "../../utils/utils";
+import LetterSpanHolder from "../functional/LetterSpanHolder";
 const HeroContainer = (props: any) => {
   // props to pass
 
@@ -24,6 +27,7 @@ const HeroContainer = (props: any) => {
     ></img>
   ) : null;
 
+
   // hero section content
 
   return (
@@ -34,7 +38,7 @@ const HeroContainer = (props: any) => {
       <div className="hero-content">
         {props.children}
         <h1 id="title">
-          {title}
+          <LetterSpanHolder string={title} emphasisIndex={[0, 8]} timeStepinS={1} />
         </h1>
         <p>
           {description}

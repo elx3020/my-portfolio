@@ -14,6 +14,7 @@ import useCurrentPage from "../../hooks/useCurrentPage";
 import { circle, triangle } from "../../utils/svgFigures";
 
 import { useGlobalContext } from "../../hooks/useGlobalContext";
+import LetterSpanHolder from "../../components/functional/LetterSpanHolder";
 
 // assets
 // import mePhoto from "../images/background-image.jpg";
@@ -44,7 +45,7 @@ const HomePage = (props: { children?: any, handlePage: (value: string) => void }
       </HeroContainer>
       <section className="messages-section">
         <p className="paragraph-big">
-          {homePageContent.firstSection.paragraph_big}
+          <LetterSpanHolder string={homePageContent.firstSection.paragraph_big} emphasisIndex={[0, 1, 2]} timeStepinS={2} useWords={true} />
         </p>
         <p className="paragraph-small">
           {homePageContent.firstSection.paragraph_small}
