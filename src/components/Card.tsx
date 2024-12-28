@@ -1,12 +1,10 @@
 import React, { useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../hooks/useGlobalContext";
 
 export default function Card(props: { projectData: ProjectDataT, index: number, maxSize: number }) {
   const { project_Name, image_Url, description, project_url, } =
     props.projectData;
 
-  const [slide, setSlide] = React.useState(false);
   const [isOpen, setIsOpen] = React.useState(false);
   const [cardClassName, setCardClassName] = React.useState('card-3d');
   const globalContext = useGlobalContext();
@@ -66,7 +64,13 @@ export default function Card(props: { projectData: ProjectDataT, index: number, 
         <div className="card-content">
           <h1>{project_Name}</h1>
           <p>{description}</p>
-          <a href={project_url} target="_blank" rel="noreferrer">{buttonText}</a>
+
+          <div>
+            <button className="inline">
+              See live
+            </button>
+            <a href={project_url} target="_blank" rel="noreferrer">{buttonText}</a>
+          </div>
         </div>
       </div>
     </div>

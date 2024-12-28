@@ -27,7 +27,7 @@ const HeroContainer = (props: any) => {
     ></img>
   ) : null;
 
-
+  const inWords = title.split(" ").map((word: string) => { return <LetterSpanHolder string={word} emphasisIndex={[0]} timeStepinS={1} /> });
   // hero section content
 
   return (
@@ -38,7 +38,7 @@ const HeroContainer = (props: any) => {
       <div className="hero-content">
         {props.children}
         <h1 id="title">
-          <LetterSpanHolder string={title} emphasisIndex={[0, 8]} timeStepinS={1} />
+          <LetterSpanHolder string={title} emphasisIndex={[0]} timeStepinS={1} />
         </h1>
         <p>
           {description}
