@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 
 // components
-import Card from "../Card";
+import Card from "./Cards/Card3DCSS";
 
 // styling
 
@@ -16,7 +16,6 @@ import Card from "../Card";
 export default function CardContainer(props: { data: ProjectDataT[], maxSize: number }) {
   const { data } = props;
 
-  const [offset, setOffset] = React.useState(0);
 
   const containerRef = React.useRef<HTMLDivElement>(null);
 
@@ -29,19 +28,28 @@ export default function CardContainer(props: { data: ProjectDataT[], maxSize: nu
 
 
   function onWheel(e: any) {
+    e.preventDefault();
     const container = containerRef.current!;
-    container.scrollBy({ left: e.deltaY });
-
-
+    container.scrollBy({ left: e.deltaY * 0.5, });
   }
 
-  useEffect(() => {
-    containerRef.current!.scrollLeft = offset;
+  function onEnter(e: any) {
+    e.preventDefault();
+    document.body.style.overflow = 'hidden';
+  }
 
-  }, [offset]);
+  function onLeave(e: any) {
+    e.preventDefault();
+    document.body.style.overflow = 'auto';
+  }
+
+  // useEffect(() => {
+  //   containerRef.current!.scrollLeft = offset;
+
+  // }, [offset]);
 
 
-  return <div className="cards-wrapper" ref={containerRef} onWheel={onWheel} >
+  return <div className="cards-wrapper" ref={containerRef} onWheel={onWheel} onMouseEnter={onEnter} onMouseLeave={onLeave} >
     <div className="cards-content">
       <div style={{ minWidth: '45vw' }}></div>
       {filteredArray}

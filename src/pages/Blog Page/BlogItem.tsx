@@ -1,6 +1,5 @@
 // create a blog page component for the blog page. the component should have a thumbnail, title, date, and description. the component should also have a link to the blog post.
 // import react and the blog page scss
-import React from "react";
 import "./blogStyles.scss";
 import { useNavigate } from "react-router-dom";
 import { useGlobalContext } from "../../hooks/useGlobalContext";
@@ -27,7 +26,7 @@ const BlogItem = (props: { blogData: IBlogItemProps }) => {
     blogUrl = '/blog/post/' + postId + '?lang=es';
   }
   // return the blog item
-  return (<div className="blog-item">
+  return (<div className="blog-item" id={postId}>
     <div className="__image">
       <img src={thumbnail} alt={title} />
     </div>

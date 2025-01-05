@@ -17,31 +17,27 @@
      
       "showcase_Data": [
         {
-          "arr_Id": "showcase_Data",
           "id": "mishkiyaku",
           "project_Name": "MishkiYaku",
-          "image_Url": "images/projects/mishkiyaku.jpg",
+          "image_Url": "images/projects/mishki_yaku.png",
           "description": "Mishki Yaku is a coffee e-shop that offers the best Ecuadorian coffee. Their name comes from indigenous language Kichwa, meaning \"delicious water\", and refers to the sugary nectar that the hummingbirds sip from small calyxes with their long, thin beaks.",
           "project_url": "https://www.mishkiyaku.com/"
         },
         {
-          "arr_Id": "showcase_Data",
           "id": "react_social_app",
           "project_Name": "Social App React",
-          "image_Url": "images/projects/placeholder.png",
+          "image_Url": "images/projects/social_app.png",
           "description": "Fullstack project created using React Redux (Front-End), Express, Node Js and Firebase as (Backend)",
           "project_url": "https://elx3020.github.io/SocialApp-Front-End-React-Redux/#/"
         },
         {
-          "arr_Id": "showcase_Data",
           "id": "markdown_parse",
           "project_Name": "Markdown parse",
-          "image_Url": "images/projects/markdown_parser.jpg",
+          "image_Url": "images/projects/markdown_parser.png",
           "description": "A markdown parse made with React. Perfect to re-style text faster. Could be use for blog where the main content is text. An easier way to format your publications",
           "project_url": "https://codepen.io/elx3020/full/KKvpqmm"
         },
         {
-          "arr_Id": "showcase_Data",
           "id": "drum_machine",
           "project_Name": "Drum Machine",
           "image_Url": "images/projects/drum_machine.jpg",
@@ -49,15 +45,13 @@
           "project_url": "https://codepen.io/elx3020/full/YzxGXay"
         },
         {
-          "arr_Id": "showcase_Data",
           "id": "calculator_react",
           "project_Name": "Calculator using React",
-          "image_Url": "images/projects/calculator.jpg",
+          "image_Url": "images/projects/calculator.png",
           "description": "A simple implementation of a calculator made with React. Can perform arithmetical operations.",
           "project_url": "https://codepen.io/elx3020/full/KKvzQxb"
         },
         {
-          "arr_Id": "showcase_Data",
           "id": "pomodoro_app",
           "project_Name": "Pomodoro App",
           "image_Url": "images/projects/pomodoro_app.jpg",
@@ -65,7 +59,6 @@
           "project_url": "https://codepen.io/elx3020/full/LYjZWKv"
         },
         {
-          "arr_Id": "showcase_Data",
           "id": "weather_app",
           "project_Name": "Weather App",
           "image_Url": "images/projects/placeholder.png",
@@ -73,7 +66,6 @@
           "project_url": "https://estebanlasso.com/WebAppWeather/index.html"
         },
         {
-          "arr_Id": "showcase_Data",
           "id": "jump_Project",
           "project_Name": "Jump App",
           "image_Url": "images/projects/jump-showcase.png",
@@ -82,7 +74,6 @@
         },
       
         {
-          "arr_Id": "showcase_Data",
           "id": "arplates_project",
           "project_Name": "AR Plates",
           "image_Url": "images/projects/web-cover-ar-plate.png",
@@ -91,7 +82,6 @@
         }
         ,
         {
-          "arr_Id": "showcase_Data",
           "id": "yupana",
           "project_Name": "Yupana App",
           "image_Url": "images/projects/yupana-cover.png",

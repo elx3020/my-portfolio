@@ -23,7 +23,7 @@
           "arr_Id": "showcase_Data",
           "id": "mishkiyaku",
           "project_Name": "MishkiYaku",
-          "image_Url": "images/projects/mishkiyaku.jpg",
+          "image_Url": "images/projects/mishki_yaku.png",
           "description": "Mishki Yaku es una empresa de cafe que se enfoca en la producción de café de alta calidad. El sitio web es una plataforma para mostrar sus productos y servicios. El sitio web está construido con Webflow y se integra con un CMS para administrar el contenido. El sitio web está optimizado para SEO y se puede encontrar en Google con palabras clave como 'café ecuatoriano'.",
           "project_url": "https://www.mishkiyaku.com/"
         },
@@ -31,7 +31,7 @@
           "arr_Id": "showcase_Data",
           "id": "react_social_app",
           "project_Name": "Aplicacion de red social",
-          "image_Url": "images/projects/placeholder.png",
+          "image_Url": "images/projects/social_app.png",
           "description": "Aplicacion Full-Stack creada con React, Redux, Node.js, Express y MongoDB. La aplicacion permite a los usuarios registrarse, iniciar sesión, crear publicaciones, comentar publicaciones, dar me gusta a publicaciones y seguir a otros usuarios.",
           "project_url": "https://elx3020.github.io/SocialApp-Front-End-React-Redux/#/"
         },
@@ -39,7 +39,7 @@
           "arr_Id": "showcase_Data",
           "id": "markdown_parse",
           "project_Name": "Markdown parse",
-          "image_Url": "images/projects/markdown_parser.jpg",
+          "image_Url": "images/projects/markdown_parser.png",
           "description": "A markdown parse hecho con React. Puede ingresar texto en el área de texto y ver el resultado en el área de vista previa. Puede usar el texto de muestra para ver cómo funciona.",
           "project_url": "https://codepen.io/elx3020/full/KKvpqmm"
         },
@@ -55,7 +55,7 @@
           "arr_Id": "showcase_Data",
           "id": "calculator_react",
           "project_Name": "Calculadora",
-          "image_Url": "images/projects/calculator.jpg",
+          "image_Url": "images/projects/calculator.png",
           "description": "Una calculadora simple hecha con React. Puede realizar operaciones matemáticas básicas. Puede usar el teclado para ingresar números y operaciones.",
           "project_url": "https://codepen.io/elx3020/full/KKvzQxb"
         },

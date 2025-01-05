@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useGlobalContext } from "../hooks/useGlobalContext";
+import { useGlobalContext } from "../../../hooks/useGlobalContext";
 
 export default function Card(props: { projectData: ProjectDataT, index: number, maxSize: number }) {
   const { project_Name, image_Url, description, project_url, } =

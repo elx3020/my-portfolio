@@ -2,7 +2,6 @@
 // to have global types do not use any import or export statement in the file
 type DataIndentity = {
     id: string,
-    arr_Id: string,
     project_Name: string,
 }
 

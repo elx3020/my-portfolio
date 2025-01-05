@@ -15,7 +15,6 @@ function mapToList(array: ProjectDataT[]) {
           description: item.description,
           id: item.id,
           project_url: item.project_url,
-          arr_Id: item.arr_Id,
           project_Name: item.project_Name,
           image_Url: item.image_Url
         }}
