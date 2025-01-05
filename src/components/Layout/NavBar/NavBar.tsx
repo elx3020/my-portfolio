@@ -55,7 +55,7 @@ const Navbar = () => {
   const linksNoBlog = links.filter((link) => link.props.to !== "blog")
 
   return (
-    <header id="navbar" className={`navbar`} data-scroll-sticky>
+    <header id="navbar" className={`navbar`}>
       <div className="nav_links">
         <Link to="/">{homeTranslation}</Link>
       </div>

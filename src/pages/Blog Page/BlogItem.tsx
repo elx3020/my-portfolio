@@ -26,7 +26,7 @@ const BlogItem = (props: { blogData: IBlogItemProps }) => {
     blogUrl = '/blog/post/' + postId + '?lang=es';
   }
   // return the blog item
-  return (<div className="blog-item" id={postId}>
+  return (<div className="blog-item" id={title}>
     <div className="__image">
       <img src={thumbnail} alt={title} />
     </div>

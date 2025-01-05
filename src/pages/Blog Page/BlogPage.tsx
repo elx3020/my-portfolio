@@ -6,6 +6,7 @@ import "./blogStyles.scss";
 import useCurrentPage from "../../hooks/useCurrentPage";
 import { useGlobalContext } from "../../hooks/useGlobalContext";
 import { useEffect, useRef, useState } from "react";
+import PageIndex from "./PageIndex";
 
 type BlogDataT = IBlogItemProps & { draft: boolean };
 
@@ -37,12 +38,20 @@ const BlogPage = (props: { handlePage: (value: string) => void }) => {
   useCurrentPage(props.handlePage);
 
   return (
-    <div className="page-content stretch">
-      <h1 style={{ marginTop: '10vh' }}>Blog</h1>
-      <p>
-        {description.current}
-      </p>
-      {blogPosts}
+    <div className="page-content">
+
+      <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', columnGap: '30px', flexWrap: 'wrap' }}>
+        <div style={{ width: "50vw", overflow: 'auto', height: '100vh', paddingRight: '7vw' }}>
+          <h1 style={{ marginTop: '10vh' }}>Blog</h1>
+          <p>
+            {description.current}
+          </p>
+          {blogPosts}
+        </div>
+        <div>
+          <PageIndex ids={blogs.map(b => b.title)} />
+        </div>
+      </div>
     </div>
   );
 };
