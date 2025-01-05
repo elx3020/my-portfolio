@@ -11,7 +11,7 @@ import useCurrentPage from "../../hooks/useCurrentPage";
 // TODO
 
 // hero image elements
-import { circle, triangle } from "../../utils/svgFigures";
+import { triangle } from "../../utils/svgFigures";
 
 import { useGlobalContext } from "../../hooks/useGlobalContext";
 import LetterSpanHolder from "../../components/functional/LetterSpanHolder";
@@ -41,7 +41,6 @@ const HomePage = (props: { children?: any, handlePage: (value: string) => void }
         flag={flagImage}
       // backgroundImage={mePhoto}
       >
-        {circle}
       </HeroContainer>
       <section className="messages-section">
         <p className="paragraph-big">
