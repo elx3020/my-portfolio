@@ -25,6 +25,8 @@ export default function NavBarPanel(props: { currentPage: string }) {
   return (
     <div className="nav-panel-wrapper">
       <input type="checkbox" role="button" aria-label="Display the menu" className={`nav-button ${navPanelOpen}`} onClick={togglePanel}></input>
+      <div className="bar">
+      </div>
       <NavPanel toggleClass={navPanelOpen} togglePanel={togglePanel} />
     </div>
   );
