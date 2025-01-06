@@ -10,9 +10,6 @@ export default function NavBarPanel(props: { currentPage: string }) {
 
   const { currentPage } = props;
 
-
-
-
   function togglePanel(e: React.MouseEvent) {
     if (navPanelOpen === "close") {
       setNavPanel("open");
@@ -27,21 +24,23 @@ export default function NavBarPanel(props: { currentPage: string }) {
 
   return (
     <div className="nav-panel-wrapper">
-      {/* <div
-        className={`nav-button ${navPanelOpen}`}
-        onClick={togglePanel}
-      >
-        <span>M</span>
-      </div> */}
-      <NavPanel toggleClass={navPanelOpen} />
+      <input type="checkbox" role="button" aria-label="Display the menu" className={`nav-button ${navPanelOpen}`} onClick={togglePanel}></input>
+      <NavPanel toggleClass={navPanelOpen} togglePanel={togglePanel} />
     </div>
   );
 }
 
-function NavPanel(props: { toggleClass: string }) {
+function NavPanel(props: { toggleClass: string, togglePanel?: (e: any) => void }) {
 
 
   const globalContext = useGlobalContext();
+
+  function changeLanguage(lang: 'en' | 'es') {
+    if (lang === globalContext.language) return;
+    globalContext.setLanguage(lang);
+    props.togglePanel && props.togglePanel('close');
+  }
+
   let navBarContent = { work: '', about: '', blog: '', contact: '', language: '' }
   const homeTranslation = globalContext.language === "en" ? "Home" : "Inicio";
 
@@ -58,7 +57,7 @@ function NavPanel(props: { toggleClass: string }) {
       <Link to="/">{homeTranslation}</Link>
 
       {globalContext.blogActive ? links : linksNoBlog}
-      <div>{navBarContent.language} <span onClick={(e) => { globalContext.setLanguage('en') }}>EN</span> <span>/</span> <span onClick={(e) => { globalContext.setLanguage('es') }}>ES</span></div>
+      <div>{navBarContent.language} <span onClick={(e) => { changeLanguage('en') }}>EN</span> <span>/</span> <span onClick={(e) => { changeLanguage('es') }}>ES</span></div>
 
     </div>
   );

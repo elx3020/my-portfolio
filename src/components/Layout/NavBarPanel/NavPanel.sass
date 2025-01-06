@@ -5,44 +5,62 @@
     position: absolute
 
 .nav-button
+    --s: 40px /* control the size */
+    --c: #e9f8dc /* the color */
+
+    height: var(--s)
+    aspect-ratio: 1
+    border: none
+    padding: 0
+    border-inline: calc(var(--s)/2) solid #0000
+    box-sizing: content-box
+    --_g1: linear-gradient(var(--c) 20%,#0000 0 80%,var(--c) 0) no-repeat content-box border-box 
+    --_g2: radial-gradient(circle closest-side at 50% 12.5%,var(--c) 95%,#0000) repeat-y content-box border-box 
+    background: var(--_g2) left  var(--_p,0px) top, var(--_g1) left  calc(var(--s)/10 + var(--_p,0px)) top, var(--_g2) right var(--_p,0px) top, var(--_g1) right calc(var(--s)/10 + var(--_p,0px)) top 
+    background-size: 20% 80%, 40% 100% 
     position: fixed
-    width: 7vh
-    height: 7vh
-    border-radius: 50%
-    z-index: 2
-    right: 1.5vh
-    top: 1.5vh
-    background-color: $BackgroundColor
-    display: flex
-    align-items: center
-    justify-content: center
-    color: $mainFontColor
-    font-weight: 200
-    transition: all 0.2s ease-in-out
-    border: 1px solid $mainFontColor
+    top: 1rem
+    z-index:5
+    clip-path: inset(0 25%)
+    -webkit-mask: linear-gradient(90deg,#0000,#000 25% 75%,#0000)
+    cursor: pointer
+    transition: background-position .3s var(--_s,.3s), clip-path 0s var(--_s,.6s) 
+    -webkit-appearance: none
+    -moz-appearance: none
+    appearance: none
+
+    &:before, &:after
+        content: ""
+        position: absolute
+        border-radius: var(--s)
+        inset: 40% 0
+        background: var(--c)
+        transition: transform .3s calc(.3s - var(--_s,.3s))
 
     &.open
-        background-color: $mainFontColor
-        color: $BackgroundColor
-    &:hover
-        cursor: pointer
-        background-color: $colorSecondary
+        clip-path: inset(0)
+        --_p: calc(-1*var(--s))
+        --_s: 0s
 
-    &.close
-        &.up
-            transform: translateX(125%)
-            @media screen and(max-width: 450px)
-                transform: translateX(0)
+    &.open:before
+        transform: rotate(45deg)
 
-    span
+    &.open:after
+        transform: rotate(-45deg)
 
-        font-size: 2.5vh
+    &:focus-visible
+        clip-path: none
+        -webkit-mask: none
+        border: none
+        outline: 2px solid var(--c)
+        outline-offset: 5px
 
 .nav-panel
     display: flex
     flex-direction: column
-    justify-content: center
     top: 0
+    left: 0
+    padding-top: 100px
     padding-left: 3%
     margin-left: auto
     position: fixed
@@ -50,10 +68,10 @@
     height: 100vh
     background-color: $BackgroundColor
     z-index: 1
-    transform: translateX(100%)
-    border-top-left-radius: 150px
-    border-bottom-left-radius: 150px
-    border-left: 1.5px solid $mainFontColor
+    transform: translateX(-100%)
+    border-top-right-radius: 150px
+    border-bottom-right-radius: 150px
+    border-right: 1.5px solid $mainFontColor
     transition: all 0.4s ease-in-out
     overflow: auto
 
@@ -65,14 +83,10 @@
             font-size: clamp(1vw,85px,6vw)
             &:hover
                 color: $colorEnphasis
-        
-
-
-
 
     a
         color: $mainFontColor
-        font-size:  clamp(1vw,85px,6vw)
+        font-size: clamp(1vw,85px,7vw)
         transition: all 0.5s ease
         display: inline-block
         &::before
@@ -82,13 +96,9 @@
             height: 50%
             overflow: hidden
             transition: all 1s ease
-            border-top-right-radius: 100px
-            border-bottom-right-radius: 100px
 
-           
         &:hover
             color: $colorEnphasis
-            // padding-left: 50px
             text-decoration: underline
             &::before
                 content: ''
@@ -96,14 +106,10 @@
                 margin-right: 10px
                 background-color: $colorEnphasis
                 color: $mainFontColor
-                
 
-    
     &.open
+        transform: translateX(0%)
+        border-top-right-radius: 0%
+        border-bottom-right-radius: 0%
 
-        transform: translateX(25%)
-        border-top-left-radius: 0%
-        border-bottom-left-radius: 0%
-
-        @media screen and (max-width: 450px)
-            transform: translateX(0%)
+      

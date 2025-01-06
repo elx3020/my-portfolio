@@ -19,12 +19,13 @@ import AppRoutes from "./Routes";
 import "./code_theme.css";
 import GlobalStateProvider from "./hooks/useGlobalContext";
 import GoToTop from "./components/functional/GoToTop";
+import browserDetect from "browser-detect";
 function App() {
   // functionality
 
   const [currentPage, setCurrentpage] = useState("");
 
-
+  const result = browserDetect();
 
   function handlePage(currentPage: string) {
     setCurrentpage(currentPage);
@@ -36,15 +37,13 @@ function App() {
     async: true,
   });
 
-  // TODO use ref to make the fade in effect
-
+  const header = result.mobile ? <NavBarPanel currentPage={currentPage} /> : <NavBar />;
 
   // Dom Render
   return (
     <GlobalStateProvider>
       <Router>
-        <NavBar />
-        <NavBarPanel currentPage={currentPage} />
+        {header}
         <AppRoutes handlePage={handlePage} />
         <Footer />
         <GoToTop />
