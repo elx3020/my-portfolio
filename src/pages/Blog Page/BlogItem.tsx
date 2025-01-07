@@ -26,14 +26,14 @@ const BlogItem = (props: { blogData: IBlogItemProps }) => {
     blogUrl = '/blog/post/' + postId + '?lang=es';
   }
   // return the blog item
-  return (<div className="blog-item" id={title}>
-    <div className="__image">
-      <img src={thumbnail} alt={title} />
-    </div>
-    <div className="content">
-      <h3 className="__title">{title}</h3>
+  return (<div className="blog-item" id={title} >
+    <div className="content"  >
+      <h3 className="__title"> <a href={`#${title}`}># </a>{title}</h3>
+      <div className="__image">
+        <img src={thumbnail} alt={title} />
+      </div>
       <p className="__date">{date}</p>
-      <p className="__description">{description}</p>
+      <p className="__description" >{description}</p>
       <div onClick={() => {
         navigate(blogUrl);
       }

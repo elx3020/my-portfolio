@@ -15,15 +15,15 @@ export default function PageIndex(props: { ids: string[] }) {
   })
 
   return (
-    <div style={{ position: 'sticky', top: '10vh', width: '320px', height: '90vh', border: '1px solid white', padding: '10px', borderRadius: '5px', backgroundColor: 'rgba(0,0,0,0.5)' }}>
+    <nav style={{ position: 'fixed', top: '8vh', width: '320px', height: '90vh', borderRight: '1px solid white', padding: '20px', }}>
       <div style={{ borderBottom: '1px solid white', marginBottom: '10px', paddingBottom: '5px' }}>
         <p>
-          <span>Blogs:</span>
+          <span>Index:</span>
         </p>
       </div>
       <ul>
         {indices}
       </ul>
-    </div>
+    </nav>
   )
 }

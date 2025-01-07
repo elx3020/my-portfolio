@@ -50,21 +50,17 @@ const BlogPage = (props: { handlePage: (value: string) => void }) => {
     {blogPosts}
   </div>)
 
-  const desktopPageContent = (<div className="page-content">
+  const desktopPageContent = (<div className="page-content blog">
+    <PageIndex ids={blogs.filter(b => b.draft !== true).map(b => b.title)} />
 
-    <div style={{ display: 'flex', flexDirection: 'row', justifyContent: 'center', columnGap: '30px', flexWrap: 'wrap' }}>
-      <div style={{ width: "50vw", overflow: 'auto', height: '100vh', paddingRight: '7vw' }}>
-        <h1 style={{ marginTop: '10vh' }}>Blog</h1>
-        <p>
-          {description.current}
-        </p>
-        {blogPosts}
-      </div>
-      <div>
-        <PageIndex ids={blogs.map(b => b.title)} />
-      </div>
+    <div style={{ marginLeft: '320px', maxWidth: '900px', padding: '25px' }}>
+      <h1>Blog</h1>
+      <p>
+        {description.current}
+      </p>
+      {blogPosts}
     </div>
-  </div>)
+  </div >)
 
   const page = result.mobile ? mobilePageContent : desktopPageContent
 
