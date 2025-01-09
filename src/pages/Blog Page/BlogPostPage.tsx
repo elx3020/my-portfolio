@@ -42,6 +42,10 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
                 setIsLoaded(true);
                 divRef.current!.innerHTML = markdownContent;
                 Prism.highlightAll();
+                // generate indices wip
+                divRef.current!.querySelectorAll('a').forEach((anchorElement) => {
+                    console.log(anchorElement.id);
+                });
             })
         }
 
