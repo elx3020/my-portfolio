@@ -15,8 +15,8 @@ export default function PageIndex(props: { ids: string[] }) {
   })
 
   return (
-    <nav style={{ position: 'fixed', top: '8vh', width: '320px', height: '90vh', borderRight: '1px solid white', padding: '20px', }}>
-      <div style={{ borderBottom: '1px solid white', marginBottom: '10px', paddingBottom: '5px' }}>
+    <nav className='page-index'>
+      <div className='content'>
         <p>
           <span>Index:</span>
         </p>
