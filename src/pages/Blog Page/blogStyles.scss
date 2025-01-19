@@ -14,16 +14,28 @@
         height: 400px;
         position: relative;
         background-color: black;
+        cursor: pointer;
         img{
             @include imageInsideDiv($max-width: 100%);
         }
         
     }
     .__title {
+        a{
+            display: inline;
+        }
+        h3 {
+            display: inline;
+            cursor: pointer;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
         margin-bottom: 5px;
         font-size: 40px;
         font-weight: 600;
         color: $mainFontColor; 
+       
     }
     .__date {
         font-size: 14px;
@@ -31,10 +43,10 @@
     }
     .__description {
         color: #999;
-        margin-bottom: 30px
+        margin: 10px 0;
     }
     .__link_w {
-        padding: 20px 30px;
+        padding: 15px 25px;
         border-radius: 2px;
         border: 1px solid $mainFontColor;
         width: fit-content;
@@ -70,4 +82,17 @@
     margin-right: auto;
     margin-top: 50px;
     margin-bottom: 50px;
+}
+
+.blog-post {
+    h1{
+        font-size: clamp(3.5vw,55px,9vw);
+        font-weight: 600;
+    }
+    div:before {
+        content: "";
+        display: block;
+        height: 90px; /* fixed header height*/
+        margin: -90px 0 0; /* negative fixed header height */
+      }
 }

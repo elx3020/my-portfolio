@@ -2,12 +2,15 @@
 
 
 
-#### What is npm?
+#### [**#**](#what_is_npm) What is npm?
+<div id='what_is_npm'>
 npm (Node Package Manager) is the default package manager for the JavaScript runtime environment Node.js. It allows developers to share, download, and manage libraries (also called packages) that can be easily incorporated into their projects.
 
 <img class='blog-c' src='https://res.cloudinary.com/benjamincrozat-com/image/fetch/c_scale,f_webp,q_auto,w_1200/https://github.com/benjamincrozat/content/assets/3613731/527efaf4-30dd-4066-8f8b-1012c05f904d' alt='reading_a_file_nodejs'>
 
 This guide will help you set up npm and cover the basics for beginners.
+
+</div>
 
 ### Step 1: Install Node.js and npm
 

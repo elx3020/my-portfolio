@@ -36,7 +36,7 @@ Create a new file called `os-example.ts` in your project directory, and we’re 
 
 The `os` module is built into Node.js, so no need to install anything extra! Simply import it at the top of your file:  
 
-```typescript  
+```js  
 import * as os from 'os';  
 ```
 
@@ -49,7 +49,7 @@ Here’s a step-by-step guide to some of the most commonly used features of the 
 ### 1. **Getting the Platform**  
 The `os.platform()` method returns the operating system platform as a string (e.g., `'win32'` for Windows, `'darwin'` for macOS, or `'linux'` for Linux).  
 
-```typescript  
+```js  
 const platform: string = os.platform();  
 console.log(`Your operating system platform is: ${platform}`);
 ```
@@ -57,7 +57,7 @@ console.log(`Your operating system platform is: ${platform}`);
 ### 2. **Checking System Architecture**  
 Use `os.arch()` to get the CPU architecture (e.g., `'x64'`, `'arm'`, etc.).  
 
-```typescript  
+```js  
 const architecture: string = os.arch();  
 console.log(`Your system architecture is: ${architecture}`);
 ```
@@ -65,7 +65,7 @@ console.log(`Your system architecture is: ${architecture}`);
 ### 3. **Fetching Home Directory**  
 The `os.homedir()` method returns the path to the current user’s home directory.  
 
-```typescript  
+```js  
 const homeDirectory: string = os.homedir();  
 console.log(`Your home directory is: ${homeDirectory}`);
 ```
@@ -73,7 +73,7 @@ console.log(`Your home directory is: ${homeDirectory}`);
 ### 4. **Free and Total Memory**  
 You can check how much memory is available and how much your system has in total using `os.freemem()` and `os.totalmem()`. Both methods return values in bytes, so you might want to convert them to megabytes or gigabytes for readability.  
 
-```typescript  
+```js  
 const freeMemory: number = os.freemem();  
 const totalMemory: number = os.totalmem();  
 
@@ -84,7 +84,7 @@ console.log(`Total memory: ${(totalMemory / 1024 / 1024).toFixed(2)} MB`);
 ### 5. **CPU Information**  
 The `os.cpus()` method returns an array of objects containing details about each logical CPU core.  
 
-```typescript  
+```js  
 const cpus = os.cpus();  
 console.log(`You have ${cpus.length} CPU cores. Here are the details:`);  
 
@@ -96,7 +96,7 @@ cpus.forEach((cpu, index) => {
 ### 6. **System Uptime**  
 The `os.uptime()` method gives you the system uptime in seconds. Let’s convert it to a more human-readable format:  
 
-```typescript  
+```js  
 const uptime: number = os.uptime();  
 console.log(`Your system has been running for ${Math.floor(uptime / 3600)} hours and ${Math.floor((uptime % 3600) / 60)} minutes.`);
 ```
@@ -107,7 +107,7 @@ console.log(`Your system has been running for ${Math.floor(uptime / 3600)} hours
 
 Here’s a complete example that uses multiple features of the `os` module:  
 
-```typescript  
+```js  
 import * as os from 'os';  
 
 // Platform and architecture  
