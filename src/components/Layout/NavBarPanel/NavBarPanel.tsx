@@ -53,12 +53,11 @@ function NavPanel(props: { toggleClass: string, togglePanel?: (e: any) => void }
   }
 
   const links = Object.entries(navBarContent).filter(([k, v]) => k !== 'language').map(([key, value]) => { return (<Link key={key} to={key}>{value}</Link>) }).filter((link) => link.props.to !== "studies");
-  const linksNoBlog = links.filter((link) => link.props.to !== "blog")
   return (
     <div id="navpanel" className={`nav-panel ${props.toggleClass}`}>
       <Link to="/">{homeTranslation}</Link>
 
-      {globalContext.blogActive ? links : linksNoBlog}
+      {links}
       <div>{navBarContent.language} <span onClick={(e) => { changeLanguage('en') }}>EN</span> <span>/</span> <span onClick={(e) => { changeLanguage('es') }}>ES</span></div>
 
     </div>

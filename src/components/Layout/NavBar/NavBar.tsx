@@ -52,7 +52,6 @@ const Navbar = () => {
 
   const links = Object.entries(navTextContent).map(([key, value]) => { return (<Link key={key} to={key}>{value}</Link>) }).filter((link) => link.props.to !== "studies");
 
-  const linksNoBlog = links.filter((link) => link.props.to !== "blog")
 
   return (
     <header id="navbar" className={`navbar`}>
@@ -60,7 +59,7 @@ const Navbar = () => {
         <Link to="/">{homeTranslation}</Link>
       </div>
       <div className="nav_links">
-        {globalContext.blogActive ? links : linksNoBlog}
+        {links}
       </div>
 
       {/* <div className={`custom-dropdown`} onMouseLeave={toggleDropdown}>

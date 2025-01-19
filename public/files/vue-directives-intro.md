@@ -119,6 +119,7 @@ Once the setup is complete, open the HTML file in your browser, and you should s
 ## [**#**](#tips_for_using_v-bind) **Tips for Using `v-bind`:**
 
 <div id='tips_for_using_v-bind'>
+
 1. **Shorthand**: You can use `:` as a shorthand for `v-bind`. For example:
    ```html
    <img :src="imageSrc" alt="Dynamic Image">

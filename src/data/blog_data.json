@@ -1,18 +1,9 @@
 {
   "pageContent": {
     "description_en": "Greetings, web wanderers! Let's takes you on a stroll through the world of tech without the hype. No fancy blog jargon, just a straightforward exploration of the gadgets, gizmos, and digital quirks that shape our lives. This blog is dedicated to motivate my self into the ways of technology, but it's also for you curious fellow who have the same goal but needs a bit of help in the process.",
-    "description_es": "¡Saludos, vagabundos de la web! Te llevaremos a dar un paseo por el mundo de la tecnología sin la exageración. Sin jerga de blog elegante, solo una exploración directa de los dispositivos, artilugios y peculiaridades digitales que dan forma a nuestras vidas. Este blog está dedicado a motivarlos a ustedes y a mi mismo en el camino de la tecnología, pero también es para ustedes, compañeros curiosos que tienen el mismo objetivo pero necesitan un poco de ayuda en el proceso."
+    "description_es": "¡Saludos, viajantes de la web! Te llevaremos a dar un paseo por el mundo de la tecnología sin la exageración. Sin jerga de blog elegante, solo una exploración directa de los dispositivos, artilugios y peculiaridades digitales que dan forma a nuestras vidas. Este blog está dedicado a motivarlos a ustedes y a mi mismo en el camino de la tecnología, pero también es para ustedes, compañeros curiosos que tienen el mismo objetivo pero necesitan un poco de ayuda en el proceso."
   },
     "blogs_en": [
-      {
-        "postId": "read-execute-file-nodejs",
-        "title": "How to read and execute file using Node.js",
-        "description": "A brief tutorial on how to read and execute file using Node.js",
-        "keywords": ["nodejs", "javascript", "backend"],
-        "thumbnail": "images/blog/cover_readfile_nodejs.jpg",
-        "date": "2024-02-05",
-        "draft": false
-      },
       {
         "postId": "markdown-react",
         "title": "Use Markdown in React to create dynamic content", 
@@ -62,14 +53,51 @@
 
     "blogs_es": [
       {
-        "postId": "read-execute-file-nodejs",
-        "title": "Como leer y ejecutar un archivo usando Node.js",
-        "description": "Un breve tutorial sobre cómo leer y ejecutar un archivo usando Node.js",
-        "keywords": ["nodejs", "javascript", "backend"],
+        "postId": "markdown-react-es",
+        "title": "Usa Markdown en React para crear contenido dinámico",
+        "description": "React y Markdown son una combinación poderosa. Aprende cómo usar Markdown en React para crear contenido dinámico.",
+        "keywords": ["Reactjs", "javascript", "Markdown", "frontend"],	
+        "thumbnail": "https://cdn-ak.f.st-hatena.com/images/fotolife/r/rifublog/20231102/20231102232849.png",
+        "date": "2024-02-12",
+        "draft": true
+      },
+      {
+        "postId": "vue-directives-intro-es",
+        "title": "Directivas en Vue.js",
+        "description": "Una de las características más poderosas de Vue.js son las directivas, que proporcionan una forma declarativa de extender HTML con comportamientos personalizados.",
+        "keywords": ["vue", "javascript", "directives", "frontend"],	
+        "thumbnail": "https://www.svgrepo.com/show/349557/vue.svg",
+        "date": "2024-10-17",
+        "draft": false
+      },
+      {
+        "postId": "npm-intro-tutorial-es",
+        "title": "Introducción y tutorial de Npm",
+        "description": "Npm es el administrador de paquetes para JavaScript. Encuentra, comparte y reutiliza paquetes de código de cientos de miles de desarrolladores, y ensamblalos de formas poderosas y nuevas.",
+        "keywords": ["npm", "javascript", "tutorial", "beginner"],	
+        "thumbnail": "https://res.cloudinary.com/benjamincrozat-com/image/fetch/c_scale,f_webp,q_auto,w_1200/https://github.com/benjamincrozat/content/assets/3613731/527efaf4-30dd-4066-8f8b-1012c05f904d",
+        "date": "2024-10-28",
+        "draft": false
+      },
+      {
+        "postId": "nodejs-read-write-file-es",
+        "title": "Leer y escribir archivos usando Node.js",
+        "description": "Comienza con Node.js, el entorno de ejecución para JavaScript. Aprende a leer y escribir archivos de texto utilizando el módulo fs.",
+        "keywords": ["node js", "javascript", "tutorial", "beginner"],	
         "thumbnail": "images/blog/cover_readfile_nodejs.jpg",
-        "date": "2024-02-05",
+        "date": "2024-11-24",
+        "draft": false
+      },
+      {
+        "postId": "os-nodejs-tutorial-es",
+        "title": "Usando el módulo OS de Node.js",
+        "description": "Aprende a usar el módulo os para tu próxima aplicación web.",
+        "keywords": ["node js", "javascript", "tutorial", "os module"],	
+        "thumbnail": "images/blog/cover-nodejs-os.jpg",
+        "date": "2024-11-30",
         "draft": false
       }
+      
     ]
 
     

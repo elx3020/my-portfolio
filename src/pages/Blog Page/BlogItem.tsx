@@ -19,12 +19,9 @@ const BlogItem = (props: { blogData: IBlogItemProps }) => {
   const { thumbnail, title, date, description, postId } = props.blogData;
   const navigate = useNavigate();
 
-  const globalContext = useGlobalContext();
 
   let blogUrl = '/blog/post/' + postId;
-  if (globalContext.language === 'es') {
-    blogUrl = '/blog/post/' + postId + '?lang=es';
-  }
+
   // return the blog item
   return (<div className="blog-item" id={title} >
     <div className="content"  >

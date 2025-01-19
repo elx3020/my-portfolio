@@ -1,6 +1,6 @@
-import { useParams, useSearchParams } from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useEffect, useRef, useState } from 'react';
-import { marked, use, } from 'marked';
+import { marked, } from 'marked';
 
 import "./blogStyles.scss";
 import useCurrentPage from '../../hooks/useCurrentPage';
@@ -20,20 +20,14 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
     const [indices, setIndices] = useState<string[]>([]);
     const divRef = useRef<HTMLDivElement>(null);
     useCurrentPage(props.handlePage);
-
+    const navigate = useNavigate();
     const globalContext = useGlobalContext();
     const result = browserDetect()
 
-    let postUrl = postId;
-    if (globalContext.language === 'en') {
-        postUrl = postId;
-    } else if (globalContext.language === 'es') {
-        postUrl = postId! + '-es';
-    }
 
     useEffect(() => {
         async function getFile() {
-            return await fetch(`/files/${postUrl}.md`).then((response) => {
+            return await fetch(`/files/${postId}.md`).then((response) => {
                 return response.text()
             }).catch((err) => { console.log(err) }).then(async (data) => {
                 if (data) setMarkdownContent(await marked.parse(data));
@@ -50,10 +44,21 @@ const BlogPostPage = (props: { handlePage: (value: string) => void }) => {
             })
         }
         getFile();
-    }, [isLoaded, globalContext.language]);
+    }, [isLoaded]);
+
+    useEffect(() => {
+        if (globalContext.language === 'es' && !postId?.includes('-es')) {
+            navigate(`/blog/post/${postId}-es`, { replace: true });
+            setIsLoaded(false);
+        } else if (globalContext.language === 'en' && postId?.includes('-es')) {
+            navigate(`/blog/post/${postId.split('-es')[0]}`);
+            setIsLoaded(false);
+        }
+
+    }, [globalContext.language]);
 
 
-    const mobileLayout = (<article className='page-content stretch'>
+    const mobileLayout = (<article className='page-content stretch' style={{ minHeight: '150vh' }}>
         {isLoaded ? (<div ref={divRef} className='blog-post' />) : (<LoadingBlogContent />)}
     </article>)
 

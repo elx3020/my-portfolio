@@ -6,8 +6,9 @@ And guess what? We'll learn how to use this module with **TypeScript**, so we ca
 
 ---
 
-## What is the OS Module?  
+## [**#**](#what_is_the_OS_module) What is the OS Module?  
 
+<div id='what_is_the_OS_module'>
 The `os` module in Node.js provides a set of methods and properties for interacting with the operating system. With it, you can:  
 - Check the platform (e.g., Windows, macOS, Linux).  
 - Get information about CPUs and memory.  
@@ -16,8 +17,10 @@ The `os` module in Node.js provides a set of methods and properties for interact
 It’s a great tool for making your application more dynamic and adaptable to different environments.  
 
 ---
+</div>
 
-## Setting Up  
+## [**#**](#setting_up) Setting Up  
+<div id='setting_up'>
 
 First things first! To follow along, ensure you have:  
 1. **Node.js** installed.  
@@ -31,8 +34,11 @@ npm install typescript --save-dev
 Create a new file called `os-example.ts` in your project directory, and we’re ready to go!  
 
 ---
+</div>
 
-## Importing the OS Module  
+## [**#**](#importing_the_OS_module) Importing the OS Module  
+
+<div id='importing_the_OS_module'>
 
 The `os` module is built into Node.js, so no need to install anything extra! Simply import it at the top of your file:  
 
@@ -41,9 +47,11 @@ import * as os from 'os';
 ```
 
 ---
+</div>
 
-## Exploring OS Module Features  
+## [**#**](#exploring_OS_module_feature) Exploring OS Module Features  
 
+<div id='exploring_OS_module_feature'>
 Here’s a step-by-step guide to some of the most commonly used features of the `os` module, complete with TypeScript examples.
 
 ### 1. **Getting the Platform**  
@@ -102,9 +110,11 @@ console.log(`Your system has been running for ${Math.floor(uptime / 3600)} hours
 ```
 
 ---
+</div>
 
-## Putting It All Together  
+## [**#**](#putting_it_all_together) Putting It All Together  
 
+<div id='putting_it_all_together'>
 Here’s a complete example that uses multiple features of the `os` module:  
 
 ```js  
@@ -131,9 +141,10 @@ console.log(`System Uptime: ${Math.floor(uptime / 3600)} hours and ${Math.floor(
 ```
 
 ---
+</div>
 
-## Running the Code  
-
+## [**#**](#running_the_code) Running the Code  
+<div id='running_the_code'>
 To compile and run the TypeScript code:  
 1. Compile the `.ts` file to JavaScript:  
    ```bash  
@@ -146,9 +157,12 @@ To compile and run the TypeScript code:
    ```  
 
 ---
+</div>
 
-## Wrapping Up  
+## [**#**](#wrapping_up) Wrapping Up  
 
+<div id='wrapping_up'>
 The `os` module is a great way to access operating system-level information and make your Node.js applications more dynamic. With TypeScript, you can catch type errors early and write more robust code.  
 
 Now it’s your turn—try experimenting with the `os` module and see how you can integrate it into your projects! Have fun coding!
+</div>
