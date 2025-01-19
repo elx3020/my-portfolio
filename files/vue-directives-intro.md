@@ -1,19 +1,31 @@
 # Step-by-Step Tutorial: Vue.js Directives – `v-bind`
 
-## **Introduction**
+## [**#**](#introduction) **Introduction**
+
+<div id='introduction'>
 Vue.js is a progressive JavaScript framework that allows you to build interactive user interfaces efficiently. One of the powerful features in Vue.js is **directives**, which provide a declarative way to extend HTML with custom behavior. In this tutorial, we will focus on the `v-bind` directive, which dynamically binds attributes or data to DOM elements.
+</div>
 
-## **What is `v-bind`?**
+## [**#**](#what_is_v-bind) **What is `v-bind`?**
+
+<div id='what_is_v-bind'>
 The `v-bind` directive in Vue.js allows you to bind an element’s attributes, properties, or even classes dynamically to Vue data. This is helpful when you want to update elements based on reactive data in the application.
+</div>
 
-## **Example Use Case**
+## [**#**](#example_use_case) **Example Use Case**
+
+<div id='example_use_case'>
 We will build a simple example where we dynamically bind the `src` attribute of an image and the `href` attribute of a link using `v-bind`.
 
 ---
+</div>
 
 ## **Step-by-Step Guide**
 
-## **Step 1: Install Vue.js**
+## [**#**](#install_vue.js) **Step 1: Install Vue.js**
+
+<div id='install_vue.js'>
+
 If you don't have Vue.js installed in your project, you can use a CDN to quickly get started:
 
 ```html
@@ -25,8 +37,11 @@ Or, if you are using Vue CLI for a more structured project, run:
 ```bash
 npm install vue
 ```
+</div>
 
-## **Step 2: Setup Basic HTML Structure**
+## [**#**](#setup_basic_html_structure) **Step 2: Setup Basic HTML Structure**
+
+<div id='setup_basic_html_structure'>
 Create a simple HTML file or Vue component where we will use `v-bind`. Here’s an example with an image and a link.
 
 ```html
@@ -62,8 +77,10 @@ Create a simple HTML file or Vue component where we will use `v-bind`. Here’s 
 </body>
 </html>
 ```
+</div>
 
-## **Step 3: Initialize the Vue Instance**
+## [**#**](#initialize_the_vue_instance) **Step 3: Initialize the Vue Instance**
+<div id='initialize_the_vue_instance'>
 In this step, we create a Vue instance and bind it to the `#app` element in our HTML. The `data` object contains the reactive properties `title`, `imageSrc`, and `url` that we will use with `v-bind`.
 
 ```javascript
@@ -76,16 +93,20 @@ new Vue({
   }
 });
 ```
+</div>
 
-## **Step 4: Use `v-bind` in the Template**
+## [**#**](#use_v-bind_in_the_template) **Step 4: Use `v-bind` in the Template**
+<div id='use_v-bind_in_the_template'>
 In the template, use the `v-bind` directive to bind the data properties to the HTML attributes.
 
 - The `v-bind:src="imageSrc"` binds the `imageSrc` data property to the `src` attribute of the `<img>` tag.
 - The `v-bind:href="url"` binds the `url` data property to the `href` attribute of the `<a>` tag.
 
 Now, when the Vue instance is initialized, the attributes will dynamically update based on the values in the data properties.
+</div>
 
-## **Step 5: Run the Example**
+## [**#**](#run_the_example) **Step 5: Run the Example**
+<div id='run_the_example'>
 Once the setup is complete, open the HTML file in your browser, and you should see:
 
 - A heading that displays the value of `title`.
@@ -93,8 +114,11 @@ Once the setup is complete, open the HTML file in your browser, and you should s
 - A link to the Vue.js documentation with the `href` attribute bound to the `url` data property.
 
 ---
+</div>
 
-## **Tips for Using `v-bind`:**
+## [**#**](#tips_for_using_v-bind) **Tips for Using `v-bind`:**
+
+<div id='tips_for_using_v-bind'>
 
 1. **Shorthand**: You can use `:` as a shorthand for `v-bind`. For example:
    ```html
@@ -119,8 +143,12 @@ Once the setup is complete, open the HTML file in your browser, and you should s
 
 ---
 
-## **Conclusion**
+</div>
 
+## [**#**](#conclusion) **Conclusion**
+
+<div id='conclusion'>
 The `v-bind` directive is a fundamental feature in Vue.js that makes your applications dynamic and reactive. It allows you to bind attributes, classes, or properties directly to your data, keeping everything in sync. It’s also incredibly versatile, from simple attribute bindings to dynamic style and class manipulations.
 
 Try experimenting with different properties and use cases to get more comfortable with this powerful directive!
+</div>
