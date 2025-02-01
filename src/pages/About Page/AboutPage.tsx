@@ -59,7 +59,7 @@ const AboutPage = (props: { handlePage: (value: string) => void }) => {
       <div style={{ display: 'flex', justifyContent: 'center', padding: '3vw' }}>
 
         <div className="cv_button">
-          <a href="files/CV_Esteban_2023.pdf" target="_blank">{pageData.button_text} <span> {downloadIcon} </span></a>
+          <a href="files/CV_Esteban.pdf" target="_blank">{pageData.button_text} <span> {downloadIcon} </span></a>
         </div>
       </div>
 
